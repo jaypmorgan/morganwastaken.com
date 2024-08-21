@@ -1,4 +1,9 @@
-.quarto/
+.quarto/idx
+.quarto/listing
+.quarto/preview
+.quarto/xref
 _site/
 *.Rproj
 .Rproj.user/
+/.quarto/
+.Rhistory
