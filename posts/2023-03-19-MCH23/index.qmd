@@ -1,0 +1,17 @@
+---
+title: "Machine Learning and Computer Vision in Heliophysics"
+date: 2023-03-19
+citation:
+  url:  https://morganwastaken.com/blog/2023-04-21-mch23
+---
+
+
+We'll be presenting a poster at the [Machine Learning and Computer
+Vision in Heliophysics international workshop](https://mosaiics.astro.bas.bg/?page_id=165), Sofia, Bulgaria.
+
+The poster concerns the our work on improving the down-stream feature
+detection of solar features by removing the contamination of clouds
+from ground-based observations. We've started to open-source our
+[program code on github](https://github.com/jaypmorgan/cloud-removal), but please come and ask some questions if
+you're at the conference!
+

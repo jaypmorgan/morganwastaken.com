@@ -1,0 +1,11 @@
+freeze: auto
+title-block-banner: true
+author:
+  - name:
+      given: Jay Paul
+      family: Morgan
+    orcid: 0000-0003-3719-362X
+    degrees: PhD
+    affiliations:
+      - name: Swansea University
+date-modified: last-modified
