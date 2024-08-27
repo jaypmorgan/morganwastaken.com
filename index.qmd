@@ -2,9 +2,12 @@
 title: ""
 ---
 
-Hello, my name is Jay Paul Morgan. I am a tutor in Computer Science at [Swansea
-University](https://www.swansea.ac.uk/staff/j.p.morgan/). My research focuses on the integration of domain knowledge into
-the design of deep neural networks.
+::: {#profile-picture style="float: left; width: 20%; margin-right: 20px;"}
+![](images/profile.jpg){style="float: left;" width="161"}
+:::
 
-I conducted my post-doc research as part of the the [LIS/DYNI](https://www.lis-lab.fr/dyni/) lab in the
-[University of Toulon](https://www.univ-tln.fr/-University-of-Toulon-.html).
+::: {#main-content style="float: left; width: 70%;"}
+Hello, my name is Jay Paul Morgan. I am a tutor in Computer Science at [Swansea University](https://www.swansea.ac.uk/staff/j.p.morgan/). My research focuses on the integration of domain knowledge into the design of deep neural networks.
+
+I conducted my post-doc research as part of the the [LIS/DYNI](https://www.lis-lab.fr/dyni/) lab in the [University of Toulon](https://www.univ-tln.fr/-University-of-Toulon-.html).
+:::

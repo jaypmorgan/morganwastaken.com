@@ -2,6 +2,7 @@ project:
   type: website
 
 website:
+  site-url: https://morganwastaken.com
   title: "Jay Paul Morgan"
   navbar:
     left:
@@ -19,13 +20,25 @@ website:
         text: Resources
       - href: posts.qmd
         text: Blog
+    right:
+      - icon: github
+        href: https://github.com/jaypmorgan
+      - icon: linkedin
+        href: https://www.linkedin.com/in/jay-p-morgan/
+      - text: "{{< ai google-scholar size=lg >}}"
+        href: https://scholar.google.com/citations?user=AO1az5YAAAAJ&hl=en
+      - text: "{{< ai researchgate size=lg >}}"
+        href: https://www.researchgate.net/profile/Jay-Morgan
+      - text: "{{< ai orcid size=lg >}}"
+        href: https://orcid.org/my-orcid?orcid=0000-0003-3719-362X
 
 format:
   html:
     theme:
       light: flatly
       dark: darkly
-    css: styles.css
+    css:
+      - styles.css
     toc: true
 
 editor: visual
