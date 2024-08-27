@@ -7,6 +7,7 @@ website:
   open-graph: true
   google-analytics: ""
   title: "Jay Paul Morgan"
+  site-url: http://morganwastaken.com
   navbar:
     left:
       - href: index.qmd
