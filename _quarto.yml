@@ -1,14 +1,18 @@
 project:
   type: website
+  resources:
+    - "assets/*"
 
 website:
+  open-graph: true
+  google-analytics: ""
   site-url: https://morganwastaken.com
   title: "Jay Paul Morgan"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - href: research.qmd
+      - href: publications.qmd
         text: Publications
       - href: talks.qmd
         text: Talks
@@ -25,9 +29,9 @@ website:
         href: https://github.com/jaypmorgan
       - icon: linkedin
         href: https://www.linkedin.com/in/jay-p-morgan/
-      - text: "{{< ai google-scholar size=lg >}}"
+      - text: "{{< ai google-scholar-square size=lg >}}"
         href: https://scholar.google.com/citations?user=AO1az5YAAAAJ&hl=en
-      - text: "{{< ai researchgate size=lg >}}"
+      - text: "{{< ai researchgate-square size=lg >}}"
         href: https://www.researchgate.net/profile/Jay-Morgan
       - text: "{{< ai orcid size=lg >}}"
         href: https://orcid.org/my-orcid?orcid=0000-0003-3719-362X

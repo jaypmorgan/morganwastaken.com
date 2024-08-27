@@ -3,7 +3,7 @@ title: ""
 ---
 
 ::: {#profile-picture style="float: left; width: 20%; margin-right: 20px;"}
-![](images/profile.jpg){style="float: left;" width="161"}
+![](assets/profile.jpg){style="float: left;" width="161"}
 :::
 
 ::: {#main-content style="float: left; width: 70%;"}
