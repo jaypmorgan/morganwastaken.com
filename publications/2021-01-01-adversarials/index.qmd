@@ -1,0 +1,18 @@
+---
+title: "Adaptive Neighbourhoods for the Discovery of Adversarial Examples"
+author:
+  - name: Jay Paul Morgan
+    orcid: 0000-0003-3719-362X
+  - Adeline Paiement
+  - Arno Pauly
+  - Monika Seisenberger
+image: image.png
+description: Constructing unique and informed bounds for constructing adversarial examples.
+---
+
+
+[<i class="ai obp"></i> PDF](paper.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&sortby=pubdate&citation_for_view=AO1az5YAAAAJ:qjMakFHDy7sC){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [Bibtex](bibtex.html){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"}
+
+# Abstract
+
+Deep Neural Networks (DNNs) have often supplied state-of-the-art results in pattern recognition tasks. Despite their advances, however, the existence of adversarial examples have caught the attention of the community. Many existing works have proposed methods for searching for adversarial examples within fixed-sized regions around training points. Our work complements and improves these existing approaches by adapting the size of these regions based on the problem complexity and data sampling density. This makes such approaches more appropriate for other types of data and may further improve adversarial training methods by increasing the region sizes without creating incorrect labels.

@@ -1,0 +1,19 @@
+---
+title: "A Chatbot Framework for the Children's Legal Centre"
+author:
+  - name: Jay Paul Morgan
+    orcid: 0000-0003-3719-362X
+  - Adeline Paiement
+  - Monika Seisenberger
+  - Jane Williams
+  - Adam Wyner
+description: This paper presents a novel method to address legal rights for children through a chatbot framework by integrating machine learning, a dialogue graph, and information extraction.
+image: image.png
+---
+
+
+[<i class="ai obp"></i> PDF](paper.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&citation_for_view=AO1az5YAAAAJ:d1gkVwhDpl0C){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [Bibtex](bibtex.html){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"}
+
+# Abstract
+
+This paper presents a novel method to address legal rights for children through a chatbot framework by integrating machine learning, a dialogue graph, and information extraction. The method addresses a significant problem: we cannot presume that children have common knowledge about their rights or express themselves as an adult might. In our framework, a chatbot user begins a conversation, where based on the circumstance described, a neural network predicts both speech acts, relating to a dialogue graph, and legal types. Information is extracted in order to create a case for a legal advisor. In collaboration with the Children's Legal Centre Wales, who advocate for the improvement of legal rights in Wales, a corpus has been constructed and a prototype chatbot developed. The framework has been evaluated with classification measures and a user study.

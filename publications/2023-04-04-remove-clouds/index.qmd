@@ -10,12 +10,15 @@ author:
 categories:
   - Research
   - Heliophysics
+  - Neural Network
 links:
   - icon: file-richtext-fill
     name: Publication
     url: https://doi.org/10.1136/ip-2023-045069
   - text: "{{< ai googlescholar >}}"
     href: https://scholar.google.fr/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&sortby=pubdate&citation_for_view=AO1az5YAAAAJ:W7OEmFMy1HYC
+description: A U-Net-style Neural Network to remove cloud contaminants from ground-based solar imagery.
+    
 ---
 
 [<i class="ai obp"></i> PDF](clouds-1.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.fr/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&sortby=pubdate&citation_for_view=AO1az5YAAAAJ:W7OEmFMy1HYC){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [Bibtex](clouds-1.html){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"}

@@ -1,0 +1,17 @@
+---
+title: "A Computability Perspective on (Verified) Machine Learning"
+author:
+  - Tonicha Crook
+  - name: Jay Paul Morgan
+    orcid: 0000-0003-3719-362X
+  - Arno Pauly
+  - Markus Roggenbach
+description: Define the computational tasks underlying the newly suggested verified ML in a model-agnostic way, i.e., they work for all machine learning approaches including, e.g., random forests, support vector machines, and Neural Networks.
+image: image.png
+---
+
+[<i class="ai obp"></i> PDF](paper.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.fr/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&citation_for_view=AO1az5YAAAAJ:UeHWp8X0CEIC){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [Bibtex](bibtex.html){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"}
+
+# Abstract
+
+In Computer Science there is a strong consensus that it is highly desirable to combine the versatility of Machine Learning (ML) with the assurances formal verification can provide. However, it is unclear what such ‘verified ML’ should look like. This paper is the first to formalise the concepts of classifiers and learners in ML in terms of computable analysis. It provides results about which properties of classifiers and learners are computable. By doing this we establish a bridge between the continuous mathematics underpinning ML and the discrete setting of most of computer science. We define the computational tasks underlying the newly suggested verified ML in a model-agnostic way, i.e., they work for all machine learning approaches including, e.g., random forests, support vector machines, and Neural Networks. We show that they are in principle computable.

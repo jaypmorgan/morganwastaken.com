@@ -6,7 +6,6 @@ project:
 website:
   open-graph: true
   google-analytics: ""
-  site-url: https://morganwastaken.com
   title: "Jay Paul Morgan"
   navbar:
     left:
