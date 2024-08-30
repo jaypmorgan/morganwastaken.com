@@ -2,12 +2,14 @@ project:
   type: website
   resources:
     - "assets/*"
+    - "teaching/**/*"
 
 website:
+  page-navigation: true
   open-graph: true
   google-analytics: ""
   title: "Jay Paul Morgan"
-  site-url: http://morganwastaken.com
+  site-url: https://morganwastaken.com
   navbar:
     left:
       - href: index.qmd

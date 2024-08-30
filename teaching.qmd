@@ -1,1 +1,70 @@
+---
+title: "Teaching"
+listing:
+  - id: machine-learning-2023
+    contents: "teaching/2023-2024/Machine Learning"
+    type: table
+    sort: date
+    fields: [date, title]
+  - id: programming-languages-2023
+    contents: "teaching/2023-2024/Programming Level-up"
+    type: table
+    sort: date
+    fields: [date, title]
+---
 
+# 2023-2024
+
+## Machine Learning
+
+Welcome to the Machine Learning course developed for the MIR Masters Engineering and Complex Systems. In this series of lectures, we're going to learn about how to learn! Specifically, we're going to learn about how computers learn using Machine Learning algorithms. We'll learn about the basic understanding of learning algorithms, as well as specific algorithms that include: linear models, support vector machines, and clustering methods. In addition to these algorithms, we will also look at a key part of using any learning algorithm -- evaluating it!
+
+::: {#machine-learning-2023}
+:::
+
+## Programming Level-up
+
+Welcome to the **Programming Level-up Course**. In this series of lectures, we will cover everything we need to be able to program in a Linux-based environment, and use the high performance computers (also called cluster/supercomputers) to run experiments.
+
+::: {#programming-languages-2023}
+:::
+
+# 2022-2023
+
+## Machine Learning
+
+### Lectures
+
+- [Lecture 1. Introduction](teaching/2022-2023/Machine Learning/1.lecture-introductions.html)
+- [Lecture 2. Linear Models](teaching/2022-2023/Machine Learning/2.linear-models.html)
+- [Lecture 3. Model Evaluations](teaching/2022-2023/Machine Learning/3.model-evaluations.html)
+- [Lecture 4. Support Vector Machines](teaching/2022-2023/Machine Learning/4.support-vector-machines.html)
+- [Lecture 5. Clustering](teaching/2022-2023/Machine Learning/5.clustering.html)
+
+### Labs
+
+- [Lab 1. Linear Models](teaching/2022-2023/Machine Learning/lab1.getting-setup.html)
+- [Lab 2. Evaluation of Models](teaching/2022-2023/Machine Learning/lab2.evaluation-of-models.html)
+
+## Programming Level-up
+
+- [Lecture 1. Introduction](teaching/2022-2023/Programming Level-up/1.introductions.html)
+- [Lecture 2. Object Oriented Programming](teaching/2022-2023/Programming Level-up/2.object-oriented-programming.html)
+- [Lecture 3. Development Environments](teaching/2022-2023/Programming Level-up/3.modules-development-environment.html)
+- [Lecture 4. Numerical Computing with Numpy](teaching/2022-2023/Programming Level-up/4.introduction-to-numerical-computing-numpy.html)
+- [Lecture 5. Introduction to Linux](teaching/2022-2023/Programming Level-up/5.introduction-to-linux.html)
+- [Lecture 6. Introduction to Matplotlib](teaching/2022-2023/Programming Level-up/6.introduction-to-matplotlib.html)
+- [Lecture 7. Introduction to Pandas](teaching/2022-2023/Programming Level-up/7.introduction-to-pandas.html)
+
+# 2021-2022
+
+## Programming Level-up
+
+- [Course outline](teaching/2021-2022/Programming Level Up/week-0/course-outline.html)
+- [Lecture 1. Introduction and Basic Python Programming](teaching/2021-2022/Programming Level Up/week-1/lecture.html)
+- [Lecture 2. More advanced Python &amp; Classes](teaching/2021-2022/Programming Level Up/week-2/lecture.html)
+- [Lecture 3. Modules & Development Environments](teaching/2021-2022/Programming Level Up/week-3/lecture.html)
+- [Lecture 4. An Introduction to Numerical Computing in Python](teaching/2021-2022/Programming Level Up/week-4/lecture.html)
+- [Lecture 5. An Introduction to using Linux](teaching/2021-2022/Programming Level Up/week-5/lecture.html)
+- [Lecture 6. An Introduction to Matplotlib](teaching/2021-2022/Programming Level Up/week-6/lecture.html)
+- [Lecture 7. An Introduction to Pandas](teaching/2021-2022/Programming Level Up/week-7/lecture.html)
