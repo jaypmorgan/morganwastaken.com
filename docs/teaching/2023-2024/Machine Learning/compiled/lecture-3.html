@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jay Paul Morgan">
+
+<title>Machine Learning - Model Performance</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lecture-1.html">Lectures</a></li><li class="breadcrumb-item"><a href="./lecture-3.html">Model Performance</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Machine Learning</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Lectures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Linear Models</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture-3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Model Performance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Support Vector Machines</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">K-Nearest Neighbour &amp; K-Means</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Labs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Linear Models</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Evaluation of Models</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">K-Nereast Neighbours</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#train-test" id="toc-train-test" class="nav-link active" data-scroll-target="#train-test">Train &amp; Test</a>
+  <ul class="collapse">
+  <li><a href="#why-do-we-have-different-sets-of-data" id="toc-why-do-we-have-different-sets-of-data" class="nav-link" data-scroll-target="#why-do-we-have-different-sets-of-data">Why do we have different ‘sets’ of data?</a></li>
+  <li><a href="#training-set" id="toc-training-set" class="nav-link" data-scroll-target="#training-set">Training Set</a></li>
+  <li><a href="#testing-set" id="toc-testing-set" class="nav-link" data-scroll-target="#testing-set">Testing Set</a></li>
+  <li><a href="#validation-set" id="toc-validation-set" class="nav-link" data-scroll-target="#validation-set">Validation Set</a></li>
+  </ul></li>
+  <li><a href="#over-underfitting" id="toc-over-underfitting" class="nav-link" data-scroll-target="#over-underfitting">Over-/Underfitting</a>
+  <ul class="collapse">
+  <li><a href="#the-ability-of-the-model" id="toc-the-ability-of-the-model" class="nav-link" data-scroll-target="#the-ability-of-the-model">The ability of the model</a></li>
+  <li><a href="#over-fitting" id="toc-over-fitting" class="nav-link" data-scroll-target="#over-fitting">Over-fitting</a></li>
+  <li><a href="#under-fitting" id="toc-under-fitting" class="nav-link" data-scroll-target="#under-fitting">Under-fitting</a></li>
+  <li><a href="#validation-curves" id="toc-validation-curves" class="nav-link" data-scroll-target="#validation-curves">Validation Curves</a></li>
+  <li><a href="#biasvariance-tradeoff" id="toc-biasvariance-tradeoff" class="nav-link" data-scroll-target="#biasvariance-tradeoff">Bias/Variance Tradeoff</a></li>
+  </ul></li>
+  <li><a href="#regression" id="toc-regression" class="nav-link" data-scroll-target="#regression">Regression</a>
+  <ul class="collapse">
+  <li><a href="#metrics" id="toc-metrics" class="nav-link" data-scroll-target="#metrics">Metrics</a></li>
+  <li><a href="#mean-squared-error-mse" id="toc-mean-squared-error-mse" class="nav-link" data-scroll-target="#mean-squared-error-mse">Mean Squared Error (MSE)</a></li>
+  <li><a href="#root-mean-squared-error-rmse" id="toc-root-mean-squared-error-rmse" class="nav-link" data-scroll-target="#root-mean-squared-error-rmse">Root Mean Squared Error (RMSE)</a></li>
+  <li><a href="#mean-absolute-error-mae" id="toc-mean-absolute-error-mae" class="nav-link" data-scroll-target="#mean-absolute-error-mae">Mean Absolute Error (MAE)</a></li>
+  </ul></li>
+  <li><a href="#classification" id="toc-classification" class="nav-link" data-scroll-target="#classification">Classification</a>
+  <ul class="collapse">
+  <li><a href="#binary-classification-labelling-as-positive-or-negative" id="toc-binary-classification-labelling-as-positive-or-negative" class="nav-link" data-scroll-target="#binary-classification-labelling-as-positive-or-negative">Binary classification &amp; labelling as positive or negative</a></li>
+  <li><a href="#tptnfpfn" id="toc-tptnfpfn" class="nav-link" data-scroll-target="#tptnfpfn">TP/TN/FP/FN</a></li>
+  <li><a href="#accuracy" id="toc-accuracy" class="nav-link" data-scroll-target="#accuracy">Accuracy</a></li>
+  <li><a href="#precision" id="toc-precision" class="nav-link" data-scroll-target="#precision">Precision</a></li>
+  <li><a href="#recall" id="toc-recall" class="nav-link" data-scroll-target="#recall">Recall</a></li>
+  <li><a href="#confusion-matrix" id="toc-confusion-matrix" class="nav-link" data-scroll-target="#confusion-matrix">Confusion Matrix</a></li>
+  <li><a href="#f_beta-f_1" id="toc-f_beta-f_1" class="nav-link" data-scroll-target="#f_beta-f_1"><span class="math inline">\(F_\beta\)</span> &amp; <span class="math inline">\(F_1\)</span></a></li>
+  <li><a href="#receiver-operating-characteristic-roc" id="toc-receiver-operating-characteristic-roc" class="nav-link" data-scroll-target="#receiver-operating-characteristic-roc">Receiver Operating Characteristic (ROC)</a></li>
+  <li><a href="#area-under-curve-auc" id="toc-area-under-curve-auc" class="nav-link" data-scroll-target="#area-under-curve-auc">Area Under Curve (AUC)</a></li>
+  </ul></li>
+  <li><a href="#choosing-the-best-model" id="toc-choosing-the-best-model" class="nav-link" data-scroll-target="#choosing-the-best-model">Choosing the best model</a>
+  <ul class="collapse">
+  <li><a href="#cross-validation-using-k-fold" id="toc-cross-validation-using-k-fold" class="nav-link" data-scroll-target="#cross-validation-using-k-fold">Cross Validation using K-fold</a></li>
+  <li><a href="#random-stratified-sampling" id="toc-random-stratified-sampling" class="nav-link" data-scroll-target="#random-stratified-sampling">Random &amp; Stratified Sampling</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lecture-3-reveal.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Model Performance</h1>
+<p class="subtitle lead">Lecture 3</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jay Paul Morgan </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="train-test" class="level1">
+<h1>Train &amp; Test</h1>
+<section id="why-do-we-have-different-sets-of-data" class="level2">
+<h2 class="anchored" data-anchor-id="why-do-we-have-different-sets-of-data">Why do we have different ‘sets’ of data?</h2>
+<p>We’ve seen in the previous lecture how we can fit a linear regression model to a set of data, and we can measure the performance of this model.</p>
+<p>But we do not understand how well this model works in the ‘real-world’, how well it performs on data that has not yet been ‘seen’, how well the model <strong>generalises</strong> to this unknown data.</p>
+<p>So, when we want to create a machine learning model, we usually take our data, and split into two (sometimes three) sets of data. These different sets are named:</p>
+<ul>
+<li>training set,</li>
+<li>testing set,</li>
+<li>and (optionally) validation set.</li>
+</ul>
+</section>
+<section id="training-set" class="level2">
+<h2 class="anchored" data-anchor-id="training-set">Training Set</h2>
+<p>The training dataset, is the set of data, that we’re allowing the model to `see’ or learn from.</p>
+<p>In our example of the linear regression, this is the set of data points to which we find the optimal parameters of our model.</p>
+<p>It is not very useful to evaluate our model’s performance with the training set as it doesn’t tell us how well it’s actually doing (we’ll come back to this when we talk about over-/under-fitting).</p>
+</section>
+<section id="testing-set" class="level2">
+<h2 class="anchored" data-anchor-id="testing-set">Testing Set</h2>
+<p>The testing set is the set of data that we use to evaluate the <strong>generalisation</strong> of our machine learning model. The model is not allowed to use this set of data during training, but it is simply used for the evaluation of the model.</p>
+<p>In general the testing set is between 10-30% of the overall available data, but this rule is not something dictated, and may vary depending on the amount of data available and the overall use case.</p>
+<p>Once the 10-30% of the data has been sampled for the testing set, the rest of the data can be used for the training and validation sets.</p>
+</section>
+<section id="validation-set" class="level2">
+<h2 class="anchored" data-anchor-id="validation-set">Validation Set</h2>
+<p>If we have an iterative optimisation process (such as what we saw with gradient descent), we might want to know how well our model is possibly generalising to unseen data.</p>
+<p>The validation dataset, is the set of data that we use to measure the generalisation of our model during the course of its learning process. Like the test set, this validation data should not be used to train the model, but only used to measure the model’s generalisation during the lifetime of the learning process.</p>
+</section>
+</section>
+<section id="over-underfitting" class="level1">
+<h1>Over-/Underfitting</h1>
+<section id="the-ability-of-the-model" class="level2">
+<h2 class="anchored" data-anchor-id="the-ability-of-the-model">The ability of the model</h2>
+<p>When we created a linear regression model, we saw that it was not possible to predict the house price exactly, there was always some error that we could not overcome with the linear model.</p>
+<p>If we have a model complicated model, such as polynomial regression (where we have polynomial terms in line equation), it may be possible to fit every training data point exactly. But <strong>is that what we want?</strong>.</p>
+<p>In this section, we’ll explore the concept of over- and under-fitting, and how we can use the testing set to understanding if these processes are happening.</p>
+</section>
+<section id="over-fitting" class="level2">
+<h2 class="anchored" data-anchor-id="over-fitting">Over-fitting</h2>
+<p>We’ll begin with over-fitting. Over-fitting occurs when our model has a very high or perfect performance on the testing set, but does not perform well at all on the testing set.</p>
+<p>There may be many reasons for this happening, such as the model being very complex, having too many variables.</p>
+<p><img src="images/overfit.png" title="Example of a well-fit model (red dashed) and a model that has overfitted to each data point (blue solid)." class="img-fluid"></p>
+</section>
+<section id="under-fitting" class="level2">
+<h2 class="anchored" data-anchor-id="under-fitting">Under-fitting</h2>
+<p>Under-fitting, as the name suggests is what happens when we cannot fit the model to the data, it doesn’t even perform well on the training data, the data the model is allowed to learn from. This can happen when the model is too simple and cannot learn the intrinsic relationship between the input and output. For example, trying to use a linear model to learn from data that is not linear by nature.</p>
+<p><img src="images/underfit.png" title="A linear model (blue line) is unable to properly capture the relationship of this polynomial and so will underfit the data." class="img-fluid"></p>
+</section>
+<section id="validation-curves" class="level2">
+<h2 class="anchored" data-anchor-id="validation-curves">Validation Curves</h2>
+<p>If we have an iterative learning process, we can use the training and validation datasets to measure whether our model is over-fitting, and stop training the model at an optimal point before it overfits.</p>
+<p>To do this, at every iteration of the learning process, we evaluate the model’s performance using both the training and validation datasets. If the performance on both datasets is decreasing we can infer that the model is learning something useful that helps with it’s generalisation to unseen data.</p>
+<p>However, if the performance on the training set is decreasing, while the performance on the validation dataset is no longer decreasing or indeed increasing, we know the model is over-fitting to the training data.</p>
+<p><img src="images/validation_curves.png" title="Example of training and validation loss as the model iteratively trains. Both the train and validation loss decreases, up until a point where the model begins overfitting. This overfitting begins to occur when the training loss continues to decrease but the validation loss either stops decreasing or increases. Ideally, we would use the model parameters from the model with the lowest validation loss." class="img-fluid"></p>
+</section>
+<section id="biasvariance-tradeoff" class="level2">
+<h2 class="anchored" data-anchor-id="biasvariance-tradeoff">Bias/Variance Tradeoff</h2>
+<p>The Bias/Variance tradeoff is a property of machine learning models. It describes a model’s expected generalisation abilities based upon how the parameters are estimated across a dataset.</p>
+<ul>
+<li><strong>Bias</strong> - the model’s `flexibility’ to represent the true relationship in the data. Model’s with low bias have a tendency to underfit. An example would be a linear model model trying to fit against non-linear function.</li>
+<li><strong>Variance</strong> - the impact that a single sample in the data has on the model. Model’s with high variance tend to overfit to the training data.</li>
+</ul>
+</section>
+</section>
+<section id="regression" class="level1">
+<h1>Regression</h1>
+<section id="metrics" class="level2">
+<h2 class="anchored" data-anchor-id="metrics">Metrics</h2>
+<p>Now that we’ve looked at the various sets of data, and the potential scenarios when we fit a model, we’ll now want to look at some actual methods of evaluating our model.</p>
+<p>These we call <strong>metrics</strong>. Metrics are values that help us understand how well a model might perform in the real world. <strong>Metrics are helpful to explain the predictive power of a model with one value</strong>.</p>
+<p>There are many different types of metrics that can be used depending on the class of problem that is being dealt with. For instance, there are different set of metrics for Regression and classification problems.</p>
+<p>We’ll first look at some metrics we can use to evaluate a regression model (some of which we’ve already seen in the Linear models lecture), and then we’ll have a look at metrics for a classification task.</p>
+</section>
+<section id="mean-squared-error-mse" class="level2">
+<h2 class="anchored" data-anchor-id="mean-squared-error-mse">Mean Squared Error (MSE)</h2>
+<p>A mean squared error (sometimes called the sum of squared residuals) is the measure of mean magnitude between two sets of points <span class="math inline">\(y, \overline{y}\)</span>.</p>
+<p>The formula for MSE is:</p>
+<p><span class="math inline">\(\text{MSE} = \frac{1}{N} \sum_i^N (y_i, \overline{y_i})^2\)</span></p>
+<p>for <span class="math inline">\(N\)</span> points.</p>
+<p>MSE is always non-negative, and the lower the MSE the better.</p>
+</section>
+<section id="root-mean-squared-error-rmse" class="level2">
+<h2 class="anchored" data-anchor-id="root-mean-squared-error-rmse">Root Mean Squared Error (RMSE)</h2>
+<p><span class="math display">\[
+\text{RMSE} = \sqrt{\text{MSE}}
+\]</span></p>
+<p>Due to the squared error term, larger errors have a large effect on the outcome of the equation, so both RMSE and MSE is sensitive to outliers.</p>
+<p>MSE’s error is measured in squared units, while RMSE is measured in the same unit as the target.</p>
+</section>
+<section id="mean-absolute-error-mae" class="level2">
+<h2 class="anchored" data-anchor-id="mean-absolute-error-mae">Mean Absolute Error (MAE)</h2>
+<p>Mean absolute error or MAE is one objective function for measure the <span class="math inline">\(L_1\)</span> between two sets of points.</p>
+<p><span class="math inline">\(\text{MAE} = \frac{1}{N} \sum_i^N | y_i - \overline{y_i} |\)</span></p>
+<p>for <span class="math inline">\(N\)</span> of points.</p>
+<p>Like MSE, RMSE, the lower the MAE value, the better the fit on the statistical model.</p>
+</section>
+</section>
+<section id="classification" class="level1">
+<h1>Classification</h1>
+<section id="binary-classification-labelling-as-positive-or-negative" class="level2">
+<h2 class="anchored" data-anchor-id="binary-classification-labelling-as-positive-or-negative">Binary classification &amp; labelling as positive or negative</h2>
+<p>We now move onto some of the more typical classification metrics. But first, we must first understand when our classifier predicts positive or negative in a binary classification task.</p>
+<p>Let’s say we have a binary classifier <span class="math inline">\(\mathcal{M}\)</span> which predicts the positive class if the predicted probability is <span class="math inline">\(\geq 0.5\)</span>. I.e.:</p>
+<p><span class="math display">\[
+L(x)  = \begin{cases}
+1 &amp; \text{if}, \; \mathcal{M}(x) \geq 0.5 \\
+0 &amp; \text{otherwise}
+\end{cases}
+\]</span></p>
+<p>where <span class="math inline">\(L\)</span> is our labelling function.</p>
+<p>Here 0.5 is the <strong>threshold</strong> for predicting the positive class.</p>
+</section>
+<section id="tptnfpfn" class="level2">
+<h2 class="anchored" data-anchor-id="tptnfpfn">TP/TN/FP/FN</h2>
+<p>Before we look at other metrics to evaluate our classification metrics, I first want to describe these acronyms.</p>
+<ul>
+<li><p>List :B_column:BMCOL:</p>
+<ul>
+<li>TP - True-Positive – our model has predicted positive (it was correct) and the actual label is positive.</li>
+<li>TN - True-Negative – our model has predicted negative (it was correct) and the actual label is negative.</li>
+<li>FP - False-Positive – our model has predicted positive (it was wrong) the actual label was negative.</li>
+<li>FN - False-Negative – our model has predicted negative (it was wrong) the actual label was positive.</li>
+</ul></li>
+<li><p>Diagram :B_column:BMCOL:</p>
+<p><img src="images/Precisionrecall.png" title="By Walber - Own work, CC BY-SA 4.0, <https://commons.wikimedia.org/w/index.php?curid=36926283>" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="accuracy" class="level2">
+<h2 class="anchored" data-anchor-id="accuracy">Accuracy</h2>
+<p>In a binary classification task, accuracy is measured using:</p>
+<p><span class="math display">\[
+\text{Accuracy} = \frac{TP+TN}{TP+TN+FP+FN}
+\]</span></p>
+<p>or multi-classification:</p>
+<p><span class="math display">\[
+\text{Accuracy} = \frac{\text{number of correct}}{\text{number of samples}}
+\]</span></p>
+<p>The range of accuracy is in <span class="math inline">\([0, 1]\)</span>, the higher the value of accuracy the better. Accuracy is often presented in the form of a percentage i.e.&nbsp;<span class="math inline">\(100 \cdot \text{Accuracy}\)</span></p>
+</section>
+<section id="precision" class="level2">
+<h2 class="anchored" data-anchor-id="precision">Precision</h2>
+<p>Measuring the precision tells us how many how accurate our model was in predicting positive cases. Here we have <span class="math inline">\(TP\)</span> or the number of True-Positive, divided by <span class="math inline">\(TP + FP\)</span> where <span class="math inline">\(FP\)</span> is the number of False-Positive cases.</p>
+<p><span class="math display">\[
+\frac{TP}{TP + FP}
+\]</span></p>
+<p>Valid values for the precision metric are in the range <span class="math inline">\([0, 1]\)</span> where the higher the value the better.</p>
+</section>
+<section id="recall" class="level2">
+<h2 class="anchored" data-anchor-id="recall">Recall</h2>
+<p>Recall tells us: out of all the positive cases, how many of them were actually found/predicted to be positive. How many of these positive cases was our model able to <em>recall</em>?</p>
+<p><span class="math display">\[
+\frac{TP}{TP+FN}
+\]</span></p>
+<p>Like precision, recall is in the range <span class="math inline">\([0, 1]\)</span> where the higher the value the better the recall.</p>
+</section>
+<section id="confusion-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="confusion-matrix">Confusion Matrix</h2>
+<p>A confusion matrix is a visual representation of these different type of predictive cases (TP/TN/FP/FN).</p>
+<p>An optimal confusion matrix, is a diagonal matrix (all entries outside of the diagonal are zero). Here is one example of a confusion matrix.</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-right">
+<col class="org-right">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">
+&nbsp;
+</td>
+<td class="org-left">
+&nbsp;
+</td>
+<td class="org-right">
+Predicted
+</td>
+<td class="org-right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td class="org-left">
+&nbsp;
+</td>
+<td class="org-left">
+&nbsp;
+</td>
+<td class="org-right">
+Positive
+</td>
+<td class="org-right">
+Negative
+</td>
+</tr>
+<tr>
+<td class="org-left">
+Actual
+</td>
+<td class="org-left">
+Positive
+</td>
+<td class="org-right">
+5
+</td>
+<td class="org-right">
+2
+</td>
+</tr>
+<tr>
+<td class="org-left">
+&nbsp;
+</td>
+<td class="org-left">
+Negative
+</td>
+<td class="org-right">
+3
+</td>
+<td class="org-right">
+1
+</td>
+</tr>
+</tbody>
+
+</table>
+<ul>
+<li><p>Values :B_column:BMCOL:</p>
+<ul>
+<li>TP = 5</li>
+<li>TN = 1</li>
+<li>FP = 3</li>
+<li>FN = 2</li>
+</ul></li>
+<li><p>Calculation :B_column:BMCOL:</p>
+<ul>
+<li>Precision = <span class="math inline">\(\frac{5}{5+3} = 0.625\)</span></li>
+<li>Recall = <span class="math inline">\(\frac{5}{5+2}\)</span> <span class="math inline">\(= 0.714\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="f_beta-f_1" class="level2">
+<h2 class="anchored" data-anchor-id="f_beta-f_1"><span class="math inline">\(F_\beta\)</span> &amp; <span class="math inline">\(F_1\)</span></h2>
+<p>With the precision/recall metrics, it is trivial to optimise for one over the over:</p>
+<ul>
+<li>We can achieve perfect precision (<span class="math inline">\(\text{precision} = 1\)</span>) by predicting everything is negative (no false positives)</li>
+<li>We can achieve perfect recall (<span class="math inline">\(\text{recall} = 1\)</span>) by predicting that everything is positive (no false negatives).</li>
+</ul>
+<p>But predicting everything is negative, or everything is positive is not really a useful model. So we have another metric that is the <strong>harmonic combination</strong> of precision and recall: <span class="math inline">\(F_1\)</span> and <span class="math inline">\(F_\beta\)</span> score.</p>
+<p><span class="math display">\[
+F_\beta = (1 + \beta^2) \frac{p \cdot r}{\beta^2 p + r}
+\]</span></p>
+<p>where <span class="math inline">\(p, r\)</span> is the precision and recall metric respectively. For the <span class="math inline">\(F_1\)</span> score, we simple set <span class="math inline">\(\beta = 1\)</span>.</p>
+</section>
+<section id="receiver-operating-characteristic-roc" class="level2">
+<h2 class="anchored" data-anchor-id="receiver-operating-characteristic-roc">Receiver Operating Characteristic (ROC)</h2>
+<p>In the previous slides, we have labelled our samples as positive if our classifier predicts <span class="math inline">\(\geq 0.5\)</span>, else it is labelled as negative. This <span class="math inline">\(0.5\)</span> is our threshold for our labelling function. But we can vary this threshold if we want. Lowering the threshold will typically mean our classifier labels positive cases more often. While increasing the threshold makes the classifier more conservative, and typically predicts labels positive cases less often.</p>
+<p>If we vary this threshold from 0 to 1 and calculate the true- and false-positive rate, we can visualise something we call the <strong>Receiver Operating Characteristic</strong> or ROC for short.</p>
+<p><img src="images/roc.png" class="img-fluid"></p>
+<p>This ROC curve, with the dotted line directly in the centre, first shows us what a random classifier would look like. This random classifier randomly predicts positive or negative for any case.</p>
+<p>We can say that our classifier is better than random, if the line is to the <strong>top-left</strong> of the random classifier. In general, the more to the top-left the line is, the better.</p>
+</section>
+<section id="area-under-curve-auc" class="level2">
+<h2 class="anchored" data-anchor-id="area-under-curve-auc">Area Under Curve (AUC)</h2>
+<p>We’ve just seen how the ROC curve can visually point to which model is better than others, and which threshold we may want to choose for our labelling function. However, we can also turn these types of curves in a number, a metric.</p>
+<p>This next metric we’re going to look at does just that. The <strong>Area Under Curve</strong> or AUC for short, takes our ROC curve, and measures the area underneath the curve, giving us a single value for each model that we can use for comparison.</p>
+<p><img src="images/auc.png" class="img-fluid"></p>
+<p>One method to calculate this area is to use the trapezoid rule to approximate the region underneath the graph of a function:</p>
+<p><span class="math display">\[
+\text{Area} = 0.5 \frac{1}{N} \times \left[ \text{TP}_1 + 2 (\text{TP}_2 + ... + \text{TP}_{N-1}) + \text{TP}_N \right]
+\]</span></p>
+<p>If the AUC is close to one we know that the model at any threshold has very good discriminatory power.</p>
+</section>
+</section>
+<section id="choosing-the-best-model" class="level1">
+<h1>Choosing the best model</h1>
+<section id="cross-validation-using-k-fold" class="level2">
+<h2 class="anchored" data-anchor-id="cross-validation-using-k-fold">Cross Validation using K-fold</h2>
+<p>We have seen why having a separate set of data for training, testing, and validation is necessary – to give some indication as to the generalisation performance of our model, and to track possible over-fitting.</p>
+<p>To create these separate sets of data, we may have just sampled randomly or using a stratified method (more on this in a few slides). However, this is only one test of the model’s generalisation abilities.</p>
+<p>Cross-validation is a statistical method to test the model on many <strong>resamplings</strong> on the test set.</p>
+<p><img src="images/K-fold_cross_validation_EN.png" title="K-fold cross-validation (By Gufosowa - Own work, CC BY-SA 4.0, <https://commons.wikimedia.org/w/index.php?curid=82298768>)" class="img-fluid"></p>
+<p>Cross-validation works selecting a subset of the data for testing (leaving the rest for training), training the model, and then calculating the performance on this test set. Next, sample a different subset of data for a new testing set, training the model, and calculating the performance. Repeat this process until all data has been sampled for the testing set, and calculate the mean and standard deviation of model performance.</p>
+<p><strong>K-fold</strong> cross-validation is this method where <span class="math inline">\(k\)</span> is the number of iterations it will take to have used the entire available data for testing. I.e., if you’re performing 5-fold cross-validation, you would have trained and tested your model 5 different types, on 5 different samples from your available data.</p>
+</section>
+<section id="random-stratified-sampling" class="level2">
+<h2 class="anchored" data-anchor-id="random-stratified-sampling">Random &amp; Stratified Sampling</h2>
+<p>When sampling data for our training and testing set, we could use two different methods:</p>
+<ul>
+<li>Random</li>
+<li>Stratified</li>
+</ul>
+<p>To perform stratified sampling, we first split the dataset into stratas or distinct groups. For a classification problem, this could be splitting samplings by their respective class labels. Then, after splitting the data into their respective groups, we randomly sample from each group.</p>
+<p>Let’s say we have 150 samples, where:</p>
+<ul>
+<li>40 samples are in group 1,</li>
+<li>25 samples are in group 2,</li>
+<li>85 samples are in group 3.</li>
+</ul>
+<p>And we want to sample from this dataset for our test set using stratified sampling. First, we calculate the proportion of each group in the overall data:</p>
+<ul>
+<li><span class="math inline">\(100 \times \frac{40}{150} = 26.\overline{6}\; \%\)</span>,</li>
+<li><span class="math inline">\(100 \times \frac{25}{150} = 16.\overline{6}\; \%\)</span>,</li>
+<li><span class="math inline">\(100 \times \frac{85}{150} = 56.\overline{6} \; \%\)</span>.</li>
+</ul>
+<p>Therefore, in our testing set, <span class="math inline">\(26.\overline{6} \; \%\)</span> of the data should be randomly sampled from group 1, and so on for all groups.</p>
+<p>So if we want to use <span class="math inline">\(10 \; \%\)</span> of our data for testing, that means we would have 15 samples in our dataset (<span class="math inline">\(\frac{150}{10}\)</span>) sampled using:</p>
+<ul>
+<li>group 1: <span class="math inline">\(40 \times (\frac{15}{150}) = 4\)</span> samples,</li>
+<li>group 2: <span class="math inline">\(25\times (\frac{15}{150}) = 2.5\)</span> samples,</li>
+<li>group 3: <span class="math inline">\(85 \times ( \frac{15}{150}) = 8.5\)</span> samples.</li>
+</ul>
+<p>The proportion of samples in our test set from each group should roughly match the proportion of the overall available data. We can verify this by calculating the proportion of each group’s representation, i.e.&nbsp;: <span class="math inline">\(100 \times \frac{4}{15} = 26.\overline{6} \; \%\)</span> and we see that it matches the proportion of the overall data.</p>
+<p>Stratified sampling is especially useful when we have a class-imbalance, and randomly sampling data could potentially lead to a situation where our test or training set only has one class label.</p>
+</section>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>In this lecture we have discussed the following things:</p>
+<ul>
+<li>The idea behind having different subsets of data dedicated to training, testing, and validation.</li>
+<li>Different metrics that are used to evaluation regression and classification models.</li>
+<li>Various methods to sample data using cross-validation, random, or stratified sampling.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

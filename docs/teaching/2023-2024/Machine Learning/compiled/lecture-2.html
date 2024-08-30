@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jay Paul Morgan">
+
+<title>Machine Learning - Linear Models</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lecture-1.html">Lectures</a></li><li class="breadcrumb-item"><a href="./lecture-2.html">Linear Models</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Machine Learning</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Lectures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture-2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Linear Models</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Model Performance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Support Vector Machines</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">K-Nearest Neighbour &amp; K-Means</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Labs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Linear Models</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Evaluation of Models</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">K-Nereast Neighbours</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#linear-regression" id="toc-linear-regression" class="nav-link active" data-scroll-target="#linear-regression">Linear Regression</a>
+  <ul class="collapse">
+  <li><a href="#linear-models" id="toc-linear-models" class="nav-link" data-scroll-target="#linear-models">Linear models</a></li>
+  <li><a href="#what-is-a-linear-model" id="toc-what-is-a-linear-model" class="nav-link" data-scroll-target="#what-is-a-linear-model">What is a linear model?</a></li>
+  </ul></li>
+  <li><a href="#model-parameters" id="toc-model-parameters" class="nav-link" data-scroll-target="#model-parameters">Model parameters</a>
+  <ul class="collapse">
+  <li><a href="#slope-intercept" id="toc-slope-intercept" class="nav-link" data-scroll-target="#slope-intercept">Slope &amp; intercept</a></li>
+  <li><a href="#multiple-variables" id="toc-multiple-variables" class="nav-link" data-scroll-target="#multiple-variables">Multiple variables</a></li>
+  <li><a href="#supporting-example" id="toc-supporting-example" class="nav-link" data-scroll-target="#supporting-example">Supporting example</a></li>
+  </ul></li>
+  <li><a href="#training-a-linear-regressor" id="toc-training-a-linear-regressor" class="nav-link" data-scroll-target="#training-a-linear-regressor">Training a linear regressor</a>
+  <ul class="collapse">
+  <li><a href="#lets-fit-a-linear-model" id="toc-lets-fit-a-linear-model" class="nav-link" data-scroll-target="#lets-fit-a-linear-model">Let’s fit a linear model</a></li>
+  <li><a href="#evaluating-our-initial-linear-model" id="toc-evaluating-our-initial-linear-model" class="nav-link" data-scroll-target="#evaluating-our-initial-linear-model">Evaluating our initial linear model</a></li>
+  <li><a href="#getting-better-model-parameters" id="toc-getting-better-model-parameters" class="nav-link" data-scroll-target="#getting-better-model-parameters">Getting better model parameters</a></li>
+  </ul></li>
+  <li><a href="#fitting-the-line-directly" id="toc-fitting-the-line-directly" class="nav-link" data-scroll-target="#fitting-the-line-directly">Fitting the line directly</a>
+  <ul class="collapse">
+  <li><a href="#solving-the-linear-model-directly" id="toc-solving-the-linear-model-directly" class="nav-link" data-scroll-target="#solving-the-linear-model-directly">Solving the linear model directly</a></li>
+  </ul></li>
+  <li><a href="#logistic-regression" id="toc-logistic-regression" class="nav-link" data-scroll-target="#logistic-regression">Logistic Regression</a>
+  <ul class="collapse">
+  <li><a href="#moving-from-regression-to-classification" id="toc-moving-from-regression-to-classification" class="nav-link" data-scroll-target="#moving-from-regression-to-classification">Moving from regression to classification</a></li>
+  <li><a href="#multi-class-vs-binary-classification" id="toc-multi-class-vs-binary-classification" class="nav-link" data-scroll-target="#multi-class-vs-binary-classification">Multi-class vs binary classification</a></li>
+  </ul></li>
+  <li><a href="#probability-likelihood" id="toc-probability-likelihood" class="nav-link" data-scroll-target="#probability-likelihood">Probability / likelihood</a>
+  <ul class="collapse">
+  <li><a href="#probability-likelihood-1" id="toc-probability-likelihood-1" class="nav-link" data-scroll-target="#probability-likelihood-1">Probability likelihood</a></li>
+  <li><a href="#making-it-linear" id="toc-making-it-linear" class="nav-link" data-scroll-target="#making-it-linear">Making it linear</a></li>
+  </ul></li>
+  <li><a href="#maximum-likelihood" id="toc-maximum-likelihood" class="nav-link" data-scroll-target="#maximum-likelihood">Maximum likelihood</a>
+  <ul class="collapse">
+  <li><a href="#enter-the-maximum-likelihood" id="toc-enter-the-maximum-likelihood" class="nav-link" data-scroll-target="#enter-the-maximum-likelihood">Enter the maximum likelihood</a></li>
+  <li><a href="#back-to-the-probability-curve" id="toc-back-to-the-probability-curve" class="nav-link" data-scroll-target="#back-to-the-probability-curve">Back to the probability curve</a></li>
+  <li><a href="#likelihood" id="toc-likelihood" class="nav-link" data-scroll-target="#likelihood">Likelihood</a></li>
+  <li><a href="#optimising-the-curve" id="toc-optimising-the-curve" class="nav-link" data-scroll-target="#optimising-the-curve">Optimising the curve</a></li>
+  </ul></li>
+  <li><a href="#binary-cross-entropy" id="toc-binary-cross-entropy" class="nav-link" data-scroll-target="#binary-cross-entropy">Binary Cross-Entropy</a>
+  <ul class="collapse">
+  <li><a href="#binary-cross-entropy-1" id="toc-binary-cross-entropy-1" class="nav-link" data-scroll-target="#binary-cross-entropy-1">Binary Cross-Entropy</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lecture-2-reveal.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Linear Models</h1>
+<p class="subtitle lead">Lecture 2</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jay Paul Morgan </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="linear-regression" class="level1">
+<h1>Linear Regression</h1>
+<section id="linear-models" class="level2">
+<h2 class="anchored" data-anchor-id="linear-models">Linear models</h2>
+<p>Having learnt a little about what it means to learn, we’re going to look at our first <em>Machine Learning</em> algorithm, the staple for much of statistics, numeric prediction using a linear model.</p>
+</section>
+<section id="what-is-a-linear-model" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-linear-model">What is a linear model?</h2>
+<p>A linear model is a prediction (a response) to an input variable. We have the following terms:</p>
+<ul>
+<li>Response/prediction/dependant – the output of the model.</li>
+<li>feature/variable/independant variable – the variable upon which the prediction is being made.</li>
+</ul>
+<p>For a linear model based on one independant we have the following:</p>
+<p><span class="math display">\[
+y = \beta_0 + \beta_1 x
+\]</span></p>
+<p>where <span class="math inline">\(y\)</span> is the response/output/prediction of the model, <span class="math inline">\(x\)</span> is the independant variable, and <span class="math inline">\(\beta_0, \beta_1\)</span> are the model parameters.</p>
+</section>
+</section>
+<section id="model-parameters" class="level1">
+<h1>Model parameters</h1>
+<section id="slope-intercept" class="level2">
+<h2 class="anchored" data-anchor-id="slope-intercept">Slope &amp; intercept</h2>
+<p>If we look at our linear model equation, we’ll notice that it’s the same equation for a straight line.</p>
+<p><img src="images/linear_model.png" style="width:70.0%;height:70.0%"></p>
+<p>As we’ve seen, the linear model, or linear regression, has two parameters: <span class="math inline">\(\beta_1, \beta_0\)</span>. What do these parameters represent?</p>
+<ul>
+<li>The <span class="math inline">\(\beta_1\)</span> parameter is the <strong>slope</strong> or strength of relationship between the independant variable and the response.</li>
+<li>Meanwhile, the <span class="math inline">\(\beta_0\)</span> parameter is called the <strong>intercept</strong>, as it’s the value of the response when the independant variable is zero.</li>
+</ul>
+<p>Let’s look at these two parameters.</p>
+<p><img src="images/slope_1.png" style="width:70.0%;height:70.0%"></p>
+<p>Here we see that when <span class="math inline">\(\beta_1\)</span> is 0 (left figure), any change in <span class="math inline">\(x\)</span> results in 0 change in <span class="math inline">\(y\)</span>. While, with <span class="math inline">\(\beta_1 = 2\)</span>, <span class="math inline">\(y\)</span> increases two-fold by every change in <span class="math inline">\(x\)</span>. Finally, when the slope is negative, we see that <span class="math inline">\(y\)</span> decreases.</p>
+<p>Notice how the line is at 5 when <span class="math inline">\(x\)</span> is zero, this is because <span class="math inline">\(\beta_0 = 5\)</span>.</p>
+</section>
+<section id="multiple-variables" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-variables">Multiple variables</h2>
+<p>So we’ve seen how we can take an input variable x, and through the combination multiplication and addition with the learnt <span class="math inline">\(\beta_0, \beta_1\)</span> values, we can create a pretty accurate prediction.</p>
+<p>However, this was only for a singular variable.</p>
+<p>In our dataset, we have many variables/features/columns that we may want to use for our prediction. It may be possible to get an even more accurate prediction by adding features to our linear regression model.</p>
+<p><span class="math display">\[
+y = \beta_0 + \sum_{i=1}^m x_i \beta_i
+\]</span></p>
+<p>where <span class="math inline">\(m\)</span> is the number of features/variables we’re adding to the model.</p>
+</section>
+<section id="supporting-example" class="level2">
+<h2 class="anchored" data-anchor-id="supporting-example">Supporting example</h2>
+<p>Let’s have a look at how we would use this linear model with one of the datasets: The Boston housing prices.</p>
+<p><img src="images/boston_rooms_prices.png" title="Scatter plot of the number of rooms in a house against the house valuation. In this plot we can see a positive effect with some outliers to this trend." class="img-fluid"></p>
+</section>
+</section>
+<section id="training-a-linear-regressor" class="level1">
+<h1>Training a linear regressor</h1>
+<section id="lets-fit-a-linear-model" class="level2">
+<h2 class="anchored" data-anchor-id="lets-fit-a-linear-model">Let’s fit a linear model</h2>
+<p>We have seen that there seems to be some correlation between the number of rooms and the house price. I.e. we can use the number of rooms of the house to get the estimated price. To get an estimated price we’ll use our linear model:</p>
+<p><span class="math display">\[
+y = \beta_0+\beta_1 x
+\]</span></p>
+<p>In this case, <span class="math inline">\(x\)</span> will be the number of rooms. But what values should we set for <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span>? Or put another way, what is <em>optimal</em> value for our model parameters.</p>
+<p>We’ll return to the question of optimal later, but for now, let’s just select some random values!</p>
+<p><span class="math display">\[\begin{aligned}
+\beta_0 = 1 \\
+\beta_1 = 1
+\end{aligned}
+\]</span></p>
+<p><img src="images/boston_rm_first_pred.png" title="A linear model line overlayed onto the boston house prices dataset. Blue circles represent samples from the dataset, while the trend line is shown in red." style="width:70.0%;height:70.0%"></p>
+<p>Well that doesn’t look very good, it could be ‘fit’ better to what we’re seeing in the scatter plot! I wonder how wrong the linear model is – how incorrect our predicted house prices are?</p>
+</section>
+<section id="evaluating-our-initial-linear-model" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-our-initial-linear-model">Evaluating our initial linear model</h2>
+<p>To evaluate how well, or in this case, how badly our linear model is doing, let’s compare the predicted value from the model against the actual house price. For example, we’ll take a single sample from our dataset.</p>
+<p>If we have 4 rooms, our model estimates the house price to be <span class="math inline">\(2(4) + 5 = 13\)</span>, $13,000, but the actual cost was $24,000. This means we have underestimated the cost by $11,000.</p>
+<p>What we’ve done there is the following:</p>
+<p><span class="math display">\[
+\delta = | y - \hat{y} |
+\]</span></p>
+<p>where <span class="math inline">\(\hat{y}\)</span> is <span class="math inline">\(\beta_0 + \beta_1 x\)</span></p>
+<p>We’ve calculated the difference or delta between the real house price <span class="math inline">\(y\)</span> and the predicted house price.</p>
+<p>That gives us the error for one sample though, what about for the whole dataset? Well we could take the mean over all samples:</p>
+<p><span class="math display">\[
+\text{MAE}(X; \beta_0,\beta_1) = \frac{1}{N}\sum_{i=0}^N | y_i - (\beta_0+\beta_1x_i) |
+\]</span></p>
+<p>If we calculate that our linear model we see that the average difference between our estimated value and real value is $15,000!</p>
+<p>Another common method of calculating how well or how badly our model is performing is to use the <strong>sum of squared residuals</strong> or perhaps more commonly known in the field of machine learning: mean squared error (MSE).</p>
+<p><span class="math display">\[
+\text{MSE}(X; \beta_0, \beta_1) = \frac{1}{N}\sum_{i=0}^N (y - (\beta_0 + \beta_1 x_i))^2
+\]</span></p>
+</section>
+<section id="getting-better-model-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="getting-better-model-parameters">Getting better model parameters</h2>
+<p>Okay, so we made our initial guess at the model parameters (random values for <span class="math inline">\(\beta_0, \beta_1\)</span>), and these weren’t very good. We were incorrectly guessing the house value by $15,000. So how do we get better values?</p>
+<p>Well if we visualise how badly we do vs the value for <span class="math inline">\(\beta_1\)</span> we get the following:</p>
+<p><img src="images/plot_linear_model_loss_w.png" title="Mean absolute error (MAE) between the true and predicted house values when varying the value for $\beta_1$ parameter in the linear model." class="img-fluid"></p>
+<p>In figure <a href="#orgfd1b474">44</a>, we see that as we change the <span class="math inline">\(\beta_1\)</span> parameter, the mean absolute error (MAE), i.e.&nbsp;the average difference between the predicted house prices and the true house prices, changes. Ideally, we would like the error or <strong>loss</strong> to be as low as possible. In this case, when <span class="math inline">\(\beta_0 = 1\)</span> the lowest possible loss we can hope to achieve with the linear model is ~ $5,500.</p>
+<p>But what value for <span class="math inline">\(\beta_1\)</span> gets us this lowest value for the loss? Looking at the graph, we see that the lowest point on the loss curve is somewhere between 0 and 5. Maybe even 4? While we could look at the curve and pick these parameter values, we’re going to use a better method – one that give us an optimal value for this loss curve automatically.</p>
+<p>We’re going to look at the method called <strong>Gradient Descent</strong>.</p>
+<p>If we visualise our loss curve again, and visualise where <span class="math inline">\(\beta_1 = 1\)</span> is on this curve, we will see:</p>
+<p><img src="images/loss_curve_w_1.png" style="width:70.0%;height:70.0%"></p>
+<p>So we want this rot dot to move down the loss curve and reach the bottom of the curve. Using the <strong>Gradient Descent</strong> algorithm, we’re going to take <strong>very small steps</strong> down the loss curve.</p>
+<p><img src="images/loss_curve_w_1_with_path.png" style="width:70.0%;height:70.0%"></p>
+<p>To determine which way is up, and which way is down the curve, we use the <strong>Gradient</strong> of the curve (hence Gradient Descent). We compute the gradient using finite differences method:</p>
+<p><span class="math display">\[
+\Delta = \frac{f(x+h) - f(x)}{h}
+\]</span></p>
+<p>where <span class="math inline">\(f(x)\)</span> is the loss when <span class="math inline">\(\beta_1\)</span> takes on the value of <span class="math inline">\(x\)</span>. <span class="math inline">\(h\)</span> is a very small value.</p>
+<p><img src="images/small_step.png" style="width:70.0%;height:70.0%"></p>
+<p>If we select <span class="math inline">\(h = 0.5\)</span> then we will have the formula:</p>
+<p><span class="math display">\[
+\Delta_{\beta_1} = \frac{L(\beta_1 + 0.5) - L(\beta_1)}{\beta_1}
+\]</span></p>
+<p>where <span class="math inline">\(L\)</span> represents our loss function, MAE. If we calculate this we have:</p>
+<p><span class="math display">\[\begin{aligned}
+\Delta_{\beta_1} &amp;= \frac{L(\beta_1 + 0.5) - L(\beta_1)}{h} \\
+&amp;= \frac{L(1.5)- L(1)}{0.5} \\
+&amp;= \frac{12 - 15}{0.5} \\
+&amp;= -6.0
+\end{aligned}
+\]</span></p>
+<p>Given that the gradient is a negative number, we know that the curve is going down/decreasing. So we will want to move <span class="math inline">\(\beta_1\)</span> in this direction – we want to move <span class="math inline">\(\beta_1\)</span> so that the loss decreases.</p>
+<p><span class="math display">\[
+\overline{\beta_1} = \beta_1 - \eta \Delta_{\beta_1}
+\]</span></p>
+<p>If we plug in the numbers we’ve calculated for when <span class="math inline">\(\beta_1 = 1\)</span> we get and <span class="math inline">\(eta = 0.5\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+\overline{\beta_1} &amp;= \beta_1 - \eta \Delta_{\beta_1} \\
+&amp;= 1.0 - (0.5 * -6.0) \\
+&amp;= 1.0 - (-3.0) \\
+&amp;= 4.0
+\end{aligned}
+\]</span></p>
+<p>Our new value for the <span class="math inline">\(\beta_1\)</span> parameter (<span class="math inline">\(\overline{\beta_1}\)</span>) is computed by taking its original value and subtracting the gradient modulated/multiplied by <span class="math inline">\(\eta\)</span>. <span class="math inline">\(\eta\)</span> in this case is what will allow us to take our <strong>small steps</strong>. It is important to set <span class="math inline">\(\eta\)</span> to a suitably small value, as high values for <span class="math inline">\(\eta\)</span> will cause the Gradient Descent to behave erratically, and even, make our loss worse!</p>
+<p><img src="images/small_step_eta.png" title="Plotting the effect of $\eta$ on the step change of $w$." class="img-fluid"></p>
+<p>In figure <a href="#org3c5afab">65</a>, we’ve varied the value of <span class="math inline">\(\eta\)</span> and computed 10 steps of updating the <span class="math inline">\(\beta_1\)</span> parameter in our linear model. When <span class="math inline">\(\eta=0.05\)</span>, we see that <span class="math inline">\(\beta_1\)</span> is slowly being updated in a way that is causing our loss to decrease, but it is more so slowly that we don’t reach the optimal value for <span class="math inline">\(\beta_1\)</span>. When <span class="math inline">\(\eta=3\)</span>, each change in <span class="math inline">\(\beta_1\)</span> is too large, so we over-shoot the optimal value, and end up bouncing back and forth without ever improving. Finally, when we set <span class="math inline">\(\eta=0.3\)</span>, the changes in <span class="math inline">\(\beta_1\)</span> are sufficiently large enough such that we reach the <strong>global minima</strong> in time, but they are also small enough so that we don’t over-shoot this same minimum.</p>
+<p>If we then apply the Gradient Descent algorithm to both parameters of the linear model <span class="math inline">\(\beta_0, \beta_1\)</span>, then we can find the optimal trend line for this data. Furthermore, visualising this will look something like figure <a href="#orge26098e">68</a>.</p>
+<p><img src="images/lm_learn.gif" title="Visualising (GIF) the linear model as its parameters improve." class="img-fluid"></p>
+</section>
+</section>
+<section id="fitting-the-line-directly" class="level1">
+<h1>Fitting the line directly</h1>
+<section id="solving-the-linear-model-directly" class="level2">
+<h2 class="anchored" data-anchor-id="solving-the-linear-model-directly">Solving the linear model directly</h2>
+<p>The way we’ve trained our linear regression is not necessarily the best, yes it does help us understand how we can optimise to a solution (especially if not all of our data can fit into memory at the same time). But, when it comes to linear models, we can compute the values for <span class="math inline">\(\beta_0, \beta_1\)</span> directly.</p>
+<p>This is called a <strong>closed-form solution</strong>.</p>
+<p><span class="math display">\[
+\beta_1 = \frac{N \sum xy - \sum x \sum y}{N \sum (x^2) - \sum (x)^2}
+\]</span></p>
+<p><span class="math display">\[
+\beta_0 = \frac{\sum y - \beta_1 \sum x}{N}
+\]</span></p>
+<p>where <span class="math inline">\(N\)</span> is the number of samples in our data.</p>
+</section>
+</section>
+<section id="logistic-regression" class="level1">
+<h1>Logistic Regression</h1>
+<section id="moving-from-regression-to-classification" class="level2">
+<h2 class="anchored" data-anchor-id="moving-from-regression-to-classification">Moving from regression to classification</h2>
+<p>We now turn to the problem of classification. We have seen in some of our toy datasets (namely the Iris dataset), that we don’t want to predict a continuous value, but rather predict the class each data point belongs to.</p>
+<p>To predict the class, we use a model called a logistic regressor.</p>
+<p>A logistic regressor is a model from the class of `Generalised Linear Models’ (GLM). In fact, the linear regressor we investigated in the previous section is also part of this class of models.</p>
+<p><img src="images/glm.jpg" class="img-fluid"></p>
+</section>
+<section id="multi-class-vs-binary-classification" class="level2">
+<h2 class="anchored" data-anchor-id="multi-class-vs-binary-classification">Multi-class vs binary classification</h2>
+<p><img src="images/iris.png" style="width:70.0%;height:70.0%"></p>
+<p>In terms of Iris dataset, this means we want to select one class from 3 possible classes.</p>
+<p>We’ll return to the problem of multiple classes later. But let’s suppose that we only want to decide if the flower is a Setosa, or not Setosa. We’ve changed our classification problem from multi-class to binary classification.</p>
+</section>
+</section>
+<section id="probability-likelihood" class="level1">
+<h1>Probability / likelihood</h1>
+<section id="probability-likelihood-1" class="level2">
+<h2 class="anchored" data-anchor-id="probability-likelihood-1">Probability likelihood</h2>
+<p><img src="images/logisitic_curve.png" style="width:70.0%;height:70.0%"></p>
+<p>Our model will eventually look like this, where we have two classes of points, and for each point we give a probability (p) that our point belongs to a class.</p>
+</section>
+<section id="making-it-linear" class="level2">
+<h2 class="anchored" data-anchor-id="making-it-linear">Making it linear</h2>
+<p>If we apply the logarithm to each probability, we get back to our linear line.</p>
+<p><img src="images/log_probs.png" style="width:70.0%;height:70.0%"></p>
+<p><span class="math display">\[
+\log \left( \frac{p}{1-p} \right)
+\]</span></p>
+</section>
+</section>
+<section id="maximum-likelihood" class="level1">
+<h1>Maximum likelihood</h1>
+<section id="enter-the-maximum-likelihood" class="level2">
+<h2 class="anchored" data-anchor-id="enter-the-maximum-likelihood">Enter the maximum likelihood</h2>
+<p>But there is a problem…we can no longer use the sum of residuals as the value would always be <span class="math inline">\(\infty\)</span>, but instead we can use the maximum likelihood. First we project each sample to its ‘odds’ (i.e.&nbsp;the value of <span class="math inline">\(y\)</span> on the linear line).</p>
+<p><img src="images/log_projected.png" style="width:70.0%;height:70.0%"></p>
+</section>
+<section id="back-to-the-probability-curve" class="level2">
+<h2 class="anchored" data-anchor-id="back-to-the-probability-curve">Back to the probability curve</h2>
+<p><img src="images/logisitic_curve.png" style="width:70.0%;height:70.0%"></p>
+<p>Our logistic or ‘sigmoid’ function:</p>
+<p><span class="math display">\[
+p = \frac{1}{1 + e^{-(\beta_0+\beta_1x)}} = \frac{e^{(\beta_0+\beta_1x)}}{1 + e^{(\beta_0+\beta_1x)}}
+\]</span></p>
+</section>
+<section id="likelihood" class="level2">
+<h2 class="anchored" data-anchor-id="likelihood">Likelihood</h2>
+<p>Probability of class 1</p>
+<p><span class="math display">\[
+p(1) = p
+\]</span></p>
+<p>Probability of class 0 (or not class 1).</p>
+<p><span class="math display">\[
+p(0) = 1 - p
+\]</span></p>
+<p>Maximum likelihood loss (which we wish to maximise), using the points on the probability curve:</p>
+<p><span class="math display">\[ L = (0.9) + (0.89) + (0.6) + (1 - 0.4) + (1 - 0.2) + (1 - 0.05)
+\]</span></p>
+</section>
+<section id="optimising-the-curve" class="level2">
+<h2 class="anchored" data-anchor-id="optimising-the-curve">Optimising the curve</h2>
+<p><img src="images/lr_learn.gif" class="img-fluid"></p>
+</section>
+</section>
+<section id="binary-cross-entropy" class="level1">
+<h1>Binary Cross-Entropy</h1>
+<section id="binary-cross-entropy-1" class="level2">
+<h2 class="anchored" data-anchor-id="binary-cross-entropy-1">Binary Cross-Entropy</h2>
+<p>We could still use MSE in order to compute our models loss. This <em>may</em> still work. But there is another objective function that we would use for binary classification problems: Binary Cross-entropy (BCE).</p>
+<p><span class="math display">\[
+\text{BCE}(X; \beta_0, \beta_1) = -(Y \log(\beta_0+\beta_1*X) + (1 - Y) \log(1- \beta_0+\beta_1*X))
+\]</span></p>
+<p>Issues when using MSE for binary classification:</p>
+<ul>
+<li>MSE is non-convex for binary classification problems.</li>
+<li>MSE assumes the data was generated from a normal distribution, while binary classification problems form a Bernoulli distribution.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

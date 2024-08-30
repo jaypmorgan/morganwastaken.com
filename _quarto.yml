@@ -3,6 +3,7 @@ project:
   resources:
     - "assets/*"
     - "teaching/**/*"
+  output-dir: docs
 
 website:
   page-navigation: true

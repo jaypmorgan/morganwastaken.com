@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.450">
+
+  <meta name="author" content="Jay Paul Morgan">
+  <title>Machine Learning - Introduction</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Introduction</h1>
+  <p class="subtitle">Lecture 1</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Jay Paul Morgan 
+</div>
+</div>
+</div>
+
+</section>
+<section>
+<section id="course-introduction" class="title-slide slide level1 center">
+<h1>Course Introduction</h1>
+
+</section>
+<section id="welcome" class="slide level2">
+<h2>Welcome!</h2>
+<p>Welcome to all the new students! Here I am going to be talking about Machine Learning and all of the great things that this “technology” has to offer. To begin our course, I shall start with a bit of house keeping – more specifically, I will be talking about what exactly we’ll be learning about in the course (Machine Learning is a broad subject after-all). In addition, I will tell you where you can find the resources related to the course and how you can contact me, should you have any questions.</p>
+</section>
+<section id="what-this-course-is-about" class="slide level2">
+<h2>What this course is about?</h2>
+<p>In this course, we will be learning about Machine Learning: firstly, what Machine Learning actually is; secondly, we’ll take a look at some of the algorithms within the scope of Machine Learning, and develop an intuition about how these algorithms work and when they would be useful; and finally, how we can compare and evaluate the algorithms we’ve learnt about.</p>
+</section>
+<section id="how-this-course-will-be-taught" class="slide level2">
+<h2>How this course will be taught</h2>
+<p>I intended to deliver this course via a series of lectures. These lectures will be accompanied by the PDF lecture slides, in which I will provide the definitions and provide reference links should you wish to do some extra reading.</p>
+</section>
+<section id="outline-of-the-course" class="slide level2">
+<h2>Outline of the course</h2>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="org-right">
+<col class="org-left">
+<col class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">
+Lecture
+</th>
+<th scope="col" class="org-left">
+Type
+</th>
+<th scope="col" class="org-left">
+Topic
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">
+1
+</td>
+<td class="org-left">
+Theory
+</td>
+<td class="org-left">
+Introduction
+</td>
+</tr>
+<tr>
+<td class="org-right">
+2
+</td>
+<td class="org-left">
+Theory
+</td>
+<td class="org-left">
+Linear models
+</td>
+</tr>
+<tr>
+<td class="org-right">
+3
+</td>
+<td class="org-left">
+Lab
+</td>
+<td class="org-left">
+Lab on Linear models
+</td>
+</tr>
+<tr>
+<td class="org-right">
+4
+</td>
+<td class="org-left">
+Theory/Lab
+</td>
+<td class="org-left">
+Evaluation of models
+</td>
+</tr>
+<tr>
+<td class="org-right">
+5
+</td>
+<td class="org-left">
+Theory/Lab
+</td>
+<td class="org-left">
+Support Vector Machines
+</td>
+</tr>
+<tr>
+<td class="org-right">
+6
+</td>
+<td class="org-left">
+Theory/Lab
+</td>
+<td class="org-left">
+Kernel methods
+</td>
+</tr>
+</tbody>
+
+</table>
+</section></section>
+<section>
+<section id="reading-the-lectures" class="title-slide slide level1 center">
+<h1>Reading the lectures</h1>
+
+</section>
+<section id="source-code" class="slide level2">
+<h2>Source code</h2>
+<p>During the course, I would also like to supplement my algorithmic definitions and explanations with some programming code – for this I will use the <a href="https://www.python.org/">Python</a> programming language. The code snippets would look something like:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> random</span>
+<span id="cb1-2"><a href="#cb1-2"></a>x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb1-3"><a href="#cb1-3"></a>y <span class="op">=</span> [random.random() <span class="op">+</span> xi <span class="cf">for</span> xi <span class="kw">in</span> x]</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="bu">print</span>(y)</span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a>[<span class="fl">1.4898241502582414</span>, <span class="fl">2.4805286156642175</span>, <span class="fl">3.065379052563245</span>, <span class="fl">4.05328483072365</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="running-the-source-code-yourself" class="slide level2">
+<h2>Running the source code yourself</h2>
+<p>All of the source can be run by yourselves if you use the same python environment (i.e.&nbsp;that you have installed all the appropriate libraries). On the git repository, I’ve included the <a href="https://git.sr.ht/~jaymorgan/teaching/tree/master/item/2022-2023/Machine%20Learning/environment.yml"><code>environment.yml</code></a> file used in the production of these lectures.</p>
+<p>To run the code:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a>    <span class="fu">wget</span> https://git.sr.ht/~jaymorgan/teaching/blob/master/2022-2023/Machine%20Learning/environment.yml</span>
+<span id="cb2-2"><a href="#cb2-2"></a>    <span class="ex">conda</span> env create <span class="at">-f</span> environment.yml  <span class="co"># recreate the conda env</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="ex">conda</span> activate ml-lectures           <span class="co"># activate the new env</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="ex">python</span> <span class="op">&lt;</span>scripts<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="references" class="slide level2">
+<h2>References</h2>
+<p>In some cases, and is the norm with academic traditions, we’ll want to include a reference, a link to previous written works.</p>
+<p>Here is an example of a sentence that includes a reference:</p>
+<p>“This is a very important sentence which I assert to be true, to convince you of this fact I shall appeal to authority and include a reference: (Shalev-Shwartz, Shai and Ben-David, Shai, 2014)”</p>
+<p>More information on the referenced material (such as title, publishing date) will be found in the bibliography slide (or bottom of the webpage if you’re viewing the HTML version of the lectures).</p>
+</section>
+<section id="about-me" class="slide level2">
+<h2>About Me</h2>
+<p>My name is Dr Jay Paul Morgan. I am a researcher at the Université de Toulon, where I am developing Deep Learning models (a sub-field of Machine Learning research) for the study of astrophysical phenomenon.</p>
+<p>You can find more information and links on my personal (LIS-Lab) website: <a href="https://pageperso.lis-lab.fr/jay.morgan/" class="uri">https://pageperso.lis-lab.fr/jay.morgan/</a></p>
+<p>I also publish libraries and source code online:</p>
+<ul>
+<li>Github: <a href="https://github.com/jaypmorgan" class="uri">https://github.com/jaypmorgan</a></li>
+<li>Gitlab: <a href="https://gitlab.com/jaymorgan" class="uri">https://gitlab.com/jaymorgan</a></li>
+<li>Source Hut: <a href="https://sr.ht/~jaymorgan/" class="uri">https://sr.ht/~jaymorgan/</a></li>
+</ul>
+<p>If you have any questions, you can email me at <code>jay.morgan@univ-tln.fr</code></p>
+</section>
+<section id="where-you-can-find-the-resources" class="slide level2">
+<h2>Where you can find the resources</h2>
+<p>I try to make this course as accessible as possible, which means that I host these slides in a variety of ways to suit you.</p>
+<p>Firstly, you can find the links to all my courses on my personal website at: <a href="https://pageperso.lis-lab.fr/jay.morgan/teaching.html" class="uri">https://pageperso.lis-lab.fr/jay.morgan/teaching.html</a></p>
+<p>Here you can find the links to each lecture in a PDF or HTML format. Additionally, you can view the source code used to make these lectures on source hut: <a href="https://git.sr.ht/~jaymorgan/teaching" class="uri">https://git.sr.ht/~jaymorgan/teaching</a>. On this git repository you can find all my lectures from all years.</p>
+</section></section>
+<section>
+<section id="what-is-learning-anyway" class="title-slide slide level1 center">
+<h1>What is learning, anyway?</h1>
+
+</section>
+<section id="lets-answer-the-question-of-learning" class="slide level2">
+<h2>Let’s answer the question of learning</h2>
+<p>We’ll begin our journey into the world of Machine Learning by tackling the question of what it means to ‘learn’ – how may a machine actually <em>learn</em> anything?</p>
+</section>
+<section id="bait-shyness" class="slide level2">
+<h2>Bait-shyness</h2>
+<p><img data-src="images/rat.jpg" style="width:30.0%;height:50.0%"></p>
+<p>To begin to answer the question of learning, we may turn to nature for advice. Principally, if we look at the studies conducted with Mice we find some idea to notion of learning (Shalev-Shwartz, Shai and Ben-David, Shai, 2014). (Image by brgfx on Freepik)</p>
+<p>When a rat encounters a novel source of food, it will first eat a little bit of it. If the food is edible for the rat, it will continue to eat the food, even in future encounters. If, however, on the initial contact with the food, the rat deems the food poisonous, it will ignore and not eat the food in future encounters. This process we call ‘bait-shyness’.</p>
+<p>Here then we see the rat, on finding something new, learn from its experience, and use that knowledge of the experience for future encounters.</p>
+<p>Our initial understanding of rat’s bait-shyness was limited, but we’ve come to understand more about it. For instance, we learn that their learning process is more complex than originally thought. In a later experiment, where the ‘poison’ in the food is replaced by a different unpleasant stimulus such as a electric shock – i.e.&nbsp;when a rat eats a food, it is then shocked. It was found that this did not deter the rat from eating the food in future encounters, unlike the poison.</p>
+<p>It is presumed that the rat’s have some ‘prior knowledge’ about the world and do not infer a temporal relationship between the food and being shocked, while they can infer the same relationship with food and illness.</p>
+</section>
+<section id="computer-programs" class="slide level2">
+<h2>Computer Programs</h2>
+<p>From these two examples of how rats may learn we see: the rat will make a guess about something now (i.e.&nbsp;that the food is not poisonous), it will find out how good this guess is (i.e.&nbsp;it either gets ill or it does not), and learn from how well its guess was for the future. We also see that its learning can be impacted by the rat’s prior knowledge about how the world may work.</p>
+<p>But how does this <em>framework</em> for the process of learning translate to computers? For a more formal definition of how computer programs could be said to learn, we have a similar idea:</p>
+<blockquote>
+<p>A computer program is said to learn from experience <span class="math inline">\(E\)</span> with respect to some class of tasks <span class="math inline">\(T\)</span> and performance measure <span class="math inline">\(P\)</span>, if its performance a tasks in <span class="math inline">\(T\)</span>, as measured by <span class="math inline">\(P\)</span>, improves with experience <span class="math inline">\(E\)</span>.</p>
+</blockquote>
+<p>(Mitchell, Tom M, 1997)</p>
+</section>
+<section id="quiz" class="slide level2">
+<h2>Quiz!</h2>
+<p>What <em>function</em> is being used here?</p>
+<pre><code>    8 ? 5   =   13
+    9 ? 1   =   10
+    1 ? 2   =    3</code></pre>
+</section>
+<section id="something-more-difficult" class="slide level2">
+<h2>Something more difficult…</h2>
+<p>What <em>values</em> are being used here?</p>
+<pre><code>    x * 1 + y   =   4
+    x * 3 + y   =   8
+    x * 5 + y   =  12</code></pre>
+</section>
+<section id="when-might-we-need-machine-learning" class="slide level2">
+<h2>When might we need Machine Learning</h2>
+<p><img data-src="images/pdf-ocr.png" style="width:50.0%;height:50.0%"></p>
+<p>Why do we need computer programs that ‘learn’ anyway? We already have programming languages, why can’t we just use them?</p>
+<p>Let’s suppose we’re creating a very simple Optical Character Recognition (OCR) program.</p>
+<p>This program looks at a PDF document and converts the text into something we can copy and paste. Part of this program’s task is to take an individual character, say the number ‘8’, and recognise that it’s an 8 and add that to the already scanned text.</p>
+<p>How would we go about creating a program where we can define how to identify ‘8’ or ‘1’ or ‘l’ – with all the varieties of lighting conditions, handwriting, fonts, sizes. We could find the process of encompassing all different variations tiresome – if not impossible, and that’s only for a single character!</p>
+<p>With Machine Learning, instead of enumerating all possible solutions within a programming language, we collect a bunch of examples of ’8’s and give them to the algorithm to learn from.</p>
+<p>Through looking at these many different examples, the algorithm will/should be able to recognise what an 8 generally looks like.</p>
+</section>
+<section id="different-types-of-learning" class="slide level2">
+<h2>Different types of Learning</h2>
+<p>What we have just demonstrated by way of the OCR example, is the type of learning we call ‘Supervised Learning’. We have many examples of input (lots of different kinds of handwritten 8’s), and we tell the learning algorithm, that they are indeed the number 8.</p>
+<p>But there are other kind of different learning frameworks. Specifically we have the following:</p>
+<ul>
+<li>Supervised Learning</li>
+<li>Unsupervised, or sometimes called self-supervised Learning</li>
+<li>Reinforcement Learning</li>
+</ul>
+</section>
+<section id="supervised-learning" class="slide level2">
+<h2>Supervised Learning</h2>
+<p>To better formalise Supervised Learning from our previous OCR example, Supervised Learning is when the learning algorithm “see’s” or has access to both the input and output.</p>
+<p>Let’s have a dataset <span class="math inline">\(X\)</span>, which is a set consisting of tuple pairs <span class="math inline">\(x_i, y_i\)</span>. <span class="math inline">\(x_i\)</span> is an input, i.e.&nbsp;a single image with an ‘8’, and <span class="math inline">\(y_i\)</span> is a label which tells the learning algorithm if the input is indeed an ‘8’ or something else. Mathematically we have:</p>
+<p><span class="math inline">\(X = \{(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)\}\)</span></p>
+</section>
+<section id="unsupervised-learning" class="slide level2">
+<h2>Unsupervised Learning</h2>
+<p>In Unsupervised learning, we have again have a dataset <span class="math inline">\(X\)</span>, who’s elements are only inputs. In other words, there are no corresponding labels for each input. Instead, the learning algorithm must learn inherent patterns in the data and create labels itself. Throughout the course, we’ll see examples of Unsupervised Learning in action.</p>
+<p>One thing to note: Recent methodologies have started to call Unsupervised Learning, self-supervised. As we have just discussed, the labels are inherent to the data from the discovered patterns, it’s just we are not explicitly giving them to the learning algorithm ourselves. So it’s sort of like a supervised learning setup, except the learning algorithm is providing the labels itself – hence the self-supervised.</p>
+</section>
+<section id="reinforcement-learning" class="slide level2">
+<h2>Reinforcement Learning</h2>
+<p>Reinforcement Learning is very different to both Supervised and Unsupervised Learning. Here is the type of learning you might be familiar with if you’ve seen ‘AI’ that learns to play video games. In this type of learning, we have the following elements:</p>
+<ul>
+<li>An agent</li>
+<li>An environment</li>
+<li>A set of allowed actions the agent can make within its environment.</li>
+</ul>
+<p>In this situation, an agent will interact with it’s environment, and when it does something it can receive a reward (a reward can be positive or negative). The agent will remember what it has done to receive the reward. The objective for the agent is to maximise the reward score, and learns to do this through many iterations or play-through.</p>
+</section></section>
+<section>
+<section id="terminology" class="title-slide slide level1 center">
+<h1>Terminology</h1>
+
+</section>
+<section id="what-will-our-data-look-like" class="slide level2">
+<h2>What will our data look like?</h2>
+<p>In this section we shall take a look at the different types of data we might expect and the different terminology used to name them.</p>
+<p>Data in Machine Learning applications can come in a variety of different formats. The most typical data formats we might see are:</p>
+<ul>
+<li>Tables</li>
+<li>Images/Videos</li>
+<li>Text</li>
+<li>Sound</li>
+</ul>
+<p>These are the initial formats, though, before actually doing any learning, we will want to transform them into a different representation that we can use.</p>
+</section>
+<section id="tables" class="slide level2">
+<h2>Tables</h2>
+<p>A table, or tabular, format is a <span class="math inline">\(n \times m\)</span> set of data with <span class="math inline">\(n\)</span> samples or examples, and <span class="math inline">\(m\)</span> features for each sample. For example, suppose we have a table consisting the price of 100 different houses:</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="org-right">
+<col class="org-right">
+<col class="org-left">
+<col class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">
+Number of bedrooms
+</th>
+<th scope="col" class="org-right">
+Garden size (ft)
+</th>
+<th scope="col" class="org-left">
+…
+</th>
+<th scope="col" class="org-left">
+Price ($)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">
+3
+</td>
+<td class="org-right">
+0
+</td>
+<td class="org-left">
+…
+</td>
+<td class="org-left">
+150,000
+</td>
+</tr>
+<tr>
+<td class="org-right">
+5
+</td>
+<td class="org-right">
+10
+</td>
+<td class="org-left">
+…
+</td>
+<td class="org-left">
+200,000
+</td>
+</tr>
+<tr>
+<td class="org-right">
+…
+</td>
+<td class="org-right">
+…
+</td>
+<td class="org-left">
+…
+</td>
+<td class="org-left">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td class="org-right">
+10
+</td>
+<td class="org-right">
+1000
+</td>
+<td class="org-left">
+…
+</td>
+<td class="org-left">
+2,000,000
+</td>
+</tr>
+</tbody>
+
+</table>
+<p>In a supervised learning setting, where we want to predict the price of a house we may then have the following dataset:</p>
+<p><span class="math inline">\(X = \{([3, 0, ...], 150,000), ([5, 10, ...], 200,000), \\..., ([10, 1000, ...], 2,000,000)\}\)</span></p>
+</section>
+<section id="imagesvideos" class="slide level2">
+<h2>Images/Videos</h2>
+<p>Images are composed of 2D or 3D arrays of numeric values. For example, in a RGB image that is 1024x500 pixels, we would have the array of size 1024x500x3 – where 3 is the red, green, and blue channel, respectively. If we have just a grayscale image, we could represent it as either 1024x500x1 or 1024x500 as the channel ‘dimension’ of the array is singular.</p>
+<p>We may already know that videos are simply a sequence of images that are iterated through 24+ times a second. For a 24 frames per second video, we would have an array size of 1024x500x3x24 – a 4-dimensional array.</p>
+</section>
+<section id="text" class="slide level2">
+<h2>Text</h2>
+<p>Text and language data is perhaps one of the most flexible formats of data, in terms of the person implementing the Machine Learning algorithm is somewhat free in determining how to represent the language to the algorithm.</p>
+<p>With text data, we have a series of ‘tokens’ – these tokens could be words, groups of words, parts of words, and even just characters. For example, consider:</p>
+<p>“this is a sentence, that shouldn’t be misunderstood.”</p>
+</section>
+<section id="tokenisation-of-text" class="slide level2">
+<h2>Tokenisation of text</h2>
+<p>“this is a sentence, that shouldn’t be misunderstood.”</p>
+<p>We could ‘tokenise’ (the process of converting a string into a series of tokens that represent the original string) this sentence by splitting at white-space:</p>
+<p><code>{"this", "is", "a", "sentence,", "that" "shouldn't", "be", "misunderstood."}</code></p>
+<p>Notice how with the words “sentence” and “misunderstood”, the punctuation is considered part of the word and so “misunderstood.” != “misunderstood”.</p>
+<p>These kinds of questions of how to best represent text and language we will talk more about in later lectures!</p>
+</section>
+<section id="time-series" class="slide level2">
+<h2>Time-series</h2>
+<p>I named this section time-series to be as general as possible. Within the type ‘time-series’, we could have the following types of information:</p>
+<ul>
+<li>Sound waves</li>
+<li>Stock prices</li>
+<li>Network messaging</li>
+</ul>
+<p>These types of data all share a property in that the ‘time’ component is important in their meaning.</p>
+</section></section>
+<section>
+<section id="example-problems" class="title-slide slide level1 center">
+<h1>Example Problems</h1>
+<p>Throughout this course, we’ll be using <em>toy</em> datasets for the explanation of Machine Learning and its algorithms. In this section, we’ll take a broad look over all the datasets that we’ll come to be very familiar with.</p>
+</section>
+<section id="types-of-outputs-regression-classification" class="slide level2">
+<h2>Types of Outputs – Regression &amp; Classification</h2>
+<p>First, however, I wish to explain the difference between the terms <em>Regression</em> and <em>Classification</em>.</p>
+<ul>
+<li>Regression: the prediction of a continuous quantity, i.e.&nbsp;how much does this house cost?</li>
+<li>Classification: the prediction of a discrete value or class label, i.e.&nbsp;dog or cat?</li>
+</ul>
+<p>In the following toy datasets, we’ll see different types of predictions that fall under the regression/classification output type.</p>
+</section>
+<section id="boston-house-prices-dataset-tabular-regression" class="slide level2">
+<h2>Boston House Prices Dataset – Tabular Regression</h2>
+<p>A dataset of 506 houses in Boston, USA, collected during US Census.</p>
+<ul>
+<li>13 features/properties about each house</li>
+<li>1 target property: the price of the house</li>
+</ul>
+<p>More information about each of the features can be found at: <a href="https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html" class="uri">https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html</a></p>
+<p>(Harrison Jr, David and Rubinfeld, Daniel L, 1978)</p>
+</section>
+<section id="boston-house-prices-example-rows" class="slide level2">
+<h2>Boston House Prices – example rows</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> warnings</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_boston</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="cf">with</span> warnings.catch_warnings():</span>
+<span id="cb5-4"><a href="#cb5-4"></a>    warnings.filterwarnings(<span class="st">"ignore"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    boston <span class="op">=</span> load_boston()</span>
+<span id="cb5-6"><a href="#cb5-6"></a>boston <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb5-7"><a href="#cb5-7"></a>    data<span class="op">=</span>np.c_[boston[<span class="st">'data'</span>], boston[<span class="st">'target'</span>]],</span>
+<span id="cb5-8"><a href="#cb5-8"></a>    columns<span class="op">=</span>boston[<span class="st">'feature_names'</span>].tolist() <span class="op">+</span> [<span class="st">'target'</span>])</span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="bu">print</span>(boston[:<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>      CRIM    ZN  INDUS  CHAS    NOX     RM  ...  RAD    TAX  PTRATIO      B  LSTAT  target
+0  0.00632  18.0   2.31   0.0  0.538  6.575  ...  1.0  296.0     15.3  396.9   4.98    24.0
+1  0.02731   0.0   7.07   0.0  0.469  6.421  ...  2.0  242.0     17.8  396.9   9.14    21.6
+
+[2 rows x 14 columns]</code></pre>
+</section>
+<section id="boston-house-prices-concerns" class="slide level2">
+<h2>Boston House Prices – concerns</h2>
+<p>The Boston dataset is an excellent dataset in the fact that it contains some ethical issues when it comes to Machine Learning. More specifically, some of the features in the data are ‘dummy’ variables for racial attributes (Carlisle, M., 2020). Moreover, these features show a racial segregation has a positive impact on house prices.</p>
+<p>Scikit-Learn (scikit-learn, 2022), one of the most prolific Machine Learning framework in the Python ecosystem, has decided to depreciate and remove the Boston dataset from their repository following these concerns.</p>
+<p>We will continue to use the dataset here as it is an easy to understand regression problem, and to demonstrate how easy it is to be accidentally unethical if you’re not thinking about the data carefully enough.</p>
+</section>
+<section id="iris-dataset-tabular-classification" class="slide level2">
+<h2>Iris Dataset – Tabular Classification</h2>
+<p><img data-src="images/iris.jpg" title="Iris Flower (Diliff, 2014)" style="width:50.0%;height:50.0%"></p>
+</section>
+<section id="iris-dataset-features" class="slide level2">
+<h2>Iris Dataset – features</h2>
+<ul>
+<li><p>150 examples</p></li>
+<li><p>4 features: Petal length/width, sepal length/width</p></li>
+<li><p>1 classification: type of flower: {viriginica, setosa, veriscolor}</p>
+<p><a href="https://archive.ics.uci.edu/ml/datasets/iris" class="uri">https://archive.ics.uci.edu/ml/datasets/iris</a> (Fisher, Ronald A, 1936)</p></li>
+</ul>
+<p><img data-src="images/Petal-sepal.jpg" title="Different parts of a flower. (Eric Guinther, 2005)" style="width:50.0%;height:50.0%"></p>
+</section>
+<section id="iris-dataset-example-rows" class="slide level2">
+<h2>Iris Dataset – example rows</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_iris</span>
+<span id="cb7-2"><a href="#cb7-2"></a>iris <span class="op">=</span> load_iris()</span>
+<span id="cb7-3"><a href="#cb7-3"></a>iris <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb7-4"><a href="#cb7-4"></a>    data <span class="op">=</span> np.c_[iris[<span class="st">'data'</span>], iris[<span class="st">'target'</span>]],</span>
+<span id="cb7-5"><a href="#cb7-5"></a>    columns <span class="op">=</span> iris[<span class="st">'feature_names'</span>] <span class="op">+</span> [<span class="st">'target'</span>])</span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="bu">print</span>(iris.head(<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>   sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)  target
+0                5.1               3.5                1.4               0.2     0.0
+1                4.9               3.0                1.4               0.2     0.0</code></pre>
+</section>
+<section id="mnist-dataset-image-classification" class="slide level2">
+<h2>MNIST Dataset – Image Classification</h2>
+<p><img data-src="images/mnist.png" title="8 examples of handwritten digits in the MNIST dataset." style="width:50.0%;height:50.0%"></p>
+<p>A dataset of images (of size 28x28) containing handwritten digits from 0 - 9.</p>
+<p><a href="http://yann.lecun.com/exdb/mnist/" class="uri">http://yann.lecun.com/exdb/mnist/</a></p>
+<p>(LeCun, Yann and Bottou, L{\’e}on and Bengio, Yoshua and Haffner, Patrick, 1998)</p>
+</section>
+<section id="mnist-dataset-features" class="slide level2">
+<h2>MNIST Dataset – Features</h2>
+<ul>
+<li>60,000 images in the training dataset</li>
+<li>10,000 images in the test dataset</li>
+<li>28x28 pixels (grayscale)</li>
+</ul>
+</section>
+<section id="mnist-dataset-example-rows" class="slide level2">
+<h2>MNIST Dataset – Example Rows</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> fetch_openml</span>
+<span id="cb9-2"><a href="#cb9-2"></a>mnist <span class="op">=</span> fetch_openml(<span class="st">"mnist_784"</span>).data[:<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>pixel1  pixel2  pixel3  pixel4  pixel5  pixel6  pixel7  pixel8  pixel9  \
+0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0   
+1     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0   
+
+pixel10  ...  pixel775  pixel776  pixel777  pixel778  pixel779  pixel780  \
+0      0.0  ...       0.0       0.0       0.0       0.0       0.0       0.0   
+1      0.0  ...       0.0       0.0       0.0       0.0       0.0       0.0   
+
+pixel781  pixel782  pixel783  pixel784  
+0       0.0       0.0       0.0       0.0  
+1       0.0       0.0       0.0       0.0  
+
+[2 rows x 784 columns]</code></pre>
+</section>
+<section id="large-movie-review-dataset-text-classificationregression" class="slide level2">
+<h2>Large Movie Review Dataset – Text Classification/Regression</h2>
+<blockquote>
+<p>Story of a man who has unnatural feelings for a pig. Starts out with a opening scene that is a terrific example of absurd comedy. A formal orchestra audience is turned into an insane, violent mob by the crazy chantings of it’s singers. Unfortunately it stays absurd the WHOLE time with no general narrative eventually making it just too off putting. Even those from the era should be turned off. The cryptic dialogue would make Shakespeare seem easy to a third grader. On a technical level it’s better than you might think with some good cinematography by future great Vilmos Zsigmond. Future stars Sally Kirkland and Frederic Forrest can be seen briefly.</p>
+</blockquote>
+<p>Review from: <code>train/neg/0_3.txt</code></p>
+<ul>
+<li>50,000 movie reviews (25,000 for training and testing).</li>
+<li>Each review is labelled with a binary label of sentiment – a positive or negative review was towards the movie in question.</li>
+</ul>
+<p><a href="https://ai.stanford.edu/~amaas/data/sentiment/" class="uri">https://ai.stanford.edu/~amaas/data/sentiment/</a></p>
+<p>(Maas, Andrew L. and Daly, Raymond E. and Pham, Peter T. and Huang, Dan and Ng, Andrew Y. and Potts, Christopher, 2011)</p>
+</section>
+<section id="ham-or-spam-text-classification" class="slide level2">
+<h2>Ham or Spam – Text Classification</h2>
+<pre><code>    Message-ID: &lt;8701134.1075856113926.JavaMail.evans@thyme&gt;
+    Date: Mon, 30 Oct 2000 02:06:00 -0800 (PST)
+    From: shona.wilson@enron.com
+    To: eugenio.perez@enron.com
+    Subject: meeting deadlines
+    Mime-Version: 1.0
+    Content-Type: text/plain; charset=us-ascii
+    Content-Transfer-Encoding: 7bit
+    X-From: Shona Wilson
+    X-To: Eugenio Perez
+    X-cc: 
+    X-bcc: 
+    X-Origin: Beck-S
+    X-FileName: sbeck.nsf
+    
+    Dear Eugenio,
+    
+    I did not want to say this when everyone else was around, but I am concerned 
+    that no attempt was made to meet the deadline of this morning that we 
+    discussed last Friday. (to decide on a name for the database).  Only Maria 
+    Teresa had her information to me this am as requested. The deadline could 
+    have been easily met by working diligently this morning, but Jennifer did not 
+    come in until 8:30 and MT until 8:15.
+    
+    I thought we had discussed the urgency of this - to have something to present 
+    at the 10am meeting.  We need to discuss this to ensure it does not happen 
+    again.
+    
+    Best regards
+    
+    Shona</code></pre>
+<ul>
+<li>Enron Spam classification of email messages.</li>
+<li>Is the email Spam – each email is labelled with a binary label, spam or not spam (ham).</li>
+<li>The dataset contains 17,171 spam and 16,545 ham email messages.</li>
+</ul>
+<p><a href="https://www2.aueb.gr/users/ion/data/enron-spam/" class="uri">https://www2.aueb.gr/users/ion/data/enron-spam/</a></p>
+<p>(Metsis, Vangelis and Androutsopoulos, Ion and Paliouras, Georgios, 2006)</p>
+</section></section>
+<section>
+<section id="concerns-considerations" class="title-slide slide level1 center">
+<h1>Concerns &amp; Considerations</h1>
+<p>As we saw with the Boston house prices dataset, ethical concerns can easily arise when we use statistical analysis &amp; Machine Learning. But our use of Machine Learning carries many more concerns other than just racial biases. In this section, we’ll highlight some ethical considerations to be made when designing and building Machine Learning models.</p>
+<p><a href="https://uksa.statisticsauthority.gov.uk/publication/ethical-considerations-in-the-use-of-machine-learning-for-research-and-statistics/" class="uri">https://uksa.statisticsauthority.gov.uk/publication/ethical-considerations-in-the-use-of-machine-learning-for-research-and-statistics/</a></p>
+</section>
+<section id="compute-resources-environmental-concerns" class="slide level2">
+<h2>Compute resources – environmental concerns</h2>
+<blockquote>
+<p>Large-scale deployment of AI could also have both positive and negative impacts on the environment. Negative impacts include increased use of natural resources, such as rare earth metals, pollution and waste, as well as energy consumption. However, AI could help with waste management and conservation offering environmental benefits.</p>
+</blockquote>
+<blockquote>
+<p>[…] In the United States, data centres already account for about 2 percent of all electricity used. In one estimation, DeepMind’s AlphaGo – which beat Go Champion Lee Sedol in 2016 – took 50,000 times as much power as the human brain to do so.</p>
+</blockquote>
+<p>({European Parliament. Directorate General for Parliamentary Research Services.}, 2020)</p>
+</section>
+<section id="bias-in-language-models" class="slide level2">
+<h2>Bias in language models</h2>
+<p><img data-src="images/debias.png" title="(Gonen, Hila and Goldberg, Yoav, 2019)" style="width:50.0%;height:50.0%"></p>
+<p>Biases exist in language models trained on news articles (Bolukbasi, Tolga and Chang, Kai-Wei and Zou, James Y and Saligrama, Venkatesh and Kalai, Adam T, 2016).</p>
+</section>
+<section id="personal-information" class="slide level2">
+<h2>Personal information</h2>
+<p>In Machine Learning applications where data is generated (such as generating faces that don’t exist), there is a possibility to expose personal information. For example, in a situation where these generative Machine Learning models create synthetic patient data, the model may be trained on real medical data. The output of the Machine Learning model could possibly leak personal information.</p>
+<p>(Arora, Anmol and Arora, Ananya, 2022)</p>
+</section>
+<section id="mental-health-of-optimisation-algorithms" class="slide level2">
+<h2>Mental health of optimisation algorithms</h2>
+<p>This example is more specific to how algorithms are used as opposed to their specific design. Yet, this should still be highlighted. We have seen increasing discussion surrounding the use of optimisation algorithms that try to increase the amount of ‘screen time’ or engagement from users of social media, and it’s no secret that spending lots of time of social media has a measurable effect on one’s mental health.</p>
+</section>
+<section id="copyright-concerns" class="slide level2">
+<h2>Copyright Concerns</h2>
+<p>A more recent addition to the concerns is that of Github’s co-pilot application that helps users write programming code. This application has been developed on open-source software – some of which includes licensing that specifies how this open-source code may be used (for example, with attribution or copy-left). Yet, Github’s co-pilot may insert code that its been trained on verbatim (though recent additions have been addressing these concerns), resulting in a situation of ‘code laundering’. <a href="https://twitter.com/mitsuhiko/status/1410886329924194309" class="uri">https://twitter.com/mitsuhiko/status/1410886329924194309</a></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource c number-lines code-with-copy"><code class="sourceCode c"><span id="cb12-1"><a href="#cb12-1"></a>    <span class="dt">float</span> Q_rsqrt<span class="op">(</span> <span class="dt">float</span> number <span class="op">)</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>    <span class="op">{</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>            <span class="dt">long</span> i<span class="op">;</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>            <span class="dt">float</span> x2<span class="op">,</span> y<span class="op">;</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>            <span class="dt">const</span> <span class="dt">float</span> threehalfs <span class="op">=</span> <span class="fl">1.5</span><span class="bu">F</span><span class="op">;</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a>    </span>
+<span id="cb12-7"><a href="#cb12-7"></a>            x2 <span class="op">=</span> number <span class="op">*</span> <span class="dv">0</span><span class="er">.5F</span><span class="op">;</span></span>
+<span id="cb12-8"><a href="#cb12-8"></a>            y  <span class="op">=</span> number<span class="op">;</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a>            i  <span class="op">=</span> <span class="op">*</span> <span class="op">(</span> <span class="dt">long</span> <span class="op">*</span> <span class="op">)</span> <span class="op">&amp;</span>y<span class="op">;</span>                       <span class="co">// evil floating point bit level hacking</span></span>
+<span id="cb12-10"><a href="#cb12-10"></a>            i  <span class="op">=</span> <span class="bn">0x5f3759df</span> <span class="op">-</span> <span class="op">(</span> i <span class="op">&gt;&gt;</span> <span class="dv">1</span> <span class="op">);</span>               <span class="co">// what the fuck? </span></span>
+<span id="cb12-11"><a href="#cb12-11"></a>            y  <span class="op">=</span> <span class="op">*</span> <span class="op">(</span> <span class="dt">float</span> <span class="op">*</span> <span class="op">)</span> <span class="op">&amp;</span>i<span class="op">;</span></span>
+<span id="cb12-12"><a href="#cb12-12"></a>            y  <span class="op">=</span> y <span class="op">*</span> <span class="op">(</span> threehalfs <span class="op">-</span> <span class="op">(</span> x2 <span class="op">*</span> y <span class="op">*</span> y <span class="op">)</span> <span class="op">);</span>   <span class="co">// 1st iteration</span></span>
+<span id="cb12-13"><a href="#cb12-13"></a>    <span class="co">//  y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed</span></span>
+<span id="cb12-14"><a href="#cb12-14"></a>    </span>
+<span id="cb12-15"><a href="#cb12-15"></a>            <span class="cf">return</span> y<span class="op">;</span></span>
+<span id="cb12-16"><a href="#cb12-16"></a>    <span class="op">}</span></span>
+<span id="cb12-17"><a href="#cb12-17"></a>    </span>
+<span id="cb12-18"><a href="#cb12-18"></a>    <span class="co">// Implementation from Quake III Arena under the GPL license.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section></section>
+<section>
+<section id="summary" class="title-slide slide level1 center">
+<h1>Summary</h1>
+
+</section>
+<section id="what-is-machine-learning" class="slide level2">
+<h2>What is Machine Learning</h2>
+<ul>
+<li>We’ve taken a look at the different kinds of frameworks for learning – animal behaviour with bait-shyness, and how that translates in computer programs.</li>
+<li>We’ve identified the different types of learning: supervised, unsupervised, and reinforcement learning.</li>
+<li>We’ve looked at the different types of data we may encounter, from tabular to text data, and have also seen examples of some toy datasets we will be using in the course.</li>
+<li>Finally, we’ve highlighted some of the ethical concerns that can arise in Machine Learning.</li>
+</ul>
+</section></section>
+<section>
+<section id="bibliography" class="title-slide slide level1 center">
+<h1>Bibliography</h1>
+
+</section>
+<section id="bibliography-1" class="slide level2">
+<h2>Bibliography</h2>
+<p>Arora, Anmol and Arora, Ananya (2022). <em>Generative Adversarial Networks and Synthetic Patient Data: Current Challenges and Future Perspectives</em>, {Royal College of Physicians}.</p>
+<p>Bolukbasi, Tolga and Chang, Kai-Wei and Zou, James Y and Saligrama, Venkatesh and Kalai, Adam T (2016). <em>Man is to computer programmer as woman is to homemaker? debiasing word embeddings</em>, Advances in neural information processing systems.</p>
+<p>Carlisle, M. (2020). <em>Racist Data Destruction?</em>, Medium.</p>
+<p>Diliff (2014). <em>Iris germanica (Purple bearded Iris), Wakehurst Place, UK - Diliff.jpg</em>.</p>
+<p>Eric Guinther (2005). <em>Image of a primrose willowherb Ludwigia octovalvis (family Onagraceae), flower showing petals and sepals</em>.</p>
+<p>Fisher, Ronald A (1936). <em>The use of multiple measurements in taxonomic problems</em>, Wiley Online Library.</p>
+<p>Gonen, Hila and Goldberg, Yoav (2019). <em>Lipstick on a {{Pig}}: {{Debiasing Methods Cover}} up {{Systematic Gender Biases}} in {{Word Embeddings But}} Do Not {{Remove Them}}</em>, {arXiv}.</p>
+<p>Harrison Jr, David and Rubinfeld, Daniel L (1978). <em>Hedonic housing prices and the demand for clean air</em>, Elsevier.</p>
+<p>LeCun, Yann and Bottou, L{\’e}on and Bengio, Yoshua and Haffner, Patrick (1998). <em>Gradient-based learning applied to document recognition</em>, Ieee.</p>
+<p>Maas, Andrew L. and Daly, Raymond E. and Pham, Peter T. and Huang, Dan and Ng, Andrew Y. and Potts, Christopher (2011). <em>Learning Word Vectors for Sentiment Analysis</em>, Association for Computational Linguistics.</p>
+<p>Metsis, Vangelis and Androutsopoulos, Ion and Paliouras, Georgios (2006). <em>Spam filtering with naive bayes-which naive bayes?</em>.</p>
+<p>Mitchell, Tom M (1997). <em>Machine learning</em>, McGraw-hill New York.</p>
+<p>Shalev-Shwartz, Shai and Ben-David, Shai (2014). <em>Understanding machine learning: From theory to algorithms</em>, Cambridge university press.</p>
+<p>scikit-learn (2022). <em>Sklearn.Datasets.Load\_boston</em>, scikit-learn.</p>
+<p>{European Parliament. Directorate General for Parliamentary Research Services.} (2020). <em>The Ethics of Artificial Intelligence: Issues and Initiatives.</em>, {Publications Office}.</p>
+
+<div class="footer footer-default">
+
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'h.v',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

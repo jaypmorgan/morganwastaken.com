@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jay Paul Morgan">
+
+<title>Jay Paul Morgan - Introduction</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Jay Paul Morgan - Introduction">
+<meta property="og:description" content="Lecture 1">
+<meta property="og:site_name" content="Jay Paul Morgan">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Jay Paul Morgan</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../talks.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../teaching.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../posts.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jaypmorgan"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/jay-p-morgan/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=AO1az5YAAAAJ&amp;hl=en"> 
+<span class="menu-text"><i class="ai  ai-google-scholar-square ai-lg"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Jay-Morgan"> 
+<span class="menu-text"><i class="ai  ai-researchgate-square ai-lg"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/my-orcid?orcid=0000-0003-3719-362X"> 
+<span class="menu-text"><i class="ai  ai-orcid ai-lg"></i></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#course-introduction" id="toc-course-introduction" class="nav-link active" data-scroll-target="#course-introduction">Course Introduction</a>
+  <ul class="collapse">
+  <li><a href="#welcome" id="toc-welcome" class="nav-link" data-scroll-target="#welcome">Welcome!</a></li>
+  <li><a href="#what-this-course-is-about" id="toc-what-this-course-is-about" class="nav-link" data-scroll-target="#what-this-course-is-about">What this course is about?</a></li>
+  <li><a href="#how-this-course-will-be-taught" id="toc-how-this-course-will-be-taught" class="nav-link" data-scroll-target="#how-this-course-will-be-taught">How this course will be taught</a></li>
+  <li><a href="#outline-of-the-course" id="toc-outline-of-the-course" class="nav-link" data-scroll-target="#outline-of-the-course">Outline of the course</a></li>
+  </ul></li>
+  <li><a href="#reading-the-lectures" id="toc-reading-the-lectures" class="nav-link" data-scroll-target="#reading-the-lectures">Reading the lectures</a>
+  <ul class="collapse">
+  <li><a href="#source-code" id="toc-source-code" class="nav-link" data-scroll-target="#source-code">Source code</a></li>
+  <li><a href="#running-the-source-code-yourself" id="toc-running-the-source-code-yourself" class="nav-link" data-scroll-target="#running-the-source-code-yourself">Running the source code yourself</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#about-me" id="toc-about-me" class="nav-link" data-scroll-target="#about-me">About Me</a></li>
+  <li><a href="#where-you-can-find-the-resources" id="toc-where-you-can-find-the-resources" class="nav-link" data-scroll-target="#where-you-can-find-the-resources">Where you can find the resources</a></li>
+  </ul></li>
+  <li><a href="#what-is-learning-anyway" id="toc-what-is-learning-anyway" class="nav-link" data-scroll-target="#what-is-learning-anyway">What is learning, anyway?</a>
+  <ul class="collapse">
+  <li><a href="#lets-answer-the-question-of-learning" id="toc-lets-answer-the-question-of-learning" class="nav-link" data-scroll-target="#lets-answer-the-question-of-learning">Let’s answer the question of learning</a></li>
+  <li><a href="#bait-shyness" id="toc-bait-shyness" class="nav-link" data-scroll-target="#bait-shyness">Bait-shyness</a></li>
+  <li><a href="#computer-programs" id="toc-computer-programs" class="nav-link" data-scroll-target="#computer-programs">Computer Programs</a></li>
+  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">Quiz!</a></li>
+  <li><a href="#something-more-difficult" id="toc-something-more-difficult" class="nav-link" data-scroll-target="#something-more-difficult">Something more difficult…</a></li>
+  <li><a href="#when-might-we-need-machine-learning" id="toc-when-might-we-need-machine-learning" class="nav-link" data-scroll-target="#when-might-we-need-machine-learning">When might we need Machine Learning</a></li>
+  <li><a href="#different-types-of-learning" id="toc-different-types-of-learning" class="nav-link" data-scroll-target="#different-types-of-learning">Different types of Learning</a></li>
+  <li><a href="#supervised-learning" id="toc-supervised-learning" class="nav-link" data-scroll-target="#supervised-learning">Supervised Learning</a></li>
+  <li><a href="#unsupervised-learning" id="toc-unsupervised-learning" class="nav-link" data-scroll-target="#unsupervised-learning">Unsupervised Learning</a></li>
+  <li><a href="#reinforcement-learning" id="toc-reinforcement-learning" class="nav-link" data-scroll-target="#reinforcement-learning">Reinforcement Learning</a></li>
+  </ul></li>
+  <li><a href="#terminology" id="toc-terminology" class="nav-link" data-scroll-target="#terminology">Terminology</a>
+  <ul class="collapse">
+  <li><a href="#what-will-our-data-look-like" id="toc-what-will-our-data-look-like" class="nav-link" data-scroll-target="#what-will-our-data-look-like">What will our data look like?</a></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">Tables</a></li>
+  <li><a href="#imagesvideos" id="toc-imagesvideos" class="nav-link" data-scroll-target="#imagesvideos">Images/Videos</a></li>
+  <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text">Text</a></li>
+  <li><a href="#tokenisation-of-text" id="toc-tokenisation-of-text" class="nav-link" data-scroll-target="#tokenisation-of-text">Tokenisation of text</a></li>
+  <li><a href="#time-series" id="toc-time-series" class="nav-link" data-scroll-target="#time-series">Time-series</a></li>
+  </ul></li>
+  <li><a href="#example-problems" id="toc-example-problems" class="nav-link" data-scroll-target="#example-problems">Example Problems</a>
+  <ul class="collapse">
+  <li><a href="#types-of-outputs-regression-classification" id="toc-types-of-outputs-regression-classification" class="nav-link" data-scroll-target="#types-of-outputs-regression-classification">Types of Outputs – Regression &amp; Classification</a></li>
+  <li><a href="#boston-house-prices-dataset-tabular-regression" id="toc-boston-house-prices-dataset-tabular-regression" class="nav-link" data-scroll-target="#boston-house-prices-dataset-tabular-regression">Boston House Prices Dataset – Tabular Regression</a></li>
+  <li><a href="#boston-house-prices-example-rows" id="toc-boston-house-prices-example-rows" class="nav-link" data-scroll-target="#boston-house-prices-example-rows">Boston House Prices – example rows</a></li>
+  <li><a href="#boston-house-prices-concerns" id="toc-boston-house-prices-concerns" class="nav-link" data-scroll-target="#boston-house-prices-concerns">Boston House Prices – concerns</a></li>
+  <li><a href="#iris-dataset-tabular-classification" id="toc-iris-dataset-tabular-classification" class="nav-link" data-scroll-target="#iris-dataset-tabular-classification">Iris Dataset – Tabular Classification</a></li>
+  <li><a href="#iris-dataset-features" id="toc-iris-dataset-features" class="nav-link" data-scroll-target="#iris-dataset-features">Iris Dataset – features</a></li>
+  <li><a href="#iris-dataset-example-rows" id="toc-iris-dataset-example-rows" class="nav-link" data-scroll-target="#iris-dataset-example-rows">Iris Dataset – example rows</a></li>
+  <li><a href="#mnist-dataset-image-classification" id="toc-mnist-dataset-image-classification" class="nav-link" data-scroll-target="#mnist-dataset-image-classification">MNIST Dataset – Image Classification</a></li>
+  <li><a href="#mnist-dataset-features" id="toc-mnist-dataset-features" class="nav-link" data-scroll-target="#mnist-dataset-features">MNIST Dataset – Features</a></li>
+  <li><a href="#mnist-dataset-example-rows" id="toc-mnist-dataset-example-rows" class="nav-link" data-scroll-target="#mnist-dataset-example-rows">MNIST Dataset – Example Rows</a></li>
+  <li><a href="#large-movie-review-dataset-text-classificationregression" id="toc-large-movie-review-dataset-text-classificationregression" class="nav-link" data-scroll-target="#large-movie-review-dataset-text-classificationregression">Large Movie Review Dataset – Text Classification/Regression</a></li>
+  <li><a href="#ham-or-spam-text-classification" id="toc-ham-or-spam-text-classification" class="nav-link" data-scroll-target="#ham-or-spam-text-classification">Ham or Spam – Text Classification</a></li>
+  </ul></li>
+  <li><a href="#concerns-considerations" id="toc-concerns-considerations" class="nav-link" data-scroll-target="#concerns-considerations">Concerns &amp; Considerations</a>
+  <ul class="collapse">
+  <li><a href="#compute-resources-environmental-concerns" id="toc-compute-resources-environmental-concerns" class="nav-link" data-scroll-target="#compute-resources-environmental-concerns">Compute resources – environmental concerns</a></li>
+  <li><a href="#bias-in-language-models" id="toc-bias-in-language-models" class="nav-link" data-scroll-target="#bias-in-language-models">Bias in language models</a></li>
+  <li><a href="#personal-information" id="toc-personal-information" class="nav-link" data-scroll-target="#personal-information">Personal information</a></li>
+  <li><a href="#mental-health-of-optimisation-algorithms" id="toc-mental-health-of-optimisation-algorithms" class="nav-link" data-scroll-target="#mental-health-of-optimisation-algorithms">Mental health of optimisation algorithms</a></li>
+  <li><a href="#copyright-concerns" id="toc-copyright-concerns" class="nav-link" data-scroll-target="#copyright-concerns">Copyright Concerns</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a>
+  <ul class="collapse">
+  <li><a href="#what-is-machine-learning" id="toc-what-is-machine-learning" class="nav-link" data-scroll-target="#what-is-machine-learning">What is Machine Learning</a></li>
+  </ul></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a>
+  <ul class="collapse">
+  <li><a href="#bibliography-1" id="toc-bibliography-1" class="nav-link" data-scroll-target="#bibliography-1">Bibliography</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lecture-1-reveal.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction</h1>
+<p class="subtitle lead">Lecture 1</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jay Paul Morgan </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="course-introduction" class="level1">
+<h1>Course Introduction</h1>
+<section id="welcome" class="level2">
+<h2 class="anchored" data-anchor-id="welcome">Welcome!</h2>
+<p>Welcome to all the new students! Here I am going to be talking about Machine Learning and all of the great things that this “technology” has to offer. To begin our course, I shall start with a bit of house keeping – more specifically, I will be talking about what exactly we’ll be learning about in the course (Machine Learning is a broad subject after-all). In addition, I will tell you where you can find the resources related to the course and how you can contact me, should you have any questions.</p>
+</section>
+<section id="what-this-course-is-about" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-course-is-about">What this course is about?</h2>
+<p>In this course, we will be learning about Machine Learning: firstly, what Machine Learning actually is; secondly, we’ll take a look at some of the algorithms within the scope of Machine Learning, and develop an intuition about how these algorithms work and when they would be useful; and finally, how we can compare and evaluate the algorithms we’ve learnt about.</p>
+</section>
+<section id="how-this-course-will-be-taught" class="level2">
+<h2 class="anchored" data-anchor-id="how-this-course-will-be-taught">How this course will be taught</h2>
+<p>I intended to deliver this course via a series of lectures. These lectures will be accompanied by the PDF lecture slides, in which I will provide the definitions and provide reference links should you wish to do some extra reading.</p>
+</section>
+<section id="outline-of-the-course" class="level2">
+<h2 class="anchored" data-anchor-id="outline-of-the-course">Outline of the course</h2>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="org-right">
+<col class="org-left">
+<col class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">
+Lecture
+</th>
+<th scope="col" class="org-left">
+Type
+</th>
+<th scope="col" class="org-left">
+Topic
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">
+1
+</td>
+<td class="org-left">
+Theory
+</td>
+<td class="org-left">
+Introduction
+</td>
+</tr>
+<tr>
+<td class="org-right">
+2
+</td>
+<td class="org-left">
+Theory
+</td>
+<td class="org-left">
+Linear models
+</td>
+</tr>
+<tr>
+<td class="org-right">
+3
+</td>
+<td class="org-left">
+Lab
+</td>
+<td class="org-left">
+Lab on Linear models
+</td>
+</tr>
+<tr>
+<td class="org-right">
+4
+</td>
+<td class="org-left">
+Theory/Lab
+</td>
+<td class="org-left">
+Evaluation of models
+</td>
+</tr>
+<tr>
+<td class="org-right">
+5
+</td>
+<td class="org-left">
+Theory/Lab
+</td>
+<td class="org-left">
+Support Vector Machines
+</td>
+</tr>
+<tr>
+<td class="org-right">
+6
+</td>
+<td class="org-left">
+Theory/Lab
+</td>
+<td class="org-left">
+Kernel methods
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="reading-the-lectures" class="level1">
+<h1>Reading the lectures</h1>
+<section id="source-code" class="level2">
+<h2 class="anchored" data-anchor-id="source-code">Source code</h2>
+<p>During the course, I would also like to supplement my algorithmic definitions and explanations with some programming code – for this I will use the <a href="https://www.python.org/">Python</a> programming language. The code snippets would look something like:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> [random.random() <span class="op">+</span> xi <span class="cf">for</span> xi <span class="kw">in</span> x]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>[<span class="fl">1.4898241502582414</span>, <span class="fl">2.4805286156642175</span>, <span class="fl">3.065379052563245</span>, <span class="fl">4.05328483072365</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="running-the-source-code-yourself" class="level2">
+<h2 class="anchored" data-anchor-id="running-the-source-code-yourself">Running the source code yourself</h2>
+<p>All of the source can be run by yourselves if you use the same python environment (i.e.&nbsp;that you have installed all the appropriate libraries). On the git repository, I’ve included the <a href="https://git.sr.ht/~jaymorgan/teaching/tree/master/item/2022-2023/Machine%20Learning/environment.yml"><code>environment.yml</code></a> file used in the production of these lectures.</p>
+<p>To run the code:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>    <span class="fu">wget</span> https://git.sr.ht/~jaymorgan/teaching/blob/master/2022-2023/Machine%20Learning/environment.yml</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">conda</span> env create <span class="at">-f</span> environment.yml  <span class="co"># recreate the conda env</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">conda</span> activate ml-lectures           <span class="co"># activate the new env</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">python</span> <span class="op">&lt;</span>scripts<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>In some cases, and is the norm with academic traditions, we’ll want to include a reference, a link to previous written works.</p>
+<p>Here is an example of a sentence that includes a reference:</p>
+<p>“This is a very important sentence which I assert to be true, to convince you of this fact I shall appeal to authority and include a reference: (Shalev-Shwartz, Shai and Ben-David, Shai, 2014)”</p>
+<p>More information on the referenced material (such as title, publishing date) will be found in the bibliography slide (or bottom of the webpage if you’re viewing the HTML version of the lectures).</p>
+</section>
+<section id="about-me" class="level2">
+<h2 class="anchored" data-anchor-id="about-me">About Me</h2>
+<p>My name is Dr Jay Paul Morgan. I am a researcher at the Université de Toulon, where I am developing Deep Learning models (a sub-field of Machine Learning research) for the study of astrophysical phenomenon.</p>
+<p>You can find more information and links on my personal (LIS-Lab) website: <a href="https://pageperso.lis-lab.fr/jay.morgan/" class="uri">https://pageperso.lis-lab.fr/jay.morgan/</a></p>
+<p>I also publish libraries and source code online:</p>
+<ul>
+<li>Github: <a href="https://github.com/jaypmorgan" class="uri">https://github.com/jaypmorgan</a></li>
+<li>Gitlab: <a href="https://gitlab.com/jaymorgan" class="uri">https://gitlab.com/jaymorgan</a></li>
+<li>Source Hut: <a href="https://sr.ht/~jaymorgan/" class="uri">https://sr.ht/~jaymorgan/</a></li>
+</ul>
+<p>If you have any questions, you can email me at <code>jay.morgan@univ-tln.fr</code></p>
+</section>
+<section id="where-you-can-find-the-resources" class="level2">
+<h2 class="anchored" data-anchor-id="where-you-can-find-the-resources">Where you can find the resources</h2>
+<p>I try to make this course as accessible as possible, which means that I host these slides in a variety of ways to suit you.</p>
+<p>Firstly, you can find the links to all my courses on my personal website at: <a href="https://pageperso.lis-lab.fr/jay.morgan/teaching.html" class="uri">https://pageperso.lis-lab.fr/jay.morgan/teaching.html</a></p>
+<p>Here you can find the links to each lecture in a PDF or HTML format. Additionally, you can view the source code used to make these lectures on source hut: <a href="https://git.sr.ht/~jaymorgan/teaching" class="uri">https://git.sr.ht/~jaymorgan/teaching</a>. On this git repository you can find all my lectures from all years.</p>
+</section>
+</section>
+<section id="what-is-learning-anyway" class="level1">
+<h1>What is learning, anyway?</h1>
+<section id="lets-answer-the-question-of-learning" class="level2">
+<h2 class="anchored" data-anchor-id="lets-answer-the-question-of-learning">Let’s answer the question of learning</h2>
+<p>We’ll begin our journey into the world of Machine Learning by tackling the question of what it means to ‘learn’ – how may a machine actually <em>learn</em> anything?</p>
+</section>
+<section id="bait-shyness" class="level2">
+<h2 class="anchored" data-anchor-id="bait-shyness">Bait-shyness</h2>
+<p><img src="images/rat.jpg" style="width:30.0%;height:50.0%"></p>
+<p>To begin to answer the question of learning, we may turn to nature for advice. Principally, if we look at the studies conducted with Mice we find some idea to notion of learning (Shalev-Shwartz, Shai and Ben-David, Shai, 2014). (Image by brgfx on Freepik)</p>
+<p>When a rat encounters a novel source of food, it will first eat a little bit of it. If the food is edible for the rat, it will continue to eat the food, even in future encounters. If, however, on the initial contact with the food, the rat deems the food poisonous, it will ignore and not eat the food in future encounters. This process we call ‘bait-shyness’.</p>
+<p>Here then we see the rat, on finding something new, learn from its experience, and use that knowledge of the experience for future encounters.</p>
+<p>Our initial understanding of rat’s bait-shyness was limited, but we’ve come to understand more about it. For instance, we learn that their learning process is more complex than originally thought. In a later experiment, where the ‘poison’ in the food is replaced by a different unpleasant stimulus such as a electric shock – i.e.&nbsp;when a rat eats a food, it is then shocked. It was found that this did not deter the rat from eating the food in future encounters, unlike the poison.</p>
+<p>It is presumed that the rat’s have some ‘prior knowledge’ about the world and do not infer a temporal relationship between the food and being shocked, while they can infer the same relationship with food and illness.</p>
+</section>
+<section id="computer-programs" class="level2">
+<h2 class="anchored" data-anchor-id="computer-programs">Computer Programs</h2>
+<p>From these two examples of how rats may learn we see: the rat will make a guess about something now (i.e.&nbsp;that the food is not poisonous), it will find out how good this guess is (i.e.&nbsp;it either gets ill or it does not), and learn from how well its guess was for the future. We also see that its learning can be impacted by the rat’s prior knowledge about how the world may work.</p>
+<p>But how does this <em>framework</em> for the process of learning translate to computers? For a more formal definition of how computer programs could be said to learn, we have a similar idea:</p>
+<blockquote class="blockquote">
+<p>A computer program is said to learn from experience <span class="math inline">\(E\)</span> with respect to some class of tasks <span class="math inline">\(T\)</span> and performance measure <span class="math inline">\(P\)</span>, if its performance a tasks in <span class="math inline">\(T\)</span>, as measured by <span class="math inline">\(P\)</span>, improves with experience <span class="math inline">\(E\)</span>.</p>
+</blockquote>
+<p>(Mitchell, Tom M, 1997)</p>
+</section>
+<section id="quiz" class="level2">
+<h2 class="anchored" data-anchor-id="quiz">Quiz!</h2>
+<p>What <em>function</em> is being used here?</p>
+<pre><code>    8 ? 5   =   13
+    9 ? 1   =   10
+    1 ? 2   =    3</code></pre>
+</section>
+<section id="something-more-difficult" class="level2">
+<h2 class="anchored" data-anchor-id="something-more-difficult">Something more difficult…</h2>
+<p>What <em>values</em> are being used here?</p>
+<pre><code>    x * 1 + y   =   4
+    x * 3 + y   =   8
+    x * 5 + y   =  12</code></pre>
+</section>
+<section id="when-might-we-need-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="when-might-we-need-machine-learning">When might we need Machine Learning</h2>
+<p><img src="images/pdf-ocr.png" style="width:50.0%;height:50.0%"></p>
+<p>Why do we need computer programs that ‘learn’ anyway? We already have programming languages, why can’t we just use them?</p>
+<p>Let’s suppose we’re creating a very simple Optical Character Recognition (OCR) program.</p>
+<p>This program looks at a PDF document and converts the text into something we can copy and paste. Part of this program’s task is to take an individual character, say the number ‘8’, and recognise that it’s an 8 and add that to the already scanned text.</p>
+<p>How would we go about creating a program where we can define how to identify ‘8’ or ‘1’ or ‘l’ – with all the varieties of lighting conditions, handwriting, fonts, sizes. We could find the process of encompassing all different variations tiresome – if not impossible, and that’s only for a single character!</p>
+<p>With Machine Learning, instead of enumerating all possible solutions within a programming language, we collect a bunch of examples of ’8’s and give them to the algorithm to learn from.</p>
+<p>Through looking at these many different examples, the algorithm will/should be able to recognise what an 8 generally looks like.</p>
+</section>
+<section id="different-types-of-learning" class="level2">
+<h2 class="anchored" data-anchor-id="different-types-of-learning">Different types of Learning</h2>
+<p>What we have just demonstrated by way of the OCR example, is the type of learning we call ‘Supervised Learning’. We have many examples of input (lots of different kinds of handwritten 8’s), and we tell the learning algorithm, that they are indeed the number 8.</p>
+<p>But there are other kind of different learning frameworks. Specifically we have the following:</p>
+<ul>
+<li>Supervised Learning</li>
+<li>Unsupervised, or sometimes called self-supervised Learning</li>
+<li>Reinforcement Learning</li>
+</ul>
+</section>
+<section id="supervised-learning" class="level2">
+<h2 class="anchored" data-anchor-id="supervised-learning">Supervised Learning</h2>
+<p>To better formalise Supervised Learning from our previous OCR example, Supervised Learning is when the learning algorithm “see’s” or has access to both the input and output.</p>
+<p>Let’s have a dataset <span class="math inline">\(X\)</span>, which is a set consisting of tuple pairs <span class="math inline">\(x_i, y_i\)</span>. <span class="math inline">\(x_i\)</span> is an input, i.e.&nbsp;a single image with an ‘8’, and <span class="math inline">\(y_i\)</span> is a label which tells the learning algorithm if the input is indeed an ‘8’ or something else. Mathematically we have:</p>
+<p><span class="math inline">\(X = \{(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)\}\)</span></p>
+</section>
+<section id="unsupervised-learning" class="level2">
+<h2 class="anchored" data-anchor-id="unsupervised-learning">Unsupervised Learning</h2>
+<p>In Unsupervised learning, we have again have a dataset <span class="math inline">\(X\)</span>, who’s elements are only inputs. In other words, there are no corresponding labels for each input. Instead, the learning algorithm must learn inherent patterns in the data and create labels itself. Throughout the course, we’ll see examples of Unsupervised Learning in action.</p>
+<p>One thing to note: Recent methodologies have started to call Unsupervised Learning, self-supervised. As we have just discussed, the labels are inherent to the data from the discovered patterns, it’s just we are not explicitly giving them to the learning algorithm ourselves. So it’s sort of like a supervised learning setup, except the learning algorithm is providing the labels itself – hence the self-supervised.</p>
+</section>
+<section id="reinforcement-learning" class="level2">
+<h2 class="anchored" data-anchor-id="reinforcement-learning">Reinforcement Learning</h2>
+<p>Reinforcement Learning is very different to both Supervised and Unsupervised Learning. Here is the type of learning you might be familiar with if you’ve seen ‘AI’ that learns to play video games. In this type of learning, we have the following elements:</p>
+<ul>
+<li>An agent</li>
+<li>An environment</li>
+<li>A set of allowed actions the agent can make within its environment.</li>
+</ul>
+<p>In this situation, an agent will interact with it’s environment, and when it does something it can receive a reward (a reward can be positive or negative). The agent will remember what it has done to receive the reward. The objective for the agent is to maximise the reward score, and learns to do this through many iterations or play-through.</p>
+</section>
+</section>
+<section id="terminology" class="level1">
+<h1>Terminology</h1>
+<section id="what-will-our-data-look-like" class="level2">
+<h2 class="anchored" data-anchor-id="what-will-our-data-look-like">What will our data look like?</h2>
+<p>In this section we shall take a look at the different types of data we might expect and the different terminology used to name them.</p>
+<p>Data in Machine Learning applications can come in a variety of different formats. The most typical data formats we might see are:</p>
+<ul>
+<li>Tables</li>
+<li>Images/Videos</li>
+<li>Text</li>
+<li>Sound</li>
+</ul>
+<p>These are the initial formats, though, before actually doing any learning, we will want to transform them into a different representation that we can use.</p>
+</section>
+<section id="tables" class="level2">
+<h2 class="anchored" data-anchor-id="tables">Tables</h2>
+<p>A table, or tabular, format is a <span class="math inline">\(n \times m\)</span> set of data with <span class="math inline">\(n\)</span> samples or examples, and <span class="math inline">\(m\)</span> features for each sample. For example, suppose we have a table consisting the price of 100 different houses:</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="org-right">
+<col class="org-right">
+<col class="org-left">
+<col class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">
+Number of bedrooms
+</th>
+<th scope="col" class="org-right">
+Garden size (ft)
+</th>
+<th scope="col" class="org-left">
+…
+</th>
+<th scope="col" class="org-left">
+Price ($)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">
+3
+</td>
+<td class="org-right">
+0
+</td>
+<td class="org-left">
+…
+</td>
+<td class="org-left">
+150,000
+</td>
+</tr>
+<tr>
+<td class="org-right">
+5
+</td>
+<td class="org-right">
+10
+</td>
+<td class="org-left">
+…
+</td>
+<td class="org-left">
+200,000
+</td>
+</tr>
+<tr>
+<td class="org-right">
+…
+</td>
+<td class="org-right">
+…
+</td>
+<td class="org-left">
+…
+</td>
+<td class="org-left">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td class="org-right">
+10
+</td>
+<td class="org-right">
+1000
+</td>
+<td class="org-left">
+…
+</td>
+<td class="org-left">
+2,000,000
+</td>
+</tr>
+</tbody>
+</table>
+<p>In a supervised learning setting, where we want to predict the price of a house we may then have the following dataset:</p>
+<p><span class="math inline">\(X = \{([3, 0, ...], 150,000), ([5, 10, ...], 200,000), \\..., ([10, 1000, ...], 2,000,000)\}\)</span></p>
+</section>
+<section id="imagesvideos" class="level2">
+<h2 class="anchored" data-anchor-id="imagesvideos">Images/Videos</h2>
+<p>Images are composed of 2D or 3D arrays of numeric values. For example, in a RGB image that is 1024x500 pixels, we would have the array of size 1024x500x3 – where 3 is the red, green, and blue channel, respectively. If we have just a grayscale image, we could represent it as either 1024x500x1 or 1024x500 as the channel ‘dimension’ of the array is singular.</p>
+<p>We may already know that videos are simply a sequence of images that are iterated through 24+ times a second. For a 24 frames per second video, we would have an array size of 1024x500x3x24 – a 4-dimensional array.</p>
+</section>
+<section id="text" class="level2">
+<h2 class="anchored" data-anchor-id="text">Text</h2>
+<p>Text and language data is perhaps one of the most flexible formats of data, in terms of the person implementing the Machine Learning algorithm is somewhat free in determining how to represent the language to the algorithm.</p>
+<p>With text data, we have a series of ‘tokens’ – these tokens could be words, groups of words, parts of words, and even just characters. For example, consider:</p>
+<p>“this is a sentence, that shouldn’t be misunderstood.”</p>
+</section>
+<section id="tokenisation-of-text" class="level2">
+<h2 class="anchored" data-anchor-id="tokenisation-of-text">Tokenisation of text</h2>
+<p>“this is a sentence, that shouldn’t be misunderstood.”</p>
+<p>We could ‘tokenise’ (the process of converting a string into a series of tokens that represent the original string) this sentence by splitting at white-space:</p>
+<p><code>{"this", "is", "a", "sentence,", "that" "shouldn't", "be", "misunderstood."}</code></p>
+<p>Notice how with the words “sentence” and “misunderstood”, the punctuation is considered part of the word and so “misunderstood.” != “misunderstood”.</p>
+<p>These kinds of questions of how to best represent text and language we will talk more about in later lectures!</p>
+</section>
+<section id="time-series" class="level2">
+<h2 class="anchored" data-anchor-id="time-series">Time-series</h2>
+<p>I named this section time-series to be as general as possible. Within the type ‘time-series’, we could have the following types of information:</p>
+<ul>
+<li>Sound waves</li>
+<li>Stock prices</li>
+<li>Network messaging</li>
+</ul>
+<p>These types of data all share a property in that the ‘time’ component is important in their meaning.</p>
+</section>
+</section>
+<section id="example-problems" class="level1">
+<h1>Example Problems</h1>
+<p>Throughout this course, we’ll be using <em>toy</em> datasets for the explanation of Machine Learning and its algorithms. In this section, we’ll take a broad look over all the datasets that we’ll come to be very familiar with.</p>
+<section id="types-of-outputs-regression-classification" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-outputs-regression-classification">Types of Outputs – Regression &amp; Classification</h2>
+<p>First, however, I wish to explain the difference between the terms <em>Regression</em> and <em>Classification</em>.</p>
+<ul>
+<li>Regression: the prediction of a continuous quantity, i.e.&nbsp;how much does this house cost?</li>
+<li>Classification: the prediction of a discrete value or class label, i.e.&nbsp;dog or cat?</li>
+</ul>
+<p>In the following toy datasets, we’ll see different types of predictions that fall under the regression/classification output type.</p>
+</section>
+<section id="boston-house-prices-dataset-tabular-regression" class="level2">
+<h2 class="anchored" data-anchor-id="boston-house-prices-dataset-tabular-regression">Boston House Prices Dataset – Tabular Regression</h2>
+<p>A dataset of 506 houses in Boston, USA, collected during US Census.</p>
+<ul>
+<li>13 features/properties about each house</li>
+<li>1 target property: the price of the house</li>
+</ul>
+<p>More information about each of the features can be found at: <a href="https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html" class="uri">https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html</a></p>
+<p>(Harrison Jr, David and Rubinfeld, Daniel L, 1978)</p>
+</section>
+<section id="boston-house-prices-example-rows" class="level2">
+<h2 class="anchored" data-anchor-id="boston-house-prices-example-rows">Boston House Prices – example rows</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_boston</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> warnings.catch_warnings():</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    warnings.filterwarnings(<span class="st">"ignore"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    boston <span class="op">=</span> load_boston()</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>boston <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>np.c_[boston[<span class="st">'data'</span>], boston[<span class="st">'target'</span>]],</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    columns<span class="op">=</span>boston[<span class="st">'feature_names'</span>].tolist() <span class="op">+</span> [<span class="st">'target'</span>])</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(boston[:<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>      CRIM    ZN  INDUS  CHAS    NOX     RM  ...  RAD    TAX  PTRATIO      B  LSTAT  target
+0  0.00632  18.0   2.31   0.0  0.538  6.575  ...  1.0  296.0     15.3  396.9   4.98    24.0
+1  0.02731   0.0   7.07   0.0  0.469  6.421  ...  2.0  242.0     17.8  396.9   9.14    21.6
+
+[2 rows x 14 columns]</code></pre>
+</section>
+<section id="boston-house-prices-concerns" class="level2">
+<h2 class="anchored" data-anchor-id="boston-house-prices-concerns">Boston House Prices – concerns</h2>
+<p>The Boston dataset is an excellent dataset in the fact that it contains some ethical issues when it comes to Machine Learning. More specifically, some of the features in the data are ‘dummy’ variables for racial attributes (Carlisle, M., 2020). Moreover, these features show a racial segregation has a positive impact on house prices.</p>
+<p>Scikit-Learn (scikit-learn, 2022), one of the most prolific Machine Learning framework in the Python ecosystem, has decided to depreciate and remove the Boston dataset from their repository following these concerns.</p>
+<p>We will continue to use the dataset here as it is an easy to understand regression problem, and to demonstrate how easy it is to be accidentally unethical if you’re not thinking about the data carefully enough.</p>
+</section>
+<section id="iris-dataset-tabular-classification" class="level2">
+<h2 class="anchored" data-anchor-id="iris-dataset-tabular-classification">Iris Dataset – Tabular Classification</h2>
+<p><img src="images/iris.jpg" title="Iris Flower (Diliff, 2014)" style="width:50.0%;height:50.0%"></p>
+</section>
+<section id="iris-dataset-features" class="level2">
+<h2 class="anchored" data-anchor-id="iris-dataset-features">Iris Dataset – features</h2>
+<ul>
+<li><p>150 examples</p></li>
+<li><p>4 features: Petal length/width, sepal length/width</p></li>
+<li><p>1 classification: type of flower: {viriginica, setosa, veriscolor}</p>
+<p><a href="https://archive.ics.uci.edu/ml/datasets/iris" class="uri">https://archive.ics.uci.edu/ml/datasets/iris</a> (Fisher, Ronald A, 1936)</p></li>
+</ul>
+<p><img src="images/Petal-sepal.jpg" title="Different parts of a flower. (Eric Guinther, 2005)" style="width:50.0%;height:50.0%"></p>
+</section>
+<section id="iris-dataset-example-rows" class="level2">
+<h2 class="anchored" data-anchor-id="iris-dataset-example-rows">Iris Dataset – example rows</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_iris</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> load_iris()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> np.c_[iris[<span class="st">'data'</span>], iris[<span class="st">'target'</span>]],</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    columns <span class="op">=</span> iris[<span class="st">'feature_names'</span>] <span class="op">+</span> [<span class="st">'target'</span>])</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(iris.head(<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>   sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)  target
+0                5.1               3.5                1.4               0.2     0.0
+1                4.9               3.0                1.4               0.2     0.0</code></pre>
+</section>
+<section id="mnist-dataset-image-classification" class="level2">
+<h2 class="anchored" data-anchor-id="mnist-dataset-image-classification">MNIST Dataset – Image Classification</h2>
+<p><img src="images/mnist.png" title="8 examples of handwritten digits in the MNIST dataset." style="width:50.0%;height:50.0%"></p>
+<p>A dataset of images (of size 28x28) containing handwritten digits from 0 - 9.</p>
+<p><a href="http://yann.lecun.com/exdb/mnist/" class="uri">http://yann.lecun.com/exdb/mnist/</a></p>
+<p>(LeCun, Yann and Bottou, L{\’e}on and Bengio, Yoshua and Haffner, Patrick, 1998)</p>
+</section>
+<section id="mnist-dataset-features" class="level2">
+<h2 class="anchored" data-anchor-id="mnist-dataset-features">MNIST Dataset – Features</h2>
+<ul>
+<li>60,000 images in the training dataset</li>
+<li>10,000 images in the test dataset</li>
+<li>28x28 pixels (grayscale)</li>
+</ul>
+</section>
+<section id="mnist-dataset-example-rows" class="level2">
+<h2 class="anchored" data-anchor-id="mnist-dataset-example-rows">MNIST Dataset – Example Rows</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> fetch_openml</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>mnist <span class="op">=</span> fetch_openml(<span class="st">"mnist_784"</span>).data[:<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>pixel1  pixel2  pixel3  pixel4  pixel5  pixel6  pixel7  pixel8  pixel9  \
+0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0   
+1     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0   
+
+pixel10  ...  pixel775  pixel776  pixel777  pixel778  pixel779  pixel780  \
+0      0.0  ...       0.0       0.0       0.0       0.0       0.0       0.0   
+1      0.0  ...       0.0       0.0       0.0       0.0       0.0       0.0   
+
+pixel781  pixel782  pixel783  pixel784  
+0       0.0       0.0       0.0       0.0  
+1       0.0       0.0       0.0       0.0  
+
+[2 rows x 784 columns]</code></pre>
+</section>
+<section id="large-movie-review-dataset-text-classificationregression" class="level2">
+<h2 class="anchored" data-anchor-id="large-movie-review-dataset-text-classificationregression">Large Movie Review Dataset – Text Classification/Regression</h2>
+<blockquote class="blockquote">
+<p>Story of a man who has unnatural feelings for a pig. Starts out with a opening scene that is a terrific example of absurd comedy. A formal orchestra audience is turned into an insane, violent mob by the crazy chantings of it’s singers. Unfortunately it stays absurd the WHOLE time with no general narrative eventually making it just too off putting. Even those from the era should be turned off. The cryptic dialogue would make Shakespeare seem easy to a third grader. On a technical level it’s better than you might think with some good cinematography by future great Vilmos Zsigmond. Future stars Sally Kirkland and Frederic Forrest can be seen briefly.</p>
+</blockquote>
+<p>Review from: <code>train/neg/0_3.txt</code></p>
+<ul>
+<li>50,000 movie reviews (25,000 for training and testing).</li>
+<li>Each review is labelled with a binary label of sentiment – a positive or negative review was towards the movie in question.</li>
+</ul>
+<p><a href="https://ai.stanford.edu/~amaas/data/sentiment/" class="uri">https://ai.stanford.edu/~amaas/data/sentiment/</a></p>
+<p>(Maas, Andrew L. and Daly, Raymond E. and Pham, Peter T. and Huang, Dan and Ng, Andrew Y. and Potts, Christopher, 2011)</p>
+</section>
+<section id="ham-or-spam-text-classification" class="level2">
+<h2 class="anchored" data-anchor-id="ham-or-spam-text-classification">Ham or Spam – Text Classification</h2>
+<pre><code>    Message-ID: &lt;8701134.1075856113926.JavaMail.evans@thyme&gt;
+    Date: Mon, 30 Oct 2000 02:06:00 -0800 (PST)
+    From: shona.wilson@enron.com
+    To: eugenio.perez@enron.com
+    Subject: meeting deadlines
+    Mime-Version: 1.0
+    Content-Type: text/plain; charset=us-ascii
+    Content-Transfer-Encoding: 7bit
+    X-From: Shona Wilson
+    X-To: Eugenio Perez
+    X-cc: 
+    X-bcc: 
+    X-Origin: Beck-S
+    X-FileName: sbeck.nsf
+    
+    Dear Eugenio,
+    
+    I did not want to say this when everyone else was around, but I am concerned 
+    that no attempt was made to meet the deadline of this morning that we 
+    discussed last Friday. (to decide on a name for the database).  Only Maria 
+    Teresa had her information to me this am as requested. The deadline could 
+    have been easily met by working diligently this morning, but Jennifer did not 
+    come in until 8:30 and MT until 8:15.
+    
+    I thought we had discussed the urgency of this - to have something to present 
+    at the 10am meeting.  We need to discuss this to ensure it does not happen 
+    again.
+    
+    Best regards
+    
+    Shona</code></pre>
+<ul>
+<li>Enron Spam classification of email messages.</li>
+<li>Is the email Spam – each email is labelled with a binary label, spam or not spam (ham).</li>
+<li>The dataset contains 17,171 spam and 16,545 ham email messages.</li>
+</ul>
+<p><a href="https://www2.aueb.gr/users/ion/data/enron-spam/" class="uri">https://www2.aueb.gr/users/ion/data/enron-spam/</a></p>
+<p>(Metsis, Vangelis and Androutsopoulos, Ion and Paliouras, Georgios, 2006)</p>
+</section>
+</section>
+<section id="concerns-considerations" class="level1">
+<h1>Concerns &amp; Considerations</h1>
+<p>As we saw with the Boston house prices dataset, ethical concerns can easily arise when we use statistical analysis &amp; Machine Learning. But our use of Machine Learning carries many more concerns other than just racial biases. In this section, we’ll highlight some ethical considerations to be made when designing and building Machine Learning models.</p>
+<p><a href="https://uksa.statisticsauthority.gov.uk/publication/ethical-considerations-in-the-use-of-machine-learning-for-research-and-statistics/" class="uri">https://uksa.statisticsauthority.gov.uk/publication/ethical-considerations-in-the-use-of-machine-learning-for-research-and-statistics/</a></p>
+<section id="compute-resources-environmental-concerns" class="level2">
+<h2 class="anchored" data-anchor-id="compute-resources-environmental-concerns">Compute resources – environmental concerns</h2>
+<blockquote class="blockquote">
+<p>Large-scale deployment of AI could also have both positive and negative impacts on the environment. Negative impacts include increased use of natural resources, such as rare earth metals, pollution and waste, as well as energy consumption. However, AI could help with waste management and conservation offering environmental benefits.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[…] In the United States, data centres already account for about 2 percent of all electricity used. In one estimation, DeepMind’s AlphaGo – which beat Go Champion Lee Sedol in 2016 – took 50,000 times as much power as the human brain to do so.</p>
+</blockquote>
+<p>({European Parliament. Directorate General for Parliamentary Research Services.}, 2020)</p>
+</section>
+<section id="bias-in-language-models" class="level2">
+<h2 class="anchored" data-anchor-id="bias-in-language-models">Bias in language models</h2>
+<p><img src="images/debias.png" title="(Gonen, Hila and Goldberg, Yoav, 2019)" style="width:50.0%;height:50.0%"></p>
+<p>Biases exist in language models trained on news articles (Bolukbasi, Tolga and Chang, Kai-Wei and Zou, James Y and Saligrama, Venkatesh and Kalai, Adam T, 2016).</p>
+</section>
+<section id="personal-information" class="level2">
+<h2 class="anchored" data-anchor-id="personal-information">Personal information</h2>
+<p>In Machine Learning applications where data is generated (such as generating faces that don’t exist), there is a possibility to expose personal information. For example, in a situation where these generative Machine Learning models create synthetic patient data, the model may be trained on real medical data. The output of the Machine Learning model could possibly leak personal information.</p>
+<p>(Arora, Anmol and Arora, Ananya, 2022)</p>
+</section>
+<section id="mental-health-of-optimisation-algorithms" class="level2">
+<h2 class="anchored" data-anchor-id="mental-health-of-optimisation-algorithms">Mental health of optimisation algorithms</h2>
+<p>This example is more specific to how algorithms are used as opposed to their specific design. Yet, this should still be highlighted. We have seen increasing discussion surrounding the use of optimisation algorithms that try to increase the amount of ‘screen time’ or engagement from users of social media, and it’s no secret that spending lots of time of social media has a measurable effect on one’s mental health.</p>
+</section>
+<section id="copyright-concerns" class="level2">
+<h2 class="anchored" data-anchor-id="copyright-concerns">Copyright Concerns</h2>
+<p>A more recent addition to the concerns is that of Github’s co-pilot application that helps users write programming code. This application has been developed on open-source software – some of which includes licensing that specifies how this open-source code may be used (for example, with attribution or copy-left). Yet, Github’s co-pilot may insert code that its been trained on verbatim (though recent additions have been addressing these concerns), resulting in a situation of ‘code laundering’. <a href="https://twitter.com/mitsuhiko/status/1410886329924194309" class="uri">https://twitter.com/mitsuhiko/status/1410886329924194309</a></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> Q_rsqrt<span class="op">(</span> <span class="dt">float</span> number <span class="op">)</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>            <span class="dt">long</span> i<span class="op">;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>            <span class="dt">float</span> x2<span class="op">,</span> y<span class="op">;</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>            <span class="dt">const</span> <span class="dt">float</span> threehalfs <span class="op">=</span> <span class="fl">1.5</span><span class="bu">F</span><span class="op">;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>            x2 <span class="op">=</span> number <span class="op">*</span> <span class="fl">0.5</span><span class="bu">F</span><span class="op">;</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>            y  <span class="op">=</span> number<span class="op">;</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>            i  <span class="op">=</span> <span class="op">*</span> <span class="op">(</span> <span class="dt">long</span> <span class="op">*</span> <span class="op">)</span> <span class="op">&amp;</span>y<span class="op">;</span>                       <span class="co">// evil floating point bit level hacking</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>            i  <span class="op">=</span> <span class="bn">0x5f3759df</span> <span class="op">-</span> <span class="op">(</span> i <span class="op">&gt;&gt;</span> <span class="dv">1</span> <span class="op">);</span>               <span class="co">// what the fuck? </span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>            y  <span class="op">=</span> <span class="op">*</span> <span class="op">(</span> <span class="dt">float</span> <span class="op">*</span> <span class="op">)</span> <span class="op">&amp;</span>i<span class="op">;</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>            y  <span class="op">=</span> y <span class="op">*</span> <span class="op">(</span> threehalfs <span class="op">-</span> <span class="op">(</span> x2 <span class="op">*</span> y <span class="op">*</span> y <span class="op">)</span> <span class="op">);</span>   <span class="co">// 1st iteration</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">//  y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> y<span class="op">;</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Implementation from Quake III Arena under the GPL license.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<section id="what-is-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-machine-learning">What is Machine Learning</h2>
+<ul>
+<li>We’ve taken a look at the different kinds of frameworks for learning – animal behaviour with bait-shyness, and how that translates in computer programs.</li>
+<li>We’ve identified the different types of learning: supervised, unsupervised, and reinforcement learning.</li>
+<li>We’ve looked at the different types of data we may encounter, from tabular to text data, and have also seen examples of some toy datasets we will be using in the course.</li>
+<li>Finally, we’ve highlighted some of the ethical concerns that can arise in Machine Learning.</li>
+</ul>
+</section>
+</section>
+<section id="bibliography" class="level1">
+<h1>Bibliography</h1>
+<section id="bibliography-1" class="level2">
+<h2 class="anchored" data-anchor-id="bibliography-1">Bibliography</h2>
+<p>Arora, Anmol and Arora, Ananya (2022). <em>Generative Adversarial Networks and Synthetic Patient Data: Current Challenges and Future Perspectives</em>, {Royal College of Physicians}.</p>
+<p>Bolukbasi, Tolga and Chang, Kai-Wei and Zou, James Y and Saligrama, Venkatesh and Kalai, Adam T (2016). <em>Man is to computer programmer as woman is to homemaker? debiasing word embeddings</em>, Advances in neural information processing systems.</p>
+<p>Carlisle, M. (2020). <em>Racist Data Destruction?</em>, Medium.</p>
+<p>Diliff (2014). <em>Iris germanica (Purple bearded Iris), Wakehurst Place, UK - Diliff.jpg</em>.</p>
+<p>Eric Guinther (2005). <em>Image of a primrose willowherb Ludwigia octovalvis (family Onagraceae), flower showing petals and sepals</em>.</p>
+<p>Fisher, Ronald A (1936). <em>The use of multiple measurements in taxonomic problems</em>, Wiley Online Library.</p>
+<p>Gonen, Hila and Goldberg, Yoav (2019). <em>Lipstick on a {{Pig}}: {{Debiasing Methods Cover}} up {{Systematic Gender Biases}} in {{Word Embeddings But}} Do Not {{Remove Them}}</em>, {arXiv}.</p>
+<p>Harrison Jr, David and Rubinfeld, Daniel L (1978). <em>Hedonic housing prices and the demand for clean air</em>, Elsevier.</p>
+<p>LeCun, Yann and Bottou, L{\’e}on and Bengio, Yoshua and Haffner, Patrick (1998). <em>Gradient-based learning applied to document recognition</em>, Ieee.</p>
+<p>Maas, Andrew L. and Daly, Raymond E. and Pham, Peter T. and Huang, Dan and Ng, Andrew Y. and Potts, Christopher (2011). <em>Learning Word Vectors for Sentiment Analysis</em>, Association for Computational Linguistics.</p>
+<p>Metsis, Vangelis and Androutsopoulos, Ion and Paliouras, Georgios (2006). <em>Spam filtering with naive bayes-which naive bayes?</em>.</p>
+<p>Mitchell, Tom M (1997). <em>Machine learning</em>, McGraw-hill New York.</p>
+<p>Shalev-Shwartz, Shai and Ben-David, Shai (2014). <em>Understanding machine learning: From theory to algorithms</em>, Cambridge university press.</p>
+<p>scikit-learn (2022). <em>Sklearn.Datasets.Load\_boston</em>, scikit-learn.</p>
+<p>{European Parliament. Directorate General for Parliamentary Research Services.} (2020). <em>The Ethics of Artificial Intelligence: Issues and Initiatives.</em>, {Publications Office}.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/morganwastaken\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

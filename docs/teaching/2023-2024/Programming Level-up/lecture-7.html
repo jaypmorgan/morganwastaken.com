@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jay Paul Morgan">
+
+<title>Jay Paul Morgan - Linux &amp; Supercomputer</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Jay Paul Morgan - Linux &amp; Supercomputer">
+<meta property="og:description" content="Lecture 7">
+<meta property="og:site_name" content="Jay Paul Morgan">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Jay Paul Morgan</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../talks.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../teaching.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../posts.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jaypmorgan"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/jay-p-morgan/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=AO1az5YAAAAJ&amp;hl=en"> 
+<span class="menu-text"><i class="ai  ai-google-scholar-square ai-lg"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Jay-Morgan"> 
+<span class="menu-text"><i class="ai  ai-researchgate-square ai-lg"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/my-orcid?orcid=0000-0003-3719-362X"> 
+<span class="menu-text"><i class="ai  ai-orcid ai-lg"></i></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#linux" id="toc-linux" class="nav-link active" data-scroll-target="#linux">Linux</a>
+  <ul class="collapse">
+  <li><a href="#what-is-linux" id="toc-what-is-linux" class="nav-link" data-scroll-target="#what-is-linux">What is Linux?</a></li>
+  <li><a href="#whats-a-distribution" id="toc-whats-a-distribution" class="nav-link" data-scroll-target="#whats-a-distribution">What’s a Distribution?</a></li>
+  <li><a href="#defining-traits-of-linux" id="toc-defining-traits-of-linux" class="nav-link" data-scroll-target="#defining-traits-of-linux">Defining Traits of Linux</a></li>
+  </ul></li>
+  <li><a href="#the-command-line" id="toc-the-command-line" class="nav-link" data-scroll-target="#the-command-line">The command line</a>
+  <ul class="collapse">
+  <li><a href="#whats-a-command" id="toc-whats-a-command" class="nav-link" data-scroll-target="#whats-a-command">What’s a command?</a></li>
+  <li><a href="#cd" id="toc-cd" class="nav-link" data-scroll-target="#cd">cd</a></li>
+  <li><a href="#mkdir" id="toc-mkdir" class="nav-link" data-scroll-target="#mkdir">mkdir</a></li>
+  <li><a href="#cp" id="toc-cp" class="nav-link" data-scroll-target="#cp">cp</a></li>
+  <li><a href="#mv" id="toc-mv" class="nav-link" data-scroll-target="#mv">mv</a></li>
+  <li><a href="#rm" id="toc-rm" class="nav-link" data-scroll-target="#rm">rm</a></li>
+  <li><a href="#cat" id="toc-cat" class="nav-link" data-scroll-target="#cat">cat</a></li>
+  <li><a href="#pwd" id="toc-pwd" class="nav-link" data-scroll-target="#pwd">pwd</a></li>
+  <li><a href="#find" id="toc-find" class="nav-link" data-scroll-target="#find">find</a></li>
+  <li><a href="#grep" id="toc-grep" class="nav-link" data-scroll-target="#grep">grep</a></li>
+  <li><a href="#lessheadtail" id="toc-lessheadtail" class="nav-link" data-scroll-target="#lessheadtail">less/head/tail</a></li>
+  <li><a href="#wc" id="toc-wc" class="nav-link" data-scroll-target="#wc">wc</a></li>
+  <li><a href="#piping" id="toc-piping" class="nav-link" data-scroll-target="#piping">piping</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  </ul></li>
+  <li><a href="#shell-scripting" id="toc-shell-scripting" class="nav-link" data-scroll-target="#shell-scripting">Shell Scripting</a>
+  <ul class="collapse">
+  <li><a href="#your-very-first-bash-script" id="toc-your-very-first-bash-script" class="nav-link" data-scroll-target="#your-very-first-bash-script">Your Very first bash script</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
+  <li><a href="#interpolation-in-bash-strings" id="toc-interpolation-in-bash-strings" class="nav-link" data-scroll-target="#interpolation-in-bash-strings">Interpolation in bash strings</a></li>
+  <li><a href="#bash-strings-the-sharp-edges" id="toc-bash-strings-the-sharp-edges" class="nav-link" data-scroll-target="#bash-strings-the-sharp-edges">Bash strings – the sharp edges</a></li>
+  <li><a href="#stopping-interpolation-in-bash-strings" id="toc-stopping-interpolation-in-bash-strings" class="nav-link" data-scroll-target="#stopping-interpolation-in-bash-strings">Stopping interpolation in bash strings</a></li>
+  <li><a href="#inputoutput" id="toc-inputoutput" class="nav-link" data-scroll-target="#inputoutput">Input/Output</a></li>
+  <li><a href="#booleans" id="toc-booleans" class="nav-link" data-scroll-target="#booleans">Booleans</a></li>
+  <li><a href="#conditionals" id="toc-conditionals" class="nav-link" data-scroll-target="#conditionals">Conditionals</a></li>
+  <li><a href="#loops" id="toc-loops" class="nav-link" data-scroll-target="#loops">Loops</a></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
+  </ul></li>
+  <li><a href="#high-performance-cluster" id="toc-high-performance-cluster" class="nav-link" data-scroll-target="#high-performance-cluster">High Performance Cluster</a>
+  <ul class="collapse">
+  <li><a href="#how-to-login" id="toc-how-to-login" class="nav-link" data-scroll-target="#how-to-login">How to login</a></li>
+  <li><a href="#how-to-login-1" id="toc-how-to-login-1" class="nav-link" data-scroll-target="#how-to-login-1">How to login</a></li>
+  <li><a href="#how-to-copy-files-to-and-from-the-cluster" id="toc-how-to-copy-files-to-and-from-the-cluster" class="nav-link" data-scroll-target="#how-to-copy-files-to-and-from-the-cluster">How to copy files to and from the cluster</a></li>
+  <li><a href="#copying-files-rsync" id="toc-copying-files-rsync" class="nav-link" data-scroll-target="#copying-files-rsync">Copying files – rsync</a></li>
+  </ul></li>
+  <li><a href="#submitting-jobs" id="toc-submitting-jobs" class="nav-link" data-scroll-target="#submitting-jobs">Submitting jobs</a>
+  <ul class="collapse">
+  <li><a href="#the-login--and-compute-nodes" id="toc-the-login--and-compute-nodes" class="nav-link" data-scroll-target="#the-login--and-compute-nodes">The Login- and Compute Nodes</a></li>
+  <li><a href="#how-to-launch-a-job-srun" id="toc-how-to-launch-a-job-srun" class="nav-link" data-scroll-target="#how-to-launch-a-job-srun">How to launch a job – srun</a></li>
+  <li><a href="#salloc" id="toc-salloc" class="nav-link" data-scroll-target="#salloc">salloc</a></li>
+  <li><a href="#options" id="toc-options" class="nav-link" data-scroll-target="#options">options</a></li>
+  <li><a href="#gpu-allocation" id="toc-gpu-allocation" class="nav-link" data-scroll-target="#gpu-allocation">GPU allocation</a></li>
+  <li><a href="#learning-more-about-nodes" id="toc-learning-more-about-nodes" class="nav-link" data-scroll-target="#learning-more-about-nodes">Learning more about nodes</a></li>
+  <li><a href="#sbatch" id="toc-sbatch" class="nav-link" data-scroll-target="#sbatch">sbatch</a></li>
+  <li><a href="#squeue" id="toc-squeue" class="nav-link" data-scroll-target="#squeue">squeue</a></li>
+  <li><a href="#scontrol" id="toc-scontrol" class="nav-link" data-scroll-target="#scontrol">scontrol</a></li>
+  <li><a href="#scancel" id="toc-scancel" class="nav-link" data-scroll-target="#scancel">scancel</a></li>
+  <li><a href="#sacct" id="toc-sacct" class="nav-link" data-scroll-target="#sacct">sacct</a></li>
+  <li><a href="#job-task-arrays-motivation" id="toc-job-task-arrays-motivation" class="nav-link" data-scroll-target="#job-task-arrays-motivation">Job Task Arrays – motivation</a></li>
+  <li><a href="#job-task-arrays-how-to" id="toc-job-task-arrays-how-to" class="nav-link" data-scroll-target="#job-task-arrays-how-to">Job Task Arrays – how to</a></li>
+  </ul></li>
+  <li><a href="#a-guided-walk-through" id="toc-a-guided-walk-through" class="nav-link" data-scroll-target="#a-guided-walk-through">A guided walk through</a>
+  <ul class="collapse">
+  <li><a href="#a-guided-walk-through-environment" id="toc-a-guided-walk-through-environment" class="nav-link" data-scroll-target="#a-guided-walk-through-environment">A guided walk through – environment</a></li>
+  <li><a href="#writing-our-scripts" id="toc-writing-our-scripts" class="nav-link" data-scroll-target="#writing-our-scripts">Writing our scripts</a></li>
+  <li><a href="#writing-our-job-submission-script" id="toc-writing-our-job-submission-script" class="nav-link" data-scroll-target="#writing-our-job-submission-script">Writing our job submission script</a></li>
+  <li><a href="#replicating-our-environment-on-the-cluster" id="toc-replicating-our-environment-on-the-cluster" class="nav-link" data-scroll-target="#replicating-our-environment-on-the-cluster">Replicating our environment on the cluster</a></li>
+  <li><a href="#sending-our-scripts-to-the-cluster" id="toc-sending-our-scripts-to-the-cluster" class="nav-link" data-scroll-target="#sending-our-scripts-to-the-cluster">Sending our scripts to the cluster</a></li>
+  <li><a href="#logging-into-the-cluster" id="toc-logging-into-the-cluster" class="nav-link" data-scroll-target="#logging-into-the-cluster">Logging into the cluster</a></li>
+  <li><a href="#re-creating-our-development-environment" id="toc-re-creating-our-development-environment" class="nav-link" data-scroll-target="#re-creating-our-development-environment">Re-creating our development environment</a></li>
+  <li><a href="#submitting-our-job" id="toc-submitting-our-job" class="nav-link" data-scroll-target="#submitting-our-job">Submitting our job</a></li>
+  <li><a href="#downloading-the-results" id="toc-downloading-the-results" class="nav-link" data-scroll-target="#downloading-the-results">Downloading the results</a></li>
+  <li><a href="#analysing-the-results" id="toc-analysing-the-results" class="nav-link" data-scroll-target="#analysing-the-results">Analysing the results</a></li>
+  <li><a href="#useful-features-x11-forwarding" id="toc-useful-features-x11-forwarding" class="nav-link" data-scroll-target="#useful-features-x11-forwarding">Useful features – X11 Forwarding</a></li>
+  <li><a href="#useful-features-jupyter-notebooks" id="toc-useful-features-jupyter-notebooks" class="nav-link" data-scroll-target="#useful-features-jupyter-notebooks">Useful features – Jupyter Notebooks</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lecture-7-reveal.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Linux &amp; Supercomputer</h1>
+<p class="subtitle lead">Lecture 7</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jay Paul Morgan </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="linux" class="level1">
+<h1>Linux</h1>
+<section id="what-is-linux" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-linux">What is Linux?</h2>
+<ul>
+<li>Linux is a popular operating system (OS) like Windows, or MacOS.</li>
+<li>Unlike these other two OSs, Linux is open source, which means the source code is freely available to look at and modify.</li>
+<li>As its open source, its very possible for anyone to build their <em>own</em> version of Linux or build on top of Linux to create their own <em>Distribution</em> of Linux.</li>
+</ul>
+</section>
+<section id="whats-a-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="whats-a-distribution">What’s a Distribution?</h2>
+<p>A distribution can be considered like a <em>flavour</em> or version of Linux. There are many popular flavours that attempt to meet different needs from different users. For example:</p>
+<ul>
+<li>Ubuntu – typically the first Linux experience people will have. Attempts to be very user friendly.</li>
+<li>Fedora – stable and secure distribution while also providing up-to-date packages.</li>
+<li>Arch Linux – strong focus on customisability rather than user friendliness with bleeding edge packages.</li>
+</ul>
+<p><img src="images/family-tree.png" class="img-fluid"></p>
+</section>
+<section id="defining-traits-of-linux" class="level2">
+<h2 class="anchored" data-anchor-id="defining-traits-of-linux">Defining Traits of Linux</h2>
+<p>While we have said that Linux is open source, there are many other traits that make it stand out from other operating systems:</p>
+<ul>
+<li>Complete control of how the system operates.</li>
+<li>The level of flexibility and automation that you can get from using the Linux command line.</li>
+</ul>
+<p>While there are many other traits, these two are going to be what we’re going to focus on.</p>
+</section>
+</section>
+<section id="the-command-line" class="level1">
+<h1>The command line</h1>
+<section id="whats-a-command" class="level2">
+<h2 class="anchored" data-anchor-id="whats-a-command">What’s a command?</h2>
+<p>While many recent versions of Linux makes things more accessible via GUIs, they will never be a substitute for using the command line. We’re going to learn how to control the system via the command line, via a <strong>shell</strong>. A shell, like the Python REPL we’ve already seen, is waits for you to input commands, executes the command, and prints the output if there is output to print.</p>
+<p>A Linux command is a call to a program optionally followed by some arguments. For example, if we want list out the files and folders in the directory, we would use the <code>ls</code> (list) command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The <code>ls</code> command comes with a number of optional flags and arguments that we can add onto the call. When calling a command a flag is something that begins with a <code>-</code> , for example <code>-l</code> tells <code>ls</code> to list the directory in a list format.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We have supplied the <code>-l</code> flag. There are many other flags for <code>ls</code>, like for example, the human readable file systems with <code>-h</code> or show hidden files (files that start with a period) with <code>-a</code>.</p>
+<p>When we’re using multiple flags we could write</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span> <span class="at">-h</span> <span class="at">-a</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Or:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-lha</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Sometimes commands take optional positional arguments. Going back to our list directory command, where, by default, it will list the current directory. But instead we can tell the command to list a particular directory by supplying the path as an argument</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> images/ <span class="at">-lha</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or ls -lha images/ works too</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>How do I know how to use a command? Well that’s where another command comes in. It’s called <code>man</code> (short for manual). If you pass another command to the <code>man</code> command, the documentation will be shown in the terminal, e.g.:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> ls  <span class="co"># display the documentation for ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The documentation should list all the different flags and arguments, describe what they mean, and sometimes give example or most common usage of a command.</p>
+<p>When the ‘man page’ is display, you can scroll up and down the page using your arrow keys, and page-up and page-down. When you’re done reading, just hit the ‘q’ character</p>
+<p>I am going to go through some of the most common commands just to make sure that you’re familiar with the typical usage.</p>
+</section>
+<section id="cd" class="level2">
+<h2 class="anchored" data-anchor-id="cd">cd</h2>
+<p>We’ve already seen <code>ls</code> to list a directory. The command to move to a directory is <code>cd</code> (change directory), that takes an argument of filepath to move to:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~ <span class="co"># tilde is short-hand for the 'home directory'</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Documents/My\ Files  <span class="co"># go to Documents and then to "My Files"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span>   <span class="co"># no argument, by default goes to the home directory</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="mkdir" class="level2">
+<h2 class="anchored" data-anchor-id="mkdir">mkdir</h2>
+<p>Sticking with the them of directories, to make a new directory we use <code>mkdir</code>, whose argument takes the name of the directory we want to create:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> my_new_directory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can create a many level nested directory structure all at once using the <code>-p</code> (parents) flag, that tells <code>mkdir</code> if the parent directory of the target directory doesn’t exist, create it.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> photos/2020/01/05  <span class="co"># won't work unless photos/2020/01 exist</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> photos/2020/01/05  <span class="co"># this will work</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="cp" class="level2">
+<h2 class="anchored" data-anchor-id="cp">cp</h2>
+<p>To copy a file or directory, we can use the <code>cp</code> command. Here we are copying a file, where the first argument is the filepath of the file you want to copy and the second argument is the filepath where the copy should be placed.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> my_old_file my_new_file</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>By default (without a flag), <code>cp</code> will not work with directories, for that you have to use the <code>-r</code> (recursive) flag</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> data/ data-backup</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="mv" class="level2">
+<h2 class="anchored" data-anchor-id="mv">mv</h2>
+<p>The syntax of moving a file is similar to that of <code>cp</code>:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> old_file new_file</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Except that it works for both files and directories without any flags. <code>mv</code> can also be used to <strong>rename</strong> files, that’s all renaming is: moving a file to the same directory under a different name.</p>
+</section>
+<section id="rm" class="level2">
+<h2 class="anchored" data-anchor-id="rm">rm</h2>
+<p>To remove a file us <code>rm</code>:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> file_to_delete</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you want to delete a directory, use the <code>-r</code> (recursive) flag:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-r</span> directory_to_delete/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="cat" class="level2">
+<h2 class="anchored" data-anchor-id="cat">cat</h2>
+<p><code>cat</code> stands for concatenate, i.e.&nbsp;concatenating the contents of two or more files:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> file1 file2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The result is that the concatenation of these two files will be printed to the screen. If you wanted to put the result into its own file you would redirect the output using <code>&gt;</code></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> file1 file2 <span class="op">&gt;</span> newfile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Since cat reads the file and prints it to screen it is a very handy way to view the contents of a file, even if it was not intended for that.</p>
+</section>
+<section id="pwd" class="level2">
+<h2 class="anchored" data-anchor-id="pwd">pwd</h2>
+<p>Sometimes you may get lost when moving directories. <code>pwd</code> prints the current working directory from the root directory, i.e.&nbsp;the path that is printed is an absolute path.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="find" class="level2">
+<h2 class="anchored" data-anchor-id="find">find</h2>
+<p>If we want to list all files of a certain type, we can use the wildcard <code>*</code> that we’ve seen before:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="pp">*</span>.jpg <span class="co"># list all files that end with .jpg</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>However, this will only list for the current directory. Perhaps the better way to find files will be using the <code>find</code> command:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> . <span class="at">-type</span> f <span class="at">-name</span> <span class="pp">*</span>.jpg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The first argument is the directory to start the search, then we define the type <code>f</code> being files, and then specify the name. Find will recursively search through directories and sub-directories to find all files that match that name.</p>
+</section>
+<section id="grep" class="level2">
+<h2 class="anchored" data-anchor-id="grep">grep</h2>
+<p>How about if we want to find files that have a certain contents? For that we can use <code>grep</code>. Grep will read a file and print (by default) the lines that contains your pattern. i.e.:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="st">'Linux'</span> lecture.org</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will print the lines that contain the word Linux in lecture.org. If we just want the matched value, we use the <code>-o</code> flag.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-o</span> <span class="st">'[0-9]'</span> lecture.org</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This prints all occurrences of numbers in lecture.org</p>
+</section>
+<section id="lessheadtail" class="level2">
+<h2 class="anchored" data-anchor-id="lessheadtail">less/head/tail</h2>
+<p>If a file is very long, we may not want to read the file using cat, as it will have to print the entire file. Instead we could use <code>less</code>, which will allow us to navigate through the file, using arrow keys to move and <code>q</code> to quit.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> filename</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If we just want to view the first few lines, or the last few lines of a file we can use head/tail, respectively:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> filename</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-n</span> 20 filename  <span class="co"># last 20 lines</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-F</span> filename <span class="co"># constantly read the file</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="wc" class="level2">
+<h2 class="anchored" data-anchor-id="wc">wc</h2>
+<p>Often times we just want to count the number of something. For example, if we want to count the number of files/folders in the directory we can do:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span> <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We’re first printing all files and folders in a list format (one per line), then passing (<sub>piping</sub>_) the result to <code>wc</code>, which with the <code>-l</code> line flag, is counting the number of lines. Therefore we get a count of the number of files and folders. Here is another example where we’re counting how many times the word bash appears in these lecture notes:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-o</span> <span class="st">'bash'</span> lecture.org <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="piping" class="level2">
+<h2 class="anchored" data-anchor-id="piping">piping</h2>
+<p>The purpose of piping is to pass data around between commands. We have just seen how we can pass the output of, say, the <code>ls</code> command to the input of <code>wc</code>. This allows use to construct very sophisticated pipelines to do some quite complex things from the combination of very simple commands.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> . <span class="at">-name</span> <span class="st">'*.txt'</span> <span class="at">-type</span> f <span class="at">-print0</span> <span class="kw">|</span> <span class="fu">xargs</span> <span class="at">-0</span> grep <span class="st">"something"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>In summary we have seen the following commands:</p>
+<ul>
+<li><code>ls</code> - List a directory</li>
+<li><code>cd</code> - Change/move to a directory</li>
+<li><code>mkdir</code> - Make a new directory</li>
+<li><code>cat</code> - Concatenate files</li>
+<li><code>cp</code> - Copy a file/directory</li>
+<li><code>mv</code> - Move files/folders</li>
+<li><code>rm</code> - Remove files and folders</li>
+<li><code>pwd</code> - Display the current absolute path</li>
+<li><code>find</code> - Find files</li>
+<li><code>grep</code> - Find occurrences of a pattern in a file</li>
+<li><code>less/head/tail</code> - Read a file</li>
+<li><code>wc</code> - Count</li>
+</ul>
+</section>
+</section>
+<section id="shell-scripting" class="level1">
+<h1>Shell Scripting</h1>
+<section id="your-very-first-bash-script" class="level2">
+<h2 class="anchored" data-anchor-id="your-very-first-bash-script">Your Very first bash script</h2>
+<p>Let’s start with the classic ‘Hello, World’ example. We’ll create a new file called ‘hello.sh’ and enter the following:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Hello, World!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>First thing to notice is that the first line contains what we call a ‘shebang’ or ‘hashbang’. It tells Linux which shell interpreter will be used to run the script, in this case: /bin/bash</p>
+<p>The next (non-empty) line in the file is <code>echo 'Hello, World'</code>. This is exactly the same as the other commands we’ve just seen.</p>
+<p>Now that we’ve created and saved our bash script, we will want to run it. We have two alternative methods to run this script:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> hello.sh  <span class="co"># run the script via bash</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The second, requires that we have executable privileges for the script:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x hello.sh  <span class="co"># add executable 'x' privileges</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./hello.sh</span>  <span class="co"># execute it</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="variables" class="level2">
+<h2 class="anchored" data-anchor-id="variables">Variables</h2>
+<p>The variables we create in our bash scripts are very much the same as the environment variables we’ve seen before. Take for example:</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="va">AGE</span><span class="op">=</span><span class="st">"35"</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="va">PERSON_NAME</span><span class="op">=</span><span class="st">"Jane"</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"</span><span class="va">$PERSON_NAME</span><span class="st"> is </span><span class="va">$AGE</span><span class="st"> years old"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We create a variable <code>AGE</code> with the <code>=</code> assignment operator. <strong>Note</strong> we don’t put spaces either side of the equals sign in bash. To refer to the variable, we use <code>$AGE</code>, using the <code>$</code> dollar sign.</p>
+</section>
+<section id="interpolation-in-bash-strings" class="level2">
+<h2 class="anchored" data-anchor-id="interpolation-in-bash-strings">Interpolation in bash strings</h2>
+<p>You would have noticed in the previous example that we included the variable directly into the string we’re echoing out. This is something similar to what we’ve seen with f-strings in Python.</p>
+<p>When we use double quotes: <code>"..."</code> in bash, the variable will be integrated into the resulting string. We can even call bash functions from directly inside the string:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"I am logging in as: </span><span class="va">$(</span><span class="fu">who</span><span class="va">)</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="bash-strings-the-sharp-edges" class="level2">
+<h2 class="anchored" data-anchor-id="bash-strings-the-sharp-edges">Bash strings – the sharp edges</h2>
+<p>You might be tempted to use a variable when generating a path:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="va">TRAIN_PROCESS</span><span class="op">=</span><span class="st">"training"</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="va">TEST_PROCESS</span><span class="op">=</span><span class="st">"testing"</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> <span class="st">"./data/</span><span class="va">$TRAIN_PROCESS_error</span><span class="st">.txt"</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> <span class="st">"./data/</span><span class="va">$TEST_PROCESS_error</span><span class="st">.txt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>But this will create an error as underscores can be part of the variable name, so bash will be looking for a variable named: <code>$TRAIN_PROCESS_error</code> which has never been created. To get around this, we can wrap our variable in curly braces:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> <span class="st">"./data/</span><span class="va">${TRAIN_PROCESS}</span><span class="st">_error.txt"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="stopping-interpolation-in-bash-strings" class="level2">
+<h2 class="anchored" data-anchor-id="stopping-interpolation-in-bash-strings">Stopping interpolation in bash strings</h2>
+<p>We can also use single quotes for strings in bash. When we use these strings, the string itself is <u>not</u> interpreted, and thus it will ignore any variables or bash commands:</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'I am logging in as: $(who)'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="inputoutput" class="level2">
+<h2 class="anchored" data-anchor-id="inputoutput">Input/Output</h2>
+<p>If we want to read the input from keyboard into a variable, we use the read command:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Enter your name:"</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="bu">read</span> <span class="va">NAME</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Hello, </span><span class="va">$NAME</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>read</code> in this context will read in the input and create the variable with that value. As we’ve already seen, we can then output this value to the console using the echo command.</p>
+</section>
+<section id="booleans" class="level2">
+<h2 class="anchored" data-anchor-id="booleans">Booleans</h2>
+<p>Technically, bash does not have built in data types for true and false, but Linux has the commands true and false which we could use in place. The implementation of how these commands work is not important.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="va">FILE_EXISTS</span><span class="op">=</span>true</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="st">"</span><span class="va">$FILE_EXISTS</span><span class="st">"</span> <span class="ot">=</span> true <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"The file exists!"</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="conditionals" class="level2">
+<h2 class="anchored" data-anchor-id="conditionals">Conditionals</h2>
+<p>When we’re creating <code>if</code> expressions, we use the following syntax:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">&lt;&lt;conditional&gt;&gt;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="st">   # do something</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="st">else</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="st">   # do something else</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="st">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can also use <code>elif</code></p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">&lt;&lt;conditional&gt;&gt;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="st">   # do something</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="st">elif &lt;&lt;conditional&gt;&gt;; then</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="st">   # do something else</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="st">else</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="st">   # something else entirely</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="st">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Writing condition expressions can be a little more cumbersome than in Python. These can be many pain points for new bash programmers, take for example:</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="va">FILE_EXISTS</span><span class="op">=</span>false</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="va">$FILE_EXISTS</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"The file exists!"</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This is because we have used the <code>[...]</code> single bracket syntax for the test. But there are others:</p>
+<ul>
+<li>No brackets: we could omit the brackets in which case it would run the false command not print the statement.</li>
+<li>Single paranthesis <code>(...)</code> creates a sub-shell.</li>
+<li>Double paranthesis <code>((...))</code> for arithmetic operation</li>
+<li>Single square bracket <code>[...]</code> calls <code>test</code></li>
+<li>Double square bracket <code>[[...]]</code></li>
+</ul>
+<p>What if we write:</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="va">VAR_1</span><span class="op">=</span><span class="st">"Mr Foo Bar"</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="va">VAR_2</span><span class="op">=</span><span class="st">"Mr Foo Bar"</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="va">$VAR_1</span> <span class="ot">=</span> <span class="va">$VAR_2</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"They are the same"</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We would get an error because <code>test</code> expands the arguments into:</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Mr</span> Foo Bar = Mr Foo Bar</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>With the spaces included. To prevent this from happening, we have to wrap the variables in quotation marks.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="va">VAR_1</span><span class="op">=</span><span class="st">"Mr Foo Bar"</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="va">VAR_2</span><span class="op">=</span><span class="st">"Mr Foo Bar"</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="st">"</span><span class="va">$VAR_1</span><span class="st">"</span> <span class="ot">=</span> <span class="st">"</span><span class="va">$VAR_2</span><span class="st">"</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"They are the same"</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If we use <code>[[</code> in if statement, then we can do more sophisticated things like pattern matching:</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="va">FILENAME</span><span class="op">=</span><span class="st">"testing.png"</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="st">"</span><span class="va">$FILENAME</span><span class="st">"</span> <span class="ot">=</span> <span class="pp">*</span>.png <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Its a png file"</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="loops" class="level2">
+<h2 class="anchored" data-anchor-id="loops">Loops</h2>
+<p>Like in Python, we can iterate in bash</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="dt">{</span><span class="dv">1</span><span class="dt">..</span><span class="dv">10</span><span class="dt">}</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$i</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This iterates with i starting at 1 upto 10 (inclusive). Or we could do:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="kw">((</span> <span class="va">i</span><span class="op">=</span><span class="dv">1</span><span class="kw">;</span> <span class="va">i</span> <span class="op">&lt;=</span> <span class="dv">10</span><span class="kw">;</span> <span class="va">i</span><span class="op">++</span> <span class="kw">));</span> <span class="cf">do</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$i</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can also iterate over a list of files/folders in a directory:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> FILE <span class="kw">in</span> ./images/<span class="pp">*</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$FILE</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Using the <code>while</code> form, we can continue looping until our conditional is false. For example, we could loop testing our internet connection, until its been established:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="ot">! </span><span class="fu">ping</span> <span class="at">-c</span> 1 google.com<span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"No internet yet"</span></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sleep</span> 1</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Internet is available!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="functions" class="level2">
+<h2 class="anchored" data-anchor-id="functions">Functions</h2>
+<p>To create a function, we use the following syntax:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">function_name()</span> <span class="kw">{</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="co"># do something</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>And to call the function, you just need to use the function name:</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="ex">function_name</span> <span class="co"># this called function name</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here is another example:</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">say_hello()</span> <span class="kw">{</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Hello, </span><span class="va">$1</span><span class="st">"</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="ex">say_hello</span> <span class="st">"Jane"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Notice that we didn’t need to include any argument list. We just used <code>$1</code> for the first argument passed to the function.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">say_hello()</span> <span class="kw">{</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"</span><span class="va">$1</span><span class="st">, </span><span class="va">$2</span><span class="st">"</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="ex">say_hello</span> <span class="st">"Hi"</span> <span class="st">"Jane"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Returning values is ‘interesting’ as, coming from other languages, you think could do something like this:</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">say_hello()</span> <span class="kw">{</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="st">"hello"</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="va">RESULT</span><span class="op">=</span><span class="st">"</span><span class="va">$(</span><span class="ex">say_hello</span><span class="va">)</span><span class="st">"</span></span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$RESULT</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This didn’t work like we expected, the value wasn’t returned and assigned to <code>RESULT</code>. So how do we return a value?</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">say_hello()</span> <span class="kw">{</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Hello"</span></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="va">RESULT</span><span class="op">=</span><span class="st">"</span><span class="va">$(</span><span class="ex">say_hello</span><span class="va">)</span><span class="st">"</span></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"This is before the printing of result"</span></span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$RESULT</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="high-performance-cluster" class="level1">
+<h1>High Performance Cluster</h1>
+<section id="how-to-login" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-login">How to login</h2>
+<div class="sourceCode" id="cb54"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;&lt;username&gt;&gt;</span>@sms-ext.lis-lab.fr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Typing this command can become tiresome very quickly, especially after sending data back and forth. But we can make it a lot easier by updating our <code>~/.ssh/config</code> file to include something like:</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Host</span> cluster</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a> <span class="ex">HostName</span> sms-ext.lis-lab.fr</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a> <span class="ex">User</span> <span class="op">&lt;&lt;username&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then to login to the cluster, we just need to type:</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> cluster</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>And we should be prompted for our password.</p>
+</section>
+<section id="how-to-login-1" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-login-1">How to login</h2>
+<p>If you trust the machine your on, you can remove password authentication and move to key-based authentication:</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-copy-id</span> cluster</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>When we next login to the server, we shouldn’t be prompted for a password.</p>
+</section>
+<section id="how-to-copy-files-to-and-from-the-cluster" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-copy-files-to-and-from-the-cluster">How to copy files to and from the cluster</h2>
+<p>We have a number of options for transferring files to and from the cluster. Firstly, let’s look at the command <code>scp</code>. It takes two arguments, the first argument is the file you want to send, the second argument is the destination of the sent file.</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="op">&lt;&lt;origin&gt;&gt;</span> <span class="op">&lt;&lt;destination&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Similar to commands like <code>cp</code>, scp by default only works for files, not folders. To send folders/directories, we use the <code>-r</code> flag just like <code>cp</code>.</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-r</span> <span class="op">&lt;&lt;origin_folder&gt;&gt;</span> <span class="op">&lt;&lt;destination_folder&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="copying-files-rsync" class="level2">
+<h2 class="anchored" data-anchor-id="copying-files-rsync">Copying files – rsync</h2>
+<p>One of the downsides about <code>scp</code> is that it will copy every file you give it. Even if the file at the destination is exactly the same. What if we only want to copy files that need to be copied, i.e.&nbsp;that are outdated, thus saving time? For that, we can use <code>rsync</code>. Rsync will copy files from one source to a destination only if the destination needs to be updated. This can save a lot of time by skipping files that already exist at the destination:</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="op">&lt;&lt;source&gt;&gt;</span> <span class="op">&lt;&lt;destination&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="submitting-jobs" class="level1">
+<h1>Submitting jobs</h1>
+<section id="the-login--and-compute-nodes" class="level2">
+<h2 class="anchored" data-anchor-id="the-login--and-compute-nodes">The Login- and Compute Nodes</h2>
+<p>When you login to the cluster, you are logging into the <em>login</em> node. <strong>Note</strong> that no computation should be run on this node. If you want to run scripts, you will have to submit a job to the compute nodes.</p>
+<p>On the login node there is a system installed called ‘SLURM’. SLURM is a job scheduler program that receives your requests for executing scripts, it will queue them and assign them to available compute nodes.</p>
+<p>We will take a look at how to request and manage jobs using the various commands that SLURM provides.</p>
+</section>
+<section id="how-to-launch-a-job-srun" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-launch-a-job-srun">How to launch a job – srun</h2>
+<p>The first command we will look at it is <code>srun</code>. This command will run request a job for execution in ‘real-time’. By real-time, we mean that the shell will wait until the job has been submitted.</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="op">&lt;&lt;compute</span> node options<span class="op">&gt;&gt;</span> <span class="op">&lt;&lt;command</span> to run<span class="op">&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Let’s take a look at an example where we want to run an interactive bash shell on the compute shell (similar to ssh’ing into the compute node).</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="at">--pty</span> bash <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will request a job on any available compute node for 10 minutes. When a node becomes available, <code>bash</code> will execute, dropping you into the shell. You will notice that the shell prompt has changed from <code>sms</code> to the name of the node.</p>
+</section>
+<section id="salloc" class="level2">
+<h2 class="anchored" data-anchor-id="salloc">salloc</h2>
+<p>There is another method we can use to create an interactive job. We could use the <code>salloc</code> command to allocate resources for a task. After the resources have been allocated and our job is ready, we can <code>ssh</code> into the node with the allocated resources.</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="ex">salloc</span> <span class="at">--time</span><span class="op">=</span>10:00:00 <span class="kw">&amp;</span></span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="options" class="level2">
+<h2 class="anchored" data-anchor-id="options">options</h2>
+<p>In the previous command, we used the <code>--time</code> option to specify how long the job will run for. But there are other options we can use to be more specific about the jobs we want to run.</p>
+<p><code>--cpus-per-task</code> can be used to request more than one CPU to be allocated. This is especially helpful when we have a multithreaded process we want to run.</p>
+<p><code>--mem</code> specifies how much memory should be allocated to the job. For example: <code>--mem=16G</code> tells SLURM to allocate 16 GB of memory.</p>
+</section>
+<section id="gpu-allocation" class="level2">
+<h2 class="anchored" data-anchor-id="gpu-allocation">GPU allocation</h2>
+<p>If we need to use a GPU, we need to use a few options. Firstly, we can specify that our job is on a compute node with GPU. There will usually be a group of nodes in a ‘GPU’ group or partition, and thus we can specify to use one of these partitions:</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="at">--partiton</span><span class="op">=</span>gpu <span class="at">--pty</span> bash <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>But you will notice that you still do not have access to a GPU. You’re running on the GPU node, but you haven’t actually requested a GPU be allocated to your job. For that you will use <code>--gres</code>:</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="at">--partition</span><span class="op">=</span>gpu <span class="at">--gres</span><span class="op">=</span>gpu:1 <span class="at">--pty</span> bash <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here we are requesting one GPU, but if we use <code>--gres:gpu:2</code> we are requesting 2 GPUs etc.</p>
+<p>There are many different types of GPUs available, some older than others. If you wanted to allocate a job with a specific type of GPU you can use the <code>--constraint</code> flag:</p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="dt">\</span></span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a> <span class="at">--partition</span><span class="op">=</span>gpu <span class="dt">\</span></span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a> <span class="at">--gres</span><span class="op">=</span>gpu:1 <span class="dt">\</span></span>
+<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a> <span class="at">--constraint</span><span class="op">=</span><span class="st">'cuda61'</span> <span class="dt">\</span></span>
+<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a> <span class="at">--pty</span> bash <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This command requests that our job run on the GPU partition, with 1 GPU allocated that has the capability of running CUDA compute 61.</p>
+<p>Or we can specify the type of GPU in the gres option:</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="dt">\</span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a> <span class="at">--partition</span><span class="op">=</span>gpu <span class="dt">\</span></span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a> <span class="at">--gres</span><span class="op">=</span>gpu:2080:1 <span class="dt">\</span></span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a> <span class="at">--pty</span> bash <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="learning-more-about-nodes" class="level2">
+<h2 class="anchored" data-anchor-id="learning-more-about-nodes">Learning more about nodes</h2>
+<p>To understand what each compute node has we can use the <code>scontrol</code> command.</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="ex">scontrol</span> show nodes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Will list out all nodes and all capabilities of each node. Or just one node:</p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="ex">scontrol</span> show node lisnode2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="sbatch" class="level2">
+<h2 class="anchored" data-anchor-id="sbatch">sbatch</h2>
+<p>It can be quite inconvenient to launch an interactive job to run some compute, and wait for the job to be allocated. If, instead, you have a long running experiment that you want to run without any intervention from you, you can use <code>sbatch</code>.</p>
+<p>Sbatch will require us to write a small bash script that specifies how to run a job and what to do once its allocated.</p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=00:01:00</span></span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --job-name=my_new_job</span></span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --output=my_new_job.out</span></span>
+<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --error=my_new_job.err</span></span>
+<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-8"><a href="#cb70-8" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$HOSTNAME</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>And run it:</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sbatch</span> my_job.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Notice that instead of supplying options to sbatch, we can instead record them directly into the script using the <code>#SBATCH</code>. SLURM will examine this file, looking for lines starting with this comment, and infer that the rest of the line contains the options.</p>
+<p>There are a few other options we’ve included that are very useful when running non-interactive jobs. Firstly, we’ve given the job a name (<code>my_new_job</code>). This is so we can different between many jobs that we might run at the same time. To list out the jobs we currently have running we use <code>squeue</code>.</p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="ex">squeue</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>By default, squeue will list all of the active jobs, even other peoples. To specify only your jobs user the <code>--user</code> option:</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="ex">squeue</span> <span class="at">--user</span><span class="op">=</span>jay.morgan</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The other two options, <code>--output</code> and <code>--error</code> specify where the printed output and printed errors will be stored. Since the job is being run on a different node, by a non-interactive process, if you didn’t include these lines, you wouldn’t be able to see what was being printed by <code>echo</code> or by any other process such as <code>print</code> in Python.</p>
+</section>
+<section id="squeue" class="level2">
+<h2 class="anchored" data-anchor-id="squeue">squeue</h2>
+<p>When we list the jobs using <code>squeue</code> it will give us multiple columns of information, such as:</p>
+<ul>
+<li>JOBID – the referable id of the job.</li>
+<li>PARTITION – the partition on which the job has been requested for.</li>
+<li>NAME – the name of the job.</li>
+<li>USER – the user who submitted the job.</li>
+<li>ST – the status, is the job currently running, waiting, or exiting?</li>
+<li>TIME – how long the job has been running for.</li>
+<li>NODES – how many nodes have been allocated to the job.</li>
+</ul>
+</section>
+<section id="scontrol" class="level2">
+<h2 class="anchored" data-anchor-id="scontrol">scontrol</h2>
+<p><code>scontrol</code> allows us to modify an existing job. For example, let us say that we have a job which we need to extend the time limit. Given that we know the job id (we could use <code>squeue</code> to find this), we can ask SLURM to update the time limit using:</p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="ex">scontrol</span> update jobid=<span class="op">&lt;</span>job_id<span class="op">&gt;</span> TimeLimit=<span class="op">&lt;</span>new_timelimit<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="scancel" class="level2">
+<h2 class="anchored" data-anchor-id="scancel">scancel</h2>
+<p>Let’s say that we’ve submitted a job, but we’ve noticed that there was an error in the code, and want to stop the job. For that, we use <code>scancel</code> and specify the id of the job we wish to cancel:</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="ex">scancel</span> 158590</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>After running this command, we should see, using <code>squeue</code>, that either the job is finishing, or that its disappeared from our list (meaning that its completely stopped).</p>
+</section>
+<section id="sacct" class="level2">
+<h2 class="anchored" data-anchor-id="sacct">sacct</h2>
+<p>If our job has finished, or exited and is no longer in <code>squeue</code>, we can use <code>sacct</code> to get a history of the jobs.</p>
+<p><code>sacct</code> will list all of your jobs within some default window of time. If we want to change this window we can use the <code>--starttime</code> and <code>--endtime</code> options.</p>
+<p>Valid time formats are:</p>
+<ul>
+<li>HH:MM[:SS][AM|PM]</li>
+<li>MMDD[YY][-HH:MM[:SS]]</li>
+<li>MM.DD[.YY][-HH:MM[:SS]]</li>
+<li>MM/DD[/YY][-HH:MM[:SS]]</li>
+<li>YYYY-MM-DD[THH:MM[:SS]]</li>
+<li>today, midnight, noon, fika (3 PM), teatime (4 PM)</li>
+<li>now[{+|-}count[seconds(default)|minutes|hours|days|weeks]]</li>
+</ul>
+</section>
+<section id="job-task-arrays-motivation" class="level2">
+<h2 class="anchored" data-anchor-id="job-task-arrays-motivation">Job Task Arrays – motivation</h2>
+<p>Task arrays allow you to submit many jobs of the same type. Why might this be useful? Suppose you have a list of files that take a long time to process:</p>
+<ul>
+<li><code>file_0.txt</code></li>
+<li><code>file_1.txt</code></li>
+<li><code>file_2.txt</code></li>
+</ul>
+<p>Or you have some computation script, such as deep learning training script, that takes uses a hyperparameter which can be tuned to achieve different performance results:</p>
+<div class="sourceCode" id="cb76"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> train.py <span class="at">--learning-rate</span> 0.001</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Instead of a creating a sbatch script for each value of hyperparameter, or sequentially enumerating the values, you can use a job task array to spawn multiple jobs with slightly different values.</p>
+</section>
+<section id="job-task-arrays-how-to" class="level2">
+<h2 class="anchored" data-anchor-id="job-task-arrays-how-to">Job Task Arrays – how to</h2>
+<p>First, we will look at how to actually submit an array of tasks. To create an task array, you will need to add the <code>--array</code> options to your sbatch script:</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --job-name=my_task_array</span></span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --array=1-5</span></span>
+<span id="cb77-5"><a href="#cb77-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-6"><a href="#cb77-6" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here we are creating an array of tasks numbered from 1-5. When you submit this script, you will see five tasks submitted to the queue.</p>
+<p>Now that we know how to create an array of tasks, we will want to do something useful with it. When you create an array, each individual task will have a unique variable called <code>SLURM_ARRAY_TASK_ID</code>. So for example, if we launch an array of 5 tasks, the first task will have the value <code>1</code>. Why is this useful? Well, we can use this variable to alter the program slightly. Take for example our list of files we need to process:</p>
+<div class="sourceCode" id="cb78"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --job-name=my_task_array</span></span>
+<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --array=0-4</span></span>
+<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=00:10:00</span></span>
+<span id="cb78-5"><a href="#cb78-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-6"><a href="#cb78-6" aria-hidden="true" tabindex="-1"></a><span class="va">FILENAME</span><span class="op">=</span><span class="st">"file_</span><span class="va">${SLURM_ARRAY_TASK_ID}</span><span class="st">.txt"</span></span>
+<span id="cb78-7"><a href="#cb78-7" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> process.py <span class="va">$FILENAME</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will create a new bash variable called <code>FILENAME</code> by concatenating <code>file_</code> the current task’s (i.e.&nbsp;0, for the first task, 1 for the second task, etc) and <code>.txt</code>.</p>
+<p>If we run the previous example, we will see that we have five jobs named exactly the same thing <code>my_task_array</code>. This is okay, but we can be a little bit more clear as to which task is running, i.e.&nbsp;which task is processing which file?</p>
+<p>We can use some special variables in our bash script to make this more clear. These are <code>%A</code> that is the main job id, and <code>%a</code> that is the task array id.</p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --error=my_task_array.%A_%a.out</span></span>
+<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --output=my_task_array.%A_%a.out</span></span>
+<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now, every task in our array will have a slightly different name because of the <code>%a</code> and therefore we will be able to determine which job is processing which file.</p>
+<p>Let’s move on to the second example, where we have a Deep Learning training program and we want to try different parameters. In this case, we can again use a task array.</p>
+<div class="sourceCode" id="cb80"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --array=1-10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We could either pass the <code>SLURM_ARRAY_TASK_ID</code> as a command line argument to the script:</p>
+<div class="sourceCode" id="cb81"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> training.py <span class="at">--learning-rate</span> <span class="va">$SLURM_ARRAY_TASK_ID</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>But in this case, we could have to properly calculate the correct learning rate from the <code>SLURM_ARRAY_TASK_ID</code> value (remember that in my sbatch script I set <code>--array=1-5</code>). But bash only performs integer arithmetic, therefore we will need to calculate the correct learning rate in something else.</p>
+<p>Instead of passing the learning rate via a command line argument. We can get the value directly from our python script and calculate the value.</p>
+<div class="sourceCode" id="cb82"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>task_id <span class="op">=</span> <span class="bu">int</span>(os.environ[<span class="st">"SLURM_ARRAY_TASK_ID"</span>])</span>
+<span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a>learning_rate <span class="op">=</span> task_id <span class="op">/</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here we are using the builtin <code>os</code> module in Python, getting the environment variable from the dictionary <code>environ</code> and parsing the value as an integer. Then we can calculate the appropriate learning rate using this value. So for example, if <code>SLURM_ARRAY_TASK_ID</code> is set to 1. Our learning rate would be 0.01 for this task.</p>
+<p>If you’re creating a job task array, you may want to create hundreds of jobs. And of course, you don’t want to use up the entire cluster leaving no resources for anybody else! Therefore, you will only want a maximum number of tasks to run at any one time.</p>
+<div class="sourceCode" id="cb83"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --array=1-100%5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will create a job task array of 100 jobs numbered from 1 to 100. But we have added an additional argument <code>%5</code> which means that only 5 jobs can run at any one time for this task array. If you have five tasks running, the other 95 tasks will wait.</p>
+<p>If, at any point, you want to change how many jobs can run simultaineously, you can update this ‘throttle’ value using <code>scontrol</code>:</p>
+<div class="sourceCode" id="cb84"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="ex">scontrol</span> update ArrayTaskThrottle=<span class="op">&lt;</span>count<span class="op">&gt;</span> JobId=<span class="op">&lt;</span>jobID<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>So if we’ve already launched a job task array with the job id of <code>50602</code> that has a throttle value of 5 (only 5 tasks will run at once), we can change it to 10 using:</p>
+<div class="sourceCode" id="cb85"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="ex">scontrol</span> update ArrayTaskThrottle=10 JobId=50602</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="a-guided-walk-through" class="level1">
+<h1>A guided walk through</h1>
+<section id="a-guided-walk-through-environment" class="level2">
+<h2 class="anchored" data-anchor-id="a-guided-walk-through-environment">A guided walk through – environment</h2>
+<p>In this section we’re going to give an example walk through of working with the HPC cluster. In this example, we’re going to write our scripts locally, including the slurm submission script, and when they’re ready, we’ll send them to the cluster to perform the actual computation.</p>
+<p>Let’s imagine we’re starting a new project, and are programming our scripts in Python. Now is a good time to create a new conda environment to install our packages we’re going to use for our research. We’ll create this environment with (replacing <code>&lt;env-name&gt;</code> with whatever we want to call this environment):</p>
+<div class="sourceCode" id="cb86"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> <span class="op">&lt;</span>env-name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>and then activate it:</p>
+<div class="sourceCode" id="cb87"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate <span class="op">&lt;</span>env-name<span class="op">&gt;</span></span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install python=3.9</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="writing-our-scripts" class="level2">
+<h2 class="anchored" data-anchor-id="writing-our-scripts">Writing our scripts</h2>
+<p>Let us also image we’ve just wrote the following script to create a lorenz attractor: <a href="https://pageperso.lis-lab.fr/jay.morgan/resources/2021-programming-level-up/lectures/week-5/lorenz.py">lorenz.py</a></p>
+<p>The specific implementation of this script is not particularly important for this walk through. Just know that we’re importing a few packages such as numpy and matplotlib. Then, we’re performing some computation, and saving the results to analyse later. As this script uses external libraries, we need to install them:</p>
+<div class="sourceCode" id="cb88"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install numpy matplotlib</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="writing-our-job-submission-script" class="level2">
+<h2 class="anchored" data-anchor-id="writing-our-job-submission-script">Writing our job submission script</h2>
+<p>Since we want our calculations to be performed on the cluster, we will need to also write a job submission script (let’s call this <code>submit-job.sh</code>) in bash to pass to SLURM.</p>
+<div class="sourceCode" id="cb89"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --job-name=lorenz_attractor</span></span>
+<span id="cb89-4"><a href="#cb89-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --output=lorenz_attractor.log</span></span>
+<span id="cb89-5"><a href="#cb89-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --error=lorenz_attractor.log</span></span>
+<span id="cb89-6"><a href="#cb89-6" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=00:10:00</span></span>
+<span id="cb89-7"><a href="#cb89-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb89-8"><a href="#cb89-8" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> lorenz.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="replicating-our-environment-on-the-cluster" class="level2">
+<h2 class="anchored" data-anchor-id="replicating-our-environment-on-the-cluster">Replicating our environment on the cluster</h2>
+<p>As we’ve installed external packages in our local development environment, we will want to ensure that when we run the calculations on the cluster, it will be using the same versions of packages. Conda makes this a lot easier. First, we export our environment to a recipe file:</p>
+<div class="sourceCode" id="cb90"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env export <span class="at">--no-builds</span> <span class="op">&gt;</span> environment.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="sending-our-scripts-to-the-cluster" class="level2">
+<h2 class="anchored" data-anchor-id="sending-our-scripts-to-the-cluster">Sending our scripts to the cluster</h2>
+<p>All of our scripts are ready! We can now transfer them from our personal computer, to the cluster. The files we need to transfer are:</p>
+<ul>
+<li><code>lorenz.py</code></li>
+<li><code>environment.yml</code></li>
+<li><code>submit-job.sh</code></li>
+</ul>
+<p>While we can send a folder (and the containing files), let’s send them one at a time:</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> lorenz.py <span class="op">&lt;</span>hostname<span class="op">&gt;</span>:<span class="op">&lt;</span>destination-path<span class="op">&gt;</span></span>
+<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> environment.yml <span class="op">&lt;</span>hostname<span class="op">&gt;</span>:<span class="op">&lt;</span>destination-path<span class="op">&gt;</span></span>
+<span id="cb91-3"><a href="#cb91-3" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> submit-job.sh <span class="op">&lt;</span>hostname<span class="op">&gt;</span>:<span class="op">&lt;</span>destination-path<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>where <code>&lt;hostname&gt;</code> is the hostname/IP address that you’ve used to connect to the login node on the cluster before. <code>&lt;destination-path&gt;</code> is the path to where you want to save the files.</p>
+</section>
+<section id="logging-into-the-cluster" class="level2">
+<h2 class="anchored" data-anchor-id="logging-into-the-cluster">Logging into the cluster</h2>
+<p>Now that our files are on the cluster, we can login:</p>
+<div class="sourceCode" id="cb92"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>username<span class="op">&gt;</span>@<span class="op">&lt;</span>hostname<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>At which point, we’ve logged into the login node, and then we need to change directory to where we saved the files:</p>
+<div class="sourceCode" id="cb93"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="op">&lt;</span>destination-path<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="re-creating-our-development-environment" class="level2">
+<h2 class="anchored" data-anchor-id="re-creating-our-development-environment">Re-creating our development environment</h2>
+<p>Now that we’re in the same folder as our scripts, we’re almost ready to submit our job. First, we need to recreate our development environment from our <code>environment.yml</code> file.</p>
+<div class="sourceCode" id="cb94"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>And activate our newly created environment:</p>
+<div class="sourceCode" id="cb95"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate <span class="op">&lt;</span>env-name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="submitting-our-job" class="level2">
+<h2 class="anchored" data-anchor-id="submitting-our-job">Submitting our job</h2>
+<p>Now we can submit our job:</p>
+<div class="sourceCode" id="cb96"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sbatch</span> submit-job.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can check the progress of our job with <code>squeue</code>, or its already completed, look at the job history with <code>sacct</code>.</p>
+</section>
+<section id="downloading-the-results" class="level2">
+<h2 class="anchored" data-anchor-id="downloading-the-results">Downloading the results</h2>
+<p>If our job runs successfully, a <code>data.pkl</code> file will be created. Back on our local computers, we will need to run the following to download it:</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="op">&lt;</span>hostname<span class="op">&gt;</span>:<span class="op">&lt;</span>destination-path<span class="op">&gt;</span>/data.pkl ./</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will download the file into the current directory.</p>
+</section>
+<section id="analysing-the-results" class="level2">
+<h2 class="anchored" data-anchor-id="analysing-the-results">Analysing the results</h2>
+<p>With the <code>data.pkl</code> file downloaded, we can visualise the results using <code>plot_lorenz.py</code>: <a href="https://pageperso.lis-lab.fr/jay.morgan/resources/2021-programming-level-up/lectures/week-5/plot-lorenz.py" class="uri">https://pageperso.lis-lab.fr/jay.morgan/resources/2021-programming-level-up/lectures/week-5/plot-lorenz.py</a></p>
+<p>If everything has been run correctly, you should see a plot of the lorenz attractor.</p>
+</section>
+<section id="useful-features-x11-forwarding" class="level2">
+<h2 class="anchored" data-anchor-id="useful-features-x11-forwarding">Useful features – X11 Forwarding</h2>
+<p>If we’re performing analysis interactively using the cluster, we’ll often want to visualise the results, using matplotlib for example. To <em>see</em> our plots display like they would on our local machine when we call <code>plt.plot</code> or <code>plt.show()</code>, we will need to ensure that we’re using something called <code>X11 Forwarding</code>. To enable <code>X11 Forwarding</code>, we use the <code>-X</code> option when <code>ssh</code>‘ing into the cluster and compute nodes (i.e.&nbsp;it will need to be enabled on every ’hop’ so to speak).</p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-X</span> <span class="op">&lt;&lt;remote-host&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If want to enable it by default, we can enable it in our <code>ssh</code> config file:</p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Host</span> cluster</span>
+<span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a> <span class="ex">HostName</span> sms-ext.lis-lab.fr</span>
+<span id="cb99-3"><a href="#cb99-3" aria-hidden="true" tabindex="-1"></a> <span class="ex">FowardX11</span> yes</span>
+<span id="cb99-4"><a href="#cb99-4" aria-hidden="true" tabindex="-1"></a> <span class="ex">User</span> <span class="op">&lt;&lt;username&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>After setting up <code>X11 Forwarding</code> correctly, and when logged into the remote host, we should be able to echo a variable called <code>$DISPLAY</code>.</p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$DISPLAY</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If <code>$DISPLAY</code> has a value, we know that X11 Forwarding has been setup correctly, and we’re ready to do some plotting!</p>
+</section>
+<section id="useful-features-jupyter-notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="useful-features-jupyter-notebooks">Useful features – Jupyter Notebooks</h2>
+<p>We’ve talked about how good jupyter notebooks are for performing analysis and exploration. But often times, we will need a lot of compute resources (more than our local computers can handle) to do this analysis. This is where using jupyter notebook on the supercomputers comes in handy. However, it is not as simple as starting the jupyter notebook server and opening up your web browser. First, we will need to setup a ‘reverse ssh tunnel’.</p>
+<p>In a nut-shell, a reverse ssh tunnel allows you to redirect data on a remote port to a local port.</p>
+<p>Therefore, we can, using a reverse ssh tunnel, start a jupyter notebook on the supercomputer and access it using the web browser on our local computer!</p>
+<p>To begin, we can create an interactive job on the cluster:</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>01:00:00 <span class="at">--pty</span> bash <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>And start our jupyter notebook, specifying a port that will not be in use:</p>
+<div class="sourceCode" id="cb102"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> notebook <span class="at">--port</span> 30333</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>With our notebook server now started on the 30333 port, we will want to create an ssh tunnel from our local computer, to the cluster’s login node, and then a tunnel from the login node to the specific compute node where the job is running:</p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-L</span> 30333:localhost:30333 <span class="op">&lt;&lt;cluster-login-node&gt;&gt;</span> ssh <span class="at">-L</span> 30333:localhost:30333 <span class="op">&lt;&lt;cluster-compute-node&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If everything goes well, we should now be able to open up our web browser, navigate to <code>localhost:30333</code> and see our jupyter notebooks.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/morganwastaken\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
