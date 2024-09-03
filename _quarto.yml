@@ -2,7 +2,6 @@ project:
   type: website
   resources:
     - "assets/*"
-    - "teaching/**/*"
   output-dir: docs
 
 website:
