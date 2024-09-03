@@ -8,7 +8,7 @@
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.555">
 
   <meta name="author" content="Jay Paul Morgan">
   <title>Programming Level-up - Introduction to Matplotlib</title>
@@ -31,7 +31,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -221,7 +221,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -420,18 +421,30 @@ Jay Paul Morgan
 <section id="installing-and-importing-matplotlib" class="slide level2">
 <h2>Installing and importing Matplotlib</h2>
 <p>Matplotlib can be installed via conda:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">conda</span> install matplotlib</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">conda</span> install matplotlib</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>or with pip:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">pip</span> install matplotlib</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="ex">pip</span> install matplotlib</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Remember! You can install packages in ipython REPL/juypter notebook by inserting a ‘!’ to the beginning of a shell command.</p>
 </section>
 <section id="basic-plotting" class="slide level2">
 <h2>Basic plotting</h2>
 <p>First, we will import the matplotlib module. The plotting function is located within the <code>pyplot</code> package within matplotlib. The use of this package is so common that 99% of Python users will alias this import as <code>plt</code>:</p>
+<div id="c8b69ba0" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>With this package now imported, we can now use the <code>plot</code> function. To begin with, let’s just plot a simple line chart. In this case, the <code>plot</code> function takes an <code>x</code> and <code>y</code> argument, where <code>x</code> denotes the values along the x-axis and <code>y</code> are the values along the y-axis.</p>
-<div class="cell" data-execution_count="2">
+<div id="66e07c33" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb4-3"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb4-4"><a></a>plt.plot(x, y)</span>
+<span id="cb4-5"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-3-output-1.png" width="813" height="411"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-3-output-1.png" width="441" height="337"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>In this example, we have created two vectors. The first <code>x</code>, creates a vector of 100 values from -10 to 10. <code>y</code> is the sin function applied to <code>x</code>. Finally, in the third line, we plot the sin wave using these two vectors.</p>
@@ -459,9 +472,17 @@ Jay Paul Morgan
 <section id="line-plots" class="slide level2">
 <h2>Line plots</h2>
 <p>We’ve already seen one example of a line plot. This plot draws a line between each x,y point. For instance in the previous example, we created a sin wave by ‘sampling’ such wave using 100 samples from -10 to 10. Let’s see what happens when we sample only 10 points:</p>
-<div class="cell" data-execution_count="3">
+<div id="9883fc7f" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb5-2"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb5-3"><a></a>plt.plot(x, y)</span>
+<span id="cb5-4"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-4-output-1.png" width="813" height="411"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-4-output-1.png" width="441" height="337"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>We see the results are a less than ideal representation of a sin wave as <code>plot</code> will simply draw a straight line from each point.</p>
@@ -470,16 +491,32 @@ Jay Paul Morgan
 <section id="scatter-plots" class="slide level2">
 <h2>Scatter plots</h2>
 <p>If we want to see where each sample of the sin wave is, we could use instead the scatter plot, which will (by default) place a small circle at every x,y value. To create a scatter plot, we use <code>scatter</code> instead of the <code>plot</code> function. The arguments to this function are the same, however.</p>
-<div class="cell" data-execution_count="4">
+<div id="d2cb76dd" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb6-2"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb6-3"><a></a>plt.scatter(x, y)</span>
+<span id="cb6-4"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-5-output-1.png" width="813" height="411"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-5-output-1.png" width="441" height="337"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Now we can see the position of each individual sample from the sin wave. If we, once again, sample 100 points from this curve, we will see better results.</p>
 <!-- ![](images/scatter.png) -->
-<div class="cell" data-execution_count="5">
+<div id="bc562a41" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb7-2"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb7-3"><a></a>plt.scatter(x, y)</span>
+<span id="cb7-4"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-6-output-1.png" width="813" height="411"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-6-output-1.png" width="441" height="337"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/scatter-2.png) -->
@@ -487,9 +524,17 @@ Jay Paul Morgan
 <section id="bar-plots" class="slide level2">
 <h2>Bar plots</h2>
 <p>Bar plots are a simple plot that again takes an <code>x</code> and a <code>y</code>, where x is the numerical position of the bar’s centre, and <code>y</code> is the height of the bar.</p>
-<div class="cell" data-execution_count="6">
+<div id="b67752fb" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>x <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">8</span>)</span>
+<span id="cb8-2"><a></a>y <span class="op">=</span> np.random.uniform(<span class="dv">2</span>, <span class="dv">7</span>, <span class="bu">len</span>(x))</span>
+<span id="cb8-3"><a></a>plt.bar(x, y)</span>
+<span id="cb8-4"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-7-output-1.png" width="781" height="411"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-7-output-1.png" width="409" height="337"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/bar.png) -->
@@ -497,9 +542,16 @@ Jay Paul Morgan
 <section id="histograms" class="slide level2">
 <h2>Histograms</h2>
 <p>Histograms allow us to visualise the distribution of values. In matplotlib, we can create a histogram of a vector by using the <code>hist</code> function that takes only the vector as its argument.</p>
-<div class="cell" data-execution_count="7">
+<div id="1521af19" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>x <span class="op">=</span> np.random.randn(<span class="dv">1000</span>)</span>
+<span id="cb9-2"><a></a>plt.hist(x)</span>
+<span id="cb9-3"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-8-output-1.png" width="798" height="413"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-8-output-1.png" width="426" height="341"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/hist.png) -->
@@ -507,9 +559,16 @@ Jay Paul Morgan
 <section id="box-plots" class="slide level2">
 <h2>Box plots</h2>
 <p>Box plots also allow us to visualise the distribution, but the distribution of values within a group. In this example we’re visualising the distribution of 3 groups. Using the <code>boxplot</code> function, we pass a matrix.</p>
-<div class="cell" data-execution_count="8">
+<div id="7a545d8b" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>x <span class="op">=</span> np.random.randn(<span class="dv">10</span>, <span class="dv">3</span>)</span>
+<span id="cb10-2"><a></a>plt.boxplot(x)</span>
+<span id="cb10-3"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-9-output-1.png" width="805" height="411"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-9-output-1.png" width="433" height="337"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/boxplot.png) -->
@@ -517,16 +576,32 @@ Jay Paul Morgan
 <section id="image-plots" class="slide level2">
 <h2>Image plots</h2>
 <p>In matplotlib, we can plot an ‘image’ – that is a 2D matrix – using the <code>imshow</code> function. For example:</p>
-<div class="cell" data-execution_count="9">
+<div id="10c5f714" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb11-2"><a></a>x <span class="op">=</span> np.random.randn(<span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb11-3"><a></a>plt.imshow(x)</span>
+<span id="cb11-4"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-10-output-1.png" width="407" height="411"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-10-output-1.png" width="333" height="337"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/imshow.png) -->
 <p>Of course, given the name, we can then use <code>imshow</code> to plot an image as well, as long as we have the image loaded as a 2D array of values.</p>
-<div class="cell" data-execution_count="10">
+<div id="c838cd94" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="im">from</span> PIL <span class="im">import</span> Image  <span class="co"># using the PIL module to read an image</span></span>
+<span id="cb12-2"><a></a>img <span class="op">=</span> np.array(Image.<span class="bu">open</span>(<span class="st">"images/Lenna.png"</span>))</span>
+<span id="cb12-3"><a></a>plt.imshow(img)</span>
+<span id="cb12-4"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-11-output-1.png" width="428" height="416"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-11-output-1.png" width="356" height="342"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/imshow-2.png) -->
@@ -534,10 +609,30 @@ Jay Paul Morgan
 <section id="dimensional-plots" class="slide level2">
 <h2>3 dimensional plots</h2>
 <p>3 dimensional plots require us to import another module from matplotlib.</p>
+<div id="5d5f13db" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">from</span> mpl_toolkits <span class="im">import</span> mplot3d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>After importing this module, we can using the <em>projection=“3d”</em> and carry on plotting as normal.</p>
-<div class="cell" data-execution_count="12">
+<div id="9e4e8703" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb14-2"><a></a><span class="co"># older matplotlib</span></span>
+<span id="cb14-3"><a></a><span class="co"># ax = fig.gca(projection='3d')</span></span>
+<span id="cb14-4"><a></a><span class="co"># newest version</span></span>
+<span id="cb14-5"><a></a>ax <span class="op">=</span> fig.add_subplot(projection<span class="op">=</span><span class="st">'3d'</span>)</span>
+<span id="cb14-6"><a></a>theta <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">4</span> <span class="op">*</span> np.pi, <span class="dv">4</span> <span class="op">*</span> np.pi, <span class="dv">100</span>)</span>
+<span id="cb14-7"><a></a>z <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">100</span>)</span>
+<span id="cb14-8"><a></a>r <span class="op">=</span> z<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb14-9"><a></a>x <span class="op">=</span> r <span class="op">*</span> np.sin(theta)</span>
+<span id="cb14-10"><a></a>y <span class="op">=</span> r <span class="op">*</span> np.cos(theta)</span>
+<span id="cb14-11"><a></a>ax.plot(x, y, z, label<span class="op">=</span><span class="st">'parametric curve'</span>)</span>
+<span id="cb14-12"><a></a>ax.legend()</span>
+<span id="cb14-13"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-13-output-1.png" width="408" height="395"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-13-output-1.png" width="332" height="327"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/3d-figure.png) -->
@@ -555,9 +650,22 @@ Jay Paul Morgan
 <section id="subplots" class="slide level2">
 <h2>Subplots</h2>
 <p>What if we wanted to create many plots side-by-side? For this we can use the <code>subplots</code> function. This function takes the number of rows, and number of columns to create. It returns two values, the first is the figure (entire figure), and the second value is a list of sub figures. Using this list, we can place a plot of each of them.</p>
-<div class="cell" data-execution_count="13">
+<div id="326259a1" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb15-2"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb15-3"><a></a>z <span class="op">=</span> np.cos(y)</span>
+<span id="cb15-4"><a></a></span>
+<span id="cb15-5"><a></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb15-6"><a></a><span class="co"># ax is a list of sub figures</span></span>
+<span id="cb15-7"><a></a>ax[<span class="dv">0</span>].plot(x, y)</span>
+<span id="cb15-8"><a></a>ax[<span class="dv">1</span>].plot(x, z)</span>
+<span id="cb15-9"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-14-output-1.png" width="813" height="411"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-14-output-1.png" width="442" height="337"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/subplots.png) -->
@@ -565,9 +673,21 @@ Jay Paul Morgan
 <section id="adding-a-legend" class="slide level2">
 <h2>Adding a legend</h2>
 <p>Or we could put them onto the same plot. Matplotlib will automatically give them a different colour. If we use the <code>label</code> argument to <code>plot</code>, we can also give them a name that will appear when we call <code>legend()</code>.</p>
-<div class="cell" data-execution_count="14">
+<div id="086cd7f1" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb16-2"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb16-3"><a></a>z <span class="op">=</span> np.tan(y)</span>
+<span id="cb16-4"><a></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb16-5"><a></a>ax.plot(x, y, label<span class="op">=</span><span class="st">"sin(x)"</span>)</span>
+<span id="cb16-6"><a></a>ax.plot(x, z, label<span class="op">=</span><span class="st">"tan(x)"</span>)</span>
+<span id="cb16-7"><a></a>ax.legend()</span>
+<span id="cb16-8"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-15-output-1.png" width="805" height="411"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-15-output-1.png" width="433" height="337"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/legend.png) -->
@@ -575,9 +695,22 @@ Jay Paul Morgan
 <section id="position-the-legend-in-different-places" class="slide level2">
 <h2>Position the legend in different places</h2>
 <p>We can change the position of the legend by specifying a different integer value for the <code>loc</code> argument (or string values such as ‘upper left’, ‘upper right’, …). Additionally, we can change the number of columns the legend has with the <code>ncol</code> argument.</p>
-<div class="cell" data-execution_count="15">
+<div id="5cf0a094" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb17-2"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb17-3"><a></a>z <span class="op">=</span> np.tan(y)</span>
+<span id="cb17-4"><a></a></span>
+<span id="cb17-5"><a></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb17-6"><a></a>ax.plot(x, y, label<span class="op">=</span><span class="st">"sin(x)"</span>)</span>
+<span id="cb17-7"><a></a>ax.plot(x, z, label<span class="op">=</span><span class="st">"tan(x)"</span>)</span>
+<span id="cb17-8"><a></a>ax.legend(loc<span class="op">=</span><span class="dv">1</span>, ncol<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb17-9"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-16-output-1.png" width="805" height="411"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-16-output-1.png" width="433" height="337"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>You can find the API reference for the different arguments to legend at: <a href="https://matplotlib.org/stable/api/legend_api.html?highlight=legend#module-matplotlib.legend" class="uri">https://matplotlib.org/stable/api/legend_api.html?highlight=legend#module-matplotlib.legend</a></p>
@@ -586,9 +719,24 @@ Jay Paul Morgan
 <section id="modifying-the-xy-axis" class="slide level2">
 <h2>Modifying the x/y axis</h2>
 <p>Good graphs always have their axis’s labelled. To do this in matplotlib, if we have a subplot object, we use <code>set_xlabel</code>, or we can use <code>plt.xlabel(...)</code>. Here is an example with an subplot object:</p>
-<div class="cell" data-execution_count="16">
+<div id="2cf14cb7" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb18-2"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb18-3"><a></a>z <span class="op">=</span> np.tan(y)</span>
+<span id="cb18-4"><a></a></span>
+<span id="cb18-5"><a></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb18-6"><a></a>ax.plot(x, y, label<span class="op">=</span><span class="st">"sin(x)"</span>)</span>
+<span id="cb18-7"><a></a>ax.plot(x, z, label<span class="op">=</span><span class="st">"tan(x)"</span>)</span>
+<span id="cb18-8"><a></a>ax.legend(loc<span class="op">=</span><span class="dv">1</span>, ncol<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb18-9"><a></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
+<span id="cb18-10"><a></a>ax.set_ylabel(<span class="st">"y"</span>)</span>
+<span id="cb18-11"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-17-output-1.png" width="823" height="429"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-17-output-1.png" width="451" height="356"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/axis.png) -->
@@ -596,20 +744,48 @@ Jay Paul Morgan
 <section id="changing-figure-size" class="slide level2">
 <h2>Changing figure size</h2>
 <p>A common change you may want to make to your figure is to change its size or aspect ratio. <code>figure()</code> or <code>subplots()</code> take an optional argument called <code>figsize</code>. This argument expects a tuple representing the width and height of the figure in inches.</p>
-<div class="cell" data-execution_count="17">
+<div id="49056aa8" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="fl">2.5</span>))</span>
+<span id="cb19-2"><a></a></span>
+<span id="cb19-3"><a></a><span class="co"># or most likely</span></span>
+<span id="cb19-4"><a></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="fl">2.5</span>))</span>
+<span id="cb19-5"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb19-6"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb19-7"><a></a>z <span class="op">=</span> np.tan(y)</span>
+<span id="cb19-8"><a></a>ax.plot(x, y, label<span class="op">=</span><span class="st">"sin(x)"</span>)</span>
+<span id="cb19-9"><a></a>ax.plot(x, z, label<span class="op">=</span><span class="st">"tan(x)"</span>)</span>
+<span id="cb19-10"><a></a>ax.legend(loc<span class="op">=</span><span class="dv">1</span>, ncol<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb19-11"><a></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
+<span id="cb19-12"><a></a>ax.set_ylabel(<span class="st">"y"</span>)</span>
+<span id="cb19-13"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>&lt;Figure size 768x240 with 0 Axes&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-18-output-2.png" width="662" height="245"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-18-output-2.png" width="662" height="245"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Here we are creating a figure with 8 inches of width, and 2.5 inches of height.</p>
 <!-- ![](images/fig-size.png) -->
 <p>This is especially useful when you have many sub-figures, as by default, they will be ‘squashed’ into the default aspect ratio. We can ‘give them more space’ by modifying this <code>figsize</code> argument when creating the many sub-figures.</p>
-<div class="cell" data-execution_count="18">
+<div id="943cdf0b" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="fl">2.5</span>))</span>
+<span id="cb21-2"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb21-3"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb21-4"><a></a>z <span class="op">=</span> np.tan(y)</span>
+<span id="cb21-5"><a></a>ax[<span class="dv">0</span>].plot(x, y, label<span class="op">=</span><span class="st">"sin(x)"</span>)</span>
+<span id="cb21-6"><a></a>ax[<span class="dv">1</span>].plot(x, z, label<span class="op">=</span><span class="st">"tan(x)"</span>)</span>
+<span id="cb21-7"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-19-output-1.png" width="656" height="226"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-19-output-1.png" width="656" height="226"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/figsize-2.png) -->
@@ -631,9 +807,21 @@ Jay Paul Morgan
 <li>markeredgewidth – outline width of the marker.</li>
 </ul>
 <p>If this example we are modifying some of the line properties that include the color (c), setting it to a string value of “green”. The linewidth (lw) to be thicker, and making the line to be a dotted line by specifying the linestyle (ls) to “=–={”.</p>
-<div class="cell" data-execution_count="19">
+<div id="4d49caea" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb22-2"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb22-3"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb22-4"><a></a>plt.plot(x, y,</span>
+<span id="cb22-5"><a></a>         c<span class="op">=</span><span class="st">"green"</span>, <span class="co"># or color</span></span>
+<span id="cb22-6"><a></a>         lw<span class="op">=</span><span class="dv">3</span>, <span class="co"># or linewidth</span></span>
+<span id="cb22-7"><a></a>         ls<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb22-8"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-20-output-1.png" width="813" height="411"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-20-output-1.png" width="441" height="337"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/linestyles.png) -->
@@ -641,12 +829,37 @@ Jay Paul Morgan
 <section id="colourmaps" class="slide level2">
 <h2>Colourmaps</h2>
 <p>When we create a heatmap using <code>imshow</code>, the gradients of colour are automatically set. Yet, we can control the colour gradient using a colour map. First we must import <code>cm</code> from matplotlib:</p>
+<div id="fbfcb6db" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Then we can get a colour map with 10 levels using <code>get_cmap</code>:</p>
+<div id="33e1f2a6" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a>blues <span class="op">=</span> cm.get_cmap(<span class="st">"Blues"</span>, <span class="dv">10</span>) <span class="co"># 10 levels</span></span>
+<span id="cb24-2"><a></a>reds <span class="op">=</span> cm.get_cmap(<span class="st">"Reds"</span>, <span class="dv">2</span>) <span class="co"># 2 levels</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/tmp/ipykernel_22708/226750876.py:1: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  blues = cm.get_cmap("Blues", 10) # 10 levels
+/tmp/ipykernel_22708/226750876.py:2: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  reds = cm.get_cmap("Reds", 2) # 2 levels</code></pre>
+</div>
+</div>
 <p>You can find a full list of different colour maps at: <a href="https://matplotlib.org/stable/tutorials/colors/colormaps.html" class="uri">https://matplotlib.org/stable/tutorials/colors/colormaps.html</a></p>
 <p>Now that we have our new colour maps, we can pass it as an <code>cmap</code> argument when we create a plot.</p>
-<div class="cell" data-execution_count="22">
+<div id="9c150e29" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a>x <span class="op">=</span> np.random.randn(<span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb26-2"><a></a>y <span class="op">=</span> np.random.randn(<span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb26-3"><a></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">3</span>))</span>
+<span id="cb26-4"><a></a>p1 <span class="op">=</span> ax[<span class="dv">0</span>].imshow(x, cmap<span class="op">=</span>blues)</span>
+<span id="cb26-5"><a></a>p2 <span class="op">=</span> ax[<span class="dv">1</span>].imshow(y, cmap<span class="op">=</span>reds)</span>
+<span id="cb26-6"><a></a>fig.colorbar(p1, ax<span class="op">=</span>ax[<span class="dv">0</span>])</span>
+<span id="cb26-7"><a></a>fig.colorbar(p2, ax<span class="op">=</span>ax[<span class="dv">1</span>])</span>
+<span id="cb26-8"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-23-output-1.png" width="632" height="261"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-23-output-1.png" width="632" height="261"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/colourmaps.png) -->
@@ -654,9 +867,25 @@ Jay Paul Morgan
 <section id="ticks" class="slide level2">
 <h2>Ticks</h2>
 <p>If we want to customise the numbers along each axis, we use the <code>set_xticks</code> for the x-axis and <code>set_yticks</code> for the y-axis. These functions take the list of locations for each ‘tick’, and optionally a list of labels to use instead of the numbers.</p>
-<div class="cell" data-execution_count="23">
+<div id="72dad4d2" class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">100</span>)</span>
+<span id="cb27-2"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb27-3"><a></a></span>
+<span id="cb27-4"><a></a>bx <span class="op">=</span> np.arange(<span class="dv">2</span>, <span class="dv">7</span>)</span>
+<span id="cb27-5"><a></a>by <span class="op">=</span> np.random.uniform(<span class="dv">2</span>, <span class="dv">7</span>, <span class="bu">len</span>(bx))</span>
+<span id="cb27-6"><a></a></span>
+<span id="cb27-7"><a></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">3</span>))</span>
+<span id="cb27-8"><a></a>ax[<span class="dv">0</span>].plot(x, y)</span>
+<span id="cb27-9"><a></a>ax[<span class="dv">0</span>].set_xticks([<span class="op">-</span><span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">2</span>])</span>
+<span id="cb27-10"><a></a>ax[<span class="dv">1</span>].bar(bx, by)</span>
+<span id="cb27-11"><a></a>ax[<span class="dv">1</span>].set_xticks(bx, [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>, <span class="st">"e"</span>])</span>
+<span id="cb27-12"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-24-output-1.png" width="656" height="263"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-24-output-1.png" width="656" height="266"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/ticks.png) -->
@@ -664,9 +893,22 @@ Jay Paul Morgan
 <section id="grids" class="slide level2">
 <h2>Grids</h2>
 <p>In all of the previous plots, the background has no grids, they are simply white. If we wanted to add grid lines to the plot we use the <code>.grid()</code> method. This function, by default, adds the major grid lines.</p>
-<div class="cell" data-execution_count="24">
+<div id="a492a06d" class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">100</span>)</span>
+<span id="cb28-2"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb28-3"><a></a>z <span class="op">=</span> np.tan(x)</span>
+<span id="cb28-4"><a></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">3</span>))</span>
+<span id="cb28-5"><a></a>ax[<span class="dv">0</span>].plot(x, y)</span>
+<span id="cb28-6"><a></a>ax[<span class="dv">0</span>].grid()</span>
+<span id="cb28-7"><a></a>ax[<span class="dv">1</span>].plot(x, z)</span>
+<span id="cb28-8"><a></a>ax[<span class="dv">1</span>].grid(which<span class="op">=</span><span class="st">"both"</span>, color<span class="op">=</span><span class="st">"r"</span>)</span>
+<span id="cb28-9"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-25-output-1.png" width="656" height="263"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-25-output-1.png" width="656" height="263"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/grids.png) -->
@@ -674,9 +916,22 @@ Jay Paul Morgan
 <section id="scale" class="slide level2">
 <h2>Scale</h2>
 <p>The default behaviour of matplotlib is to plot using a linear scale. In certain situations, we want view the plot using a different scale. For this we can use <code>set_yscale</code>.</p>
-<div class="cell" data-execution_count="25">
+<div id="c5e179a7" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb29-2"><a></a>y <span class="op">=</span> np.exp(x)</span>
+<span id="cb29-3"><a></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">3</span>))</span>
+<span id="cb29-4"><a></a>ax[<span class="dv">0</span>].plot(x, y)</span>
+<span id="cb29-5"><a></a>ax[<span class="dv">0</span>].grid()</span>
+<span id="cb29-6"><a></a>ax[<span class="dv">1</span>].plot(x, y)</span>
+<span id="cb29-7"><a></a>ax[<span class="dv">1</span>].set_yscale(<span class="st">'log'</span>)</span>
+<span id="cb29-8"><a></a>ax[<span class="dv">1</span>].grid()</span>
+<span id="cb29-9"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-26-output-1.png" width="668" height="263"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-26-output-1.png" width="668" height="263"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/scale.png) -->
@@ -684,9 +939,21 @@ Jay Paul Morgan
 <section id="setting-the-plot-limits" class="slide level2">
 <h2>Setting the plot limits</h2>
 <p>By default, matplotlib will calculate the minimum and maximum values of the data, and use those values to set the limits of the plot. Using <code>set_xlim</code> and <code>set_ylim</code> we can change this default behaviour.</p>
-<div class="cell" data-execution_count="26">
+<div id="3800f21a" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">100</span>)</span>
+<span id="cb30-2"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb30-3"><a></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">3</span>))</span>
+<span id="cb30-4"><a></a>ax[<span class="dv">0</span>].plot(x, y)</span>
+<span id="cb30-5"><a></a>ax[<span class="dv">0</span>].set_ylim(<span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb30-6"><a></a>ax[<span class="dv">1</span>].plot(x, y)</span>
+<span id="cb30-7"><a></a>ax[<span class="dv">1</span>].set_xlim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb30-8"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-27-output-1.png" width="660" height="268"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-27-output-1.png" width="660" height="268"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/limits.png) -->
@@ -698,9 +965,27 @@ Jay Paul Morgan
 <li>.axhline – plot a horizontal line (axvline for vertical lines)/</li>
 <li>.annotate – add text to the plot at a certain position.</li>
 </ul>
-<div class="cell" data-execution_count="27">
+<div id="616eadf9" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">100</span>)</span>
+<span id="cb31-2"><a></a>y <span class="op">=</span> np.sin(x)</span>
+<span id="cb31-3"><a></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb31-4"><a></a>ax.plot(x, y)</span>
+<span id="cb31-5"><a></a>ax.axhline(<span class="dv">0</span>, c<span class="op">=</span><span class="st">'gray'</span>, ls<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb31-6"><a></a>ax.annotate(<span class="st">"0th line"</span>, </span>
+<span id="cb31-7"><a></a>            (<span class="op">-</span><span class="dv">2</span>, <span class="dv">0</span>), </span>
+<span id="cb31-8"><a></a>            xytext<span class="op">=</span>(<span class="op">-</span><span class="fl">1.5</span>, <span class="fl">0.25</span>),</span>
+<span id="cb31-9"><a></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(</span>
+<span id="cb31-10"><a></a>                facecolor<span class="op">=</span><span class="st">'black'</span>, </span>
+<span id="cb31-11"><a></a>                shrink<span class="op">=</span><span class="fl">0.05</span>,</span>
+<span id="cb31-12"><a></a>                width<span class="op">=</span><span class="fl">0.5</span>, </span>
+<span id="cb31-13"><a></a>                headwidth<span class="op">=</span><span class="fl">5.0</span>))</span>
+<span id="cb31-14"><a></a>plt.show()                </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-28-output-1.png" width="813" height="411"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-28-output-1.png" width="441" height="337"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/annotations.png) -->
@@ -708,9 +993,27 @@ Jay Paul Morgan
 <section id="creating-a-twin-axes-plot" class="slide level2">
 <h2>Creating a twin axes plot</h2>
 <p>Sometimes you will want to display multiple sub-plots on the same plot, but where each have a very different range in values. Instead of having a single y-axis, with <code>twinx()</code> we can create a two y-axis plot.</p>
-<div class="cell" data-execution_count="28">
+<div id="4570da9b" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a></a>x <span class="op">=</span> np.arange(<span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb32-2"><a></a>y <span class="op">=</span> np.exp(x)</span>
+<span id="cb32-3"><a></a>z <span class="op">=</span> np.log(x)</span>
+<span id="cb32-4"><a></a></span>
+<span id="cb32-5"><a></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb32-6"><a></a>ax[<span class="dv">0</span>].plot(x, y, label<span class="op">=</span><span class="st">"exp(x)"</span>)</span>
+<span id="cb32-7"><a></a>ax[<span class="dv">0</span>].plot(x, z, label<span class="op">=</span><span class="st">"log(x)"</span>)</span>
+<span id="cb32-8"><a></a>ax[<span class="dv">0</span>].legend()</span>
+<span id="cb32-9"><a></a></span>
+<span id="cb32-10"><a></a>ax2 <span class="op">=</span> ax[<span class="dv">1</span>].twinx()</span>
+<span id="cb32-11"><a></a>ax[<span class="dv">1</span>].plot(x, y)</span>
+<span id="cb32-12"><a></a>ax2.plot(x, z, color<span class="op">=</span><span class="st">"orange"</span>)</span>
+<span id="cb32-13"><a></a>ax2.tick_params(axis<span class="op">=</span><span class="st">"y"</span>, labelcolor<span class="op">=</span><span class="st">"orange"</span>)</span>
+<span id="cb32-14"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="lecture-5_files/figure-revealjs/cell-29-output-1.png" width="824" height="425"></p>
+<div>
+<figure>
+<p><img data-src="lecture-5_files/figure-html/cell-29-output-1.png" width="452" height="351"></p>
+</figure>
+</div>
 </div>
 </div>
 <!-- ![](images/twinx.png) -->
@@ -724,8 +1027,10 @@ Jay Paul Morgan
 <li>Basic plot types – <a href="https://matplotlib.org/stable/plot_types/index.html" class="uri">https://matplotlib.org/stable/plot_types/index.html</a></li>
 </ul>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -754,7 +1059,6 @@ Jay Paul Morgan
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1015,10 +1319,27 @@ Jay Paul Morgan
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1028,8 +1349,17 @@ Jay Paul Morgan
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1043,7 +1373,11 @@ Jay Paul Morgan
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

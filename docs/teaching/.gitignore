@@ -1,0 +1,14 @@
+_minted-*/
+/_minted-*/
+*.pygtex
+.ipynb_checkpoints/
+__pycache__/
+*.pdf
+/MNIST/
+MNIST/
+/2022-2023/Machine Learning/ltximg/
+/.juliahistory
+/2022-2023/Programming Level-up/ltximg/
+compiled/
+**/.DS_Store
+.quarto/idx/

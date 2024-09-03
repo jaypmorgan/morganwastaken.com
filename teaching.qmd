@@ -35,36 +35,36 @@ Welcome to the **Programming Level-up Course**. In this series of lectures, we w
 
 ### Lectures
 
-- [Lecture 1. Introduction](teaching/2022-2023/Machine Learning/1.lecture-introductions.html)
-- [Lecture 2. Linear Models](teaching/2022-2023/Machine Learning/2.linear-models.html)
-- [Lecture 3. Model Evaluations](teaching/2022-2023/Machine Learning/3.model-evaluations.html)
-- [Lecture 4. Support Vector Machines](teaching/2022-2023/Machine Learning/4.support-vector-machines.html)
-- [Lecture 5. Clustering](teaching/2022-2023/Machine Learning/5.clustering.html)
+-   [Lecture 1. Introduction](teaching/2022-2023/Machine%20Learning/1.lecture-introductions.html)
+-   [Lecture 2. Linear Models](teaching/2022-2023/Machine%20Learning/2.linear-models.html)
+-   [Lecture 3. Model Evaluations](teaching/2022-2023/Machine%20Learning/3.model-evaluations.html)
+-   [Lecture 4. Support Vector Machines](teaching/2022-2023/Machine%20Learning/4.support-vector-machines.html)
+-   [Lecture 5. Clustering](teaching/2022-2023/Machine%20Learning/5.clustering.html)
 
 ### Labs
 
-- [Lab 1. Linear Models](teaching/2022-2023/Machine Learning/lab1.getting-setup.html)
-- [Lab 2. Evaluation of Models](teaching/2022-2023/Machine Learning/lab2.evaluation-of-models.html)
+-   [Lab 1. Linear Models](teaching/2022-2023/Machine%20Learning/lab1.getting-setup.html)
+-   [Lab 2. Evaluation of Models](teaching/2022-2023/Machine%20Learning/lab2.evaluation-of-models.html)
 
 ## Programming Level-up
 
-- [Lecture 1. Introduction](teaching/2022-2023/Programming Level-up/1.introductions.html)
-- [Lecture 2. Object Oriented Programming](teaching/2022-2023/Programming Level-up/2.object-oriented-programming.html)
-- [Lecture 3. Development Environments](teaching/2022-2023/Programming Level-up/3.modules-development-environment.html)
-- [Lecture 4. Numerical Computing with Numpy](teaching/2022-2023/Programming Level-up/4.introduction-to-numerical-computing-numpy.html)
-- [Lecture 5. Introduction to Linux](teaching/2022-2023/Programming Level-up/5.introduction-to-linux.html)
-- [Lecture 6. Introduction to Matplotlib](teaching/2022-2023/Programming Level-up/6.introduction-to-matplotlib.html)
-- [Lecture 7. Introduction to Pandas](teaching/2022-2023/Programming Level-up/7.introduction-to-pandas.html)
+-   [Lecture 1. Introduction](teaching/2022-2023/Programming%20Level-up/1.introductions.html)
+-   [Lecture 2. Object Oriented Programming](teaching/2022-2023/Programming%20Level-up/2.object-oriented-programming.html)
+-   [Lecture 3. Development Environments](teaching/2022-2023/Programming%20Level-up/3.modules-development-environment.html)
+-   [Lecture 4. Numerical Computing with Numpy](teaching/2022-2023/Programming%20Level-up/4.introduction-to-numerical-computing-numpy.html)
+-   [Lecture 5. Introduction to Linux](teaching/2022-2023/Programming%20Level-up/5.introduction-to-linux.html)
+-   [Lecture 6. Introduction to Matplotlib](teaching/2022-2023/Programming%20Level-up/6.introduction-to-matplotlib.html)
+-   [Lecture 7. Introduction to Pandas](teaching/2022-2023/Programming%20Level-up/7.introduction-to-pandas.html)
 
 # 2021-2022
 
 ## Programming Level-up
 
-- [Course outline](teaching/2021-2022/Programming Level Up/week-0/course-outline.html)
-- [Lecture 1. Introduction and Basic Python Programming](teaching/2021-2022/Programming Level Up/week-1/lecture.html)
-- [Lecture 2. More advanced Python &amp; Classes](teaching/2021-2022/Programming Level Up/week-2/lecture.html)
-- [Lecture 3. Modules & Development Environments](teaching/2021-2022/Programming Level Up/week-3/lecture.html)
-- [Lecture 4. An Introduction to Numerical Computing in Python](teaching/2021-2022/Programming Level Up/week-4/lecture.html)
-- [Lecture 5. An Introduction to using Linux](teaching/2021-2022/Programming Level Up/week-5/lecture.html)
-- [Lecture 6. An Introduction to Matplotlib](teaching/2021-2022/Programming Level Up/week-6/lecture.html)
-- [Lecture 7. An Introduction to Pandas](teaching/2021-2022/Programming Level Up/week-7/lecture.html)
+-   [Course outline](teaching/2021-2022/Programming%20Level%20Up/week-0/course-outline.html)
+-   [Lecture 1. Introduction and Basic Python Programming](teaching/2021-2022/Programming%20Level%20Up/week-1/lecture.html)
+-   [Lecture 2. More advanced Python & Classes](teaching/2021-2022/Programming%20Level%20Up/week-2/lecture.html)
+-   [Lecture 3. Modules & Development Environments](teaching/2021-2022/Programming%20Level%20Up/week-3/lecture.html)
+-   [Lecture 4. An Introduction to Numerical Computing in Python](teaching/2021-2022/Programming%20Level%20Up/week-4/lecture.html)
+-   [Lecture 5. An Introduction to using Linux](teaching/2021-2022/Programming%20Level%20Up/week-5/lecture.html)
+-   [Lecture 6. An Introduction to Matplotlib](teaching/2021-2022/Programming%20Level%20Up/week-6/lecture.html)
+-   [Lecture 7. An Introduction to Pandas](teaching/2021-2022/Programming%20Level%20Up/week-7/lecture.html)
