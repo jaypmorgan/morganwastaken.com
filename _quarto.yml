@@ -33,7 +33,6 @@ website:
         text: Blog
   page-footer:
     border: true
-    background: dark
     left:
       - text: "© {{< now year >}} Jay Paul Morgan"
     right:
