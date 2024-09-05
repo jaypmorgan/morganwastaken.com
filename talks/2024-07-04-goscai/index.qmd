@@ -16,4 +16,4 @@ image: feature.png
 
 ## Abstract
 
-In this presentation, I detail the motivation behind our research of the Adaptive Neighbourhoods algorithm. In this way, we construct 'manifold-aware' adversarial examples.
+In this presentation, I detail the motivation behind our research of the [Adaptive Neighbourhoods algorithm](/publications/2021-01-01-adversarials/index.qmd). In this way, we construct 'manifold-aware' adversarial examples.

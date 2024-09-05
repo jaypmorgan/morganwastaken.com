@@ -27,8 +27,6 @@ website:
         text: Projects
       - href: teaching.qmd
         text: Teaching
-      - href: resources.qmd
-        text: Resources
       - href: posts.qmd
         text: Blog
   page-footer:

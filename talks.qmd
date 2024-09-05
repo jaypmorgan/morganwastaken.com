@@ -2,7 +2,7 @@
 title: "Talks and Presentations"
 listing: 
   contents: talks
-  sort: "desc date"
+  sort: "date desc"
   type: default
   categories: true
   sort-ui: true
