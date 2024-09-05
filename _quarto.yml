@@ -48,6 +48,18 @@ format:
     toc: true
     canonical-url: true
 
+babelquarto:
+  languagecodes:
+  - name: en
+    text: "English"
+  - name: cy
+    text: "Cymraeg"
+  mainlanguage: 'en'
+  languages: ['cy']
+title-cy: Jay Paul Morgan
+author-cy: Jay Paul Morgan
+lang: en
+
 editor: visual
 
 execute:

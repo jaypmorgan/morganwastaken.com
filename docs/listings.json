@@ -42,12 +42,12 @@
   {
     "listing": "/publications.html",
     "items": [
-      "/publications/2023-04-04-remove-clouds/index.html",
-      "/publications/2023-12-12-chemistry/index.html",
+      "/publications/2018-01-01-chatbot/index.html",
+      "/publications/2021-01-01-adversarials/index.html",
       "/publications/2022-01-01-computability/index.html",
       "/publications/2022-01-02-thesis/index.html",
-      "/publications/2021-01-01-adversarials/index.html",
-      "/publications/2018-01-01-chatbot/index.html"
+      "/publications/2023-04-04-remove-clouds/index.html",
+      "/publications/2023-12-12-chemistry/index.html"
     ]
   }
 ]
