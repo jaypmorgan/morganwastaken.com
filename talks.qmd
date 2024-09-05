@@ -1,1 +1,10 @@
-
+---
+title: "Talks and Presentations"
+listing: 
+  contents: talks
+  sort: "desc date"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+---

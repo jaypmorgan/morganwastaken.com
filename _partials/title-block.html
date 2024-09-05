@@ -1,0 +1,33 @@
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+$if(title)$<h1 class="title">$title$</h1>$endif$
+
+$if(date)$
+<div class="quarto-title-meta">
+  <div>
+    <div class="quarto-title-meta-heading">Date</div>
+    <div class="quarto-title-meta-contents"><p>$date$</p></div>
+  </div>
+</div>
+$endif$
+
+$if(event)$
+<div class="quarto-title-meta">
+  <div>
+    <div class="quarto-title-meta-heading">Event</div>
+    <div class="quarto-title-meta-contents">
+      <p>$if(event_url)$<a href="$event_url$">$event$</a>$else$$event$$endif$</p>
+    </div>
+  </div>
+</div>
+$endif$
+
+$if(location)$
+<div class="quarto-title-meta">
+  <div>
+    <div class="quarto-title-meta-heading">Location</div>
+    <div class="quarto-title-meta-contents"><p>$location$</p></div>
+  </div>
+</div>
+$endif$
+
+</header>

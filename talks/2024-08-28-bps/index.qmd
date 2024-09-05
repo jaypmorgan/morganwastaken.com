@@ -1,0 +1,17 @@
+---
+title: "Icons: What do we know? Do we know things? Let's find out"
+description: Analysis of psychological normative studies and learning with Deep Learning models.
+categories: conference
+author: Jay Paul Morgan
+date: 2024-08-28
+event: "British Psychology Society Cognitive Section 2024"
+event_url: "https://www.bps.org.uk/event/cognitive-section-annual-conference-2024"
+location: Swansea
+image: feature.png
+---
+
+<iframe src="https://docs.google.com/presentation/d/1sZ7XscJGyG698rdHjdA4ZCBDGC5Z_buq4itOdbmvFp8/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+## Abstract
+
+Icons are used everywhere in modern life, but how well do we understand them? In this work, I worked with Irene Reppa of Psychology, Swansea University, to create new normative studies to find out how well people of different diversities and cultures understand icons. Using this information, we device Machine Learning algorithms to learn from them.

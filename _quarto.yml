@@ -10,6 +10,11 @@ website:
   google-analytics: ""
   title: "Jay Paul Morgan"
   site-url: https://morganwastaken.com
+  repo-url: https://github.com/jaypmorgan/morganwastaken.com
+  repo-actions:
+  - source
+  - edit
+  - issue
   navbar:
     left:
       - href: index.qmd
@@ -26,6 +31,11 @@ website:
         text: Resources
       - href: posts.qmd
         text: Blog
+  page-footer:
+    border: true
+    background: dark
+    left:
+      - text: "© {{< now year >}} Jay Paul Morgan"
     right:
       - icon: github
         href: https://github.com/jaypmorgan

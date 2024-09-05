@@ -49,5 +49,11 @@
       "/publications/2023-04-04-remove-clouds/index.html",
       "/publications/2023-12-12-chemistry/index.html"
     ]
+  },
+  {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/2024-08-28-bps/index.html"
+    ]
   }
 ]
