@@ -5,3 +5,5 @@
 .Rhistory
 /venv/
 _freeze/
+.DS_Store
+/renv/library/
