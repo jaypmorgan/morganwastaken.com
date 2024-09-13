@@ -1,5 +1,41 @@
 [
   {
+    "listing": "/teaching.html",
+    "items": [
+      "/teaching/2023-2024/Machine Learning/index.html",
+      "/teaching/2023-2024/Machine Learning/lab-1.html",
+      "/teaching/2023-2024/Machine Learning/lab-2.html",
+      "/teaching/2023-2024/Machine Learning/lab-3.html",
+      "/teaching/2023-2024/Machine Learning/lecture-1.html",
+      "/teaching/2023-2024/Machine Learning/lecture-2.html",
+      "/teaching/2023-2024/Machine Learning/lecture-3.html",
+      "/teaching/2023-2024/Machine Learning/lecture-4.html",
+      "/teaching/2023-2024/Machine Learning/lecture-5.html",
+      "/teaching/2023-2024/Programming Level-up/0.course-introduction.html",
+      "/teaching/2023-2024/Programming Level-up/index.html",
+      "/teaching/2023-2024/Programming Level-up/lecture-1.html",
+      "/teaching/2023-2024/Programming Level-up/lecture-2.html",
+      "/teaching/2023-2024/Programming Level-up/lecture-3.html",
+      "/teaching/2023-2024/Programming Level-up/lecture-4.html",
+      "/teaching/2023-2024/Programming Level-up/lecture-5.html",
+      "/teaching/2023-2024/Programming Level-up/lecture-6.html",
+      "/teaching/2023-2024/Programming Level-up/lecture-7.html",
+      "/teaching/2023-2024/Programming Level-up/lecture-8.html"
+    ]
+  },
+  {
+    "listing": "/publications.html",
+    "items": [
+      "/publications/2024-09-09-cloud-removal/index.html",
+      "/publications/2023-12-12-chemistry/index.html",
+      "/publications/2023-04-04-remove-clouds/index.html",
+      "/publications/2022-01-02-thesis/index.html",
+      "/publications/2022-01-01-computability/index.html",
+      "/publications/2021-01-01-adversarials/index.html",
+      "/publications/2018-01-01-chatbot/index.html"
+    ]
+  },
+  {
     "listing": "/posts.html",
     "items": [
       "/posts/2024-05-08-utilise/index.html",
@@ -16,17 +52,6 @@
     ]
   },
   {
-    "listing": "/publications.html",
-    "items": [
-      "/publications/2022-01-01-computability/index.html",
-      "/publications/2023-12-12-chemistry/index.html",
-      "/publications/2023-04-04-remove-clouds/index.html",
-      "/publications/2021-01-01-adversarials/index.html",
-      "/publications/2022-01-02-thesis/index.html",
-      "/publications/2018-01-01-chatbot/index.html"
-    ]
-  },
-  {
     "listing": "/talks.html",
     "items": [
       "/talks/2024-08-28-bps/index.html",
@@ -36,30 +61,6 @@
       "/talks/2021-08-05-Learning-how-to-learn-with-deep-learning/index.html",
       "/talks/2021-03-30-trustable-machine-learning-systems/index.html",
       "/talks/2018-12-14-jurix/index.html"
-    ]
-  },
-  {
-    "listing": "/teaching.html",
-    "items": [
-      "/teaching/2023-2024/Machine Learning/lecture-4.html",
-      "/teaching/2023-2024/Machine Learning/lecture-5.html",
-      "/teaching/2023-2024/Machine Learning/lecture-2.html",
-      "/teaching/2023-2024/Machine Learning/lecture-3.html",
-      "/teaching/2023-2024/Machine Learning/lecture-1.html",
-      "/teaching/2023-2024/Machine Learning/index.html",
-      "/teaching/2023-2024/Machine Learning/lab-2.html",
-      "/teaching/2023-2024/Machine Learning/lab-3.html",
-      "/teaching/2023-2024/Machine Learning/lab-1.html",
-      "/teaching/2023-2024/Programming Level-up/lecture-4.html",
-      "/teaching/2023-2024/Programming Level-up/lecture-5.html",
-      "/teaching/2023-2024/Programming Level-up/lecture-7.html",
-      "/teaching/2023-2024/Programming Level-up/lecture-6.html",
-      "/teaching/2023-2024/Programming Level-up/lecture-2.html",
-      "/teaching/2023-2024/Programming Level-up/lecture-3.html",
-      "/teaching/2023-2024/Programming Level-up/lecture-1.html",
-      "/teaching/2023-2024/Programming Level-up/index.html",
-      "/teaching/2023-2024/Programming Level-up/lecture-8.html",
-      "/teaching/2023-2024/Programming Level-up/0.course-introduction.html"
     ]
   }
 ]

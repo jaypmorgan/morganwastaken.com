@@ -10,24 +10,12 @@ categories:
   - Research
   - Quantum Chemistry
   - Neural Network
-image: chemistry.png  
+image: chemistry.png
+date: 2023-12-12
 ---
 
 [<i class="ai obp"></i> PDF](chemistry.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.fr/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&sortby=pubdate&citation_for_view=AO1az5YAAAAJ:Tyk-4Ss8FVUC){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [Bibtex](chemistry.html){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"}
 
 # Abstract
 
-We explore different strategies to integrate prior domain knowledge into
-the design of a deep neural network (DNN). We focus on graph neural
-networks (GNN), with a use case of estimating the potential energy of
-chemical systems (molecules and crystals) represented as graphs. We
-integrate two elements of domain knowledge into the design of the GNN to
-constrain and regularise its learning, towards higher accuracy and
-generalisation. First, knowledge on the existence of different types of
-relations (chemical bonds) between atoms is used to modulate the
-interaction of nodes in the GNN. Second, knowledge of the relevance of
-some physical quantities is used to constrain the learnt features
-towards a higher physical relevance using a simple multi-task paradigm.
-We demonstrate the general applicability of our knowledge integrations
-by applying them to two architectures that rely on different mechanisms
-to propagate information between nodes and to update node states.
+We explore different strategies to integrate prior domain knowledge into the design of a deep neural network (DNN). We focus on graph neural networks (GNN), with a use case of estimating the potential energy of chemical systems (molecules and crystals) represented as graphs. We integrate two elements of domain knowledge into the design of the GNN to constrain and regularise its learning, towards higher accuracy and generalisation. First, knowledge on the existence of different types of relations (chemical bonds) between atoms is used to modulate the interaction of nodes in the GNN. Second, knowledge of the relevance of some physical quantities is used to constrain the learnt features towards a higher physical relevance using a simple multi-task paradigm. We demonstrate the general applicability of our knowledge integrations by applying them to two architectures that rely on different mechanisms to propagate information between nodes and to update node states.

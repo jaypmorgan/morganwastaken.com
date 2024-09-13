@@ -6,6 +6,7 @@ author:
     orcid: 0000-0003-3719-362X
   - Arno Pauly
   - Markus Roggenbach
+date: 2022-01-01
 description: Define the computational tasks underlying the newly suggested verified ML in a model-agnostic way, i.e., they work for all machine learning approaches including, e.g., random forests, support vector machines, and Neural Networks.
 image: image.png
 ---

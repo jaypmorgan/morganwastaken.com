@@ -7,10 +7,10 @@ author:
   - Monika Seisenberger
   - Jane Williams
   - Adam Wyner
+date: 2018-01-01
 description: This paper presents a novel method to address legal rights for children through a chatbot framework by integrating machine learning, a dialogue graph, and information extraction.
 image: image.png
 ---
-
 
 [<i class="ai obp"></i> PDF](paper.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&citation_for_view=AO1az5YAAAAJ:d1gkVwhDpl0C){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [Bibtex](bibtex.html){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"}
 

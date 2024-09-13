@@ -1,0 +1,105 @@
+---
+title: Removing cloud shadows from ground-based solar imagery
+date: 2024-09-09
+author:
+  - Amal Chaoui
+  - name: Jay Paul Morgan
+    orcid: 0000-0003-3719-362X
+  - Adeline Paiement
+  - Jean Aboudarham
+description: Cloud coverage can contaminate and occlude our vision of the Sun. This cloud-contamination can vastly reduce the amount of usable data for scientists studying the weather conditions on the Sun. In this work, we address this issue using Neural Networks to remove clouds from solar imagery.
+categories:
+  - Research
+  - Neural Network
+  - Heliophysics
+  - Image Processing
+  - Computer Vision
+image: feature.png
+---
+
+[<i class="ai obp"></i> PDF](https://link.springer.com/article/10.1007/s00138-024-01607-2){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=AO1az5YAAAAJ:W7OEmFMy1HYC){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [Bibtex](bibtex.bib){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"}
+
+# Abstract
+
+The study and prediction of space weather entails the analysis of solar images showing structures of the Sun’s atmosphere.
+When imaged from the Earth’s ground, images may be polluted by terrestrial clouds which hinder the detection of solar
+structures. We propose a new method to remove cloud shadows, based on a U-Net architecture, and compare classical
+supervision with conditional GAN. We evaluate our method on two different imaging modalities, using both real images
+and a new dataset of synthetic clouds. Quantitative assessments are obtained through image quality indices (RMSE, PSNR,
+SSIM, and FID). We demonstrate improved results with regards to the traditional cloud removal technique and a sparse coding
+baseline, on different cloud types and textures.
+
+# Data
+
+We have released the data used in this project on [Zenodo](https://zenodo.org/records/8010703)
+
+# Source Code
+
+The source code for this project is hosted on the [LIS-lab Gitlab](https://gitlab.lis-lab.fr/presage/cloud-removal-from-solar-imagery).
+
+## Install
+
+You can pip install directly from this repo:
+
+```bash
+pip install git+https://github.com/jaypmorgan/cloud-removal.git
+```
+
+or if you've cloned the repo to a local directory:
+
+```bash
+cd cloudremoval
+pip install ./
+```
+
+## Usage
+
+Using the existing synthetic clouds dataset:
+
+```python
+import dfp
+from cloudremoval.dataset import SyntheticClouds, CloudsTransform
+
+# download the data
+dataset = SyntheticClouds(download=True)
+
+# get only a single wavelength from the data
+caii = dataset.filter(lambda row: dfp.has_props(row, {"type": "Ca II"}))
+
+# split into train and test
+train, test = caii.split(lambda row: dfp.has_props(row, {"subset": "train"}))
+
+# get the first instance:
+item = train[0]
+inp1 = item.input
+item.target
+item.mask
+
+# Add a transform
+train.transform = CloudsTransform(hflip_p=0.5, vflip_p=0.5)
+item = train[0]
+inp2 = item.input
+```
+
+To create a model, or load one using existing model weights:
+
+```python
+from cloudremoval.model import CloudRemover
+
+# create a new model from scratch (i.e. random model weights)
+model = CloudRemover()
+
+# create a model using the existing weights
+model = CloudRemover(pretrained=True)
+
+# create a model using a different wavelength
+model = CloudRemover(wavelength="H-alpha", pretrained=True)
+
+# test making of predictions
+dataset = SyntheticClouds(download=True, transform=CloudsTransform())
+model = CloudRemover(pretrained=True)
+out = model(dataset[0].input[None,...])*dataset[0].mask[None,...]
+
+import matplotlib.pyplot as plt
+plt.imshow(out[0,0].detach().cpu().numpy(), cmap="Greys_r")
+```

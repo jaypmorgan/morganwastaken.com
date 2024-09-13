@@ -18,7 +18,7 @@ links:
   - text: "{{< ai googlescholar >}}"
     href: https://scholar.google.fr/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&sortby=pubdate&citation_for_view=AO1az5YAAAAJ:W7OEmFMy1HYC
 description: A U-Net-style Neural Network to remove cloud contaminants from ground-based solar imagery.
-    
+date: 2023-04-04
 ---
 
 [<i class="ai obp"></i> PDF](clouds-1.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.fr/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&sortby=pubdate&citation_for_view=AO1az5YAAAAJ:W7OEmFMy1HYC){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [Bibtex](clouds-1.html){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"}
@@ -26,3 +26,4 @@ description: A U-Net-style Neural Network to remove cloud contaminants from grou
 # Abstract
 
 The study and prediction of space weather entails the analysis of solar images showing structures of the Sun's atmosphere. When imaged from the Earth's ground, images may be polluted by terrestrial clouds which hinder the detection of solar structures. We propose a new method to remove cloud shadows, based on a U-Net architecture, and compare classical supervision with conditional GAN. We evaluate our method on two different imaging modalities, using both real images and a new dataset of synthetic clouds. Quantitative assessments are obtained through image quality indices (RMSE, PSNR, SSIM). We demonstrate improved results with regards to the traditional cloud removal technique and a sparse coding baseline, on different cloud types and textures.
+
