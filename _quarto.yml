@@ -8,7 +8,9 @@ project:
 website:
   page-navigation: true
   open-graph: true
-  google-analytics: ""
+  google-analytics:
+    tracking-id: "G-Q1SQLS91HT"
+    storage: none
   title: "Jay Paul Morgan"
   site-url: https://morganwastaken.com
   repo-url: https://github.com/jaypmorgan/morganwastaken.com
