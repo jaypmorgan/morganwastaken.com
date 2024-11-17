@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<link rel="alternate" hreflang="en" href="https://morganwastaken.com/teaching/2022-2023/Machine Learning/lab1.getting-setup.html" />
+<link rel="alternate" hreflang="cy" href="https://morganwastaken.com/cy/teaching/2022-2023/Machine Learning/lab1.getting-setup.cy.html" />
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-08-29 lun. 14:32 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Machine Learning</title>
+<meta name="author" content="Jay Morgan" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Machine Learning
+<br />
+<span class="subtitle">Lab 1 - Linear Models</span>
+</h1>
+
+<div id="outline-container-orgf2c1abd" class="outline-2">
+<h2 id="orgf2c1abd">Introduction</h2>
+<div class="outline-text-2" id="text-orgf2c1abd">
+</div>
+<div id="outline-container-org11df260" class="outline-3">
+<h3 id="org11df260">Plan for this lab</h3>
+<div class="outline-text-3" id="text-org11df260">
+</div>
+<div id="outline-container-org601d519" class="outline-4">
+<h4 id="org601d519">Welcome</h4>
+<div class="outline-text-4" id="text-org601d519">
+<p>
+Welcome to the first lab. In these lab tutorials we are going to be experimenting
+with what we've learnt in the lectures. This means that we're going to implement the
+algorithms and doing some Machine Learning ourselves!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99ccb5b" class="outline-4">
+<h4 id="org99ccb5b">Plan for the first lab</h4>
+<div class="outline-text-4" id="text-org99ccb5b">
+<p>
+For this first lab session, we're going to need to do just a little 'admin' work
+before we start implementing these algorithms.
+</p>
+
+<p>
+We will need to do the following:
+</p>
+<ul class="org-ul">
+<li>Create an project directory.</li>
+<li>Create a conda environment and install the latest version of Python.</li>
+<li>Setup our IDE (integrated development environment of choice).</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org26e38f0" class="outline-3">
+<h3 id="org26e38f0">Lab setup</h3>
+<div class="outline-text-3" id="text-org26e38f0">
+</div>
+<div id="outline-container-org9cf1a43" class="outline-4">
+<h4 id="org9cf1a43">Creating a project directory</h4>
+<div class="outline-text-4" id="text-org9cf1a43">
+<p>
+Exactly how you want to organise your work is up to you. However, with that being
+said, I would recommend the following example structure:
+</p>
+
+<pre class="example" id="org2cff3ac">
+~/workspace/&lt;project-name&gt;/&lt;files-&amp;-directories&gt;
+</pre>
+
+<p>
+So, for example, in this course, we would have the following directory:
+<code>~/workspace/machine-learning</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga04e04f" class="outline-4">
+<h4 id="orga04e04f">Using the datascience repository</h4>
+<div class="outline-text-4" id="text-orga04e04f">
+
+<div id="orgab65e22" class="figure">
+<p><img src="images/datascience-repo.png" alt="datascience-repo.png" width="200%" /> 
+</p>
+<p><span class="figure-number">Figure 1: </span>The datascience repository templated hosted on github (github.com/jaypmorgan/datascience)</p>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-bash">git clone git@github.com:jaypmorgan/datascience.git
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org450d143" class="outline-4">
+<h4 id="org450d143">Layout &amp; intentionality behind the datascience repository</h4>
+<div class="outline-text-4" id="text-org450d143">
+<ul class="org-ul">
+<li><code>data</code> &#x2013; location of all data files (preferably in their own directory such as
+data/raw/&lt;files&gt;, data/processed/&lt;files&gt;, data/results/&lt;files&gt;). These files will
+not be committed to git as they much be too large.</li>
+<li><code>experiments</code> &#x2013; location of one off files that are used for running single
+experiments and scripts.</li>
+<li><code>notes</code> &#x2013; storage of notes and reports created during the lifetime of the project.</li>
+<li><code>src</code> &#x2013; here we store the library of functions/classes that are useful for the
+entire project.</li>
+<li><code>.config</code> &#x2013; a configuration file</li>
+<li><code>Makefile</code> &#x2013; make routines for building the project (if we have any, we'll cover
+this at a later point, alternatively you can read:
+<a href="https://blog.morganwastaken.com/2020-03-05/makefile">https://blog.morganwastaken.com/2020-03-05/makefile</a>).</li>
+<li><code>environment.yml</code> &#x2013; the configuration script for conda (we'll cover this just in a
+moment!).</li>
+<li><code>README.md</code> &#x2013; Markdown readme file that explains introduces the project, and perhaps
+some installation and running instructions for others.</li>
+</ul>
+
+<p>
+I will using this folder structure for our labs, so we'll see (by the way of example)
+how we use this structure.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fcc4ad" class="outline-4">
+<h4 id="org3fcc4ad">Creating a conda environment</h4>
+<div class="outline-text-4" id="text-org3fcc4ad">
+<p>
+Conda is a command line tool to manage environments. We're going to highlight some of the most used commands. But for the full list of management, you can use the instructions at: <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html</a>
+</p>
+
+<p>
+If you're creating a brand new environment, use:
+</p>
+
+<pre class="example">
+conda create --name &lt;name-of-env&gt;
+</pre>
+
+<p>
+This will prompt you to confirm you want to create a new environment, whereupon you
+enter either a y or n. If y your new environment will be created, but start using the
+environment, you will first have to activate it.
+</p>
+
+<p>
+For more information, visit:
+<a href="https://pageperso.lis-lab.fr/jay.morgan/resources/2021-programming-level-up/lectures/week-3/lecture.html#orga9fbc8c">https://pageperso.lis-lab.fr/jay.morgan/resources/2021-programming-level-up/lectures/week-3/lecture.html#orga9fbc8c</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org51ea6f3" class="outline-4">
+<h4 id="org51ea6f3">Installing jupyter notebook &amp; jupyter lab</h4>
+<div class="outline-text-4" id="text-org51ea6f3">
+<p>
+As we're going to do lots of visualisations, we're going to want some environment
+where we can rapidly evolve and interrogate our data. For this, we're going to use
+jupyter notebooks. However, there are many other alternatives if you're so
+inclined. There is google colab (a jupyter-like environment on the cloud), org-mode
+with org-babel if you like emacs, the Spyder IDE with code cells.
+</p>
+
+<p>
+To install jupyter notebook use (assuming you have activated the correct environment):
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">conda install -c conda-forge jupyterlab
+</pre>
+</div>
+
+<p>
+<a href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html">https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5adf51c" class="outline-4">
+<h4 id="org5adf51c">Setting up our IDE</h4>
+<div class="outline-text-4" id="text-org5adf51c">
+<p>
+While most of our exploration is going to take place inside a jupyter notebook,
+we're going to use a fully fledged IDE for the heavy lifting of our Python
+programming. The IDE we're going to use in these lab sessions is PyCharm.
+</p>
+
+
+<div id="org35394d3" class="figure">
+<p><img src="images/pycharm.png" alt="pycharm.png" width="200%" />
+</p>
+<p><span class="figure-number">Figure 2: </span>PyCharm IDE</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcb4f827" class="outline-2">
+<h2 id="orgcb4f827">Creating a linear model</h2>
+<div class="outline-text-2" id="text-orgcb4f827">
+</div>
+<div id="outline-container-orgbc68800" class="outline-3">
+<h3 id="orgbc68800"></h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: &lt;TODO&gt;</p>
+<p class="author">Author: Jay Morgan</p>
+<p class="date">Created: 2022-08-29 lun. 14:32</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

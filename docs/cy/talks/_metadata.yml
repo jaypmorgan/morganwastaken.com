@@ -1,0 +1,5 @@
+title-block-banner: false
+format:
+  html:
+    template-partials:
+      ../_partials/title-block.html

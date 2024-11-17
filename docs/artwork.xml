@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Jay Paul Morgan</title>
+<link>https://morganwastaken.com/artwork.html</link>
+<atom:link href="https://morganwastaken.com/artwork.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.4.554</generator>
+<lastBuildDate>Sun, 17 Nov 2024 21:07:53 GMT</lastBuildDate>
+<item>
+  <title>Pumpkins and Squash</title>
+  <dc:creator>Charcoal on Paper</dc:creator>
+  <link>https://morganwastaken.com/artwork/2024-11-10-pumpkins/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>It’s that time of year, plenty of pumpkins and squashes about!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://morganwastaken.com/artwork/2024-11-10-pumpkins/IMG_0683.jpg" class="img-fluid figure-img"></p>
+<figcaption>Pumpkins and Squash, Pencil on Paper, 11/2024</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>charcoal</category>
+  <category>sketch</category>
+  <category>simple</category>
+  <guid>https://morganwastaken.com/artwork/2024-11-10-pumpkins/</guid>
+  <pubDate>Sun, 17 Nov 2024 21:07:53 GMT</pubDate>
+</item>
+<item>
+  <title>Half of Bargue Plate 1</title>
+  <dc:creator>Pencil on Paper</dc:creator>
+  <link>https://morganwastaken.com/artwork/2024-11-17-bargue-plate-1/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The Bargue plates are a set of reference lithographs used in the 19th century to teach art students. These plates were even used by Pablo Picasso and Vincent van Gogh as study.</p>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://morganwastaken.com/artwork/2024-11-17-bargue-plate-1/IMG_0743.jpg" class="img-fluid figure-img"></p>
+<figcaption>Half of Bargue Plate 1, Pencil on Paper, 11/2024</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>pencil</category>
+  <category>sketch</category>
+  <category>bargue</category>
+  <guid>https://morganwastaken.com/artwork/2024-11-17-bargue-plate-1/</guid>
+  <pubDate>Sun, 17 Nov 2024 21:07:53 GMT</pubDate>
+</item>
+<item>
+  <title>Toby Profile</title>
+  <dc:creator>Charcoal on Paper</dc:creator>
+  <link>https://morganwastaken.com/artwork/2024-11-16-toby-profile/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://morganwastaken.com/artwork/2024-11-16-toby-profile/IMG_0722.jpg" class="img-fluid figure-img"></p>
+<figcaption>Profile of Toby, charcoal on paper, 11/2024.</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>charcoal</category>
+  <category>sketch</category>
+  <category>simple</category>
+  <guid>https://morganwastaken.com/artwork/2024-11-16-toby-profile/</guid>
+  <pubDate>Sun, 17 Nov 2024 21:07:53 GMT</pubDate>
+</item>
+</channel>
+</rss>
