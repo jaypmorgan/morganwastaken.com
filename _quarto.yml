@@ -32,6 +32,8 @@ website:
         text: Teaching
       - href: posts.qmd
         text: Blog
+      - href: artwork.qmd
+        text: Artwork
   page-footer:
     border: true
     left:

@@ -1,0 +1,13 @@
+---
+title: "Artwork"
+listing: 
+  contents: artwork
+  type: grid
+  sort: "date desc"
+  categories: true
+  feed: true
+---
+
+When I was younger, I used to be very passionate about art. But over the last 10-15 years, the experience has languished. During the summer of 2024, I decided to pick it back up, to revitalise that old spirit. Being so long without regular practice, it does mean that I am somewhat learning from scratch, but one is always learning and improving in art anyway, no one ever makes it there.
+
+In my spare time, I like to try and improve my artwork. Below I am posting some of my drawings and paintings as practice and make art. Sometimes, these maybe be practice drawings, simple sketches (not taking longer than 10-15 minutes), or works that take considerably more time.
