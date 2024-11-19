@@ -84,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -214,7 +214,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bargue">bargue <span class="quarto-category-count">(1)</span></div><div class="category" data-category="charcoal">charcoal <span class="quarto-category-count">(2)</span></div><div class="category" data-category="pencil">pencil <span class="quarto-category-count">(1)</span></div><div class="category" data-category="simple">simple <span class="quarto-category-count">(2)</span></div><div class="category" data-category="sketch">sketch <span class="quarto-category-count">(3)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="bargue">bargue <span class="quarto-category-count">(1)</span></div><div class="category" data-category="charcoal">charcoal <span class="quarto-category-count">(6)</span></div><div class="category" data-category="pencil">pencil <span class="quarto-category-count">(2)</span></div><div class="category" data-category="simple">simple <span class="quarto-category-count">(4)</span></div><div class="category" data-category="sketch">sketch <span class="quarto-category-count">(7)</span></div><div class="category" data-category="study">study <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -245,38 +245,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="charcoal,sketch,simple" data-listing-file-modified-sort="1731877642941" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<a href="./artwork/2024-11-10-pumpkins/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="artwork/2024-11-10-pumpkins/IMG_0683.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Pumpkins and Squash
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('charcoal'); return false;">
-charcoal
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('sketch'); return false;">
-sketch
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('simple'); return false;">
-simple
-</div>
-</div>
-<div class="card-text listing-description">
-It’s that time of year, plenty of pumpkins and squashes about!
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Charcoal on Paper
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="pencil,sketch,bargue" data-listing-file-modified-sort="1731877642952" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<div class="g-col-1" data-index="0" data-categories="pencil,sketch,bargue" data-listing-date-sort="1731801600000" data-listing-file-modified-sort="1732024345626" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
 <a href="./artwork/2024-11-17-bargue-plate-1/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="artwork/2024-11-17-bargue-plate-1/IMG_0743.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -298,16 +267,19 @@ bargue
 <div class="card-text listing-description">
 The Bargue plates are a set of reference lithographs used in the 19th century to teach art students. These plates were even used by Pablo Picasso and Vincent van Gogh as…
 </div>
-<div class="card-attribution card-text-small start">
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Pencil on Paper
+</div>
+<div class="listing-date">
+Nov 17, 2024
 </div>
 </div>
 </div>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="charcoal,sketch,simple" data-listing-file-modified-sort="1731877642949" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="g-col-1" data-index="1" data-categories="charcoal,sketch,simple" data-listing-date-sort="1731715200000" data-listing-file-modified-sort="1732024345622" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <a href="./artwork/2024-11-16-toby-profile/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="artwork/2024-11-16-toby-profile/IMG_0722.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -334,9 +306,232 @@ simple
 </figure>
 
 </div>
-<div class="card-attribution card-text-small start">
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Charcoal on Paper
+</div>
+<div class="listing-date">
+Nov 16, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="charcoal,sketch,simple" data-listing-date-sort="1731196800000" data-listing-file-modified-sort="1732024345617" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./artwork/2024-11-10-pumpkins/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="artwork/2024-11-10-pumpkins/IMG_0683.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Pumpkins and Squash
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('charcoal'); return false;">
+charcoal
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('sketch'); return false;">
+sketch
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('simple'); return false;">
+simple
+</div>
+</div>
+<div class="card-text listing-description">
+It’s that time of year, plenty of pumpkins and squashes about!
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Charcoal on Paper
+</div>
+<div class="listing-date">
+Nov 10, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="charcoal,sketch" data-listing-date-sort="1731196800000" data-listing-file-modified-sort="1732024345613" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<a href="./artwork/2024-11-10-penny/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="artwork/2024-11-10-penny/IMG_0737.JPG" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Penny
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('charcoal'); return false;">
+charcoal
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('sketch'); return false;">
+sketch
+</div>
+</div>
+<div class="card-text listing-description">
+
+<figure class="figure">
+<p></p>
+<figcaption>Penny, Charcoal on Paper, 11/2024</figcaption>
+</figure>
+
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Charcoal on Paper
+</div>
+<div class="listing-date">
+Nov 10, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="charcoal,sketch,simple" data-listing-date-sort="1731110400000" data-listing-file-modified-sort="1732024345611" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
+<a href="./artwork/2024-11-09-penny-asleep/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="artwork/2024-11-09-penny-asleep/IMG_0739.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Penny Asleep
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('charcoal'); return false;">
+charcoal
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('sketch'); return false;">
+sketch
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('simple'); return false;">
+simple
+</div>
+</div>
+<div class="card-text listing-description">
+
+<figure class="figure">
+<p></p>
+<figcaption>Penny Asleep, Charcoal on Paper, 11/2024</figcaption>
+</figure>
+
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Charcoal on Paper
+</div>
+<div class="listing-date">
+Nov 9, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="charcoal,simple,sketch" data-listing-date-sort="1729724400000" data-listing-file-modified-sort="1732024345563" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
+<a href="./artwork/2024-10-24-mad-cats/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="artwork/2024-10-24-mad-cats/mad-cat.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Mad Cats
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('charcoal'); return false;">
+charcoal
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('simple'); return false;">
+simple
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('sketch'); return false;">
+sketch
+</div>
+</div>
+<div class="card-text listing-description">
+
+<figure class="figure">
+<p></p>
+<figcaption>Mad Cat 1, Charcoal on Paper, 10/2024</figcaption>
+</figure>
+
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Charcoal on Paper
+</div>
+<div class="listing-date">
+Oct 24, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="pencil,sketch" data-listing-date-sort="1728082800000" data-listing-file-modified-sort="1732024345534" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
+<a href="./artwork/2024-10-05-singleton-tree/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="artwork/2024-10-05-singleton-tree/tree.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Singleton Tree
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('pencil'); return false;">
+pencil
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('sketch'); return false;">
+sketch
+</div>
+</div>
+<div class="card-text listing-description">
+
+<figure class="figure">
+<p></p>
+<figcaption>Singleton Tree, Pencil on Paper, 10/2024</figcaption>
+</figure>
+
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Pencil on Paper
+</div>
+<div class="listing-date">
+Oct 5, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="7" data-categories="study,charcoal" data-listing-date-sort="1726959600000" data-listing-file-modified-sort="1732024345534" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+<a href="./artwork/2024-09-22-study-of-hands/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="artwork/2024-09-22-study-of-hands/hands.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Small Study of Hands
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('study'); return false;">
+study
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('charcoal'); return false;">
+charcoal
+</div>
+</div>
+<div class="card-text listing-description">
+
+<figure class="figure">
+<p></p>
+<figcaption>Small Study of Hands, Charcoal on Paper, 09/2024</figcaption>
+</figure>
+
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Charcoal on Paper
+</div>
+<div class="listing-date">
+Sep 22, 2024
 </div>
 </div>
 </div>

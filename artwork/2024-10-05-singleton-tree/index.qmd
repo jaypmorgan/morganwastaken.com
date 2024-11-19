@@ -1,0 +1,8 @@
+---
+title: "Singleton Tree"
+author: Pencil on Paper
+date: 2024-10-05
+categories: [pencil, sketch]
+---
+
+![Singleton Tree, Pencil on Paper, 10/2024](tree.png)
