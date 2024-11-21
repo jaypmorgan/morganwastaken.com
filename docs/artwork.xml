@@ -33,6 +33,7 @@
   <category>charcoal</category>
   <category>sketch</category>
   <category>simple</category>
+  <category>animal</category>
   <guid>https://morganwastaken.com/artwork/2024-11-21-poppy/</guid>
   <pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate>
 </item>
@@ -46,7 +47,6 @@
 
 
 <p>The Bargue plates are a set of reference lithographs used in the 19th century to teach art students. These plates were even used by Pablo Picasso and Vincent van Gogh as study.</p>
-<hr>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://morganwastaken.com/artwork/2024-11-17-bargue-plate-1/IMG_0743.jpg" class="img-fluid figure-img"></p>
@@ -60,6 +60,7 @@
   <category>pencil</category>
   <category>sketch</category>
   <category>bargue</category>
+  <category>study</category>
   <guid>https://morganwastaken.com/artwork/2024-11-17-bargue-plate-1/</guid>
   <pubDate>Sun, 17 Nov 2024 00:00:00 GMT</pubDate>
 </item>
@@ -85,6 +86,7 @@
   <category>charcoal</category>
   <category>sketch</category>
   <category>simple</category>
+  <category>animal</category>
   <guid>https://morganwastaken.com/artwork/2024-11-16-toby-profile/</guid>
   <pubDate>Sat, 16 Nov 2024 00:00:00 GMT</pubDate>
 </item>
@@ -111,6 +113,7 @@
   <category>charcoal</category>
   <category>sketch</category>
   <category>simple</category>
+  <category>still life</category>
   <guid>https://morganwastaken.com/artwork/2024-11-10-pumpkins/</guid>
   <pubDate>Sun, 10 Nov 2024 00:00:00 GMT</pubDate>
 </item>
@@ -135,6 +138,7 @@
  ]]></description>
   <category>charcoal</category>
   <category>sketch</category>
+  <category>animal</category>
   <guid>https://morganwastaken.com/artwork/2024-11-10-penny/</guid>
   <pubDate>Sun, 10 Nov 2024 00:00:00 GMT</pubDate>
 </item>
@@ -160,8 +164,33 @@
   <category>charcoal</category>
   <category>sketch</category>
   <category>simple</category>
+  <category>animal</category>
   <guid>https://morganwastaken.com/artwork/2024-11-09-penny-asleep/</guid>
   <pubDate>Sat, 09 Nov 2024 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Brynmill</title>
+  <dc:creator>Watercolour on Paper</dc:creator>
+  <link>https://morganwastaken.com/artwork/2024-11-03-brynmill/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://morganwastaken.com/artwork/2024-11-03-brynmill/IMG_0740.JPG" class="img-fluid figure-img"></p>
+<figcaption>Brynmill, Watercolour on Paper, 11/2024</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>watercolour</category>
+  <category>landscape</category>
+  <guid>https://morganwastaken.com/artwork/2024-11-03-brynmill/</guid>
+  <pubDate>Sun, 03 Nov 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Mad Cats</title>
@@ -191,6 +220,7 @@
   <category>charcoal</category>
   <category>simple</category>
   <category>sketch</category>
+  <category>animal</category>
   <guid>https://morganwastaken.com/artwork/2024-10-24-mad-cats/</guid>
   <pubDate>Wed, 23 Oct 2024 23:00:00 GMT</pubDate>
 </item>
@@ -215,6 +245,7 @@
  ]]></description>
   <category>pencil</category>
   <category>sketch</category>
+  <category>landscape</category>
   <guid>https://morganwastaken.com/artwork/2024-10-05-singleton-tree/</guid>
   <pubDate>Fri, 04 Oct 2024 23:00:00 GMT</pubDate>
 </item>

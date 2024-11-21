@@ -2,7 +2,7 @@
 title: "Mad Cats"
 author: Charcoal on Paper
 date: 2024-10-24
-categories: [charcoal, simple, sketch]
+categories: [charcoal, simple, sketch, animal]
 ---
 
 ![Mad Cat 1, Charcoal on Paper, 10/2024](mad-cat.png)

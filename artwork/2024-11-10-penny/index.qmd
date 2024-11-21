@@ -1,7 +1,7 @@
 ---
 title: "Penny"
 author: "Charcoal on Paper"
-categories: [charcoal, sketch]
+categories: [charcoal, sketch, animal]
 date: 2024-11-10
 ---
 

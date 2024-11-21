@@ -1,7 +1,7 @@
 ---
 title: "Toby Profile"
 author: "Charcoal on Paper"
-categories: [charcoal, sketch, simple]
+categories: [charcoal, sketch, simple, animal]
 date: 2024-11-16
 ---
 

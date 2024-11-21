@@ -2,7 +2,7 @@
 title: "Poppy"
 author: Charcoal on Paper
 date: 2024-11-21
-categories: [charcoal, sketch, simple]
+categories: [charcoal, sketch, simple, animal]
 ---
 
 ![Poppy, Charcoal on Paper, 11/2024](IMG_0760.jpg)
