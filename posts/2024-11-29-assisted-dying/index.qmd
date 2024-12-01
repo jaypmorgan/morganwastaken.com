@@ -1,0 +1,57 @@
+---
+title: "Assited Suicide or Assisted Dying?"
+subtitle: "What does Moral Philosophy have to say about UK's Assisted Dying bill?"
+date: 2024-11-29
+categories: [ethics]
+format: 
+  html: default
+  typst: default
+format-links: 
+  - format: typst
+    text: PDF
+    icon: file-pdf
+bibliography: references.bib
+csl: nature.csl
+citation: true
+draft: true
+---
+
+As of the 29th November 2024, Members of the UK Parliament voted in favour of proposals to legalise terminally ill patients ending their own lives [@noauthor_mps_2024]. This proposal has sparked major debate across the spectrum of politics. Those in favour of allowing patients end their own lives typically refer to this as 'assisted dying', i.e., the patient is in the process of dying and is unnecessarily suffering–it would be wrong to prolong their suffering. The alternate view is that allowing the patient to die amounts to 'assisted suicide', or depending on method by which the patient ends their life, murder. No matter your personal views on whether this proposed bill is good or bad (for the patient or society), no one can argue this proposal has not demonstrated a fundamental shift in the philosophy of medical care in the UK.
+
+In this article, I will look at the how moral philosophy evaluates the situation of allowing the suffering to die.
+
+I would like to make it clear that if my own personal views on this matter were present in this article, I would say this prior to the view (e.g. 'in my personal opinion'). Sufficed to say, my views are not represented in this article, nor are any views of any affiliated institution. Any objections made on the position of this article should be related to how the moral philosophy is represented and not whether 'my view is wrong' because, of course, these are not my views, just how the philosophical framework would argue for or against assisted dying.
+
+Finally, I won't go into specific arguments made by either side of the political spectrum as their arguments for or against assisted dying is not the focus–it is the nature of assisted dying that is the focus.
+
+# Action & Intention
+
+Under the existing laws, it is illegal to help someone to commit suicide, even in cases where a patient is terminally ill and suffering. In this regard, the action of killing is immoral, despite the intention to reduce suffer (which is moral). If the proposal becomes law, there is a fundamental shift in how intention is perceived by the law–it has a larger status and can absolve the immoral act of killing in order to prevent further suffering.
+
+# Autonomy, Justice, and Suffering
+
+To decide how you view the matter of whether allow a patient to end their life, you must evaluate this situation against your values and the values you hold for society. For example, do you value that individuals have autonomy to do what they feel is right with their life. Making a decision to end your life should never be an easy decision to make, but when your mind is clear about the choice you've made, should you have the autonomy to this self-regarding action[^1].
+
+[^1]: Actions that only affect oneself. Admittedly, this may not always be a self-regarding action: if the patient has a family that cares deeply about them, the act of ending their life while not necessarily affect only the patient but create suffering for the family. Is this suffering more or less than the patient would experience in prematurely ending their life?
+
+Another value you may hold is that of Justice.
+
+# The Slippery Slope Argument
+
+# A Note on the Term 'Assisted Dying'
+
+The following does not concern the views of moral philosophy, but is more closely related to how language is exercised to get what you want. More specifically, this is related to the name of the proposal 'assisted dying'.
+
+Here we see the term 'dying' is used as opposed to 'suicide'. The latter, I think you'll agree, has a more negative connotation than the former. If proponents of the bill presented it to Parliament as 'assisted suicide', there would have been perhaps less support. It amounts to saying "I support someone's right to die on their own terms and minimise suffering", versus "I support someone's right to kill themselves to minimise suffering". While related by theme, the semantics and the picture it presents to the mind's eye is different. This use of language in this way, I believe, was a very successful part of the campaign, especially when the discourse around this can come from headlines and social media where space to get attention and present your case is limited.
+
+Throughout the campaign, I heard only a few people against the proposed bill label it as 'assisted suicide'. I'd assumed that is where the opposition would make their first defence of the existing laws surrounding.
+
+What can we learn from this? When presenting an argument, you're in charge of the narrative, language, and how the argument gets talked about. If you have the chance to make the language clear and more favourable for your case, you should do so while you can. Otherwise once the argument is presented, the narrative might be framed against your case. This may still happen even if you've attempted to control the use of language, but you should still take the first movers advantage.
+
+# Final Words
+
+# References
+
+::: {#refs}
+:::
+

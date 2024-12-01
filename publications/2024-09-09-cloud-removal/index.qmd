@@ -21,13 +21,7 @@ image: feature.png
 
 # Abstract
 
-The study and prediction of space weather entails the analysis of solar images showing structures of the Sun’s atmosphere.
-When imaged from the Earth’s ground, images may be polluted by terrestrial clouds which hinder the detection of solar
-structures. We propose a new method to remove cloud shadows, based on a U-Net architecture, and compare classical
-supervision with conditional GAN. We evaluate our method on two different imaging modalities, using both real images
-and a new dataset of synthetic clouds. Quantitative assessments are obtained through image quality indices (RMSE, PSNR,
-SSIM, and FID). We demonstrate improved results with regards to the traditional cloud removal technique and a sparse coding
-baseline, on different cloud types and textures.
+The study and prediction of space weather entails the analysis of solar images showing structures of the Sun’s atmosphere. When imaged from the Earth’s ground, images may be polluted by terrestrial clouds which hinder the detection of solar structures. We propose a new method to remove cloud shadows, based on a U-Net architecture, and compare classical supervision with conditional GAN. We evaluate our method on two different imaging modalities, using both real images and a new dataset of synthetic clouds. Quantitative assessments are obtained through image quality indices (RMSE, PSNR, SSIM, and FID). We demonstrate improved results with regards to the traditional cloud removal technique and a sparse coding baseline, on different cloud types and textures.
 
 # Data
 
@@ -41,13 +35,13 @@ The source code for this project is hosted on the [LIS-lab Gitlab](https://gitla
 
 You can pip install directly from this repo:
 
-```bash
+``` bash
 pip install git+https://github.com/jaypmorgan/cloud-removal.git
 ```
 
 or if you've cloned the repo to a local directory:
 
-```bash
+``` bash
 cd cloudremoval
 pip install ./
 ```
@@ -56,7 +50,7 @@ pip install ./
 
 Using the existing synthetic clouds dataset:
 
-```python
+``` python
 import dfp
 from cloudremoval.dataset import SyntheticClouds, CloudsTransform
 
@@ -83,7 +77,7 @@ inp2 = item.input
 
 To create a model, or load one using existing model weights:
 
-```python
+``` python
 from cloudremoval.model import CloudRemover
 
 # create a new model from scratch (i.e. random model weights)

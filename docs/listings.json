@@ -31,6 +31,18 @@
     ]
   },
   {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/2024-08-28-bps/index.html",
+      "/talks/2024-07-04-goscai/index.html",
+      "/talks/2023-04-19-cloud-removal/index.html",
+      "/talks/2022-10-13-adaptive-neighbourhoods/index.html",
+      "/talks/2021-08-05-Learning-how-to-learn-with-deep-learning/index.html",
+      "/talks/2021-03-30-trustable-machine-learning-systems/index.html",
+      "/talks/2018-12-14-jurix/index.html"
+    ]
+  },
+  {
     "listing": "/teaching.html",
     "items": [
       "/teaching/2023-2024/Machine Learning/lecture-4.html",
@@ -55,20 +67,9 @@
     ]
   },
   {
-    "listing": "/talks.html",
-    "items": [
-      "/talks/2024-08-28-bps/index.html",
-      "/talks/2024-07-04-goscai/index.html",
-      "/talks/2023-04-19-cloud-removal/index.html",
-      "/talks/2022-10-13-adaptive-neighbourhoods/index.html",
-      "/talks/2021-08-05-Learning-how-to-learn-with-deep-learning/index.html",
-      "/talks/2021-03-30-trustable-machine-learning-systems/index.html",
-      "/talks/2018-12-14-jurix/index.html"
-    ]
-  },
-  {
     "listing": "/publications.html",
     "items": [
+      "/publications/2024-11-06-whales/index.html",
       "/publications/2024-09-09-cloud-removal/index.html",
       "/publications/2023-12-12-chemistry/index.html",
       "/publications/2023-04-04-remove-clouds/index.html",

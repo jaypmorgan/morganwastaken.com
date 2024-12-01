@@ -1,0 +1,41 @@
+---
+title: "A first vocal repertoire characterization of long-finned pilot whales (Globicephala melas) in the Mediterranean Sea: a machine learning approach"
+date: 2024-11-06
+author:
+  - name: Marion Poupard
+    orcid: 0000-0002-8235-5184
+  - Paul Best
+  - name: Jay Paul Morgan
+    orcid: 0000-0003-3719-362X
+  - Gianni Pavan
+  - Hervé Glotin
+description: The acoustic repertoires of long-finned pilot whales (Globicephala melas) in the Mediterranean Sea are poorly understood. This study aims to create a catalogue of calls, analyse acoustic parameters, and propose a classification tree for future research. An acoustic database was compiled using recordings from the Alboran Sea, Gulf of Lion and Ligurian Sea (Western Mediterranean Basin) between 2008 and 2022, totalling 640 calls. Using a deep neural network, the calls were clustered based on frequency contour similarities, leading to the identification of 40 distinct call types defining the local population’s vocal repertoire. These categories encompass pulsed calls with varied complexities, from simplistic to highly intricate structures comprising multiple elements and segments. This study marks the initial documentation of the vocal catalogue of long-finned pilot whales in the Mediterranean Sea. 
+categories:
+  - Research
+  - Neural Network
+  - Bioacoustics
+image: feature.png
+---
+
+[<i class="ai obp"></i> PDF](https://royalsocietypublishing.org/doi/pdf/10.1098/rsos.231973 "Here's a tooltip"){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.fr/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&citation_for_view=AO1az5YAAAAJ:aqlVkmm33-oC "Here's a tooltip"){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"} [Bibtex](bibtex.bib "Here's a tooltip"){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"}
+
+# Abstract
+
+The acoustic repertoires of long-finned pilot whales
+(Globicephala melas) in the Mediterranean Sea are poorly
+understood. This study aims to create a catalogue of calls,
+analyse acoustic parameters, and propose a classification tree
+for future research. An acoustic database was compiled using
+recordings from the Alboran Sea, Gulf of Lion and Ligurian
+Sea (Western Mediterranean Basin) between 2008 and 2022,
+totalling 640 calls. Using a deep neural network, the calls were
+clustered based on frequency contour similarities, leading to
+the identification of 40 distinct call types defining the local
+population’s vocal repertoire. These categories encompass
+pulsed calls with varied complexities, from simplistic to
+highly intricate structures comprising multiple elements
+and segments. This study marks the initial documentation
+of the vocal catalogue of long-finned pilot whales in the
+Mediterranean Sea. Subsequent research should delve deeper
+into this multifaceted communication system and explore its
+potential linkages with social structures.
