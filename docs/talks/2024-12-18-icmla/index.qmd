@@ -1,0 +1,13 @@
+---
+title: "Temporal Phenotype of Human Information Search"
+description: "From the paper: Predicting Temporal Patterns in Keyword Searches with Recurrent Neural Networks - Phenotyping Human Behaviour from Search Engine Usage"
+categories: [conference,poster]
+author: Jay Paul Morgan
+date: 2024-12-18
+event: "International Conference on Machine Learning and Applications (ICMLA) 2024"
+event_url: "https://www.icmla-conference.org/icmla24/index.php"
+location: Miami, Florida
+image: poster.png
+---
+
+![](poster.png){width="1000"}

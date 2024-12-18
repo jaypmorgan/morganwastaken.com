@@ -54,4 +54,3 @@ What can we learn from this? When presenting an argument, you're in charge of th
 
 ::: {#refs}
 :::
-
