@@ -1,7 +1,7 @@
 ---
 title: "Thumbnail of Boots"
 author: "Charcoal on Paper"
-date: 21/12/2024
+date: 2024-12-21
 categories: [thumbnail, simple, sketch]
 ---
 

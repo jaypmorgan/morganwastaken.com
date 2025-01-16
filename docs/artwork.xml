@@ -41,27 +41,7 @@
   <category>sketch</category>
   <guid>https://morganwastaken.com/artwork/2025-01-12-portrait/</guid>
   <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Thumbnail of Boots</title>
-  <dc:creator>Charcoal on Paper</dc:creator>
-  <link>https://morganwastaken.com/artwork/2024-12-21-boots/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>A thumbnail drawing of some leather boots using on a limited palette of values.</p>
-<p><img src="https://morganwastaken.com/artwork/2024-12-21-boots/IMG_0988.jpg" class="img-fluid"></p>
-
-
-
- ]]></description>
-  <category>thumbnail</category>
-  <category>simple</category>
-  <category>sketch</category>
-  <guid>https://morganwastaken.com/artwork/2024-12-21-boots/</guid>
-  <pubDate>Thu, 11 Sep 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://morganwastaken.com/artwork/2025-01-12-portrait/IMG_0991.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Simplification of Pear</title>
@@ -82,6 +62,7 @@
   <category>sketch</category>
   <guid>https://morganwastaken.com/artwork/2025-01-08-pear/</guid>
   <pubDate>Thu, 31 Jul 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://morganwastaken.com/artwork/2025-01-08-pear/IMG_0984.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Bargue Plate 1</title>
@@ -103,6 +84,27 @@
   <category>simple</category>
   <guid>https://morganwastaken.com/artwork/2025-01-02-bargue-plate-1/</guid>
   <pubDate>Sat, 01 Feb 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Thumbnail of Boots</title>
+  <dc:creator>Charcoal on Paper</dc:creator>
+  <link>https://morganwastaken.com/artwork/2024-12-21-boots/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>A thumbnail drawing of some leather boots using on a limited palette of values.</p>
+<p><img src="https://morganwastaken.com/artwork/2024-12-21-boots/IMG_0988.jpg" class="img-fluid"></p>
+
+
+
+ ]]></description>
+  <category>thumbnail</category>
+  <category>simple</category>
+  <category>sketch</category>
+  <guid>https://morganwastaken.com/artwork/2024-12-21-boots/</guid>
+  <pubDate>Sat, 21 Dec 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Poppy</title>

@@ -3,6 +3,7 @@ title: "Simplification of Portrait"
 author: "Pencil on Paper"
 categories: [simple, sketch]
 date: 12/01/2025
+image: IMG_0991.jpg 
 ---
 
 Like in the [pear exercise](../2025-01-08-pear/index), I am simplifying the object of study–in form and in value. The first attempt is on top, while bottom is the second attempt. In the second version, I spent a lot more time on getting the proportion correct. I think slowing down here was more successful.

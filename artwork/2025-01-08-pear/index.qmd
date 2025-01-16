@@ -3,9 +3,10 @@ title: "Simplification of Pear"
 author: "Pencil on Paper"
 date: 08/01/2025
 categories: [simple, sketch]
+image: IMG_0984.jpg
 ---
 
 This was an exercise where the object was simplified both in terms of values (i.e., using a limited palette of 5 values), and in terms of lines (only straight lines could be used). I made two attempts at this. The top figure is the first attempt, and the second attempt is on the bottom.
 
-![First attempt](IMG_0982.jpg)
-![Second attempt](IMG_0984.jpg)
+![First attempt](IMG_0982.jpg) ![Second attempt](IMG_0984.jpg)
+
