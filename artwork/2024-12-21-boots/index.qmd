@@ -1,0 +1,10 @@
+---
+title: "Thumbnail of Boots"
+author: "Charcoal on Paper"
+date: 21/12/2024
+categories: [thumbnail, simple, sketch]
+---
+
+A thumbnail drawing of some leather boots using on a limited palette of values.
+
+![](IMG_0988.jpg)
