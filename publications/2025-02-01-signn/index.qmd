@@ -1,0 +1,34 @@
+---
+title: "SIGNN - Star Identification using Graph Neural Networks"
+date: 2025-02-01
+author: 
+  - name: Floyd Hepburn-Dickins
+  - name: Mark W. Jones
+    orcid: 0000-0001-8991-1190
+  - name: Mike Edwards
+    orcid: 0000-0003-3367-969X
+  - name: Jay Paul Morgan
+    orcid: 0000-0003-3719-362X
+  - name: Steve Bell
+categories:
+  - Neural Network
+  - Astrophysics
+  - Computer Vision
+  - Research
+  - Conference
+image: feature.png
+description: As a solution for the lost-in-space star identification problem we present Star Identification using Graph Neural Network (SIGNN), a novel approach using Graph Attention Networks.
+citation:
+  type: paper-conference
+  container-title: accepted to Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)
+  url: https://wacv2025.thecvf.com/
+  
+---
+
+[<i class="ai obp"></i> Accepted PDF](https://cronfa.swan.ac.uk/Record/cronfa68091/Download/68091__33069__32352d3a6aeb411d810311c54a810d80.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&citation_for_view=AO1az5YAAAAJ:4DMP91E08xMC){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"} [Bibtex](bibtex.bib "Here's a tooltip"){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"}
+[<i class="ai obp"></i> Poster](https://markwjones.github.io/files/2025_SIGNN_Poster.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"}
+[<i class="ai obp"></i> Video Presentation](https://drive.google.com/file/d/1m4MgXraiqvCB9PbVNUY8im8GUiQrPOug/view?usp=sharing){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"}
+
+# Abstract
+
+As a solution for the lost-in-space star identification problem we present Star Identification using Graph Neural Network (SIGNN), a novel approach using Graph Attention Networks. By representing the celestial sphere as a graph data structure, created from the ESA's Hipparcos catalogue, we are able to accurately capture the rich information and relationships within local star fields. Graph learning techniques allow our model to aggregate information and learn the relative importance of the nodes and structure within each stars local neighbourhood to it's identification. This approach, combined with our parametric data-generation and noise simulation, allows us to train a highly robust model capable of accurate star identification even under intensive noise, outperforming existing methods. Code and generation techniques will be available on github.com.

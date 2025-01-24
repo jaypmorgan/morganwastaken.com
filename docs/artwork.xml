@@ -9,7 +9,7 @@
 <link>https://morganwastaken.com/artwork.html</link>
 <atom:link href="https://morganwastaken.com/artwork.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.6.40</generator>
+<generator>quarto-1.7.6</generator>
 <lastBuildDate>Mon, 01 Dec 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Simplification of Portrait</title>
@@ -186,6 +186,31 @@
   <pubDate>Sat, 16 Nov 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>Penny</title>
+  <dc:creator>Charcoal on Paper</dc:creator>
+  <link>https://morganwastaken.com/artwork/2024-11-10-penny/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://morganwastaken.com/artwork/2024-11-10-penny/IMG_0737.JPG" class="img-fluid figure-img"></p>
+<figcaption>Penny, Charcoal on Paper, 11/2024</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>charcoal</category>
+  <category>sketch</category>
+  <category>animal</category>
+  <guid>https://morganwastaken.com/artwork/2024-11-10-penny/</guid>
+  <pubDate>Sun, 10 Nov 2024 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Pumpkins and Squash</title>
   <dc:creator>Charcoal on Paper</dc:creator>
   <link>https://morganwastaken.com/artwork/2024-11-10-pumpkins/</link>
@@ -210,31 +235,6 @@
   <category>simple</category>
   <category>still life</category>
   <guid>https://morganwastaken.com/artwork/2024-11-10-pumpkins/</guid>
-  <pubDate>Sun, 10 Nov 2024 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Penny</title>
-  <dc:creator>Charcoal on Paper</dc:creator>
-  <link>https://morganwastaken.com/artwork/2024-11-10-penny/</link>
-  <description><![CDATA[ 
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://morganwastaken.com/artwork/2024-11-10-penny/IMG_0737.JPG" class="img-fluid figure-img"></p>
-<figcaption>Penny, Charcoal on Paper, 11/2024</figcaption>
-</figure>
-</div>
-
-
-
- ]]></description>
-  <category>charcoal</category>
-  <category>sketch</category>
-  <category>animal</category>
-  <guid>https://morganwastaken.com/artwork/2024-11-10-penny/</guid>
   <pubDate>Sun, 10 Nov 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
