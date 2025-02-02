@@ -9,6 +9,10 @@ author:
 date: 2022-01-01
 description: Define the computational tasks underlying the newly suggested verified ML in a model-agnostic way, i.e., they work for all machine learning approaches including, e.g., random forests, support vector machines, and Neural Networks.
 image: image.png
+categories:
+  - Conference
+  - Computability
+  - Adversarial Examples
 ---
 
 [<i class="ai obp"></i> PDF](paper.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.fr/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&citation_for_view=AO1az5YAAAAJ:UeHWp8X0CEIC){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [Bibtex](bibtex.html){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"}

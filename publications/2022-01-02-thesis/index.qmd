@@ -6,6 +6,8 @@ author:
 description: PhD Thesis of developing strategies for incorporating priors and domain knowledge into design of Deep Neural Networks.
 image: image.png
 date: 2022-01-02
+categories:
+  - Thesis
 ---
 
 [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.fr/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&citation_for_view=AO1az5YAAAAJ:zYLM7Y9cAGgC){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"} [Bibtex](bibtex.html){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"}

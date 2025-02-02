@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<link rel="alternate" hreflang="en" href="https://morganwastaken.com/publications/2021-01-01-adversarials/index.html" />
-<link rel="alternate" hreflang="cy" href="https://morganwastaken.com/cy/publications/2021-01-01-adversarials/index.cy.html" />
+<link rel="alternate" hreflang="en" href="https://morganwastaken.com/publications/2025-02-01-signn/index.html" />
+<link rel="alternate" hreflang="cy" href="https://morganwastaken.com/cy/publications/2025-02-01-signn/index.cy.html" />
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Floyd Hepburn-Dickins">
+<meta name="author" content="Mark W. Jones">
+<meta name="author" content="Mike Edwards">
 <meta name="author" content="Jay Paul Morgan">
-<meta name="author" content="Adeline Paiement">
-<meta name="author" content="Arno Pauly">
-<meta name="author" content="Monika Seisenberger">
-<meta name="dcterms.date" content="2021-01-01">
-<meta name="description" content="Constructing unique and informed bounds for constructing adversarial examples.">
+<meta name="author" content="Steve Bell">
+<meta name="dcterms.date" content="2025-02-01">
+<meta name="description" content="As a solution for the lost-in-space star identification problem we present Star Identification using Graph Neural Network (SIGNN), a novel approach using Graph Attention Networks.">
 
-<title>Adaptive Neighbourhoods for the Discovery of Adversarial Examples – Jay Paul Morgan</title>
+<title>SIGNN - Star Identification using Graph Neural Networks – Jay Paul Morgan</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,13 +96,13 @@ gtag('config', 'G-Q1SQLS91HT', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Adaptive Neighbourhoods for the Discovery of Adversarial Examples – Jay Paul Morgan">
-<meta property="og:description" content="Constructing unique and informed bounds for constructing adversarial examples.">
-<meta property="og:image" content="https://morganwastaken.com/publications/2021-01-01-adversarials/image.png">
+<meta property="og:title" content="SIGNN - Star Identification using Graph Neural Networks – Jay Paul Morgan">
+<meta property="og:description" content="As a solution for the lost-in-space star identification problem we present Star Identification using Graph Neural Network (SIGNN), a novel approach using Graph Attention Networks.">
+<meta property="og:image" content="https://morganwastaken.com/publications/2025-02-01-signn/feature.png">
 <meta property="og:site_name" content="Jay Paul Morgan">
-<meta property="og:image:height" content="731">
-<meta property="og:image:width" content="773">
-<link rel="canonical" href="https://morganwastaken.com/publications/2021-01-01-adversarials/">
+<meta property="og:image:height" content="913">
+<meta property="og:image:width" content="1056">
+<link rel="canonical" href="https://morganwastaken.com/publications/2025-02-01-signn/">
 </head>
 
 <body class="nav-fixed">
@@ -161,15 +162,18 @@ gtag('config', 'G-Q1SQLS91HT', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Adaptive Neighbourhoods for the Discovery of Adversarial Examples</h1>
+      <h1 class="title">SIGNN - Star Identification using Graph Neural Networks</h1>
                   <div>
         <div class="description">
-          Constructing unique and informed bounds for constructing adversarial examples.
+          As a solution for the lost-in-space star identification problem we present Star Identification using Graph Neural Network (SIGNN), a novel approach using Graph Attention Networks.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Preprint</div>
-                <div class="quarto-category">Adversarial Examples</div>
+                <div class="quarto-category">Neural Network</div>
+                <div class="quarto-category">Astrophysics</div>
+                <div class="quarto-category">Computer Vision</div>
+                <div class="quarto-category">Research</div>
+                <div class="quarto-category">Conference</div>
               </div>
                   </div>
   </div>
@@ -180,17 +184,18 @@ gtag('config', 'G-Q1SQLS91HT', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Authors</div>
       <div class="quarto-title-meta-contents">
+               <p>Floyd Hepburn-Dickins </p>
+               <p>Mark W. Jones <a href="https://orcid.org/0000-0001-8991-1190" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+               <p>Mike Edwards <a href="https://orcid.org/0000-0003-3367-969X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
                <p>Jay Paul Morgan <a href="https://orcid.org/0000-0003-3719-362X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-               <p>Adeline Paiement </p>
-               <p>Arno Pauly </p>
-               <p>Monika Seisenberger </p>
+               <p>Steve Bell </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 1, 2021</p>
+        <p class="date">February 1, 2025</p>
       </div>
     </div>
     
@@ -208,7 +213,7 @@ gtag('config', 'G-Q1SQLS91HT', { 'anonymize_ip': true});
   <ul>
   <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/jaypmorgan/morganwastaken.com/blob/main/publications/2021-01-01-adversarials/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/jaypmorgan/morganwastaken.com/edit/main/publications/2021-01-01-adversarials/index.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/jaypmorgan/morganwastaken.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/jaypmorgan/morganwastaken.com/blob/main/publications/2025-02-01-signn/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/jaypmorgan/morganwastaken.com/edit/main/publications/2025-02-01-signn/index.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/jaypmorgan/morganwastaken.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -217,15 +222,31 @@ gtag('config', 'G-Q1SQLS91HT', { 'anonymize_ip': true});
 
 
 
-<p><a href="paper.pdf" class="btn btn-outline-primary" role="button" data-toggle="tooltip" title="Here's a tooltip"><i class="ai obp"></i> PDF</a> <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=AO1az5YAAAAJ&amp;sortby=pubdate&amp;citation_for_view=AO1az5YAAAAJ:qjMakFHDy7sC" class="btn btn-outline-primary" role="button" data-toggle="tooltip" title="Here's a tooltip"><i class="ai ai-google-scholar"></i> Google Scholar</a> <a href="bibtex.html" class="btn btn-outline-primary" role="button" data-toggle="tooltip" title="Here's a tooltip">Bibtex</a></p>
+<p><a href="https://cronfa.swan.ac.uk/Record/cronfa68091/Download/68091__33069__32352d3a6aeb411d810311c54a810d80.pdf" class="btn btn-outline-primary" role="button" data-toggle="tooltip"><i class="ai obp"></i> Accepted PDF</a> <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=AO1az5YAAAAJ&amp;citation_for_view=AO1az5YAAAAJ:4DMP91E08xMC" class="btn btn-outline-primary" role="button" data-toggle="tooltip"><i class="ai ai-google-scholar"></i> Google Scholar</a> <a href="bibtex.bib" class="btn btn-outline-primary" role="button" data-toggle="tooltip" title="Here's a tooltip">Bibtex</a> <a href="https://markwjones.github.io/files/2025_SIGNN_Poster.pdf" class="btn btn-outline-primary" role="button" data-toggle="tooltip"><i class="ai obp"></i> Poster</a> <a href="https://drive.google.com/file/d/1m4MgXraiqvCB9PbVNUY8im8GUiQrPOug/view?usp=sharing" class="btn btn-outline-primary" role="button" data-toggle="tooltip"><i class="ai obp"></i> Video Presentation</a></p>
 <section id="abstract" class="level1">
 <h1>Abstract</h1>
-<p>Deep Neural Networks (DNNs) have often supplied state-of-the-art results in pattern recognition tasks. Despite their advances, however, the existence of adversarial examples have caught the attention of the community. Many existing works have proposed methods for searching for adversarial examples within fixed-sized regions around training points. Our work complements and improves these existing approaches by adapting the size of these regions based on the problem complexity and data sampling density. This makes such approaches more appropriate for other types of data and may further improve adversarial training methods by increasing the region sizes without creating incorrect labels.</p>
+<p>As a solution for the lost-in-space star identification problem we present Star Identification using Graph Neural Network (SIGNN), a novel approach using Graph Attention Networks. By representing the celestial sphere as a graph data structure, created from the ESA’s Hipparcos catalogue, we are able to accurately capture the rich information and relationships within local star fields. Graph learning techniques allow our model to aggregate information and learn the relative importance of the nodes and structure within each stars local neighbourhood to it’s identification. This approach, combined with our parametric data-generation and noise simulation, allows us to train a highly robust model capable of accurate star identification even under intensive noise, outperforming existing methods. Code and generation techniques will be available on github.com.</p>
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@inproceedings{hepburn-dickins2025,
+  author = {Hepburn-Dickins, Floyd and W. Jones, Mark and Edwards, Mike
+    and Paul Morgan, Jay and Bell, Steve},
+  title = {SIGNN - {Star} {Identification} Using {Graph} {Neural}
+    {Networks}},
+  booktitle = {accepted to Proceedings of the IEEE/CVF Winter Conference
+    on Applications of Computer Vision (WACV)},
+  date = {2025-02-01},
+  url = {https://wacv2025.thecvf.com/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-hepburn-dickins2025" class="csl-entry quarto-appendix-citeas" role="listitem">
+Hepburn-Dickins, Floyd, Mark W. Jones, Mike Edwards, Jay Paul Morgan,
+and Steve Bell. 2025. <span>“SIGNN - Star Identification Using Graph
+Neural Networks.”</span> In <em>Accepted to Proceedings of the IEEE/CVF
+Winter Conference on Applications of Computer Vision (WACV)</em>. <a href="https://wacv2025.thecvf.com/">https://wacv2025.thecvf.com/</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -799,7 +820,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jaypmorgan/morganwastaken.com/blob/main/publications/2021-01-01-adversarials/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/jaypmorgan/morganwastaken.com/edit/main/publications/2021-01-01-adversarials/index.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/jaypmorgan/morganwastaken.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jaypmorgan/morganwastaken.com/blob/main/publications/2025-02-01-signn/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/jaypmorgan/morganwastaken.com/edit/main/publications/2025-02-01-signn/index.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/jaypmorgan/morganwastaken.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
