@@ -2,7 +2,7 @@
 title: "Simplification of Portrait"
 author: "Pencil on Paper"
 categories: [simple, sketch]
-date: 12/01/2025
+date: 2025-01-12
 image: IMG_0991.jpg 
 ---
 

@@ -10,7 +10,26 @@
 <atom:link href="https://morganwastaken.com/artwork.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.6.40</generator>
-<lastBuildDate>Mon, 01 Dec 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 28 Jan 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Swansea Beach</title>
+  <dc:creator>Pen and Watercolour on Paper</dc:creator>
+  <link>https://morganwastaken.com/artwork/2025-01-28-beach/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://morganwastaken.com/artwork/2025-01-28-beach/feature.jpg" class="img-fluid"></p>
+
+
+
+ ]]></description>
+  <category>watercolour</category>
+  <guid>https://morganwastaken.com/artwork/2025-01-28-beach/</guid>
+  <pubDate>Tue, 28 Jan 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://morganwastaken.com/artwork/2025-01-28-beach/feature.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Simplification of Portrait</title>
   <dc:creator>Pencil on Paper</dc:creator>
@@ -40,7 +59,7 @@
   <category>simple</category>
   <category>sketch</category>
   <guid>https://morganwastaken.com/artwork/2025-01-12-portrait/</guid>
-  <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
+  <pubDate>Sun, 12 Jan 2025 00:00:00 GMT</pubDate>
   <media:content url="https://morganwastaken.com/artwork/2025-01-12-portrait/IMG_0991.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -61,7 +80,7 @@
   <category>simple</category>
   <category>sketch</category>
   <guid>https://morganwastaken.com/artwork/2025-01-08-pear/</guid>
-  <pubDate>Thu, 31 Jul 2025 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 08 Jan 2025 00:00:00 GMT</pubDate>
   <media:content url="https://morganwastaken.com/artwork/2025-01-08-pear/IMG_0984.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -83,7 +102,7 @@
   <category>sketch</category>
   <category>simple</category>
   <guid>https://morganwastaken.com/artwork/2025-01-02-bargue-plate-1/</guid>
-  <pubDate>Sat, 01 Feb 2025 00:00:00 GMT</pubDate>
+  <pubDate>Thu, 02 Jan 2025 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Thumbnail of Boots</title>
