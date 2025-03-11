@@ -1,0 +1,25 @@
+---
+title: "Predicting Temporal Patterns in Keyword Searches with Recurrent Neural Networks — Phenotyping Human Behaviour from Search Engine Usage"
+date: 2024-12-18
+author: 
+  - name: Jay Paul Morgan
+    orcid: 0000-0003-3719-362X
+  - name: Frederic Boy
+    orcid: 0000-0003-1373-6634
+categories:
+  - Neural Network
+  - Time-series
+  - Conference
+image: feature.png
+description: Every day, millions of people use search engines to find relevant information using various keywords and queries. These keywords may provide vital clues into our behaviour on a societal level and point to specific indicators of economics and well-being. In this work, we examine the search volume data of 61 keywords from Google Trends, finding there are three main morphological patterns of how keywords are used in searches throughout the day. 
+citation:
+  type: paper-conference
+  container-title: 2024 International Conference on Machine Learning and Applications (ICMLA) 
+  url: https://ieeexplore.ieee.org/abstract/document/10903455
+---
+
+[<i class="ai obp"></i>PDF](https://ieeexplore.ieee.org/abstract/document/10903455){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&citation_for_view=AO1az5YAAAAJ:M3NEmzRMIkIC){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"} [Bibtex](bibtex.bib "Here's a tooltip"){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"}
+
+# Abstract
+
+Every day, millions of people use search engines to find relevant information using various keywords and queries. These keywords may provide vital clues into our behaviour on a societal level and point to specific indicators of economics and well-being. In this work, we examine the search volume data of 61 keywords from Google Trends, finding there are three main morphological patterns of how keywords are used in searches throughout the day. The search volume for these 61 keywords are compared using Dynamic Time Warping and categorised with hierarchical clustering, while the 24-hour time series patterns are learnt by a Recurrent Neural Network (RNN). The performance of this RNN is analysed using two experiments to test its ability to generalise to different types of keywords and to different dates. If integrated with an overarching system, this RNN could track societal well-being and inform policies to tackle underlying societal issues.

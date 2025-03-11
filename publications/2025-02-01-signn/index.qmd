@@ -22,12 +22,9 @@ citation:
   type: paper-conference
   container-title: accepted to Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)
   url: https://wacv2025.thecvf.com/
-  
 ---
 
-[<i class="ai obp"></i> Accepted PDF](https://cronfa.swan.ac.uk/Record/cronfa68091/Download/68091__33069__32352d3a6aeb411d810311c54a810d80.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&citation_for_view=AO1az5YAAAAJ:4DMP91E08xMC){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"} [Bibtex](bibtex.bib "Here's a tooltip"){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"}
-[<i class="ai obp"></i> Poster](https://markwjones.github.io/files/2025_SIGNN_Poster.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"}
-[<i class="ai obp"></i> Video Presentation](https://drive.google.com/file/d/1m4MgXraiqvCB9PbVNUY8im8GUiQrPOug/view?usp=sharing){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"}
+[<i class="ai obp"></i> Accepted PDF](https://cronfa.swan.ac.uk/Record/cronfa68091/Download/68091__33069__32352d3a6aeb411d810311c54a810d80.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&citation_for_view=AO1az5YAAAAJ:4DMP91E08xMC){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"} [Bibtex](bibtex.bib "Here's a tooltip"){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"} [<i class="ai obp"></i> Poster](https://markwjones.github.io/files/2025_SIGNN_Poster.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"} [<i class="ai obp"></i> Video Presentation](https://drive.google.com/file/d/1m4MgXraiqvCB9PbVNUY8im8GUiQrPOug/view?usp=sharing){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"}
 
 # Abstract
 
