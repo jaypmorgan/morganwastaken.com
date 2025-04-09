@@ -1078,5 +1078,34 @@ June 27, 2019. <a href="https://morganwastaken.com/blog/2019-06-27-membership-fu
   <guid>https://morganwastaken.com/posts/2019-06-27-membership-functions/</guid>
   <pubDate>Wed, 26 Jun 2019 23:00:00 GMT</pubDate>
 </item>
+<item>
+  <title>On Paper</title>
+  <dc:creator>Jay Paul Morgan</dc:creator>
+  <link>https://morganwastaken.com/posts/2025-09-01-paper/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><img src="https://morganwastaken.com/posts/2025-09-01-paper/screen.png" class="img-fluid" style="width:100.0%"></p>
+<p>Today I opened my old MacBook Pro from 2015, which I’d replaced in the subsequent years. This device, after charging for a little while, appeared to functional well-albeit a little sluggishly when first booted. However, beyond the mere functioning, this MacBook is quite useless for me. It is running Mac OS 11 with no modern updates, and no compatibility with more recent versions. I couldn’t even sign in to iCloud. While I could try to work on this machine, I would be hesitant to use it due the security issues that may arise–ones that would never be fixed by apple for a device this old.</p>
+<p>But it brings me to the thought of permanency of the data contained on this device. This laptop is 10 years old. That may seem like a long time for an electronic device—a lot has changed and improved. But it’s really not that long. When this device functions as it should, why should it not be compatible with the more recent versions? Presumably apple simply doesn’t want to invest the time in testing and making the software work for older hardware. Then, if I can’t use a perfectly functioning laptop, it becomes e-waste<sup>1</sup>. This was once a brand new laptop, and from its conception, it had a shelf life of less than 10 years. While I know this to be true for the majority of devices we buy, and this is certainly not just an issue with apple, it still feels short-sighted, and perhaps long-sighted for the company by getting consumers to upgrade to the latest models.</p>
+<p>The blow from my inability to use this device properly is cushioned by the fact that the data had already been transferred to newer devices. But what about if I hadn’t been around to do this? Say, if I had died. If I had died, a family member would see this laptop and think that it might contain some precious memories—photos from iCloud, notes that I’d written in the midst of a thought, or drawings that I’d made. What could they do to retrieve these memories? They open the laptop, realise its password locked, be unable to change the password because it can’t connect with iCloud, take the device to an expert who cannot read the hard drive due to encryption. I am not sure someone would go through that effort, especially for my data! The memories of a dead person belong to the technology company of apple, who after some time of account inactivity may decide to delete the account and the data therein (which apple has the right to do).</p>
+<p>If, for example, I had use paper to chronicle my thoughts and make my art, upon my death, my family member would simply pick this paper (hopefully organised in a folio) off the shelf. My creative output are subjects to only the paper, which itself never requires updating. If stored it properly, the permanency of paper is far longer than that of an electronic device. The technology company decides what is e-waste, but I get to say how long the paper lasts, and how my ‘data’ is used. For things that I want to last longer than me, I’ll stick to paper.</p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Of course there are alternative actions such as installing a compatible version of Linux. There are many such examples of bringing older hardware back to life through the use of open-source software. However, this is further to my point: you would need to format the hard drive in this process thereby eliminating any data contained on it.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <guid>https://morganwastaken.com/posts/2025-09-01-paper/</guid>
+  <pubDate>Wed, 09 Apr 2025 07:50:41 GMT</pubDate>
+  <media:content url="https://morganwastaken.com/posts/2025-09-01-paper/screen.png" medium="image" type="image/png" height="92" width="144"/>
+</item>
 </channel>
 </rss>

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<link rel="alternate" hreflang="en" href="https://morganwastaken.com/posts/2022-12-15-org-babel-tramp/index.html" />
-<link rel="alternate" hreflang="cy" href="https://morganwastaken.com/cy/posts/2022-12-15-org-babel-tramp/index.cy.html" />
+<link rel="alternate" hreflang="en" href="https://morganwastaken.com/posts/2025-09-01-paper/index.html" />
+<link rel="alternate" hreflang="cy" href="https://morganwastaken.com/cy/posts/2025-09-01-paper/index.cy.html" />
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.6">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jay Paul Morgan">
-<meta name="dcterms.date" content="2022-12-15">
 
-<title>Using a remote Python process in Org-mode files – Jay Paul Morgan</title>
+<title>On Paper – Jay Paul Morgan</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -91,11 +90,13 @@ gtag('config', 'G-Q1SQLS91HT', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Using a remote Python process in Org-mode files – Jay Paul Morgan">
+<meta property="og:title" content="On Paper – Jay Paul Morgan">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://morganwastaken.com/posts/2022-12-15-org-babel-tramp/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta property="og:image" content="https://morganwastaken.com/posts/2025-09-01-paper/screen.png">
 <meta property="og:site_name" content="Jay Paul Morgan">
-<link rel="canonical" href="https://morganwastaken.com/posts/2022-12-15-org-babel-tramp/">
+<meta property="og:image:height" content="996">
+<meta property="og:image:width" content="1565">
+<link rel="canonical" href="https://morganwastaken.com/posts/2025-09-01-paper/">
 </head>
 
 <body class="nav-fixed">
@@ -155,7 +156,7 @@ gtag('config', 'G-Q1SQLS91HT', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Using a remote Python process in Org-mode files</h1>
+      <h1 class="title">On Paper</h1>
                       </div>
   </div>
     
@@ -176,12 +177,6 @@ gtag('config', 'G-Q1SQLS91HT', { 'anonymize_ip': true});
   <div class="quarto-title-meta">
 
         
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">December 15, 2022</p>
-      </div>
-    </div>
     
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
@@ -196,17 +191,8 @@ gtag('config', 'G-Q1SQLS91HT', { 'anonymize_ip': true});
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
-  <li><a href="#changing-the-python-interpreter" id="toc-changing-the-python-interpreter" class="nav-link" data-scroll-target="#changing-the-python-interpreter">Changing the Python Interpreter</a></li>
-  <li><a href="#plotting" id="toc-plotting" class="nav-link" data-scroll-target="#plotting">Plotting</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/jaypmorgan/morganwastaken.com/blob/main/posts/2022-12-15-org-babel-tramp/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/jaypmorgan/morganwastaken.com/edit/main/posts/2022-12-15-org-babel-tramp/index.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/jaypmorgan/morganwastaken.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -215,98 +201,21 @@ gtag('config', 'G-Q1SQLS91HT', { 'anonymize_ip': true});
 
 
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>Sometimes the work we do requires a lot of horse-power – a lot of compute resource. Perhaps more than what we can do locally. In these cases, we might need to use a remote server.</p>
-<p>In this blog post, I wanted to demonstrate how I’ve used a local org-mode file to execute computations via a remote python process.</p>
-<p><a id="org44cc27d"></a></p>
-</section>
-<section id="setup" class="level1">
-<h1>Setup</h1>
-<p>First, we setup the location of remote server, and where the python process will be started. I do this within the top of the org-mode file so that all python code blocks will use this location by default. We set this up using the <code>#+PROPERTY:</code> argument:</p>
-<pre><code>#+PROPERTY: header-args:python :dir /ssh:&lt;server&gt;:/path/to/dir</code></pre>
-<p>We’ve added <code>:dir</code> that specifies the remote path using tramp. Whenever a python code block is executed normally with <code>C-c C-c</code>, it will connect to <code>&lt;server&gt;</code> and navigate to the <code>/path/to/dir</code> directory, start a python process, execute the source code and return the results.</p>
-<p>We can verify that the code block is being executed on the remote server, and find out which python is being used by printing the hostname of the machine running the python process, and the path to the python executable:</p>
-<pre><code>#+begin_src python :results output
-import sys
-import socket
-print(socket.gethostname())
-print(sys.executable)
-#+end_src</code></pre>
-<p><a id="orgdffb656"></a></p>
-</section>
-<section id="changing-the-python-interpreter" class="level1">
-<h1>Changing the Python Interpreter</h1>
-<p>By default, the python code blocks will be executed using the first “python” command found on the remote server’s path. Often, when working with Python, we have virtual environments.</p>
-<p>The best (hacky) solution I’ve got to use the correct python environment is to manually change the <code>org-babel-python-command</code> to the path of the virtual environment to use:</p>
-<pre><code>#+begin_src emacs-lisp
-(setq org-babel-python-command "venv/bin/python")
-#+end_src</code></pre>
-<p>We can then confirm that the correct virtual environment is being used by printing the path to the executable again.</p>
-<pre><code>#+begin_src python :results output
-import socket
-print(sys.executable)
-#+end_src</code></pre>
-<p><a id="org2a8826a"></a></p>
-</section>
-<section id="plotting" class="level1">
-<h1>Plotting</h1>
-<p>Alas there is still a pain point: plotting. When we execute a code block and specify that it returns a file (the path to the newly created plot), it will return a path on the local machine. Of course, this doesn’t exist as it was executed on the remote server. Take for example:</p>
-<pre><code>#+begin_src python :results file
-import matplotlib.pyplot as plt
-import numpy as np
-x = np.arange(0, 10)
-y = np.random.randn(*x.shape) + x
-plt.plot(x, y, 'r--')
-plt.savefig("/tmp/test.png")
-"/tmp/test.png"
-#+end_src
-
-#+RESULTS:
-file:/tmp/testplot.png</code></pre>
-<p>This will not work. Instead, a workaround I’ve created is creating a named code block to save and return the remote path:</p>
-<pre><code>#+name: savefig
-#+begin_src python :session testing :var filename="/tmp/plot.png"
-f"""
-plt.savefig('{filename}')
-plt.close()
-'/ssh:&lt;server&gt;:{filename}'
-"""
-#+end_src
-
-#+RESULTS: savefig
-
-: plt.savefig('/tmp/plot.png')
-: plt.close()
-: '/ssh:&lt;server&gt;:/tmp/plot.png'</code></pre>
-<p>Then when we want to create a plot:</p>
-<pre><code>#+begin_src python :results file :noweb strip-export
-import matplotlib.pyplot as plt
-import numpy as np
-x = np.arange(0, 10)
-y = np.random.randn(*x.shape) + x
-plt.plot(x, y, 'r--')
-&lt;&lt;savefig(filename="/tmp/testplot.png")&gt;&gt;
-#+end_src
-
-#+RESULTS:
-file:/ssh:&lt;server&gt;:/tmp/testplot.png]]</code></pre>
-<p>We won’t be able to see the image within the notebook itself, but we can use <code>C-c C-o</code> to open the file into it’s own buffer, which is the best solution I’ve come up with for the moment.</p>
+<p><img src="screen.png" class="img-fluid" style="width:100.0%"></p>
+<p>Today I opened my old MacBook Pro from 2015, which I’d replaced in the subsequent years. This device, after charging for a little while, appeared to functional well-albeit a little sluggishly when first booted. However, beyond the mere functioning, this MacBook is quite useless for me. It is running Mac OS 11 with no modern updates, and no compatibility with more recent versions. I couldn’t even sign in to iCloud. While I could try to work on this machine, I would be hesitant to use it due the security issues that may arise–ones that would never be fixed by apple for a device this old.</p>
+<p>But it brings me to the thought of permanency of the data contained on this device. This laptop is 10 years old. That may seem like a long time for an electronic device—a lot has changed and improved. But it’s really not that long. When this device functions as it should, why should it not be compatible with the more recent versions? Presumably apple simply doesn’t want to invest the time in testing and making the software work for older hardware. Then, if I can’t use a perfectly functioning laptop, it becomes e-waste<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. This was once a brand new laptop, and from its conception, it had a shelf life of less than 10 years. While I know this to be true for the majority of devices we buy, and this is certainly not just an issue with apple, it still feels short-sighted, and perhaps long-sighted for the company by getting consumers to upgrade to the latest models.</p>
+<p>The blow from my inability to use this device properly is cushioned by the fact that the data had already been transferred to newer devices. But what about if I hadn’t been around to do this? Say, if I had died. If I had died, a family member would see this laptop and think that it might contain some precious memories—photos from iCloud, notes that I’d written in the midst of a thought, or drawings that I’d made. What could they do to retrieve these memories? They open the laptop, realise its password locked, be unable to change the password because it can’t connect with iCloud, take the device to an expert who cannot read the hard drive due to encryption. I am not sure someone would go through that effort, especially for my data! The memories of a dead person belong to the technology company of apple, who after some time of account inactivity may decide to delete the account and the data therein (which apple has the right to do).</p>
+<p>If, for example, I had use paper to chronicle my thoughts and make my art, upon my death, my family member would simply pick this paper (hopefully organised in a folio) off the shelf. My creative output are subjects to only the paper, which itself never requires updating. If stored it properly, the permanency of paper is far longer than that of an electronic device. The technology company decides what is e-waste, but I get to say how long the paper lasts, and how my ‘data’ is used. For things that I want to last longer than me, I’ll stick to paper.</p>
 
 
-</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{morgan2022,
-  author = {Morgan, Jay Paul},
-  title = {Using a Remote {Python} Process in {Org-mode} Files},
-  date = {2022-12-15},
-  url = {https://morganwastaken.com/blog/2022-12-15-org-babel-tramp},
-  langid = {en}
-}
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-morgan2022" class="csl-entry quarto-appendix-citeas" role="listitem">
-Morgan, Jay Paul. 2022. <span>“Using a Remote Python Process in Org-Mode
-Files.”</span> December 15, 2022. <a href="https://morganwastaken.com/blog/2022-12-15-org-babel-tramp">https://morganwastaken.com/blog/2022-12-15-org-babel-tramp</a>.
-</div></div></section></div></main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Of course there are alternative actions such as installing a compatible version of Linux. There are many such examples of bringing older hardware back to life through the use of open-source software. However, this is further to my point: you would need to format the hard drive in this process thereby eliminating any data contained on it.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -880,7 +789,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jaypmorgan/morganwastaken.com/blob/main/posts/2022-12-15-org-babel-tramp/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/jaypmorgan/morganwastaken.com/edit/main/posts/2022-12-15-org-babel-tramp/index.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/jaypmorgan/morganwastaken.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/jaypmorgan/morganwastaken.com/blob/main/posts/2025-09-01-paper/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/jaypmorgan/morganwastaken.com/edit/main/posts/2025-09-01-paper/index.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/jaypmorgan/morganwastaken.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
