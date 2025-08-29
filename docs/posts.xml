@@ -9,13 +9,14 @@
 <link>https://morganwastaken.com/posts.html</link>
 <atom:link href="https://morganwastaken.com/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.7.6</generator>
+<generator>quarto-1.7.32</generator>
 <lastBuildDate>Tue, 07 May 2024 23:00:00 GMT</lastBuildDate>
 <item>
   <title>How I utilise the word utilise</title>
   <dc:creator>Jay Paul Morgan</dc:creator>
   <link>https://morganwastaken.com/posts/2024-05-08-utilise/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -45,6 +46,7 @@ May 8, 2024. <a href="https://morganwastaken.com/blog/2024-05-08-utilise">https:
   <dc:creator>Jay Paul Morgan</dc:creator>
   <link>https://morganwastaken.com/posts/2024-04-21-scientific-ethics/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -95,6 +97,7 @@ Morgan, Jay Paul. 2024. <span>“On Scientific Ethics.”</span> April 21,
 
 
 
+
 <p>I would like to bring to attention that our (Jay Paul Morgan, Adeline Paiement, and Christian Klinke) paper ‘Domain-informed graph neural networks: a quantum chemistry case study’ has been accepted for publication in the journal ‘Neural Networks’, while we are waiting for the article to become available, we may direct you to an archive version at: <a href="https://hal.science/hal-04142152" class="uri">https://hal.science/hal-04142152</a></p>
 <p>In this paper, we investigate strategies to incorporate domain knowledge of atomic interaction processes into the design of graph neural networks. These take form of two overall strategies: an indirect but easier to implementation version of multi-task method; and a more direct but more successful method of learning modulation parameters for different edge relations of chemical bonds.</p>
 <p>We show how these designs lead to concrete implementations in various neural network architectures, such as message-passing, or convolutional networks.</p>
@@ -122,6 +125,7 @@ Quantum Chemistry Case Study.”</span> June 27, 2023. <a href="https://https:/m
   <dc:creator>Jay Paul Morgan</dc:creator>
   <link>https://morganwastaken.com/posts/2023-04-21-mch23/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -201,6 +205,7 @@ Morgan, Jay Paul. 2023. <span>“MCH2023 - A Retrospective.”</span> April
 
 
 
+
 <p>We’ll be presenting a poster at the <a href="https://mosaiics.astro.bas.bg/?page_id=165">Machine Learning and Computer Vision in Heliophysics international workshop</a>, Sofia, Bulgaria.</p>
 <p>The poster concerns the our work on improving the down-stream feature detection of solar features by removing the contamination of clouds from ground-based observations. We’ve started to open-source our <a href="https://github.com/jaypmorgan/cloud-removal">program code on github</a>, but please come and ask some questions if you’re at the conference!</p>
 
@@ -225,6 +230,7 @@ Heliophysics.”</span> March 19, 2023. <a href="https://morganwastaken.com/blog
   <dc:creator>Jay Paul Morgan</dc:creator>
   <link>https://morganwastaken.com/posts/2023-03-18-Org-babel-remote-images/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -269,6 +275,7 @@ Org-Mode.”</span> March 18, 2023. <a href="https://morganwastaken.com/blog/202
   <dc:creator>Jay Paul Morgan</dc:creator>
   <link>https://morganwastaken.com/posts/2022-12-15-org-babel-tramp/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -379,6 +386,7 @@ Files.”</span> December 15, 2022. <a href="https://morganwastaken.com/blog/202
 
 
 
+
 <p>Talk prepared for the AISB Workshop on Explainability and Transparency in AI, <a href="http://va7.myqnapcloud.com/WordPress/xtai-2022/">XTAI 2022</a>.</p>
 <p><strong>Presentation Abstract</strong></p>
 <p>Machine Learning, in particular Deep Learning, has most recently provided the state-of-the-art results for many tasks such as object recognition, text-to-speech processing, and credit-card fraud detection. In many cases, Deep Learning has even out-performed human performance on these very same tasks. Despite this advance in performance, however, the existence of so-called adversarial examples is well known within the community. These adversarial examples are the metaphorical ‘blind-spot’ of Deep Learning models, where very small (often human-imperceptible) changes to model’s input can result catastrophic miss-classifications. These adversarial examples then pose a great safety risk, especially in systems where safety is critical such as fully-automotive vehicles.</p>
@@ -416,6 +424,7 @@ the Discovery of Adversarial Examples.”</span> October 12, 2022. <a href="http
 
 
 
+
 <p><strong>Presentation Abstract</strong></p>
 <p>Machine Learning (ML) has had a remarkable impact on society. Everything from the phones in our pockets, to the cars that we drive, are being increasingly outfitted with this progressively sophisticated suite of algorithms. But while many of the most basic and fundamental algorithms from ML can be formally verified and tested for safety without much trouble, the same may not be said for Deep Learning (DL) – a prominent forerunner in the state-of-the-art for ML research. These DL models, while performing simple matrix-to-matrix operations at a micro-level, have evolved in scale far past what is tractable for current formal verification methods – all in the pursuit of improving accuracy and performance. This issue of tractability is unsettling considering that the existence of adversarial examples is well known in the ML community. These adversarial examples occur when very small changes to the input space result in a large change in the output space and cause a miss-classification made by the DL model. In the context of self-driving vehicles, small defects and visual artifacts in the sensor input of the DL model, could lead the vehicle to wrongly conclude a stop sign indicates to continue driving where it should have stopped. While the manufacturers will need to put safe-guards in place to prevent this from happening, we should formally prove the (non)-existence of these adversarial examples in the DL model itself. In this presentation, I present the foundational knowledge for understanding adversarial examples, how we can use the input space to dictate the search space for the existence of these examples, and demonstrate their presence with the use of SAT-solving. This work, as a free and open-source project, provides a framework for ML practitioners to verify their own architectures.</p>
 <p><strong>Presentation Slides</strong></p>
@@ -443,6 +452,7 @@ Computer Science (BCTCS) 2021.”</span> March 29, 2021. <a href="https://morgan
   <dc:creator>Jay Paul Morgan</dc:creator>
   <link>https://morganwastaken.com/posts/2020-03-05-makefile/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -789,6 +799,7 @@ Research-Based Programming.”</span> March 5, 2020. <a href="https://morganwast
 
 
 
+
 <p>A membership function is a method of translating a crisp value <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%0A%5Cmathbb%7BR%7D"> into a fuzzy set. In other words, we can find the membership grade (the amount of membership) for x with a value between 0 and 1. If the membership grade is only 0 or 1, then we are using classical sets.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AA%20=%20%5C%7B(x,%20%5Cmu_A(x))%20%7C%20x%20%5Cin%20X%5C%7D,%0A"></p>
 <p>where <img src="https://latex.codecogs.com/png.latex?%5Cmu_A(x)"> is the Membership function (MF) for the fuzzy set <img src="https://latex.codecogs.com/png.latex?A">.</p>
@@ -1088,6 +1099,7 @@ June 27, 2019. <a href="https://morganwastaken.com/blog/2019-06-27-membership-fu
 
 
 
+
 <p><img src="https://morganwastaken.com/posts/2025-09-01-paper/screen.png" class="img-fluid" style="width:100.0%"></p>
 <p>Today I opened my old MacBook Pro from 2015, which I’d replaced in the subsequent years. This device, after charging for a little while, appeared to functional well-albeit a little sluggishly when first booted. However, beyond the mere functioning, this MacBook is quite useless for me. It is running Mac OS 11 with no modern updates, and no compatibility with more recent versions. I couldn’t even sign in to iCloud. While I could try to work on this machine, I would be hesitant to use it due the security issues that may arise–ones that would never be fixed by apple for a device this old.</p>
 <p>But it brings me to the thought of permanency of the data contained on this device. This laptop is 10 years old. That may seem like a long time for an electronic device—a lot has changed and improved. But it’s really not that long. When this device functions as it should, why should it not be compatible with the more recent versions? Presumably apple simply doesn’t want to invest the time in testing and making the software work for older hardware. Then, if I can’t use a perfectly functioning laptop, it becomes e-waste<sup>1</sup>. This was once a brand new laptop, and from its conception, it had a shelf life of less than 10 years. While I know this to be true for the majority of devices we buy, and this is certainly not just an issue with apple, it still feels short-sighted, and perhaps long-sighted for the company by getting consumers to upgrade to the latest models.</p>
@@ -1104,7 +1116,7 @@ June 27, 2019. <a href="https://morganwastaken.com/blog/2019-06-27-membership-fu
 </ol>
 </section></div> ]]></description>
   <guid>https://morganwastaken.com/posts/2025-09-01-paper/</guid>
-  <pubDate>Wed, 09 Apr 2025 07:50:41 GMT</pubDate>
+  <pubDate>Fri, 29 Aug 2025 12:46:16 GMT</pubDate>
   <media:content url="https://morganwastaken.com/posts/2025-09-01-paper/screen.png" medium="image" type="image/png" height="92" width="144"/>
 </item>
 </channel>
