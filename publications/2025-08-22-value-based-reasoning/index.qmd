@@ -1,0 +1,35 @@
+---
+title: "A Review of AI Agent Reasoning with Values"
+date: 2025-08-22
+author: 
+  - name: Jay Paul Morgan
+    orcid: 0000-0003-3719-362X
+  - name: Adam Wyner
+    orcid: 0000-0002-2958-3428
+categories:
+  - Machine Learning
+  - Ethics
+  - Research
+  - Conference
+image: feature.png
+description: In this study, we conduct a systematic review of the literature on Value-based Reasoning to gain a clear understanding of the broader landscape of this field and to determine its future direction.
+# citation:
+#   type: paper-conference
+#   container-title: accepted in the workshop of Value Engineering in Artificial Intelligence (VALE) 2025.
+#   url: https://vale2025.iiia.csic.es/
+---
+
+[<i class="ai obp"></i> Accepted PDF](https://cronfa.swan.ac.uk/Record/cronfa70238/Download/70238__35009__de059d9bd65b4444830bb595c1aea9df.pdf){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"} [<i class="ai ai-google-scholar"></i> Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AO1az5YAAAAJ&citation_for_view=AO1az5YAAAAJ:a0OBvERweLwC){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"} [<i class="ai obp"></i> Poster](/talks/2025-10-26-vale/){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip"}
+
+# Abstract
+
+With the increasing presence and integration of technology in our
+society, they are more frequently involved in fundamental decisions that
+have a significant impact on us. It is only natural that, if decisions
+will be automated by technology, we would wish to guarantee they are
+optimally good and well-behaved according to ethical (moral, value,
+deontic) requirements. One approach which seeks to integrate values
+within the decision process is called Value-based Reasoning. In this
+study, we conduct a systematic review of the literature on Value-based
+Reasoning to gain a clear understanding of the broader landscape of this
+field and to determine its future direction.

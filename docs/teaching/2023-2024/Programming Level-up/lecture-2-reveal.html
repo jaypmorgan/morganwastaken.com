@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<link rel="alternate" hreflang="en" href="https://morganwastaken.com/teaching/2023-2024/Programming Level-up/lecture-2-reveal.html" />
-<link rel="alternate" hreflang="cy" href="https://morganwastaken.com/cy/teaching/2023-2024/Programming Level-up/lecture-2-reveal.cy.html" />
+<link rel="alternate" hreflang="en" href="/teaching/2023-2024/Programming Level-up/lecture-2-reveal.html" />
+<link rel="alternate" hreflang="cy" href="/cy/teaching/2023-2024/Programming Level-up/lecture-2-reveal.cy.html" />
 <script src="../../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Jay Paul Morgan">
   <title>Jay Paul Morgan – Errors &amp; Object Oriented Programming</title>
@@ -97,7 +97,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Q1SQLS91HT"></script>
 
   <script type="text/javascript">
@@ -235,26 +235,26 @@ Jay Paul Morgan
 <h2>Try-catch</h2>
 <p>Try-catches are keywords that introduce a scope where the statements are executed, and if an error (of a certain type IndexError in this example) occurs, different statements could be executed.</p>
 <p>In this example, we are trying to access an element in a list using an index larger than the length of the list. This will produce an <code>IndexError</code>. Instead of exiting Python with an error, however, we can catch the error, and print a string.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>    x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>    x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
 <span id="cb1-2"><a></a>    </span>
 <span id="cb1-3"><a></a>    <span class="cf">try</span>:</span>
 <span id="cb1-4"><a></a>        <span class="bu">print</span>(x[<span class="dv">3</span>])</span>
 <span id="cb1-5"><a></a>    <span class="cf">except</span> <span class="pp">IndexError</span>:</span>
-<span id="cb1-6"><a></a>        <span class="bu">print</span>(<span class="st">"Couldn't access element"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a></a>        <span class="bu">print</span>(<span class="st">"Couldn't access element"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; Couldn't access element</code></pre>
 </section>
 <section id="capturing-messages" class="slide level2">
 <h2>Capturing messages</h2>
 <p>If we wanted to include the original error message in the print statement, we can use the form:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>    <span class="cf">except</span> <span class="op">&lt;</span>error<span class="op">&gt;</span> <span class="im">as</span> <span class="op">&lt;</span>variable<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>    <span class="cf">except</span> <span class="op">&lt;</span>error<span class="op">&gt;</span> <span class="im">as</span> <span class="op">&lt;</span>variable<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This provides us with an variable containing the original error that we can use later on in the try-catch form.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>    x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>    x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
 <span id="cb4-2"><a></a>    </span>
 <span id="cb4-3"><a></a>    <span class="cf">try</span>:</span>
 <span id="cb4-4"><a></a>        <span class="bu">print</span>(x[<span class="dv">3</span>])</span>
 <span id="cb4-5"><a></a>    <span class="cf">except</span> <span class="pp">IndexError</span> <span class="im">as</span> e:</span>
-<span id="cb4-6"><a></a>        <span class="bu">print</span>(<span class="ss">f"Couldn't access elements at index beacuse: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-6"><a></a>        <span class="bu">print</span>(<span class="ss">f"Couldn't access elements at index beacuse: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; Couldn't access elements at index beacuse: list index out of range</code></pre>
 </section>
@@ -272,12 +272,12 @@ Jay Paul Morgan
 <section id="assertions" class="slide level2">
 <h2>Assertions</h2>
 <p>One of the previous errors (<code>AssertionError</code>) occurs when an assert statement fails. Assert is a keyword provided to test some condition and raise an error if the condition is false. It typically requires less code than an <code>if</code>-statement that raises an error, so they might be useful for checking the inputs to functions, for example:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>    <span class="kw">def</span> my_divide(a, b):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>    <span class="kw">def</span> my_divide(a, b):</span>
 <span id="cb6-2"><a></a>        <span class="cf">assert</span> b <span class="op">!=</span> <span class="dv">0</span></span>
 <span id="cb6-3"><a></a>        <span class="cf">return</span> a <span class="op">/</span> b</span>
 <span id="cb6-4"><a></a>    </span>
 <span id="cb6-5"><a></a>    my_divide(<span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb6-6"><a></a>    my_divide(<span class="dv">1</span>, <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-6"><a></a>    my_divide(<span class="dv">1</span>, <span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here we are checking that the divisor is not a 0, in which case division is not defined.</p>
 </section></section>
 <section>
@@ -296,37 +296,37 @@ Jay Paul Morgan
 <p>We’re going to start off with the very basic syntax, and build up some more complex classes.</p>
 <p>To create a class, we use the <code>class</code> keyword, and give our new class a name. This introduces a new scope in Python, the scope of the class.</p>
 <p>Typically, the first thing we shall see in the class is the <code>__init__</code> function.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>    <span class="kw">class</span> <span class="op">&lt;</span>name_of_class<span class="op">&gt;</span>:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>    <span class="kw">class</span> <span class="op">&lt;</span>name_of_class<span class="op">&gt;</span>:</span>
 <span id="cb7-2"><a></a>        <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, args<span class="op">*</span>):</span>
-<span id="cb7-3"><a></a>            <span class="op">&lt;</span>body<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-3"><a></a>            <span class="op">&lt;</span>body<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="init-method" class="slide level2">
 <h2>Init method</h2>
 <p>The <code>__init__</code> function is a function that gets called automatically as soon as a class is made. This init function can take many arguments, but must always start with a <code>self</code>.</p>
 <p>In this example, we are creating a class that represents an x, y coordinate. We’ve called this class <code>Coordinate</code>, and we’ve defined our init function to take an x and y values when the class is being created.</p>
 <p><strong>Note</strong> its more typical to use titlecase when specifying the class name. So when reading code its easy to see when you’re creating a class versus calling a function. You should use this style.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>    <span class="kw">class</span> Coordinate:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>    <span class="kw">class</span> Coordinate:</span>
 <span id="cb8-2"><a></a>        <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, x, y):</span>
 <span id="cb8-3"><a></a>            <span class="va">self</span>.x <span class="op">=</span> x</span>
-<span id="cb8-4"><a></a>            <span class="va">self</span>.y <span class="op">=</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-4"><a></a>            <span class="va">self</span>.y <span class="op">=</span> y</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="instantiating" class="slide level2">
 <h2>Instantiating</h2>
 <p>To create an <em>instance</em> of this class, call the name of the class as you would a function, and pass any parameters you’ve defined in the init function.</p>
 <p>In this example, we are creating a new vector using <code>Vector(...)</code> and we’re passing the x and y coordinate.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>    <span class="kw">class</span> Vector:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>    <span class="kw">class</span> Vector:</span>
 <span id="cb9-2"><a></a>        <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, x, y):</span>
 <span id="cb9-3"><a></a>            <span class="va">self</span>.x <span class="op">=</span> x</span>
 <span id="cb9-4"><a></a>            <span class="va">self</span>.y <span class="op">=</span> y</span>
 <span id="cb9-5"><a></a>    </span>
 <span id="cb9-6"><a></a>    </span>
-<span id="cb9-7"><a></a>    point_1 <span class="op">=</span> Vector(<span class="dv">5</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-7"><a></a>    point_1 <span class="op">=</span> Vector(<span class="dv">5</span>, <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="class-variables" class="slide level2">
 <h2>Class variables</h2>
 <p>In the previous example, we’ve been creating a class variables by using <code>self.&lt;variable_name&gt;</code>. This is telling Python <em>this class should have a variable of this name</em>.</p>
 <p>It allows then to reference the variable when working with the class.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>    <span class="kw">class</span> Vector:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>    <span class="kw">class</span> Vector:</span>
 <span id="cb10-2"><a></a>        <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, x, y):</span>
 <span id="cb10-3"><a></a>            <span class="va">self</span>.x <span class="op">=</span> x</span>
 <span id="cb10-4"><a></a>            <span class="va">self</span>.y <span class="op">=</span> y</span>
@@ -335,7 +335,7 @@ Jay Paul Morgan
 <span id="cb10-7"><a></a>    point_1 <span class="op">=</span> Vector(<span class="dv">5</span>, <span class="dv">2</span>)</span>
 <span id="cb10-8"><a></a>    <span class="bu">print</span>(point_1.x)</span>
 <span id="cb10-9"><a></a>    <span class="bu">print</span>(point_1.y)</span>
-<span id="cb10-10"><a></a>    <span class="bu">print</span>(point_1.length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-10"><a></a>    <span class="bu">print</span>(point_1.length)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; 5
 # =&gt; 2
@@ -346,7 +346,7 @@ Jay Paul Morgan
 <p>A class can have many methods associated with it. To create a new method, we create a function within the scope of the class, remember that the first parameter of the function should be <code>self</code>.</p>
 <p>Even in these functions, we can refer to our <code>self.x</code> and <code>self.y</code> within this new function.</p>
 <p>You’ll notice that to call this function, we using the <code>.length()</code> method similar to how we’ve worked with strings/lists/etc. This is because in Python, everything is an object!</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>    <span class="kw">class</span> Vector:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>    <span class="kw">class</span> Vector:</span>
 <span id="cb12-2"><a></a>        <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, x, y):</span>
 <span id="cb12-3"><a></a>            <span class="va">self</span>.x <span class="op">=</span> x</span>
 <span id="cb12-4"><a></a>            <span class="va">self</span>.y <span class="op">=</span> y</span>
@@ -356,7 +356,7 @@ Jay Paul Morgan
 <span id="cb12-8"><a></a>    </span>
 <span id="cb12-9"><a></a>    </span>
 <span id="cb12-10"><a></a>    my_point <span class="op">=</span> Vector(<span class="dv">2</span>, <span class="dv">5</span>)</span>
-<span id="cb12-11"><a></a>    <span class="bu">print</span>(my_point.length())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-11"><a></a>    <span class="bu">print</span>(my_point.length())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; 7</code></pre>
 </section>
@@ -364,7 +364,7 @@ Jay Paul Morgan
 <h2>dunder-methods</h2>
 <p>While we could, for example, create a function called <code>.print()</code>, sometimes we would like to use the in built functions like <code>print()</code>. When creating a class, there is a set of <em>dunder-methods</em> (double-under to reference the two ‘<code>__</code>’ characters either side of the function name).</p>
 <p>One of these dunder-methods is <code>__repr__</code>, which allows us to specify how the object looks when its printed.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>    <span class="kw">class</span> OldVector:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>    <span class="kw">class</span> OldVector:</span>
 <span id="cb14-2"><a></a>        <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, x, y):</span>
 <span id="cb14-3"><a></a>            <span class="va">self</span>.x <span class="op">=</span> x</span>
 <span id="cb14-4"><a></a>            <span class="va">self</span>.y <span class="op">=</span> y</span>
@@ -379,7 +379,7 @@ Jay Paul Morgan
 <span id="cb14-13"><a></a>        <span class="kw">def</span> <span class="fu">__repr__</span>(<span class="va">self</span>):</span>
 <span id="cb14-14"><a></a>            <span class="cf">return</span> <span class="ss">f"Vector(</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>x<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>y<span class="sc">}</span><span class="ss">)"</span></span>
 <span id="cb14-15"><a></a>    </span>
-<span id="cb14-16"><a></a>    <span class="bu">print</span>(Vector(<span class="dv">2</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-16"><a></a>    <span class="bu">print</span>(Vector(<span class="dv">2</span>, <span class="dv">5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; &lt;__main__.OldVector object at 0x7f658721e250&gt;
 # =&gt; Vector(2, 5)</code></pre>
@@ -395,7 +395,7 @@ Jay Paul Morgan
 <section id="len__" class="slide level2">
 <h2><code>__len__</code></h2>
 <p>The <code>__len__</code> function allows us to specify how the <code>len()</code> function acts on the class. Take this hypothetical dataset. We create a <code>__len__</code> function that returns the length of the unique elements in the dataset.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>    <span class="kw">class</span> Dataset:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>    <span class="kw">class</span> Dataset:</span>
 <span id="cb16-2"><a></a>        <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, data):</span>
 <span id="cb16-3"><a></a>            <span class="va">self</span>.data <span class="op">=</span> data</span>
 <span id="cb16-4"><a></a>    </span>
@@ -404,14 +404,14 @@ Jay Paul Morgan
 <span id="cb16-7"><a></a>            <span class="cf">return</span> <span class="bu">len</span>(<span class="bu">set</span>(<span class="va">self</span>.data))</span>
 <span id="cb16-8"><a></a>    </span>
 <span id="cb16-9"><a></a>    data <span class="op">=</span> Dataset([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">1</span>])</span>
-<span id="cb16-10"><a></a>    <span class="bu">print</span>(<span class="bu">len</span>(data))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-10"><a></a>    <span class="bu">print</span>(<span class="bu">len</span>(data))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; 4</code></pre>
 </section>
 <section id="getitem__" class="slide level2">
 <h2><code>__getitem__</code></h2>
 <p>Next <code>__getitem__</code> allows us to index over a class. This new function must include <code>self</code> and a variable to pass the index. Here I’ve used <code>idx</code>. In this function I am simply indexing on the on the classes <code>self.data</code>.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>    <span class="kw">class</span> Dataset:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>    <span class="kw">class</span> Dataset:</span>
 <span id="cb18-2"><a></a>        <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, data):</span>
 <span id="cb18-3"><a></a>            <span class="va">self</span>.data <span class="op">=</span> data</span>
 <span id="cb18-4"><a></a>    </span>
@@ -419,21 +419,21 @@ Jay Paul Morgan
 <span id="cb18-6"><a></a>            <span class="cf">return</span> <span class="va">self</span>.data[idx]</span>
 <span id="cb18-7"><a></a>    </span>
 <span id="cb18-8"><a></a>    data <span class="op">=</span> Dataset([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">1</span>])</span>
-<span id="cb18-9"><a></a>    <span class="bu">print</span>(data[<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-9"><a></a>    <span class="bu">print</span>(data[<span class="dv">2</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; 3</code></pre>
 </section>
 <section id="call__" class="slide level2">
 <h2><code>__call__</code></h2>
 <p>In a small number of cases, it is nice to use the class just like a function. This is what <code>__call__</code> allows us to do. In this function we specify what should happen when class is ‘called’ like a function. In this simple example, we are creating a function that prints the type of food being used as a parameter to the function.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a>    <span class="kw">class</span> Jaguar:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a>    <span class="kw">class</span> Jaguar:</span>
 <span id="cb20-2"><a></a>        <span class="kw">def</span> <span class="fu">__call__</span>(<span class="va">self</span>, food):</span>
 <span id="cb20-3"><a></a>            <span class="bu">print</span>(<span class="ss">f"The jaguar eats the </span><span class="sc">{</span>food<span class="sc">}</span><span class="ss">."</span>)</span>
 <span id="cb20-4"><a></a>    </span>
 <span id="cb20-5"><a></a>    food <span class="op">=</span> <span class="st">"apple"</span></span>
 <span id="cb20-6"><a></a>    animal <span class="op">=</span> Jaguar()</span>
 <span id="cb20-7"><a></a>    </span>
-<span id="cb20-8"><a></a>    animal(food)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-8"><a></a>    animal(food)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; The jaguar eats the apple.</code></pre>
 </section>
@@ -442,7 +442,7 @@ Jay Paul Morgan
 <p><code>__iter__</code> and <code>__next__</code> allow us to make our class iterable, i.e.&nbsp;we can use it in a <code>for</code> loop for example.</p>
 <p>The <code>__iter__</code> function should define what happens when we start the iteration, and <code>__next__</code> defines what happens at every step of the iteration.</p>
 <p>Let’s take a look at an example where we have an iterable set of prime numbers.</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a>    <span class="kw">class</span> Primes:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a>    <span class="kw">class</span> Primes:</span>
 <span id="cb22-2"><a></a>        <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
 <span id="cb22-3"><a></a>            <span class="va">self</span>.primes <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">11</span>]</span>
 <span id="cb22-4"><a></a>    </span>
@@ -459,12 +459,12 @@ Jay Paul Morgan
 <span id="cb22-15"><a></a>                <span class="va">self</span>.idx <span class="op">+=</span> <span class="dv">1</span></span>
 <span id="cb22-16"><a></a>                <span class="cf">return</span> item</span>
 <span id="cb22-17"><a></a>            <span class="cf">else</span>:</span>
-<span id="cb22-18"><a></a>                <span class="cf">raise</span> <span class="pp">StopIteration</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-18"><a></a>                <span class="cf">raise</span> <span class="pp">StopIteration</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And now we can iterate over this class</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a>    prime_numbers <span class="op">=</span> Primes()</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a>    prime_numbers <span class="op">=</span> Primes()</span>
 <span id="cb23-2"><a></a>    </span>
 <span id="cb23-3"><a></a>    <span class="cf">for</span> prime_number <span class="kw">in</span> prime_numbers:</span>
-<span id="cb23-4"><a></a>        <span class="bu">print</span>(prime_number)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-4"><a></a>        <span class="bu">print</span>(prime_number)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; 2
 # =&gt; 3
@@ -476,34 +476,34 @@ Jay Paul Morgan
 <h2>Inheritance</h2>
 <p>One special thing about OOP is that its normally designed to provide inheritance – this is true in Python. Inheritance is where you have a base class, and other classes inherit from this base class. This means that the class that inherits from the base class has access to the same methods and class variables. In some cases, it can override some of these features.</p>
 <p>Let’s take a look an example.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a>    <span class="kw">class</span> Animal:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a>    <span class="kw">class</span> Animal:</span>
 <span id="cb25-2"><a></a>        <span class="kw">def</span> growl(<span class="va">self</span>):</span>
 <span id="cb25-3"><a></a>            <span class="bu">print</span>(<span class="st">"The animal growls"</span>)</span>
 <span id="cb25-4"><a></a>    </span>
 <span id="cb25-5"><a></a>        <span class="kw">def</span> walk(<span class="va">self</span>):</span>
-<span id="cb25-6"><a></a>            <span class="cf">raise</span> NotImplementError</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb25-6"><a></a>            <span class="cf">raise</span> NotImplementError</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here we have created a simple class called Animal, that has two functions, one of which will raise an error if its called.</p>
 <p>We can inherit from this Animal class by placing our base class in <code>()</code> after the new class name.</p>
 <p>Here we are creating two classes, Tiger and Duck. Both of these new classes inherit from Animal. Also, both of these classes are overriding the walk functions. But they are not creating a growl method themselves.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a>    <span class="kw">class</span> Tiger(Animal):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a>    <span class="kw">class</span> Tiger(Animal):</span>
 <span id="cb26-2"><a></a>        <span class="kw">def</span> walk(<span class="va">self</span>):</span>
 <span id="cb26-3"><a></a>            <span class="bu">print</span>(<span class="st">"The Tiger walks through the jungle"</span>)</span>
 <span id="cb26-4"><a></a>    </span>
 <span id="cb26-5"><a></a>    <span class="kw">class</span> Duck(Animal):</span>
 <span id="cb26-6"><a></a>        <span class="kw">def</span> walk(<span class="va">self</span>):</span>
-<span id="cb26-7"><a></a>            <span class="bu">print</span>(<span class="st">"The Duck walks through the jungle"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-7"><a></a>            <span class="bu">print</span>(<span class="st">"The Duck walks through the jungle"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Look at what happens when we create instances of these classes, and call the functions. First we see that the correct method has been called. I.e. for the duck class, the correct <code>walk</code> method was called.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a>    first_animal <span class="op">=</span> Tiger()</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a>    first_animal <span class="op">=</span> Tiger()</span>
 <span id="cb27-2"><a></a>    second_animal <span class="op">=</span> Duck()</span>
 <span id="cb27-3"><a></a>    </span>
 <span id="cb27-4"><a></a>    first_animal.walk()</span>
-<span id="cb27-5"><a></a>    second_animal.walk()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb27-5"><a></a>    second_animal.walk()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; The Tiger walks through the jungle
 # =&gt; The Duck walks through the jungle</code></pre>
 <p>But what happens if we call the <code>.growl()</code> method?</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a>    first_animal.growl()</span>
-<span id="cb29-2"><a></a>    second_animal.growl()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a>    first_animal.growl()</span>
+<span id="cb29-2"><a></a>    second_animal.growl()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; The animal growls
 # =&gt; The animal growls</code></pre>
@@ -600,8 +600,8 @@ Douglas Adams
 <section id="updating-our-database" class="slide level2">
 <h2>Updating our database</h2>
 <p>Create a class method called <code>update</code> that takes 4 arguments:, 1) the key of the value we want to update 2) the value we want to update it to 3) the key we want to check to find out if we have the correct book and 4) the value of the key to check if we have the correct book.</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a>    db.update(key<span class="op">=</span><span class="st">"release_date"</span>, value<span class="op">=</span><span class="dv">1979</span>, where_key<span class="op">=</span><span class="st">"title"</span>,</span>
-<span id="cb31-2"><a></a>              where_value<span class="op">=</span><span class="st">"Hitchhikers Guide to the Galaxy"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a>    db.update(key<span class="op">=</span><span class="st">"release_date"</span>, value<span class="op">=</span><span class="dv">1979</span>, where_key<span class="op">=</span><span class="st">"title"</span>,</span>
+<span id="cb31-2"><a></a>              where_value<span class="op">=</span><span class="st">"Hitchhikers Guide to the Galaxy"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Use this to fix the release data of the Hitchhiker’s book.</p>
 </section>
 <section id="printed-representation" class="slide level2">
@@ -826,7 +826,7 @@ Entry 1:
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -900,13 +900,14 @@ Entry 1:
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

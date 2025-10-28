@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<link rel="alternate" hreflang="en" href="https://morganwastaken.com/publications.html" />
-<link rel="alternate" hreflang="cy" href="https://morganwastaken.com/cy/publications.cy.html" />
+<link rel="alternate" hreflang="en" href="/publications.html" />
+<link rel="alternate" hreflang="cy" href="/cy/publications.cy.html" />
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,18 +36,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-77633ece19c8e04db6d5a17cd4436747.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-77a2314449dfb98733dd17d55e0a86b3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-77633ece19c8e04db6d5a17cd4436747.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c91f5ecd240dbcfad33507b16abcbcec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-a36fef8c6f594d6a13d5724b75b58e17.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c91f5ecd240dbcfad33507b16abcbcec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -135,7 +136,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -153,10 +154,10 @@ window.Quarto = {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Publications – Jay Paul Morgan">
-<meta property="og:image" content="https://morganwastaken.com/publications/2025-02-01-signn/feature.png">
+<meta property="og:image" content="https://morganwastaken.com/publications/2025-08-22-value-based-reasoning/feature.png">
 <meta property="og:site_name" content="Jay Paul Morgan">
-<meta property="og:image:height" content="913">
-<meta property="og:image:width" content="1056">
+<meta property="og:image:height" content="849">
+<meta property="og:image:width" content="1241">
 <link rel="canonical" href="https://morganwastaken.com/publications.html">
 </head>
 
@@ -329,6 +330,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Jay Paul Morgan</span>
     </a>
@@ -381,7 +384,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="QWR2ZXJzYXJpYWwlMjBFeGFtcGxlcw==">Adversarial Examples <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QXN0cm9waHlzaWNz">Astrophysics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QmlvYWNvdXN0aWNz">Bioacoustics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29tcHV0YWJpbGl0eQ==">Computability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29tcHV0ZXIlMjBWaXNpb24=">Computer Vision <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q29uZmVyZW5jZQ==">Conference <span class="quarto-category-count">(4)</span></div><div class="category" data-category="SGVsaW9waHlzaWNz">Heliophysics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SW1hZ2UlMjBQcm9jZXNzaW5n">Image Processing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Sm91cm5hbA==">Journal <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TmV1cmFsJTIwTmV0d29yaw==">Neural Network <span class="quarto-category-count">(7)</span></div><div class="category" data-category="UHJlcHJpbnQ=">Preprint <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UXVhbnR1bSUyMENoZW1pc3RyeQ==">Quantum Chemistry <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVzZWFyY2g=">Research <span class="quarto-category-count">(5)</span></div><div class="category" data-category="VGhlc2lz">Thesis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGltZS1zZXJpZXM=">Time-series <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="QWR2ZXJzYXJpYWwlMjBFeGFtcGxlcw==">Adversarial Examples <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QXN0cm9waHlzaWNz">Astrophysics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QmlvYWNvdXN0aWNz">Bioacoustics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29tcHV0YWJpbGl0eQ==">Computability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29tcHV0ZXIlMjBWaXNpb24=">Computer Vision <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q29uZmVyZW5jZQ==">Conference <span class="quarto-category-count">(5)</span></div><div class="category" data-category="RXRoaWNz">Ethics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SGVsaW9waHlzaWNz">Heliophysics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SW1hZ2UlMjBQcm9jZXNzaW5n">Image Processing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Sm91cm5hbA==">Journal <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TWFjaGluZSUyMExlYXJuaW5n">Machine Learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TmV1cmFsJTIwTmV0d29yaw==">Neural Network <span class="quarto-category-count">(7)</span></div><div class="category" data-category="UHJlcHJpbnQ=">Preprint <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UXVhbnR1bSUyMENoZW1pc3RyeQ==">Quantum Chemistry <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVzZWFyY2g=">Research <span class="quarto-category-count">(6)</span></div><div class="category" data-category="VGhlc2lz">Thesis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGltZS1zZXJpZXM=">Time-series <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -436,7 +439,43 @@ window.Quarto = {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TmV1cmFsJTIwTmV0d29yayUyQ0FzdHJvcGh5c2ljcyUyQ0NvbXB1dGVyJTIwVmlzaW9uJTJDUmVzZWFyY2glMkNDb25mZXJlbmNl" data-listing-date-sort="1738368000000" data-listing-file-modified-sort="1756472485572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="164">
+<div class="quarto-post image-right" data-index="0" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDRXRoaWNzJTJDUmVzZWFyY2glMkNDb25mZXJlbmNl" data-listing-date-sort="1755817200000" data-listing-file-modified-sort="1761658514913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="119">
+<div class="thumbnail"><a href="./publications/2025-08-22-value-based-reasoning/index.html" class="no-external">
+
+<img loading="lazy" src="./publications/2025-08-22-value-based-reasoning/feature.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./publications/2025-08-22-value-based-reasoning/index.html" class="no-external">A Review of AI Agent Reasoning with Values</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RXRoaWNz'); return false;">Ethics</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UmVzZWFyY2g='); return false;">Research</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q29uZmVyZW5jZQ=='); return false;">Conference</div>
+
+</div>
+<div class="delink listing-description"><a href="./publications/2025-08-22-value-based-reasoning/index.html" class="no-external">
+<p>In this study, we conduct a systematic review of the literature on Value-based Reasoning to gain a clear understanding of the broader landscape of this field and to determine its future direction.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./publications/2025-08-22-value-based-reasoning/index.html" class="no-external">
+<div class="listing-date">
+Aug 22, 2025
+</div>
+<div class="listing-author">
+Jay Paul Morgan, Adam Wyner
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="TmV1cmFsJTIwTmV0d29yayUyQ0FzdHJvcGh5c2ljcyUyQ0NvbXB1dGVyJTIwVmlzaW9uJTJDUmVzZWFyY2glMkNDb25mZXJlbmNl" data-listing-date-sort="1738368000000" data-listing-file-modified-sort="1761658514913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="164">
 <div class="thumbnail"><a href="./publications/2025-02-01-signn/index.html" class="no-external">
 
 <img loading="lazy" src="./publications/2025-02-01-signn/feature.png" class="thumbnail-image">
@@ -474,7 +513,7 @@ Floyd Hepburn-Dickins, Mark W. Jones, Mike Edwards, Jay Paul Morgan, Steve Bell
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="TmV1cmFsJTIwTmV0d29yayUyQ1RpbWUtc2VyaWVzJTJDQ29uZmVyZW5jZQ==" data-listing-date-sort="1734480000000" data-listing-file-modified-sort="1756472485569" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="171">
+<div class="quarto-post image-right" data-index="2" data-categories="TmV1cmFsJTIwTmV0d29yayUyQ1RpbWUtc2VyaWVzJTJDQ29uZmVyZW5jZQ==" data-listing-date-sort="1734480000000" data-listing-file-modified-sort="1761658514913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="171">
 <div class="thumbnail"><a href="./publications/2024-12-18-phenotype/index.html" class="no-external">
 
 <img loading="lazy" src="./publications/2024-12-18-phenotype/feature.png" class="thumbnail-image">
@@ -508,7 +547,7 @@ Jay Paul Morgan, Frederic Boy
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="UmVzZWFyY2glMkNOZXVyYWwlMjBOZXR3b3JrJTJDQmlvYWNvdXN0aWNzJTJDSm91cm5hbA==" data-listing-date-sort="1730851200000" data-listing-file-modified-sort="1756472485567" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="177">
+<div class="quarto-post image-right" data-index="3" data-categories="UmVzZWFyY2glMkNOZXVyYWwlMjBOZXR3b3JrJTJDQmlvYWNvdXN0aWNzJTJDSm91cm5hbA==" data-listing-date-sort="1730851200000" data-listing-file-modified-sort="1761658514913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="177">
 <div class="thumbnail"><a href="./publications/2024-11-06-whales/index.html" class="no-external">
 
 <img loading="lazy" src="./publications/2024-11-06-whales/feature.png" class="thumbnail-image">
@@ -544,7 +583,7 @@ Marion Poupard, Paul Best, Jay Paul Morgan, Gianni Pavan, Hervé Glotin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="UmVzZWFyY2glMkNOZXVyYWwlMjBOZXR3b3JrJTJDSGVsaW9waHlzaWNzJTJDSW1hZ2UlMjBQcm9jZXNzaW5nJTJDQ29tcHV0ZXIlMjBWaXNpb24lMkNBc3Ryb3BoeXNpY3MlMkNKb3VybmFs" data-listing-date-sort="1725836400000" data-listing-file-modified-sort="1756472485565" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="316">
+<div class="quarto-post image-right" data-index="4" data-categories="UmVzZWFyY2glMkNOZXVyYWwlMjBOZXR3b3JrJTJDSGVsaW9waHlzaWNzJTJDSW1hZ2UlMjBQcm9jZXNzaW5nJTJDQ29tcHV0ZXIlMjBWaXNpb24lMkNBc3Ryb3BoeXNpY3MlMkNKb3VybmFs" data-listing-date-sort="1725836400000" data-listing-file-modified-sort="1761658514913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="316">
 <div class="thumbnail"><a href="./publications/2024-09-09-cloud-removal/index.html" class="no-external">
 
 <img loading="lazy" src="./publications/2024-09-09-cloud-removal/feature.png" class="thumbnail-image">
@@ -586,7 +625,7 @@ Amal Chaoui, Jay Paul Morgan, Adeline Paiement, Jean Aboudarham
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="UmVzZWFyY2glMkNRdWFudHVtJTIwQ2hlbWlzdHJ5JTJDTmV1cmFsJTIwTmV0d29yayUyQ0pvdXJuYWw=" data-listing-date-sort="1702339200000" data-listing-file-modified-sort="1756472485561" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="178">
+<div class="quarto-post image-right" data-index="5" data-categories="UmVzZWFyY2glMkNRdWFudHVtJTIwQ2hlbWlzdHJ5JTJDTmV1cmFsJTIwTmV0d29yayUyQ0pvdXJuYWw=" data-listing-date-sort="1702339200000" data-listing-file-modified-sort="1761658514913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="178">
 <div class="thumbnail"><a href="./publications/2023-12-12-chemistry/index.html" class="no-external">
 
 <img loading="lazy" src="./publications/2023-12-12-chemistry/chemistry.png" class="thumbnail-image">
@@ -622,7 +661,7 @@ Jay Paul Morgan, Adeline Paiement, Christian Klinke
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="UmVzZWFyY2glMkNIZWxpb3BoeXNpY3MlMkNOZXVyYWwlMjBOZXR3b3JrJTJDUHJlcHJpbnQ=" data-listing-date-sort="1680562800000" data-listing-file-modified-sort="1756472485556" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
+<div class="quarto-post image-right" data-index="6" data-categories="UmVzZWFyY2glMkNIZWxpb3BoeXNpY3MlMkNOZXVyYWwlMjBOZXR3b3JrJTJDUHJlcHJpbnQ=" data-listing-date-sort="1680562800000" data-listing-file-modified-sort="1761658514913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
 <div class="thumbnail"><a href="./publications/2023-04-04-remove-clouds/index.html" class="no-external">
 
 <img loading="lazy" src="./publications/2023-04-04-remove-clouds/cloud-1.png" class="thumbnail-image">
@@ -658,7 +697,7 @@ Amal Chaoui, Jay Paul Morgan, Adeline Paiement, Jean Aboudarham
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="VGhlc2lz" data-listing-date-sort="1641081600000" data-listing-file-modified-sort="1756472485548" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="398">
+<div class="quarto-post image-right" data-index="7" data-categories="VGhlc2lz" data-listing-date-sort="1641081600000" data-listing-file-modified-sort="1761658514913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="398">
 <div class="thumbnail"><a href="./publications/2022-01-02-thesis/index.html" class="no-external">
 
 <img loading="lazy" src="./publications/2022-01-02-thesis/image.png" class="thumbnail-image">
@@ -688,7 +727,7 @@ Jay Paul Morgan
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="Q29uZmVyZW5jZSUyQ0NvbXB1dGFiaWxpdHklMkNBZHZlcnNhcmlhbCUyMEV4YW1wbGVz" data-listing-date-sort="1640995200000" data-listing-file-modified-sort="1756472485541" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="164">
+<div class="quarto-post image-right" data-index="8" data-categories="Q29uZmVyZW5jZSUyQ0NvbXB1dGFiaWxpdHklMkNBZHZlcnNhcmlhbCUyMEV4YW1wbGVz" data-listing-date-sort="1640995200000" data-listing-file-modified-sort="1761658514913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="164">
 <div class="thumbnail"><a href="./publications/2022-01-01-computability/index.html" class="no-external">
 
 <img loading="lazy" src="./publications/2022-01-01-computability/image.png" class="thumbnail-image">
@@ -722,7 +761,7 @@ Tonicha Crook, Jay Paul Morgan, Arno Pauly, Markus Roggenbach
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="UHJlcHJpbnQlMkNBZHZlcnNhcmlhbCUyMEV4YW1wbGVz" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1756472485535" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="127">
+<div class="quarto-post image-right" data-index="9" data-categories="UHJlcHJpbnQlMkNBZHZlcnNhcmlhbCUyMEV4YW1wbGVz" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1761658514912" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="127">
 <div class="thumbnail"><a href="./publications/2021-01-01-adversarials/index.html" class="no-external">
 
 <img loading="lazy" src="./publications/2021-01-01-adversarials/image.png" class="thumbnail-image">
@@ -754,7 +793,7 @@ Jay Paul Morgan, Adeline Paiement, Arno Pauly, Monika Seisenberger
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Q29uZmVyZW5jZSUyQ05ldXJhbCUyME5ldHdvcms=" data-listing-date-sort="1514764800000" data-listing-file-modified-sort="1756472485529" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="163">
+<div class="quarto-post image-right" data-index="10" data-categories="Q29uZmVyZW5jZSUyQ05ldXJhbCUyME5ldHdvcms=" data-listing-date-sort="1514764800000" data-listing-file-modified-sort="1761658514912" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="163">
 <div class="thumbnail"><a href="./publications/2018-01-01-chatbot/index.html" class="no-external">
 
 <img loading="lazy" src="./publications/2018-01-01-chatbot/image.png" class="thumbnail-image">
@@ -853,13 +892,14 @@ Jay Paul Morgan, Adeline Paiement, Monika Seisenberger, Jane Williams, Adam Wyne
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

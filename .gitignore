@@ -7,3 +7,5 @@
 _freeze/
 .DS_Store
 /renv/library/
+
+**/*.quarto_ipynb

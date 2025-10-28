@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<link rel="alternate" hreflang="en" href="https://morganwastaken.com/teaching/2023-2024/Programming Level-up/lecture-3-reveal.html" />
-<link rel="alternate" hreflang="cy" href="https://morganwastaken.com/cy/teaching/2023-2024/Programming Level-up/lecture-3-reveal.cy.html" />
+<link rel="alternate" hreflang="en" href="/teaching/2023-2024/Programming Level-up/lecture-3-reveal.html" />
+<link rel="alternate" hreflang="cy" href="/cy/teaching/2023-2024/Programming Level-up/lecture-3-reveal.cy.html" />
 <script src="../../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Jay Paul Morgan">
   <title>Jay Paul Morgan – Python Modules</title>
@@ -97,7 +97,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Q1SQLS91HT"></script>
 
   <script type="text/javascript">
@@ -239,51 +239,51 @@ Jay Paul Morgan
 <h2>The basic structure of importing</h2>
 <p>Modules or packages are other <em>scripts or programs</em> that can be imported into other scripts. This definition is very general, but we shall see how flexible importing in Python can be.</p>
 <p>The basic syntax of importing is:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> <span class="op">&lt;</span>package_name<span class="op">&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> <span class="op">&lt;</span>package_name<span class="op">&gt;</span></span>
 <span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a><span class="op">&lt;</span>package_name<span class="op">&gt;</span>.<span class="op">&lt;</span>function<span class="op">/</span><span class="kw">class</span><span class="op">/</span>variable<span class="op">/</span>etc<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a></a><span class="op">&lt;</span>package_name<span class="op">&gt;</span>.<span class="op">&lt;</span>function<span class="op">/</span><span class="kw">class</span><span class="op">/</span>variable<span class="op">/</span>etc<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If we import <code>&lt;package_name&gt;</code> using this syntax, we always have to use the dot <code>.</code> syntax to refer to something within this package.</p>
 <p>Let’s take a look at a very basic example.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> math</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> math</span>
 <span id="cb2-2"><a></a></span>
 <span id="cb2-3"><a></a>radius <span class="op">=</span> <span class="fl">6.4</span>  <span class="co"># cm</span></span>
-<span id="cb2-4"><a></a>circum <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> math.pi <span class="op">*</span> radius</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a></a>circum <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> math.pi <span class="op">*</span> radius</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>In this example, we are importing the built-in <code>math</code> package. This package contains a bunch of useful functions and variables. We’re not going to take a look at them here, as we’re focusing on importing, but you can see we’re referring to a variable called <code>pi</code> to calculate the circumference of a circle.</p>
 </section>
 <section id="importing-specific-items" class="slide level2">
 <h2>Importing specific items</h2>
 <p>If we didn’t always want to specify the package name when we only want to use something specific from a package, we can directly import that something.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">from</span> <span class="op">&lt;</span>package_name<span class="op">&gt;</span> <span class="im">import</span> <span class="op">&lt;</span>function<span class="op">/</span><span class="kw">class</span><span class="op">/</span>variable<span class="op">/</span>etc<span class="op">&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">from</span> <span class="op">&lt;</span>package_name<span class="op">&gt;</span> <span class="im">import</span> <span class="op">&lt;</span>function<span class="op">/</span><span class="kw">class</span><span class="op">/</span>variable<span class="op">/</span>etc<span class="op">&gt;</span></span>
 <span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a><span class="op">&lt;</span>function<span class="op">/</span><span class="kw">class</span><span class="op">/</span>variable<span class="op">/</span>etc<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a></a><span class="op">&lt;</span>function<span class="op">/</span><span class="kw">class</span><span class="op">/</span>variable<span class="op">/</span>etc<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>As you can see, we’re using the <code>from ... import ...</code> syntax.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">from</span> math <span class="im">import</span> pi</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">from</span> math <span class="im">import</span> pi</span>
 <span id="cb4-2"><a></a></span>
-<span id="cb4-3"><a></a>circumference <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> pi <span class="op">*</span> radius</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-3"><a></a>circumference <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> pi <span class="op">*</span> radius</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="dont-do-this" class="slide level2">
 <h2>Don’t do this!</h2>
 <p>When using <code>from ... import ...</code>, there is a wildcard <code>*</code> that we <strong>could</strong> use. You may sometimes see this style of importing when looking at documentation online:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">from</span> <span class="op">&lt;</span>package_name<span class="op">&gt;</span> <span class="im">import</span> <span class="op">*</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">from</span> <span class="op">&lt;</span>package_name<span class="op">&gt;</span> <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb5-2"><a></a></span>
-<span id="cb5-3"><a></a><span class="op">&lt;</span>function<span class="op">/</span><span class="kw">class</span><span class="op">/</span>variable<span class="op">/</span>etc<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-3"><a></a><span class="op">&lt;</span>function<span class="op">/</span><span class="kw">class</span><span class="op">/</span>variable<span class="op">/</span>etc<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>However, this can create many problems with reading your program code</p>
 <p>Which module does <code>my_function()</code> originate? Are there are common names between the two? Which would be used?</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="im">from</span> my_module <span class="im">import</span> <span class="op">*</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="im">from</span> my_module <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb6-2"><a></a><span class="im">from</span> my_second_module <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb6-3"><a></a></span>
-<span id="cb6-4"><a></a>my_function()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-4"><a></a>my_function()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="alias" class="slide level2">
 <h2>Alias</h2>
 <p>When importing, we can optionally create an alias to a symbol. Here we’re creating an alias to the existing <code>pi</code> in <code>math</code>.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="im">from</span> math <span class="im">import</span> pi <span class="im">as</span> decilious_pi</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="im">from</span> math <span class="im">import</span> pi <span class="im">as</span> decilious_pi</span>
 <span id="cb7-2"><a></a></span>
-<span id="cb7-3"><a></a>circumference <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> delicious_pi <span class="op">*</span> radius</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-3"><a></a>circumference <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> delicious_pi <span class="op">*</span> radius</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>There are some very common conventions of aliasing very highly used packages that we will definitely revisit in another lecture!</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb8-2"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb8-3"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-3"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="importing-local-libraries" class="slide level2">
 <h2>Importing local libraries</h2>
@@ -295,9 +295,9 @@ Jay Paul Morgan
             |-- cats.py
             |-- dogs.py</code></pre>
 <p>If we wanted to import something from <code>my_module.py</code> we would do:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="im">from</span> src.my_module <span class="im">import</span> MyAwesomeClass</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="im">from</span> src.my_module <span class="im">import</span> MyAwesomeClass</span>
 <span id="cb10-2"><a></a></span>
-<span id="cb10-3"><a></a>my_class <span class="op">=</span> MyAwesomeclass()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-3"><a></a>my_class <span class="op">=</span> MyAwesomeclass()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here is another example for increased nesting of directories:</p>
 <pre><code>    main.py
     src/
@@ -305,11 +305,11 @@ Jay Paul Morgan
      |-- module_1/
             |-- cats.py
             |-- dogs.py</code></pre>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="im">from</span> src.module_1 <span class="im">import</span> cats</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="im">from</span> src.module_1 <span class="im">import</span> cats</span>
 <span id="cb12-2"><a></a><span class="im">from</span> src.module_1.dogs <span class="im">import</span> Dog</span>
 <span id="cb12-3"><a></a></span>
 <span id="cb12-4"><a></a>cat <span class="op">=</span> cats.Cat()</span>
-<span id="cb12-5"><a></a>dog <span class="op">=</span> Dog()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-5"><a></a>dog <span class="op">=</span> Dog()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="quick-exercise-imports" class="slide level2">
 <h2>Quick exercise – imports</h2>
@@ -332,28 +332,28 @@ Jay Paul Morgan
             |-- cats.py
             |-- dogs.py</code></pre>
 <p>In <code>__init__.py</code>:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="im">from</span> cats <span class="im">import</span> Cat</span>
-<span id="cb14-2"><a></a><span class="im">from</span> dogs <span class="im">import</span> Dog</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="im">from</span> cats <span class="im">import</span> Cat</span>
+<span id="cb14-2"><a></a><span class="im">from</span> dogs <span class="im">import</span> Dog</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>In <code>main.py</code>:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="im">from</span> src.module_1 <span class="im">import</span> Cat, Dog</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="im">from</span> src.module_1 <span class="im">import</span> Cat, Dog</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="what-is-__main__" class="slide level2">
 <h2>What is <code>__main__</code>?</h2>
 <p>Consider a file with the following:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>x <span class="op">=</span> <span class="dv">2</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>x <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb16-2"><a></a>y <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb16-3"><a></a>z <span class="op">=</span> x <span class="op">+</span> y</span>
 <span id="cb16-4"><a></a></span>
 <span id="cb16-5"><a></a><span class="kw">class</span> MyAwesomeClass:</span>
-<span id="cb16-6"><a></a>...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-6"><a></a>...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If we import this file in another script, <code>x, y,</code> and <code>z</code> will be computed. In this very simple case this will have very little impact. But what if the computation of these takes a very long time?</p>
 <p>Here we are wrapping any global computations into a appropriate functions. This prevents the global variables being computed as soon as the script is imported.</p>
 <p>Now, if we wanted to compute x, y, and z if this script is run, we could use:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb17-2"><a></a><span class="co"># do something</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb17-2"><a></a><span class="co"># do something</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Anything within the scope of the <code>if</code> function will only be run if the current file is the script that is being run directly (i.e.&nbsp;<code>python &lt;the-file&gt;.py</code>). If the script is being imported, the statements within this if scope will not be run.</p>
 <p>So if we wanted to run <code>compute()</code> if this file is being run directly, we would write:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">def</span> compute():</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">def</span> compute():</span>
 <span id="cb18-2"><a></a>    x <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb18-3"><a></a>    y <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb18-4"><a></a>    z <span class="op">=</span> x <span class="op">+</span> y</span>
@@ -365,7 +365,7 @@ Jay Paul Morgan
 <span id="cb18-10"><a></a>    compute()</span>
 <span id="cb18-11"><a></a>    <span class="co"># we can of course use MyAwesomeClass as well</span></span>
 <span id="cb18-12"><a></a>    my_class <span class="op">=</span> MyAwesomeClass()</span>
-<span id="cb18-13"><a></a>    my_class.do_something()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-13"><a></a>    my_class.do_something()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section></section>
 <section>
 <section id="working-with-files-and-directories" class="title-slide slide level1 center">
@@ -375,12 +375,12 @@ Jay Paul Morgan
 <section id="current-working-directory" class="slide level2">
 <h2>Current working directory</h2>
 <p>The folder in which you run Python will be the <em>current working directory (CWD)</em>. We can print this value with the <code>os.getcwd()</code> function, or change the directory with <code>os.chdir(...)</code>. Its important to know what your CWD is as all relative paths (paths that do not start with a ‘/’) will be relative to your CWD.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="im">import</span> os</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="im">import</span> os</span>
 <span id="cb19-2"><a></a></span>
 <span id="cb19-3"><a></a><span class="bu">print</span>(os.getcwd())</span>
 <span id="cb19-4"><a></a>os.chdir(<span class="st">"../"</span>)</span>
 <span id="cb19-5"><a></a><span class="bu">print</span>(os.getcwd())</span>
-<span id="cb19-6"><a></a>os.chdir(<span class="st">"week-3"</span>)`</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-6"><a></a>os.chdir(<span class="st">"week-3"</span>)`</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; [...]/Programming Level-up/week-3
 # =&gt; [...]/Programming Level-up</code></pre>
@@ -389,8 +389,8 @@ Jay Paul Morgan
 <section id="listing-directories" class="slide level2">
 <h2>Listing directories</h2>
 <p>Continuing with our usage of the <code>os</code> package, we can use the <code>listdir</code> function to list all files within a directory.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a><span class="bu">print</span>(os.listdir())</span>
-<span id="cb21-2"><a></a><span class="bu">print</span>(os.listdir(<span class="st">"images/"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a><span class="bu">print</span>(os.listdir())</span>
+<span id="cb21-2"><a></a><span class="bu">print</span>(os.listdir(<span class="st">"images/"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; ['images', '__pycache__', 'lecture.pdf', 'lecture.tex', 'data', 'test_file_1.py', 'lecture.org', '_minted-lecture', 'test_file_2.py']
 # =&gt; ['legend-2.png', 'fig-size.png', 'basic.png', 'subplots.png', 'python.png', 'pycharm01.png', 'installing-scikit-learn.png', 'pycharm02.png', 'PyCharm_Icon.png', 'axis.png', 'legend.png', 'complex-pycharm.jpg']</code></pre>
@@ -399,8 +399,8 @@ Jay Paul Morgan
 <section id="testing-for-files-or-directories" class="slide level2">
 <h2>Testing for files or directories</h2>
 <p>In the previous example we saw that the items returned by <code>listdir</code> does not specify if the item is a file or directory. However, <code>os</code> provides an <code>isfile</code> function in the <code>path</code> submodule to test if the argument is a file, else it will be a directory.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a><span class="cf">for</span> path <span class="kw">in</span> os.listdir():</span>
-<span id="cb23-2"><a></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>path<span class="sc">}</span><span class="ss"> =&gt; is file: </span><span class="sc">{</span>os<span class="sc">.</span>path<span class="sc">.</span>isfile(path)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a><span class="cf">for</span> path <span class="kw">in</span> os.listdir():</span>
+<span id="cb23-2"><a></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>path<span class="sc">}</span><span class="ss"> =&gt; is file: </span><span class="sc">{</span>os<span class="sc">.</span>path<span class="sc">.</span>isfile(path)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; images =&gt; is file: False
 # =&gt; __pycache__ =&gt; is file: False
@@ -415,10 +415,10 @@ Jay Paul Morgan
 <section id="using-wildcards" class="slide level2">
 <h2>Using wildcards</h2>
 <p>If we wanted to get all files within a directory, we could use the <code>glob</code> function from the <code>glob</code> package. <code>glob</code> allows us to use the <code>*</code> wildcard. E.g. <code>*.png</code> will list all files that end with <code>.png</code>. <code>test-*</code> will list all files that start with <code>test-*</code>.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a><span class="im">from</span> glob <span class="im">import</span> glob</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a><span class="im">from</span> glob <span class="im">import</span> glob</span>
 <span id="cb25-2"><a></a></span>
 <span id="cb25-3"><a></a><span class="cf">for</span> fn <span class="kw">in</span> glob(<span class="st">"images/*"</span>):</span>
-<span id="cb25-4"><a></a>    <span class="bu">print</span>(fn)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb25-4"><a></a>    <span class="bu">print</span>(fn)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; images/legend-2.png
 # =&gt; images/fig-size.png
@@ -436,7 +436,7 @@ Jay Paul Morgan
 <section id="pathlib-a-newer-way" class="slide level2">
 <h2>Pathlib – a newer way</h2>
 <p><code>pathlib</code> is a somewhat recent addition to the Python standard library which makes working with files a little easier. Firstly, we can create a <code>Path</code> object, allowing us to concatenate paths with the <code>/</code>. Instead of using the <code>glob</code> module, a <code>Path</code> object has a <code>glob</code> class method.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb27-2"><a></a></span>
 <span id="cb27-3"><a></a>data_dir <span class="op">=</span> Path(<span class="st">"data"</span>)</span>
 <span id="cb27-4"><a></a>processed_data <span class="op">=</span> data_dir <span class="op">/</span> <span class="st">"processed"</span></span>
@@ -444,7 +444,7 @@ Jay Paul Morgan
 <span id="cb27-6"><a></a>data_files <span class="op">=</span> processed_data.glob(<span class="st">"*.txt"</span>)</span>
 <span id="cb27-7"><a></a></span>
 <span id="cb27-8"><a></a><span class="cf">for</span> data_file <span class="kw">in</span> data_files:</span>
-<span id="cb27-9"><a></a>    <span class="bu">print</span>(data_file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb27-9"><a></a>    <span class="bu">print</span>(data_file)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; data/processed/data-2.txt
 # =&gt; data/processed/data.txt</code></pre>
@@ -452,14 +452,14 @@ Jay Paul Morgan
 <section id="pathlib-convenient-functions" class="slide level2">
 <h2>Pathlib – convenient functions</h2>
 <p><code>pathlib</code> allows us to easily decompose a path into different components. Take for example getting the filename of a path with <code>.name</code>.</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb29-2"><a></a></span>
 <span id="cb29-3"><a></a>some_file <span class="op">=</span> Path(<span class="st">"data/processed/data.txt"</span>)</span>
 <span id="cb29-4"><a></a></span>
 <span id="cb29-5"><a></a><span class="bu">print</span>(some_file.parts)  <span class="co"># get component parts</span></span>
 <span id="cb29-6"><a></a><span class="bu">print</span>(some_file.parents[<span class="dv">0</span>])  <span class="co"># list of parent dirs</span></span>
 <span id="cb29-7"><a></a><span class="bu">print</span>(some_file.name)   <span class="co"># only filename</span></span>
-<span id="cb29-8"><a></a><span class="bu">print</span>(some_file.suffix) <span class="co"># extension</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb29-8"><a></a><span class="bu">print</span>(some_file.suffix) <span class="co"># extension</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; ('data', 'processed', 'data.txt')
 # =&gt; data/processed
@@ -469,7 +469,7 @@ Jay Paul Morgan
 <section id="converting-path-into-a-string" class="slide level2">
 <h2>Converting Path into a string</h2>
 <p>As <code>pathlib</code> is a recent addition to Python, some functions/classes are expecting a <code>str</code> representation of the path, not a <code>Path</code> object. Therefore, you may want to use the <code>str</code> function to convert a <code>Path</code> object to a string.</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a><span class="bu">str</span>(Path(<span class="st">"data/"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a><span class="bu">str</span>(Path(<span class="st">"data/"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; 'data'</code></pre>
 </section>
@@ -561,10 +561,10 @@ Douglas Adams
 <p>To read a file, we must first open it with the <code>open</code> function. This returns a file stream to which we can call the <code>read()</code> class method.</p>
 <p>You should always make sure to call the <code>close()</code> class method on this stream to close the file.</p>
 <p><code>read()</code> reads the entire contents of the file and places it into a string.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a>open_file <span class="op">=</span> <span class="bu">open</span>(<span class="bu">str</span>(Path(<span class="st">"data"</span>) <span class="op">/</span> <span class="st">"processed"</span> <span class="op">/</span> <span class="st">"data.txt"</span>))</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a>open_file <span class="op">=</span> <span class="bu">open</span>(<span class="bu">str</span>(Path(<span class="st">"data"</span>) <span class="op">/</span> <span class="st">"processed"</span> <span class="op">/</span> <span class="st">"data.txt"</span>))</span>
 <span id="cb33-2"><a></a>contents_of_file <span class="op">=</span> open_file.read()</span>
 <span id="cb33-3"><a></a>open_file.close()  <span class="co"># should always happen!</span></span>
-<span id="cb33-4"><a></a><span class="bu">print</span>(contents_of_file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb33-4"><a></a><span class="bu">print</span>(contents_of_file)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; this is some data
 # =&gt; on another line</code></pre>
@@ -572,24 +572,24 @@ Douglas Adams
 <section id="reading-files-lines-or-entire-file" class="slide level2">
 <h2>Reading files – lines or entire file?</h2>
 <p>While <code>read</code> works for the last example, you may want to read files in different ways. Luckily there are a number of methods you could use.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a></a>open_file.read()       <span class="co"># read entire file</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a></a>open_file.read()       <span class="co"># read entire file</span></span>
 <span id="cb35-2"><a></a>open_file.readline()   <span class="co"># read a single line</span></span>
 <span id="cb35-3"><a></a>open_file.readline(<span class="dv">5</span>)  <span class="co"># read 5 lines</span></span>
 <span id="cb35-4"><a></a>open_file.readlines()  <span class="co"># returns all lines as a list</span></span>
 <span id="cb35-5"><a></a></span>
 <span id="cb35-6"><a></a><span class="cf">for</span> line <span class="kw">in</span> open_file:  <span class="co"># read one line at a time</span></span>
-<span id="cb35-7"><a></a>    do_something(line)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb35-7"><a></a>    do_something(line)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="the-with-keyword" class="slide level2">
 <h2>The <code>with</code> keyword</h2>
 <p>It can be a pain to remember to use the <code>.close()</code> every time you open a file. In Python, we can use <code>open()</code> as a context with the <code>with</code> keyword. This context will handle the closing of the file as soon as the scope is exited.</p>
 <p>The syntax for opening a file is as follows:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"data/processed/data.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> open_file:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"data/processed/data.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> open_file:</span>
 <span id="cb36-2"><a></a>    contents <span class="op">=</span> open_file.read()</span>
 <span id="cb36-3"><a></a></span>
 <span id="cb36-4"><a></a><span class="co"># the file is automatically closed at this point</span></span>
 <span id="cb36-5"><a></a></span>
-<span id="cb36-6"><a></a>    <span class="bu">print</span>(contents)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb36-6"><a></a>    <span class="bu">print</span>(contents)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; this is some data
 # =&gt; on another line</code></pre>
@@ -597,7 +597,7 @@ Douglas Adams
 <section id="writing-files" class="slide level2">
 <h2>Writing files</h2>
 <p>The syntax for writing a file is similar to reading a file. The main difference is the use <code>"w"</code> instead of <code>"r"</code> in the second argument of <code>open</code>. Also, instead of <code>read()</code>, we use <code>write()</code>.</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a></a>data <span class="op">=</span> [<span class="st">"this is some data"</span>, <span class="st">"on another line"</span>, <span class="st">"with another line"</span>]</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a></a>data <span class="op">=</span> [<span class="st">"this is some data"</span>, <span class="st">"on another line"</span>, <span class="st">"with another line"</span>]</span>
 <span id="cb38-2"><a></a>new_filename <span class="op">=</span> <span class="st">"data/processed/new-data.txt"</span></span>
 <span id="cb38-3"><a></a></span>
 <span id="cb38-4"><a></a><span class="cf">with</span> <span class="bu">open</span>(new_filename, <span class="st">"w"</span>) <span class="im">as</span> open_file:</span>
@@ -607,7 +607,7 @@ Douglas Adams
 <span id="cb38-8"><a></a><span class="cf">with</span> <span class="bu">open</span>(new_filename, <span class="st">"r"</span>) <span class="im">as</span> open_file:</span>
 <span id="cb38-9"><a></a>    new_contents <span class="op">=</span> open_file.read()</span>
 <span id="cb38-10"><a></a></span>
-<span id="cb38-11"><a></a><span class="bu">print</span>(new_contents)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb38-11"><a></a><span class="bu">print</span>(new_contents)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; this is some data
 # =&gt; on another line
@@ -616,7 +616,7 @@ Douglas Adams
 <section id="appending-to-files" class="slide level2">
 <h2>Appending to files</h2>
 <p>Every time we write to a file, the entire contents is deleted and replaced. If we want to just append to the file instead, we use <code>"a"</code>.</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a></a>data <span class="op">=</span> [<span class="st">"this is some appended data"</span>]</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a></a>data <span class="op">=</span> [<span class="st">"this is some appended data"</span>]</span>
 <span id="cb40-2"><a></a>new_filename <span class="op">=</span> <span class="st">"data/processed/new-data.txt"</span></span>
 <span id="cb40-3"><a></a></span>
 <span id="cb40-4"><a></a><span class="cf">with</span> <span class="bu">open</span>(new_filename, <span class="st">"a"</span>) <span class="im">as</span> open_file:</span>
@@ -626,7 +626,7 @@ Douglas Adams
 <span id="cb40-8"><a></a><span class="cf">with</span> <span class="bu">open</span>(new_filename, <span class="st">"r"</span>) <span class="im">as</span> open_file:</span>
 <span id="cb40-9"><a></a>    new_contents <span class="op">=</span> open_file.read()</span>
 <span id="cb40-10"><a></a></span>
-<span id="cb40-11"><a></a><span class="bu">print</span>(new_contents)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb40-11"><a></a><span class="bu">print</span>(new_contents)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; this is some data
 # =&gt; on another line
@@ -644,7 +644,7 @@ Douglas Adams
 <section id="reading-csv-files-builtin" class="slide level2">
 <h2>Reading CSV files – builtin</h2>
 <p>When working with common file types, Python has built-in modules to make the process a little easier. Take, for example, reading and writing a CSV file. Here we are importing the <code>csv</code> module and in the context of reading the file, we are creating a CSV reader object. When reading, every line of the CSV file is returned as a list, thus an entire CSV file is a list of lists.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a></a><span class="im">import</span> csv  <span class="co"># built-in library</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a></a><span class="im">import</span> csv  <span class="co"># built-in library</span></span>
 <span id="cb42-2"><a></a></span>
 <span id="cb42-3"><a></a>data_path <span class="op">=</span> <span class="st">"data/processed/data.csv"</span></span>
 <span id="cb42-4"><a></a></span>
@@ -652,7 +652,7 @@ Douglas Adams
 <span id="cb42-6"><a></a><span class="cf">with</span> <span class="bu">open</span>(data_path, <span class="st">"r"</span>) <span class="im">as</span> csv_file:</span>
 <span id="cb42-7"><a></a>    csv_reader <span class="op">=</span> csv.reader(csv_file, delimiter<span class="op">=</span><span class="st">","</span>)</span>
 <span id="cb42-8"><a></a>    <span class="cf">for</span> line <span class="kw">in</span> csv_reader:</span>
-<span id="cb42-9"><a></a>        <span class="bu">print</span>(line)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb42-9"><a></a>        <span class="bu">print</span>(line)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; ['name', 'id', 'age']
 # =&gt; ['jane', '01', '35']
@@ -661,14 +661,14 @@ Douglas Adams
 <section id="writing-a-csv-file-builtin" class="slide level2">
 <h2>Writing a CSV file – builtin</h2>
 <p>Writing a CSV file is similar except we are creating a CSV writer object, and are using <code>writerow</code> instead.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a></a><span class="co"># write a csv file</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a></a><span class="co"># write a csv file</span></span>
 <span id="cb44-2"><a></a>new_data_file <span class="op">=</span> <span class="st">"data/processed/new-data.csv"</span></span>
 <span id="cb44-3"><a></a>new_data <span class="op">=</span> [[<span class="st">"name"</span>, <span class="st">"age"</span>, <span class="st">"height"</span>], [<span class="st">"jane"</span>, <span class="st">"35"</span>, <span class="st">"6"</span>]]</span>
 <span id="cb44-4"><a></a></span>
 <span id="cb44-5"><a></a><span class="cf">with</span> <span class="bu">open</span>(new_data_file, <span class="st">"w"</span>) <span class="im">as</span> csv_file:</span>
 <span id="cb44-6"><a></a>  csv_writer <span class="op">=</span> csv.writer(csv_file, delimiter<span class="op">=</span><span class="st">","</span>)</span>
 <span id="cb44-7"><a></a>  <span class="cf">for</span> row <span class="kw">in</span> new_data:</span>
-<span id="cb44-8"><a></a>      csv_writer.writerow(row)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb44-8"><a></a>      csv_writer.writerow(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="quick-exercise-readingwriting-csv-files" class="slide level2">
 <h2>Quick exercise – reading/writing CSV files</h2>
@@ -683,7 +683,7 @@ Douglas Adams
 <h2>Read JSON files – builtin</h2>
 <p>Like CSV, json is a common format for storing data. Python includes a package called <code>json</code> that enables us to read/write to json files with ease.</p>
 <p>Let’s first tackle the process of reading:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a></a><span class="im">import</span> json</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a></a><span class="im">import</span> json</span>
 <span id="cb45-2"><a></a></span>
 <span id="cb45-3"><a></a>json_file_path <span class="op">=</span> <span class="st">"data/processed/data.json"</span></span>
 <span id="cb45-4"><a></a></span>
@@ -692,7 +692,7 @@ Douglas Adams
 <span id="cb45-7"><a></a>    data <span class="op">=</span> json.load(json_file)</span>
 <span id="cb45-8"><a></a>    <span class="bu">print</span>(data)</span>
 <span id="cb45-9"><a></a>    <span class="bu">print</span>(data.keys())</span>
-<span id="cb45-10"><a></a>    <span class="bu">print</span>(data[<span class="st">"names"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb45-10"><a></a>    <span class="bu">print</span>(data[<span class="st">"names"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; {'names': ['jane', 'james'], 'ages': [35, 50]}
 # =&gt; dict_keys(['names', 'ages'])
@@ -701,14 +701,14 @@ Douglas Adams
 <section id="write-json-files-builtin" class="slide level2">
 <h2>Write JSON files – builtin</h2>
 <p>While we used <code>json.load</code> to read the file, we use <code>json.dump</code> to write the data to a json file.</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a></a>new_data <span class="op">=</span> {<span class="st">"names"</span>: [<span class="st">"someone-new"</span>], <span class="st">"ages"</span>: [<span class="st">"NA"</span>]}</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a></a>new_data <span class="op">=</span> {<span class="st">"names"</span>: [<span class="st">"someone-new"</span>], <span class="st">"ages"</span>: [<span class="st">"NA"</span>]}</span>
 <span id="cb47-2"><a></a></span>
 <span id="cb47-3"><a></a><span class="co"># write a json file</span></span>
 <span id="cb47-4"><a></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"data/processed/new-data.json"</span>, <span class="st">"w"</span>) <span class="im">as</span> json_file:</span>
 <span id="cb47-5"><a></a>    json.dump(new_data, json_file)</span>
 <span id="cb47-6"><a></a></span>
 <span id="cb47-7"><a></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"data/processed/new-data.json"</span>, <span class="st">"r"</span>) <span class="im">as</span> json_file:</span>
-<span id="cb47-8"><a></a>    <span class="bu">print</span>(json.load(json_file))`</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb47-8"><a></a>    <span class="bu">print</span>(json.load(json_file))`</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Results: 
 # =&gt; {'names': ['someone-new'], 'ages': ['NA']}</code></pre>
 </section></section>
@@ -742,78 +742,78 @@ Douglas Adams
 <li>Save the file to the disk</li>
 <li>Open up a terminal and run the following commands:</li>
 </ul>
-<div class="sourceCode" id="cb49"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><a></a>    <span class="fu">chmod</span> +x <span class="op">&lt;</span>miniconda-file<span class="op">&gt;</span>.sh</span>
-<span id="cb49-2"><a></a>    <span class="ex">./</span><span class="op">&lt;</span>miniconda-file<span class="op">&gt;</span>.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><a></a>    <span class="fu">chmod</span> +x <span class="op">&lt;</span>miniconda-file<span class="op">&gt;</span>.sh</span>
+<span id="cb49-2"><a></a>    <span class="ex">./</span><span class="op">&lt;</span>miniconda-file<span class="op">&gt;</span>.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Follow the installation instructions (most of the time the defaults are sensible).</p>
 </section>
 <section id="creating-an-environment" class="slide level2">
 <h2>Creating an environment</h2>
 <p>Conda is a command line tool to manage environments. We’re going to highlight some of the most used commands. But for the full list of management, you can use the instructions at: <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html" class="uri">https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html</a></p>
 <p>If you’re creating a <strong>brand new</strong> environment, use:</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><a></a><span class="ex">conda</span> create <span class="at">--name</span> <span class="op">&lt;</span>name-of-env<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><a></a><span class="ex">conda</span> create <span class="at">--name</span> <span class="op">&lt;</span>name-of-env<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This will prompt you to confirm you want to create a new environment, whereupon you enter either a <code>y</code> or <code>n</code>. If <code>y</code> your new environment will be created, but start using the environment, you will first have to activate it.</p>
 </section>
 <section id="activating-an-environment" class="slide level2">
 <h2>Activating an environment</h2>
 <p>Once you’ve created a new environment, you can activate it. This is as simple as:</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb51-1"><a></a><span class="ex">conda</span> activate <span class="op">&lt;</span>name-of-env<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb51-1"><a></a><span class="ex">conda</span> activate <span class="op">&lt;</span>name-of-env<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You will notice that your command line prompt has changed from <code>(base)</code> to <code>(&lt;name-of-env&gt;</code>). And whenever you start a new terminal it will always be <code>(base)</code>.</p>
 </section>
 <section id="de-activating-an-environment" class="slide level2">
 <h2>De-activating an environment</h2>
 <p>To deactivate an environment, just use:</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><a></a><span class="ex">conda</span> deactivate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><a></a><span class="ex">conda</span> deactivate</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>or:</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb53-1"><a></a><span class="ex">conda</span> activate base</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb53-1"><a></a><span class="ex">conda</span> activate base</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="installing-using-conda" class="slide level2">
 <h2>Installing using conda</h2>
 <p>Let’s say we want to install a package, say <code>scikit-learn</code> (if we’re doing some data processing or machine learning). To install this package in conda, use:</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb54-1"><a></a><span class="ex">conda</span> install scikit-learn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb54-1"><a></a><span class="ex">conda</span> install scikit-learn</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Conda will then check what packages are needed for <code>scikit-learn</code> to work, and figure out if anything needs to be upgraded/downgraded to match the required dependencies of other packages.</p>
 <p>When Conda has finalised what packages need to change, it will tell you these changes and ask to confirm. If everything seems okay type <code>y</code>, and enter.</p>
 <p><code>scikit-learn</code> is a package in the anaconda repository. For a list of packages, you can use: <a href="https://anaconda.org/anaconda/repo" class="uri">https://anaconda.org/anaconda/repo</a></p>
 </section>
 <section id="package-versions" class="slide level2">
 <h2>Package versions</h2>
-<div class="sourceCode" id="cb55"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb55-1"><a></a><span class="ex">conda</span> install <span class="op">&lt;</span>package-name<span class="op">&gt;</span>=<span class="op">&lt;</span>version-number<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb55-1"><a></a><span class="ex">conda</span> install <span class="op">&lt;</span>package-name<span class="op">&gt;</span>=<span class="op">&lt;</span>version-number<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="installing-a-specific-version-of-python" class="slide level2">
 <h2>Installing a specific version of Python</h2>
 <p>If we wanted to, we could also change the python version being used in the virtual environment.</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb56-1"><a></a><span class="ex">conda</span> install python=3.9</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb56-1"><a></a><span class="ex">conda</span> install python=3.9</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This will try to install Python version 3.9 providing that the packages you already have installed support it.</p>
 </section>
 <section id="conda-forge-and-other-repositories" class="slide level2">
 <h2>Conda-forge and other repositories</h2>
 <p>Let’s say that the package is not within the basic anaconda repository. You can specify another repository or channel using the <code>-c</code> flag.</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb57-1"><a></a><span class="ex">conda</span> install <span class="at">-c</span> <span class="op">&lt;</span>channel<span class="op">&gt;</span> <span class="op">&lt;</span>package<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb57"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb57-1"><a></a><span class="ex">conda</span> install <span class="at">-c</span> <span class="op">&lt;</span>channel<span class="op">&gt;</span> <span class="op">&lt;</span>package<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>For example, PyTorch (<a href="https://pytorch.org/" class="uri">https://pytorch.org/</a>) uses their own channel:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb58-1"><a></a><span class="ex">conda</span> install <span class="at">-c</span> pytorch pytorch </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb58-1"><a></a><span class="ex">conda</span> install <span class="at">-c</span> pytorch pytorch </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="exporting-an-environment" class="slide level2">
 <h2>Exporting an environment</h2>
 <p>We will want to share our research and work with others. To allow others to use the exact same packages and especially the <strong>versions</strong> of packages we’re using, we want to export a snapshot of our environment. Conda includes an export command to do just this:</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb59-1"><a></a><span class="ex">conda</span> env export <span class="at">--no-builds</span> <span class="op">&gt;</span> environment.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb59"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb59-1"><a></a><span class="ex">conda</span> env export <span class="at">--no-builds</span> <span class="op">&gt;</span> environment.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here we exporting our currently activated environment to a file called <code>environment.yml</code> (common convention) file. I am using the <code>--no-builds</code> flag to improve compatibility with other operating systems such as Mac OS.</p>
 </section>
 <section id="reproducing-an-environment" class="slide level2">
 <h2>Reproducing an environment</h2>
 <p>To create an environment from an existing environment.yml file, you can use the following command:</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb60-1"><a></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb60-1"><a></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This will create an environment with the same name and install the same versions of the packages.</p>
 </section>
 <section id="deleting-an-environment" class="slide level2">
 <h2>Deleting an Environment</h2>
 <p>At later points in our project life-cycle – we have finished our project and we don’t want to have the environment installed anymore (besides we already have the <code>environment.yml</code> to recreate it from if we need to!).</p>
 <p>We can remove an environment using:</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb61-1"><a></a><span class="ex">conda</span> env remove <span class="at">--name</span> <span class="op">&lt;</span>name-of-env<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb61"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb61-1"><a></a><span class="ex">conda</span> env remove <span class="at">--name</span> <span class="op">&lt;</span>name-of-env<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This will remove the environment from Anaconda.</p>
 </section>
 <section id="cleaning-up" class="slide level2">
 <h2>Cleaning up</h2>
 <p>If you use Anaconda for a long time, you may start to see that a lot of memory is being used, this is because for every version of the package you install, a download of that package is cached to disk. Having these caches can make reinstalling these packages quicker as you won’t need to download the package again. But if you’re running out of hard drive space, cleaning up these cached downloads is an instant space saver:</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb62-1"><a></a><span class="ex">conda</span> clean <span class="at">--all</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb62"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb62-1"><a></a><span class="ex">conda</span> clean <span class="at">--all</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This command will clean up the cache files for all environments, but doesn’t necessarily affect what’s already installed in the environments – so nothing should be <em>broken</em> by running this command.</p>
 </section>
 <section id="pip" class="slide level2">
@@ -825,33 +825,33 @@ Douglas Adams
 <section id="installing-packages-with-pip" class="slide level2">
 <h2>Installing packages with pip</h2>
 <p>If you want to install a package, its as simple as <code>pip install</code>.</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb63-1"><a></a><span class="ex">pip</span> install <span class="op">&lt;</span>package-name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb63"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb63-1"><a></a><span class="ex">pip</span> install <span class="op">&lt;</span>package-name<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="installing-specific-versions" class="slide level2">
 <h2>Installing specific versions</h2>
 <p>Sometimes, though, you will want to install a specific package version. For this use ‘==<version-number>’ after the name of the package.</version-number></p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb64-1"><a></a><span class="ex">pip</span> install <span class="op">&lt;</span>package-name<span class="op">&gt;</span>==<span class="op">&lt;</span>version-number<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb64"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb64-1"><a></a><span class="ex">pip</span> install <span class="op">&lt;</span>package-name<span class="op">&gt;</span>==<span class="op">&lt;</span>version-number<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="upgrade-packages-with-pip" class="slide level2">
 <h2>Upgrade packages with pip</h2>
 <p>If you want upgrade/install the package to the latest version, use the <code>--upgrade</code> flag.</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb65-1"><a></a><span class="ex">pip</span> install <span class="op">&lt;</span>package-name<span class="op">&gt;</span> --upgrade</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb65"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb65-1"><a></a><span class="ex">pip</span> install <span class="op">&lt;</span>package-name<span class="op">&gt;</span> --upgrade</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="export-requirements-file" class="slide level2">
 <h2>Export requirements file</h2>
 <p>Like exporting with conda, pip also includes a method to capture the currently installed environment. In pip, this is called <code>freeze</code>.</p>
 <p>The common convention is to call the file <code>requirements.txt</code>.</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb66-1"><a></a><span class="ex">pip</span> freeze <span class="op">&gt;</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb66"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb66-1"><a></a><span class="ex">pip</span> freeze <span class="op">&gt;</span> requirements.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="installing-multiple-packages-from-a-requirements-file" class="slide level2">
 <h2>Installing multiple packages from a requirements file</h2>
 <p>If we want to recreate the environment, we can install multiple packages with specific versions from a requirements file with:</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb67-1"><a></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb67"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb67-1"><a></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="anaconda-handles-both-conda-and-pip" class="slide level2">
 <h2>Anaconda handles both conda and pip</h2>
 <p>Conda encompasses pip, which means that when you create a virtual environment with conda, it can also include pip. So I would recommend using conda to create the virtual environment and to install packages when you can. But if the package is only available via pip, then it will be okay to install it using pip as well. When you export the environment with conda, it will specify what is installed with pip and what is installed via conda.</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb68-1"><a></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb68-1"><a></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>When the environment is re-created with conda, it will install the packages from the correct places, whether that is conda or pip.</p>
 </section></section>
 <section>
@@ -875,10 +875,10 @@ Douglas Adams
 <section id="installing-pycharm" class="slide level2">
 <h2>Installing PyCharm</h2>
 <p>Using Ubuntu snaps:</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb69-1"><a></a><span class="ex">snap</span> install pycharm-community <span class="at">--classic</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb69"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb69-1"><a></a><span class="ex">snap</span> install pycharm-community <span class="at">--classic</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Or we can download an archive with the executable. The steps to run goes something like:</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb70-1"><a></a><span class="fu">tar</span> xvf pycharm-community-<span class="op">&lt;</span>version<span class="op">&gt;</span>.tar.gz</span>
-<span id="cb70-2"><a></a><span class="fu">bash</span> pycharm-community-<span class="op">&lt;</span>version<span class="op">&gt;</span>/bin/pycharm.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb70-1"><a></a><span class="fu">tar</span> xvf pycharm-community-<span class="op">&lt;</span>version<span class="op">&gt;</span>.tar.gz</span>
+<span id="cb70-2"><a></a><span class="fu">bash</span> pycharm-community-<span class="op">&lt;</span>version<span class="op">&gt;</span>/bin/pycharm.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="using-pycharm" class="slide level2">
 <h2>Using PyCharm</h2>
@@ -900,13 +900,13 @@ Douglas Adams
 <section id="installing-jupyter" class="slide level2">
 <h2>Installing Jupyter</h2>
 <p>We first need to install Jupyter. In you conda environment type:</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb71-1"><a></a><span class="ex">conda</span> install jupyter</span>
-<span id="cb71-2"><a></a><span class="co"># or pip install jupyter</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb71"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb71-1"><a></a><span class="ex">conda</span> install jupyter</span>
+<span id="cb71-2"><a></a><span class="co"># or pip install jupyter</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="starting-the-server" class="slide level2">
 <h2>Starting the server</h2>
 <p>With Jupyter installed, we can now start the notebook server using:</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb72-1"><a></a><span class="ex">jupyter</span> notebook</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb72-1"><a></a><span class="ex">jupyter</span> notebook</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>A new browser window will appear. This is the Jupyter interface.</p>
 <p>If you want to stop the server, press Ctrl+c in the terminal window.</p>
 </section>
@@ -930,9 +930,9 @@ Douglas Adams
 <section id="a-slightly-better-environment-jupyterlab" class="slide level2">
 <h2>A slightly better environment – jupyterlab</h2>
 <p>The notebook environment is fine, but there exists another package called jupyter-lab that enhances the environment to include a separate file browser, etc.</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb73-1"><a></a><span class="ex">conda</span> install jupyterlab <span class="at">-c</span> conda-forge</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb73"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb73-1"><a></a><span class="ex">conda</span> install jupyterlab <span class="at">-c</span> conda-forge</span>
 <span id="cb73-2"><a></a></span>
-<span id="cb73-3"><a></a><span class="ex">jupyter-lab</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb73-3"><a></a><span class="ex">jupyter-lab</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section></section>
 <section>
 <section id="style-guide-line" class="title-slide slide level1 center">
@@ -951,7 +951,7 @@ Douglas Adams
 <div class="column" style="width:50%;">
 <div class="fragment">
 <p>What does this code do?</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a></a><span class="kw">def</span> f(l):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb74"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a></a><span class="kw">def</span> f(l):</span>
 <span id="cb74-2"><a></a>    x <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb74-3"><a></a>    y <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb74-4"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> l:</span>
@@ -960,12 +960,12 @@ Douglas Adams
 <span id="cb74-7"><a></a>    <span class="cf">return</span> x <span class="op">/</span> y</span>
 <span id="cb74-8"><a></a></span>
 <span id="cb74-9"><a></a>a <span class="op">=</span> <span class="bu">range</span>(<span class="dv">100</span>)</span>
-<span id="cb74-10"><a></a>r <span class="op">=</span> f(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb74-10"><a></a>r <span class="op">=</span> f(a)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
 <p>What about this one?</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a></a><span class="kw">def</span> compute_average(list_of_data):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb75"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a></a><span class="kw">def</span> compute_average(list_of_data):</span>
 <span id="cb75-2"><a></a>    <span class="bu">sum</span> <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb75-3"><a></a>    num_elements <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb75-4"><a></a>    <span class="cf">for</span> element <span class="kw">in</span> list_of_data:</span>
@@ -974,7 +974,7 @@ Douglas Adams
 <span id="cb75-7"><a></a>    <span class="cf">return</span> <span class="bu">sum</span> <span class="op">/</span> num_elements</span>
 <span id="cb75-8"><a></a></span>
 <span id="cb75-9"><a></a>dataset <span class="op">=</span> <span class="bu">range</span>(<span class="dv">100</span>)</span>
-<span id="cb75-10"><a></a>average_value <span class="op">=</span> compute_average(dataset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb75-10"><a></a>average_value <span class="op">=</span> compute_average(dataset)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 <div class="fragment">
@@ -984,18 +984,18 @@ Douglas Adams
 <section id="use-builtins-where-possible" class="slide level2">
 <h2>Use builtins where possible</h2>
 <p>Don’t re-invent the wheel. Try to use Python’s built-in functions/classes if they exist, they will normally be quicker and more accurate than what you could make in Python itself. For example:</p>
-<div class="sourceCode" id="cb76"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a></a>dataset <span class="op">=</span> <span class="bu">range</span>(<span class="dv">100</span>)</span>
-<span id="cb76-2"><a></a>average_value <span class="op">=</span> <span class="bu">sum</span>(dataset) <span class="op">/</span> <span class="bu">len</span>(dataset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb76"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a></a>dataset <span class="op">=</span> <span class="bu">range</span>(<span class="dv">100</span>)</span>
+<span id="cb76-2"><a></a>average_value <span class="op">=</span> <span class="bu">sum</span>(dataset) <span class="op">/</span> <span class="bu">len</span>(dataset)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="fragment">
 <p>or maybe even:</p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb77"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb77-2"><a></a>dataset <span class="op">=</span> <span class="bu">range</span>(<span class="dv">100</span>)</span>
-<span id="cb77-3"><a></a>average_value <span class="op">=</span> np.mean(dataset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb77-3"><a></a>average_value <span class="op">=</span> np.mean(dataset)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="use-docstrings-and-comments" class="slide level2">
 <h2>Use docstrings and comments</h2>
-<div class="sourceCode" id="cb78"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a></a><span class="kw">def</span> compute_average(list_of_data, exclude<span class="op">=</span><span class="va">None</span>):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb78"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a></a><span class="kw">def</span> compute_average(list_of_data, exclude<span class="op">=</span><span class="va">None</span>):</span>
 <span id="cb78-2"><a></a>    <span class="co">"""</span></span>
 <span id="cb78-3"><a></a><span class="co">    Compute and return the average value of an iterable list. </span></span>
 <span id="cb78-4"><a></a><span class="co">    This average excludes any value if specified by exclude</span></span>
@@ -1015,7 +1015,7 @@ Douglas Adams
 <span id="cb78-18"><a></a>            <span class="cf">continue</span>  <span class="co"># skip this element</span></span>
 <span id="cb78-19"><a></a>        <span class="bu">sum</span> <span class="op">+=</span> element</span>
 <span id="cb78-20"><a></a>        num_elements <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb78-21"><a></a>    <span class="cf">return</span> <span class="bu">sum</span> <span class="op">/</span> num_elements</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb78-21"><a></a>    <span class="cf">return</span> <span class="bu">sum</span> <span class="op">/</span> num_elements</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="using-agreed-upon-casing" class="slide level2">
 <h2>Using agreed upon casing</h2>
@@ -1023,21 +1023,21 @@ Douglas Adams
 <li><code>snake_casing</code> for functions and variables</li>
 <li>Classes should use <code>CamelCasing</code></li>
 </ul>
-<div class="sourceCode" id="cb79"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a></a><span class="kw">def</span> this_if_a_function(data_x, data_y):</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb80"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a></a><span class="kw">class</span> BookEntry:</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb79"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a></a><span class="kw">def</span> this_if_a_function(data_x, data_y):</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb80"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a></a><span class="kw">class</span> BookEntry:</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="use-type-annotations-if-possible" class="slide level2">
 <h2>Use type-annotations if possible</h2>
 <p>Type annotations can helper your editor (such as PyCharm) find potential issues in your code. If you use type annotations, the editor can spot types that are not compatible. For example, a string being used with a division.</p>
 <p><a href="https://docs.python.org/3/library/typing.html" class="uri">https://docs.python.org/3/library/typing.html</a> <a href="https://realpython.com/python-type-checking/" class="uri">https://realpython.com/python-type-checking/</a></p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a></a><span class="kw">def</span> compute_average(list_of_data: <span class="bu">list</span>[<span class="bu">int</span>],</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb81"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a></a><span class="kw">def</span> compute_average(list_of_data: <span class="bu">list</span>[<span class="bu">int</span>],</span>
 <span id="cb81-2"><a></a>                    exclude: Optional[<span class="bu">int</span>] <span class="op">=</span> <span class="va">None</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
-<span id="cb81-3"><a></a>    ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb81-3"><a></a>    ...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="organise-your-imports" class="slide level2">
 <h2>Organise your imports</h2>
 <p>Make the distinction between standard library imports, externally installed imports, and your own custom imports.</p>
-<div class="sourceCode" id="cb82"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a></a><span class="co"># internal imports</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb82"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a></a><span class="co"># internal imports</span></span>
 <span id="cb82-2"><a></a><span class="im">import</span> os</span>
 <span id="cb82-3"><a></a><span class="im">from</span> math <span class="im">import</span> pi</span>
 <span id="cb82-4"><a></a></span>
@@ -1047,7 +1047,7 @@ Douglas Adams
 <span id="cb82-8"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb82-9"><a></a></span>
 <span id="cb82-10"><a></a><span class="co"># custom imports</span></span>
-<span id="cb82-11"><a></a><span class="im">from</span> src.my_module <span class="im">import</span> DAGs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb82-11"><a></a><span class="im">from</span> src.my_module <span class="im">import</span> DAGs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="functions-should-do-one-thing-only" class="slide level2">
 <h2>Functions should do one thing only</h2>
@@ -1057,19 +1057,19 @@ Douglas Adams
 <h2>Functions as re-usability</h2>
 <p>If you find yourself doing something over and over, a function call help consolidate duplication and potentially reduce the chance of getting things wrong.</p>
 <div class="fragment">
-<div class="sourceCode" id="cb83"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a></a><span class="bu">print</span>(<span class="st">"The result is "</span>, w <span class="op">*</span> x1 <span class="op">+</span> b)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb83"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a></a><span class="bu">print</span>(<span class="st">"The result is "</span>, w <span class="op">*</span> x1 <span class="op">+</span> b)</span>
 <span id="cb83-2"><a></a><span class="bu">print</span>(<span class="st">"The result is "</span>, w <span class="op">*</span> x2 <span class="op">+</span> b)</span>
-<span id="cb83-3"><a></a><span class="bu">print</span>(<span class="st">"The result is "</span>, w <span class="op">*</span> x3 <span class="op">+</span> b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb83-3"><a></a><span class="bu">print</span>(<span class="st">"The result is "</span>, w <span class="op">*</span> x3 <span class="op">+</span> b)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
-<div class="sourceCode" id="cb84"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a></a><span class="kw">def</span> compute(var):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb84"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a></a><span class="kw">def</span> compute(var):</span>
 <span id="cb84-2"><a></a>    <span class="cf">return</span> w <span class="op">*</span> var <span class="op">+</span> b</span>
 <span id="cb84-3"><a></a></span>
 <span id="cb84-4"><a></a><span class="kw">def</span> print_result(res):</span>
 <span id="cb84-5"><a></a>    <span class="bu">print</span>(<span class="st">"The result is "</span>, res)</span>
 <span id="cb84-6"><a></a></span>
 <span id="cb84-7"><a></a><span class="cf">for</span> var <span class="kw">in</span> [x1, x2, x3]:</span>
-<span id="cb84-8"><a></a>    print_result(compute(var))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb84-8"><a></a>    print_result(compute(var))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="be-wary-of-god-classes" class="slide level2">
@@ -1078,7 +1078,7 @@ Douglas Adams
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="fragment">
-<div class="sourceCode" id="cb85"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a></a><span class="kw">class</span> Game:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb85"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a></a><span class="kw">class</span> Game:</span>
 <span id="cb85-2"><a></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
 <span id="cb85-3"><a></a>        ...</span>
 <span id="cb85-4"><a></a>    <span class="kw">def</span> create_character(<span class="va">self</span>):</span>
@@ -1097,11 +1097,11 @@ Douglas Adams
 <span id="cb85-17"><a></a>        ...</span>
 <span id="cb85-18"><a></a>    <span class="kw">def</span> stop_boat(<span class="va">self</span>):</span>
 <span id="cb85-19"><a></a>        ...</span>
-<span id="cb85-20"><a></a>    ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb85-20"><a></a>    ...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
-<div class="sourceCode" id="cb86"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a></a><span class="kw">class</span> Game:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb86"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a></a><span class="kw">class</span> Game:</span>
 <span id="cb86-2"><a></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
 <span id="cb86-3"><a></a>        ...</span>
 <span id="cb86-4"><a></a>    <span class="kw">def</span> start_game(<span class="va">self</span>):</span>
@@ -1118,7 +1118,7 @@ Douglas Adams
 <span id="cb86-15"><a></a>        ...</span>
 <span id="cb86-16"><a></a></span>
 <span id="cb86-17"><a></a><span class="kw">class</span> ScoreBoard:</span>
-<span id="cb86-18"><a></a>    ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb86-18"><a></a>    ...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 </section>
@@ -1132,8 +1132,8 @@ Douglas Adams
 <li>Ensure that comments are correct.</li>
 <li>Don’t over document (i.e.&nbsp;if something is self explanatory, then comments will distract rather than inform). An example from PEP 8:</li>
 </ul>
-<div class="sourceCode" id="cb87"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a></a>x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span>                 <span class="co"># Increment x</span></span>
-<span id="cb87-2"><a></a>x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span>                 <span class="co"># Compensate for border</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb87"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a></a>x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span>                 <span class="co"># Increment x</span></span>
+<span id="cb87-2"><a></a>x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span>                 <span class="co"># Compensate for border</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Document what you think will be difficult to understand without some prior knowledge, such as why a particular decision was made to do something a certain way. Don’t explain, educate the reader.</li>
 </ul>
@@ -1333,7 +1333,7 @@ Douglas Adams
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -1407,13 +1407,14 @@ Douglas Adams
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

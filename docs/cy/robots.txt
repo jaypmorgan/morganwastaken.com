@@ -1,1 +1,1 @@
-Sitemap: https://morganwastaken.com/cy/sitemap.xml
+Sitemap: /cy/sitemap.xml

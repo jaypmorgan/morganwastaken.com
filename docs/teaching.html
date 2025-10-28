@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<link rel="alternate" hreflang="en" href="https://morganwastaken.com/teaching.html" />
-<link rel="alternate" hreflang="cy" href="https://morganwastaken.com/cy/teaching.cy.html" />
+<link rel="alternate" hreflang="en" href="/teaching.html" />
+<link rel="alternate" hreflang="cy" href="/cy/teaching.cy.html" />
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,18 +36,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-77633ece19c8e04db6d5a17cd4436747.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-77a2314449dfb98733dd17d55e0a86b3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-77633ece19c8e04db6d5a17cd4436747.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c91f5ecd240dbcfad33507b16abcbcec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-a36fef8c6f594d6a13d5724b75b58e17.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c91f5ecd240dbcfad33507b16abcbcec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -163,7 +164,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -354,6 +355,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Jay Paul Morgan</span>
     </a>
@@ -497,17 +500,7 @@ window.Quarto = {
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1756472486175" data-listing-reading-time-sort="7" data-listing-word-count-sort="1202" data-listing-title-sort="Support Vector Machines" data-listing-filename-sort="lecture-4.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./teaching/2023-2024/Machine Learning/lecture-4.html" class="title listing-title">Support Vector Machines</a>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-file-modified-sort="1756472486175" data-listing-reading-time-sort="7" data-listing-word-count-sort="1248" data-listing-title-sort="K-Nearest Neighbour &amp; K-Means" data-listing-filename-sort="lecture-5.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1761658514932" data-listing-reading-time-sort="7" data-listing-word-count-sort="1248" data-listing-title-sort="K-Nearest Neighbour &amp; K-Means" data-listing-filename-sort="lecture-5.qmd">
 <td>
 <span class="listing-date">&nbsp;</span>
 </td>
@@ -517,17 +510,17 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1756472486174" data-listing-reading-time-sort="10" data-listing-word-count-sort="1902" data-listing-title-sort="Linear Models" data-listing-filename-sort="lecture-2.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1761658514932" data-listing-reading-time-sort="7" data-listing-word-count-sort="1202" data-listing-title-sort="Support Vector Machines" data-listing-filename-sort="lecture-4.qmd">
 <td>
 <span class="listing-date">&nbsp;</span>
 </td>
 <td>
-<a href="./teaching/2023-2024/Machine Learning/lecture-2.html" class="title listing-title">Linear Models</a>
+<a href="./teaching/2023-2024/Machine Learning/lecture-4.html" class="title listing-title">Support Vector Machines</a>
 </td>
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1756472486175" data-listing-reading-time-sort="14" data-listing-word-count-sort="2660" data-listing-title-sort="Model Performance" data-listing-filename-sort="lecture-3.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1761658514932" data-listing-reading-time-sort="14" data-listing-word-count-sort="2660" data-listing-title-sort="Model Performance" data-listing-filename-sort="lecture-3.qmd">
 <td>
 <span class="listing-date">&nbsp;</span>
 </td>
@@ -537,7 +530,17 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1756472486174" data-listing-reading-time-sort="25" data-listing-word-count-sort="4859" data-listing-title-sort="Introduction" data-listing-filename-sort="lecture-1.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1761658514932" data-listing-reading-time-sort="10" data-listing-word-count-sort="1902" data-listing-title-sort="Linear Models" data-listing-filename-sort="lecture-2.qmd">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="./teaching/2023-2024/Machine Learning/lecture-2.html" class="title listing-title">Linear Models</a>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-file-modified-sort="1761658514932" data-listing-reading-time-sort="25" data-listing-word-count-sort="4859" data-listing-title-sort="Introduction" data-listing-filename-sort="lecture-1.qmd">
 <td>
 <span class="listing-date">&nbsp;</span>
 </td>
@@ -547,27 +550,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1756472486172" data-listing-reading-time-sort="1" data-listing-word-count-sort="155" data-listing-title-sort="Machine Learning" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./teaching/2023-2024/Machine Learning/index.html" class="title listing-title">Machine Learning</a>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-file-modified-sort="1756472486173" data-listing-reading-time-sort="16" data-listing-word-count-sort="3055" data-listing-title-sort="Evaluation of Models" data-listing-filename-sort="lab-2.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./teaching/2023-2024/Machine Learning/lab-2.html" class="title listing-title">Evaluation of Models</a>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-file-modified-sort="1756472486173" data-listing-reading-time-sort="2" data-listing-word-count-sort="360" data-listing-title-sort="K-Nereast Neighbours" data-listing-filename-sort="lab-3.qmd">
+<tr data-index="5" data-listing-file-modified-sort="1761658514932" data-listing-reading-time-sort="2" data-listing-word-count-sort="360" data-listing-title-sort="K-Nereast Neighbours" data-listing-filename-sort="lab-3.qmd">
 <td>
 <span class="listing-date">&nbsp;</span>
 </td>
@@ -577,12 +560,32 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="8" data-listing-file-modified-sort="1756472486173" data-listing-reading-time-sort="13" data-listing-word-count-sort="2438" data-listing-title-sort="Linear Models" data-listing-filename-sort="lab-1.qmd">
+<tr data-index="6" data-listing-file-modified-sort="1761658514932" data-listing-reading-time-sort="16" data-listing-word-count-sort="3055" data-listing-title-sort="Evaluation of Models" data-listing-filename-sort="lab-2.qmd">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="./teaching/2023-2024/Machine Learning/lab-2.html" class="title listing-title">Evaluation of Models</a>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-file-modified-sort="1761658514932" data-listing-reading-time-sort="13" data-listing-word-count-sort="2438" data-listing-title-sort="Linear Models" data-listing-filename-sort="lab-1.qmd">
 <td>
 <span class="listing-date">&nbsp;</span>
 </td>
 <td>
 <a href="./teaching/2023-2024/Machine Learning/lab-1.html" class="title listing-title">Linear Models</a>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-file-modified-sort="1761658514932" data-listing-reading-time-sort="1" data-listing-word-count-sort="155" data-listing-title-sort="Machine Learning" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="./teaching/2023-2024/Machine Learning/index.html" class="title listing-title">Machine Learning</a>
 </td>
 
 </tr>
@@ -634,87 +637,7 @@ window.Quarto = {
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1756472486456" data-listing-reading-time-sort="15" data-listing-word-count-sort="2949" data-listing-title-sort="Introduction to Numpy" data-listing-filename-sort="lecture-4.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./teaching/2023-2024/Programming Level-up/lecture-4.html" class="title listing-title">Introduction to Numpy</a>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-file-modified-sort="1756472486456" data-listing-reading-time-sort="10" data-listing-word-count-sort="1984" data-listing-title-sort="Introduction to Matplotlib" data-listing-filename-sort="lecture-5.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./teaching/2023-2024/Programming Level-up/lecture-5.html" class="title listing-title">Introduction to Matplotlib</a>
-</td>
-
-</tr>
-
-<tr data-index="2" data-listing-file-modified-sort="1756472486467" data-listing-reading-time-sort="27" data-listing-word-count-sort="5209" data-listing-title-sort="Linux &amp; Supercomputer" data-listing-filename-sort="lecture-7.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./teaching/2023-2024/Programming Level-up/lecture-7.html" class="title listing-title">Linux &amp; Supercomputer</a>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-file-modified-sort="1756472486466" data-listing-reading-time-sort="7" data-listing-word-count-sort="1287" data-listing-title-sort="Introduction to Pandas" data-listing-filename-sort="lecture-6.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./teaching/2023-2024/Programming Level-up/lecture-6.html" class="title listing-title">Introduction to Pandas</a>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-file-modified-sort="1756472486455" data-listing-reading-time-sort="17" data-listing-word-count-sort="3336" data-listing-title-sort="Errors &amp; Object Oriented Programming" data-listing-filename-sort="lecture-2.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./teaching/2023-2024/Programming Level-up/lecture-2.html" class="title listing-title">Errors &amp; Object Oriented Programming</a>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-file-modified-sort="1756472486455" data-listing-reading-time-sort="27" data-listing-word-count-sort="5247" data-listing-title-sort="Python Modules" data-listing-filename-sort="lecture-3.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./teaching/2023-2024/Programming Level-up/lecture-3.html" class="title listing-title">Python Modules</a>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-file-modified-sort="1756472486454" data-listing-reading-time-sort="44" data-listing-word-count-sort="8720" data-listing-title-sort="Python Introduction" data-listing-filename-sort="lecture-1.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./teaching/2023-2024/Programming Level-up/lecture-1.html" class="title listing-title">Python Introduction</a>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-file-modified-sort="1756472486453" data-listing-reading-time-sort="2" data-listing-word-count-sort="341" data-listing-title-sort="Programming Level-up" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./teaching/2023-2024/Programming Level-up/index.html" class="title listing-title">Programming Level-up</a>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-file-modified-sort="1756472486467" data-listing-reading-time-sort="16" data-listing-word-count-sort="3041" data-listing-title-sort="All about Git" data-listing-filename-sort="lecture-8.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1761658514938" data-listing-reading-time-sort="16" data-listing-word-count-sort="3041" data-listing-title-sort="All about Git" data-listing-filename-sort="lecture-8.qmd">
 <td>
 <span class="listing-date">&nbsp;</span>
 </td>
@@ -724,7 +647,87 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="9" data-listing-file-modified-sort="1756472486275" data-listing-reading-time-sort="4" data-listing-word-count-sort="731" data-listing-title-sort="Course Introduction" data-listing-filename-sort="0.course-introduction.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1761658514938" data-listing-reading-time-sort="27" data-listing-word-count-sort="5209" data-listing-title-sort="Linux &amp; Supercomputer" data-listing-filename-sort="lecture-7.qmd">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="./teaching/2023-2024/Programming Level-up/lecture-7.html" class="title listing-title">Linux &amp; Supercomputer</a>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-file-modified-sort="1761658514938" data-listing-reading-time-sort="7" data-listing-word-count-sort="1287" data-listing-title-sort="Introduction to Pandas" data-listing-filename-sort="lecture-6.qmd">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="./teaching/2023-2024/Programming Level-up/lecture-6.html" class="title listing-title">Introduction to Pandas</a>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-file-modified-sort="1761658514938" data-listing-reading-time-sort="11" data-listing-word-count-sort="2040" data-listing-title-sort="Introduction to Matplotlib" data-listing-filename-sort="lecture-5.qmd">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="./teaching/2023-2024/Programming Level-up/lecture-5.html" class="title listing-title">Introduction to Matplotlib</a>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-file-modified-sort="1761658514938" data-listing-reading-time-sort="15" data-listing-word-count-sort="2949" data-listing-title-sort="Introduction to Numpy" data-listing-filename-sort="lecture-4.qmd">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="./teaching/2023-2024/Programming Level-up/lecture-4.html" class="title listing-title">Introduction to Numpy</a>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-file-modified-sort="1761658514938" data-listing-reading-time-sort="27" data-listing-word-count-sort="5247" data-listing-title-sort="Python Modules" data-listing-filename-sort="lecture-3.qmd">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="./teaching/2023-2024/Programming Level-up/lecture-3.html" class="title listing-title">Python Modules</a>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-file-modified-sort="1761658514938" data-listing-reading-time-sort="17" data-listing-word-count-sort="3336" data-listing-title-sort="Errors &amp; Object Oriented Programming" data-listing-filename-sort="lecture-2.qmd">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="./teaching/2023-2024/Programming Level-up/lecture-2.html" class="title listing-title">Errors &amp; Object Oriented Programming</a>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-file-modified-sort="1761658514938" data-listing-reading-time-sort="44" data-listing-word-count-sort="8720" data-listing-title-sort="Python Introduction" data-listing-filename-sort="lecture-1.qmd">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="./teaching/2023-2024/Programming Level-up/lecture-1.html" class="title listing-title">Python Introduction</a>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-file-modified-sort="1761658514938" data-listing-reading-time-sort="2" data-listing-word-count-sort="341" data-listing-title-sort="Programming Level-up" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="./teaching/2023-2024/Programming Level-up/index.html" class="title listing-title">Programming Level-up</a>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-file-modified-sort="1761658514934" data-listing-reading-time-sort="4" data-listing-word-count-sort="731" data-listing-title-sort="Course Introduction" data-listing-filename-sort="0.course-introduction.qmd">
 <td>
 <span class="listing-date">&nbsp;</span>
 </td>
@@ -860,13 +863,14 @@ window.Quarto = {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

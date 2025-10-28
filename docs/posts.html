@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<link rel="alternate" hreflang="en" href="https://morganwastaken.com/posts.html" />
-<link rel="alternate" hreflang="cy" href="https://morganwastaken.com/cy/posts.cy.html" />
+<link rel="alternate" hreflang="en" href="/posts.html" />
+<link rel="alternate" hreflang="cy" href="/cy/posts.cy.html" />
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,18 +36,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-77633ece19c8e04db6d5a17cd4436747.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-77a2314449dfb98733dd17d55e0a86b3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-77633ece19c8e04db6d5a17cd4436747.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c91f5ecd240dbcfad33507b16abcbcec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-a36fef8c6f594d6a13d5724b75b58e17.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c91f5ecd240dbcfad33507b16abcbcec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -135,7 +136,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -329,6 +330,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Jay Paul Morgan</span>
     </a>
@@ -411,7 +414,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1756472485517" data-listing-reading-time-sort="3" data-listing-word-count-sort="590">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1761658514912" data-listing-reading-time-sort="3" data-listing-word-count-sort="590">
 <a href="./posts/2025-09-01-paper/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -432,7 +435,7 @@ Jay Paul Morgan
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1715122800000" data-listing-file-modified-sort="1756472485514" data-listing-date-modified-sort="1756472485000" data-listing-reading-time-sort="1" data-listing-word-count-sort="61">
+<div class="g-col-1" data-index="1" data-listing-date-sort="1715122800000" data-listing-file-modified-sort="1761658514912" data-listing-date-modified-sort="1761658514000" data-listing-reading-time-sort="1" data-listing-word-count-sort="61">
 <a href="./posts/2024-05-08-utilise/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -454,7 +457,7 @@ May 8, 2024
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="1713654000000" data-listing-file-modified-sort="1756472485514" data-listing-date-modified-sort="1756472485000" data-listing-reading-time-sort="4" data-listing-word-count-sort="602">
+<div class="g-col-1" data-index="2" data-listing-date-sort="1713654000000" data-listing-file-modified-sort="1761658514912" data-listing-date-modified-sort="1761658514000" data-listing-reading-time-sort="4" data-listing-word-count-sort="602">
 <a href="./posts/2024-04-21-scientific-ethics/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -476,7 +479,7 @@ Apr 21, 2024
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="1687820400000" data-listing-file-modified-sort="1756472485511" data-listing-date-modified-sort="1756472485000" data-listing-reading-time-sort="1" data-listing-word-count-sort="174">
+<div class="g-col-1" data-index="3" data-listing-date-sort="1687820400000" data-listing-file-modified-sort="1761658514912" data-listing-date-modified-sort="1761658514000" data-listing-reading-time-sort="1" data-listing-word-count-sort="174">
 <a href="./posts/2023-06-27-GNN/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -498,7 +501,7 @@ Jun 27, 2023
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-listing-date-sort="1682031600000" data-listing-file-modified-sort="1756472485493" data-listing-date-modified-sort="1756472485000" data-listing-reading-time-sort="5" data-listing-word-count-sort="805">
+<div class="g-col-1" data-index="4" data-listing-date-sort="1682031600000" data-listing-file-modified-sort="1761658514910" data-listing-date-modified-sort="1761658514000" data-listing-reading-time-sort="5" data-listing-word-count-sort="805">
 <a href="./posts/2023-04-21-mch23/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="posts/2023-04-21-mch23/images/20230419_085440.jpg" style="height: 150px;" title="2023 Machine Learning and Computer Vision in Heliophyics conference introduction." class="thumbnail-image card-img"/></p>
@@ -520,7 +523,7 @@ Apr 21, 2023
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="5" data-listing-date-sort="1679184000000" data-listing-file-modified-sort="1756472485443" data-listing-date-modified-sort="1756472485000" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
+<div class="g-col-1" data-index="5" data-listing-date-sort="1679184000000" data-listing-file-modified-sort="1761658514908" data-listing-date-modified-sort="1761658514000" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
 <a href="./posts/2023-03-19-MCH23/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -542,7 +545,7 @@ Mar 19, 2023
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="6" data-listing-date-sort="1679097600000" data-listing-file-modified-sort="1756472485443" data-listing-date-modified-sort="1756472485000" data-listing-reading-time-sort="2" data-listing-word-count-sort="268">
+<div class="g-col-1" data-index="6" data-listing-date-sort="1679097600000" data-listing-file-modified-sort="1761658514908" data-listing-date-modified-sort="1761658514000" data-listing-reading-time-sort="2" data-listing-word-count-sort="268">
 <a href="./posts/2023-03-18-Org-babel-remote-images/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -564,7 +567,7 @@ Mar 18, 2023
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="7" data-listing-date-sort="1671062400000" data-listing-file-modified-sort="1756472485443" data-listing-date-modified-sort="1756472485000" data-listing-reading-time-sort="3" data-listing-word-count-sort="509">
+<div class="g-col-1" data-index="7" data-listing-date-sort="1671062400000" data-listing-file-modified-sort="1761658514908" data-listing-date-modified-sort="1761658514000" data-listing-reading-time-sort="3" data-listing-word-count-sort="509">
 <a href="./posts/2022-12-15-org-babel-tramp/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -586,7 +589,7 @@ Dec 15, 2022
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="8" data-listing-date-sort="1665529200000" data-listing-file-modified-sort="1756472485443" data-listing-date-modified-sort="1756472485000" data-listing-reading-time-sort="2" data-listing-word-count-sort="314">
+<div class="g-col-1" data-index="8" data-listing-date-sort="1665529200000" data-listing-file-modified-sort="1761658514908" data-listing-date-modified-sort="1761658514000" data-listing-reading-time-sort="2" data-listing-word-count-sort="314">
 <a href="./posts/2022-10-12-adaptive/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -608,7 +611,7 @@ Oct 12, 2022
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="9" data-listing-date-sort="1616972400000" data-listing-file-modified-sort="1756472485443" data-listing-date-modified-sort="1756472485000" data-listing-reading-time-sort="2" data-listing-word-count-sort="290">
+<div class="g-col-1" data-index="9" data-listing-date-sort="1616972400000" data-listing-file-modified-sort="1761658514908" data-listing-date-modified-sort="1761658514000" data-listing-reading-time-sort="2" data-listing-word-count-sort="290">
 <a href="./posts/2021-03-29-bctcs/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -630,7 +633,7 @@ Mar 29, 2021
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="10" data-listing-date-sort="1583366400000" data-listing-file-modified-sort="1756472485302" data-listing-date-modified-sort="1756472485000" data-listing-reading-time-sort="16" data-listing-word-count-sort="3173">
+<div class="g-col-1" data-index="10" data-listing-date-sort="1583366400000" data-listing-file-modified-sort="1761658514904" data-listing-date-modified-sort="1761658514000" data-listing-reading-time-sort="16" data-listing-word-count-sort="3173">
 <a href="./posts/2020-03-05-makefile/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="posts/2020-03-05-makefile/images/makefile_process_1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -652,7 +655,7 @@ Mar 5, 2020
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="11" data-listing-date-sort="1561590000000" data-listing-file-modified-sort="1756472485294" data-listing-date-modified-sort="1756472485000" data-listing-reading-time-sort="8" data-listing-word-count-sort="1518">
+<div class="g-col-1" data-index="11" data-listing-date-sort="1561590000000" data-listing-file-modified-sort="1761658514904" data-listing-date-modified-sort="1761658514000" data-listing-reading-time-sort="8" data-listing-word-count-sort="1518">
 <a href="./posts/2019-06-27-membership-functions/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="posts/2019-06-27-membership-functions/images/output_6_1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -742,13 +745,14 @@ Jun 27, 2019
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

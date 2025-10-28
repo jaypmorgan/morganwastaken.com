@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<link rel="alternate" hreflang="en" href="https://morganwastaken.com/teaching/2023-2024/Programming Level-up/lecture-7-reveal.html" />
-<link rel="alternate" hreflang="cy" href="https://morganwastaken.com/cy/teaching/2023-2024/Programming Level-up/lecture-7-reveal.cy.html" />
+<link rel="alternate" hreflang="en" href="/teaching/2023-2024/Programming Level-up/lecture-7-reveal.html" />
+<link rel="alternate" hreflang="cy" href="/cy/teaching/2023-2024/Programming Level-up/lecture-7-reveal.cy.html" />
 <script src="../../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Jay Paul Morgan">
   <title>Jay Paul Morgan – Linux &amp; Supercomputer</title>
@@ -97,7 +97,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Q1SQLS91HT"></script>
 
   <script type="text/javascript">
@@ -265,19 +265,19 @@ Jay Paul Morgan
 <h2>What’s a command?</h2>
 <p>While many recent versions of Linux makes things more accessible via GUIs, they will never be a substitute for using the command line. We’re going to learn how to control the system via the command line, via a <strong>shell</strong>. A shell, like the Python REPL we’ve already seen, is waits for you to input commands, executes the command, and prints the output if there is output to print.</p>
 <p>A Linux command is a call to a program optionally followed by some arguments. For example, if we want list out the files and folders in the directory, we would use the <code>ls</code> (list) command:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The <code>ls</code> command comes with a number of optional flags and arguments that we can add onto the call. When calling a command a flag is something that begins with a <code>-</code> , for example <code>-l</code> tells <code>ls</code> to list the directory in a list format.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="fu">ls</span> <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="fu">ls</span> <span class="at">-l</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>We have supplied the <code>-l</code> flag. There are many other flags for <code>ls</code>, like for example, the human readable file systems with <code>-h</code> or show hidden files (files that start with a period) with <code>-a</code>.</p>
 <p>When we’re using multiple flags we could write</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="fu">ls</span> <span class="at">-l</span> <span class="at">-h</span> <span class="at">-a</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="fu">ls</span> <span class="at">-l</span> <span class="at">-h</span> <span class="at">-a</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Or:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="fu">ls</span> <span class="at">-lha</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="fu">ls</span> <span class="at">-lha</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Sometimes commands take optional positional arguments. Going back to our list directory command, where, by default, it will list the current directory. But instead we can tell the command to list a particular directory by supplying the path as an argument</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="fu">ls</span> images/ <span class="at">-lha</span></span>
-<span id="cb5-2"><a></a><span class="co"># or ls -lha images/ works too</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="fu">ls</span> images/ <span class="at">-lha</span></span>
+<span id="cb5-2"><a></a><span class="co"># or ls -lha images/ works too</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>How do I know how to use a command? Well that’s where another command comes in. It’s called <code>man</code> (short for manual). If you pass another command to the <code>man</code> command, the documentation will be shown in the terminal, e.g.:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a></a><span class="fu">man</span> ls  <span class="co"># display the documentation for ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a></a><span class="fu">man</span> ls  <span class="co"># display the documentation for ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The documentation should list all the different flags and arguments, describe what they mean, and sometimes give example or most common usage of a command.</p>
 <p>When the ‘man page’ is display, you can scroll up and down the page using your arrow keys, and page-up and page-down. When you’re done reading, just hit the ‘q’ character</p>
 <p>I am going to go through some of the most common commands just to make sure that you’re familiar with the typical usage.</p>
@@ -285,87 +285,87 @@ Jay Paul Morgan
 <section id="cd" class="slide level2">
 <h2>cd</h2>
 <p>We’ve already seen <code>ls</code> to list a directory. The command to move to a directory is <code>cd</code> (change directory), that takes an argument of filepath to move to:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a></a><span class="bu">cd</span> ~ <span class="co"># tilde is short-hand for the 'home directory'</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a></a><span class="bu">cd</span> ~ <span class="co"># tilde is short-hand for the 'home directory'</span></span>
 <span id="cb7-2"><a></a><span class="bu">cd</span> ~/Documents/My\ Files  <span class="co"># go to Documents and then to "My Files"</span></span>
-<span id="cb7-3"><a></a><span class="bu">cd</span>   <span class="co"># no argument, by default goes to the home directory</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-3"><a></a><span class="bu">cd</span>   <span class="co"># no argument, by default goes to the home directory</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="mkdir" class="slide level2">
 <h2>mkdir</h2>
 <p>Sticking with the them of directories, to make a new directory we use <code>mkdir</code>, whose argument takes the name of the directory we want to create:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a></a><span class="fu">mkdir</span> my_new_directory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a></a><span class="fu">mkdir</span> my_new_directory</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You can create a many level nested directory structure all at once using the <code>-p</code> (parents) flag, that tells <code>mkdir</code> if the parent directory of the target directory doesn’t exist, create it.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a></a><span class="fu">mkdir</span> photos/2020/01/05  <span class="co"># won't work unless photos/2020/01 exist</span></span>
-<span id="cb9-2"><a></a><span class="fu">mkdir</span> <span class="at">-p</span> photos/2020/01/05  <span class="co"># this will work</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a></a><span class="fu">mkdir</span> photos/2020/01/05  <span class="co"># won't work unless photos/2020/01 exist</span></span>
+<span id="cb9-2"><a></a><span class="fu">mkdir</span> <span class="at">-p</span> photos/2020/01/05  <span class="co"># this will work</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="cp" class="slide level2">
 <h2>cp</h2>
 <p>To copy a file or directory, we can use the <code>cp</code> command. Here we are copying a file, where the first argument is the filepath of the file you want to copy and the second argument is the filepath where the copy should be placed.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a></a><span class="fu">cp</span> my_old_file my_new_file</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a></a><span class="fu">cp</span> my_old_file my_new_file</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>By default (without a flag), <code>cp</code> will not work with directories, for that you have to use the <code>-r</code> (recursive) flag</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="fu">cp</span> <span class="at">-r</span> data/ data-backup</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="fu">cp</span> <span class="at">-r</span> data/ data-backup</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="mv" class="slide level2">
 <h2>mv</h2>
 <p>The syntax of moving a file is similar to that of <code>cp</code>:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a></a><span class="fu">mv</span> old_file new_file</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a></a><span class="fu">mv</span> old_file new_file</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Except that it works for both files and directories without any flags. <code>mv</code> can also be used to <strong>rename</strong> files, that’s all renaming is: moving a file to the same directory under a different name.</p>
 </section>
 <section id="rm" class="slide level2">
 <h2>rm</h2>
 <p>To remove a file us <code>rm</code>:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a></a><span class="fu">rm</span> file_to_delete</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a></a><span class="fu">rm</span> file_to_delete</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If you want to delete a directory, use the <code>-r</code> (recursive) flag:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a></a><span class="fu">rm</span> <span class="at">-r</span> directory_to_delete/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a></a><span class="fu">rm</span> <span class="at">-r</span> directory_to_delete/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="cat" class="slide level2">
 <h2>cat</h2>
 <p><code>cat</code> stands for concatenate, i.e.&nbsp;concatenating the contents of two or more files:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a></a><span class="fu">cat</span> file1 file2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a></a><span class="fu">cat</span> file1 file2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The result is that the concatenation of these two files will be printed to the screen. If you wanted to put the result into its own file you would redirect the output using <code>&gt;</code></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a></a><span class="fu">cat</span> file1 file2 <span class="op">&gt;</span> newfile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a></a><span class="fu">cat</span> file1 file2 <span class="op">&gt;</span> newfile</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Since cat reads the file and prints it to screen it is a very handy way to view the contents of a file, even if it was not intended for that.</p>
 </section>
 <section id="pwd" class="slide level2">
 <h2>pwd</h2>
 <p>Sometimes you may get lost when moving directories. <code>pwd</code> prints the current working directory from the root directory, i.e.&nbsp;the path that is printed is an absolute path.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a></a><span class="bu">pwd</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="find" class="slide level2">
 <h2>find</h2>
 <p>If we want to list all files of a certain type, we can use the wildcard <code>*</code> that we’ve seen before:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a></a><span class="fu">ls</span> <span class="pp">*</span>.jpg <span class="co"># list all files that end with .jpg</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a></a><span class="fu">ls</span> <span class="pp">*</span>.jpg <span class="co"># list all files that end with .jpg</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>However, this will only list for the current directory. Perhaps the better way to find files will be using the <code>find</code> command:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a></a><span class="fu">find</span> . <span class="at">-type</span> f <span class="at">-name</span> <span class="pp">*</span>.jpg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a></a><span class="fu">find</span> . <span class="at">-type</span> f <span class="at">-name</span> <span class="pp">*</span>.jpg</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The first argument is the directory to start the search, then we define the type <code>f</code> being files, and then specify the name. Find will recursively search through directories and sub-directories to find all files that match that name.</p>
 </section>
 <section id="grep" class="slide level2">
 <h2>grep</h2>
 <p>How about if we want to find files that have a certain contents? For that we can use <code>grep</code>. Grep will read a file and print (by default) the lines that contains your pattern. i.e.:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a></a><span class="fu">grep</span> <span class="st">'Linux'</span> lecture.org</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a></a><span class="fu">grep</span> <span class="st">'Linux'</span> lecture.org</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This will print the lines that contain the word Linux in lecture.org. If we just want the matched value, we use the <code>-o</code> flag.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a></a><span class="fu">grep</span> <span class="at">-o</span> <span class="st">'[0-9]'</span> lecture.org</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a></a><span class="fu">grep</span> <span class="at">-o</span> <span class="st">'[0-9]'</span> lecture.org</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This prints all occurrences of numbers in lecture.org</p>
 </section>
 <section id="lessheadtail" class="slide level2">
 <h2>less/head/tail</h2>
 <p>If a file is very long, we may not want to read the file using cat, as it will have to print the entire file. Instead we could use <code>less</code>, which will allow us to navigate through the file, using arrow keys to move and <code>q</code> to quit.</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a></a><span class="fu">less</span> filename</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a></a><span class="fu">less</span> filename</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If we just want to view the first few lines, or the last few lines of a file we can use head/tail, respectively:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a></a><span class="fu">head</span> filename</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a></a><span class="fu">head</span> filename</span>
 <span id="cb23-2"><a></a><span class="fu">tail</span> <span class="at">-n</span> 20 filename  <span class="co"># last 20 lines</span></span>
-<span id="cb23-3"><a></a><span class="fu">tail</span> <span class="at">-F</span> filename <span class="co"># constantly read the file</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-3"><a></a><span class="fu">tail</span> <span class="at">-F</span> filename <span class="co"># constantly read the file</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="wc" class="slide level2">
 <h2>wc</h2>
 <p>Often times we just want to count the number of something. For example, if we want to count the number of files/folders in the directory we can do:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a></a><span class="fu">ls</span> <span class="at">-l</span> <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a></a><span class="fu">ls</span> <span class="at">-l</span> <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>We’re first printing all files and folders in a list format (one per line), then passing (<sub>piping</sub>_) the result to <code>wc</code>, which with the <code>-l</code> line flag, is counting the number of lines. Therefore we get a count of the number of files and folders. Here is another example where we’re counting how many times the word bash appears in these lecture notes:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a></a><span class="fu">grep</span> <span class="at">-o</span> <span class="st">'bash'</span> lecture.org <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a></a><span class="fu">grep</span> <span class="at">-o</span> <span class="st">'bash'</span> lecture.org <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="piping" class="slide level2">
 <h2>piping</h2>
 <p>The purpose of piping is to pass data around between commands. We have just seen how we can pass the output of, say, the <code>ls</code> command to the input of <code>wc</code>. This allows use to construct very sophisticated pipelines to do some quite complex things from the combination of very simple commands.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a></a><span class="fu">find</span> . <span class="at">-name</span> <span class="st">'*.txt'</span> <span class="at">-type</span> f <span class="at">-print0</span> <span class="kw">|</span> <span class="fu">xargs</span> <span class="at">-0</span> grep <span class="st">"something"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a></a><span class="fu">find</span> . <span class="at">-name</span> <span class="st">'*.txt'</span> <span class="at">-type</span> f <span class="at">-print0</span> <span class="kw">|</span> <span class="fu">xargs</span> <span class="at">-0</span> grep <span class="st">"something"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
@@ -393,90 +393,90 @@ Jay Paul Morgan
 <section id="your-very-first-bash-script" class="slide level2">
 <h2>Your Very first bash script</h2>
 <p>Let’s start with the classic ‘Hello, World’ example. We’ll create a new file called ‘hello.sh’ and enter the following:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a></a><span class="co">#!/bin/bash</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a></a><span class="co">#!/bin/bash</span></span>
 <span id="cb27-2"><a></a></span>
-<span id="cb27-3"><a></a><span class="bu">echo</span> <span class="st">"Hello, World!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb27-3"><a></a><span class="bu">echo</span> <span class="st">"Hello, World!"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>First thing to notice is that the first line contains what we call a ‘shebang’ or ‘hashbang’. It tells Linux which shell interpreter will be used to run the script, in this case: /bin/bash</p>
 <p>The next (non-empty) line in the file is <code>echo 'Hello, World'</code>. This is exactly the same as the other commands we’ve just seen.</p>
 <p>Now that we’ve created and saved our bash script, we will want to run it. We have two alternative methods to run this script:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a></a><span class="fu">bash</span> hello.sh  <span class="co"># run the script via bash</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a></a><span class="fu">bash</span> hello.sh  <span class="co"># run the script via bash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The second, requires that we have executable privileges for the script:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a></a><span class="fu">chmod</span> +x hello.sh  <span class="co"># add executable 'x' privileges</span></span>
-<span id="cb29-2"><a></a><span class="ex">./hello.sh</span>  <span class="co"># execute it</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a></a><span class="fu">chmod</span> +x hello.sh  <span class="co"># add executable 'x' privileges</span></span>
+<span id="cb29-2"><a></a><span class="ex">./hello.sh</span>  <span class="co"># execute it</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="variables" class="slide level2">
 <h2>Variables</h2>
 <p>The variables we create in our bash scripts are very much the same as the environment variables we’ve seen before. Take for example:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a></a><span class="co">#!/bin/bash</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a></a><span class="co">#!/bin/bash</span></span>
 <span id="cb30-2"><a></a><span class="va">AGE</span><span class="op">=</span><span class="st">"35"</span></span>
 <span id="cb30-3"><a></a><span class="va">PERSON_NAME</span><span class="op">=</span><span class="st">"Jane"</span></span>
-<span id="cb30-4"><a></a><span class="bu">echo</span> <span class="st">"</span><span class="va">$PERSON_NAME</span><span class="st"> is </span><span class="va">$AGE</span><span class="st"> years old"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb30-4"><a></a><span class="bu">echo</span> <span class="st">"</span><span class="va">$PERSON_NAME</span><span class="st"> is </span><span class="va">$AGE</span><span class="st"> years old"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>We create a variable <code>AGE</code> with the <code>=</code> assignment operator. <strong>Note</strong> we don’t put spaces either side of the equals sign in bash. To refer to the variable, we use <code>$AGE</code>, using the <code>$</code> dollar sign.</p>
 </section>
 <section id="interpolation-in-bash-strings" class="slide level2">
 <h2>Interpolation in bash strings</h2>
 <p>You would have noticed in the previous example that we included the variable directly into the string we’re echoing out. This is something similar to what we’ve seen with f-strings in Python.</p>
 <p>When we use double quotes: <code>"..."</code> in bash, the variable will be integrated into the resulting string. We can even call bash functions from directly inside the string:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a></a><span class="bu">echo</span> <span class="st">"I am logging in as: </span><span class="va">$(</span><span class="fu">who</span><span class="va">)</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a></a><span class="bu">echo</span> <span class="st">"I am logging in as: </span><span class="va">$(</span><span class="fu">who</span><span class="va">)</span><span class="st">"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="bash-strings-the-sharp-edges" class="slide level2">
 <h2>Bash strings – the sharp edges</h2>
 <p>You might be tempted to use a variable when generating a path:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a></a><span class="va">TRAIN_PROCESS</span><span class="op">=</span><span class="st">"training"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a></a><span class="va">TRAIN_PROCESS</span><span class="op">=</span><span class="st">"training"</span></span>
 <span id="cb32-2"><a></a><span class="va">TEST_PROCESS</span><span class="op">=</span><span class="st">"testing"</span></span>
 <span id="cb32-3"><a></a></span>
 <span id="cb32-4"><a></a><span class="fu">touch</span> <span class="st">"./data/</span><span class="va">$TRAIN_PROCESS_error</span><span class="st">.txt"</span></span>
-<span id="cb32-5"><a></a><span class="fu">touch</span> <span class="st">"./data/</span><span class="va">$TEST_PROCESS_error</span><span class="st">.txt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb32-5"><a></a><span class="fu">touch</span> <span class="st">"./data/</span><span class="va">$TEST_PROCESS_error</span><span class="st">.txt</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>But this will create an error as underscores can be part of the variable name, so bash will be looking for a variable named: <code>$TRAIN_PROCESS_error</code> which has never been created. To get around this, we can wrap our variable in curly braces:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a></a><span class="fu">touch</span> <span class="st">"./data/</span><span class="va">${TRAIN_PROCESS}</span><span class="st">_error.txt"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a></a><span class="fu">touch</span> <span class="st">"./data/</span><span class="va">${TRAIN_PROCESS}</span><span class="st">_error.txt"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="stopping-interpolation-in-bash-strings" class="slide level2">
 <h2>Stopping interpolation in bash strings</h2>
 <p>We can also use single quotes for strings in bash. When we use these strings, the string itself is <u>not</u> interpreted, and thus it will ignore any variables or bash commands:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a></a><span class="bu">echo</span> <span class="st">'I am logging in as: $(who)'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a></a><span class="bu">echo</span> <span class="st">'I am logging in as: $(who)'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="inputoutput" class="slide level2">
 <h2>Input/Output</h2>
 <p>If we want to read the input from keyboard into a variable, we use the read command:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a></a><span class="co">#!/bin/bash</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a></a><span class="co">#!/bin/bash</span></span>
 <span id="cb35-2"><a></a></span>
 <span id="cb35-3"><a></a><span class="bu">echo</span> <span class="st">"Enter your name:"</span></span>
 <span id="cb35-4"><a></a><span class="bu">read</span> <span class="va">NAME</span></span>
 <span id="cb35-5"><a></a></span>
-<span id="cb35-6"><a></a><span class="bu">echo</span> <span class="st">"Hello, </span><span class="va">$NAME</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb35-6"><a></a><span class="bu">echo</span> <span class="st">"Hello, </span><span class="va">$NAME</span><span class="st">"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>read</code> in this context will read in the input and create the variable with that value. As we’ve already seen, we can then output this value to the console using the echo command.</p>
 </section>
 <section id="booleans" class="slide level2">
 <h2>Booleans</h2>
 <p>Technically, bash does not have built in data types for true and false, but Linux has the commands true and false which we could use in place. The implementation of how these commands work is not important.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a></a><span class="va">FILE_EXISTS</span><span class="op">=</span>true</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a></a><span class="va">FILE_EXISTS</span><span class="op">=</span>true</span>
 <span id="cb36-2"><a></a></span>
 <span id="cb36-3"><a></a><span class="cf">if</span> <span class="bu">[</span> <span class="st">"</span><span class="va">$FILE_EXISTS</span><span class="st">"</span> <span class="ot">=</span> true <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
 <span id="cb36-4"><a></a><span class="bu">echo</span> <span class="st">"The file exists!"</span></span>
-<span id="cb36-5"><a></a><span class="cf">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb36-5"><a></a><span class="cf">fi</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="conditionals" class="slide level2">
 <h2>Conditionals</h2>
 <p>When we’re creating <code>if</code> expressions, we use the following syntax:</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a></a><span class="cf">if</span> <span class="op">&lt;&lt;conditional&gt;&gt;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a></a><span class="cf">if</span> <span class="op">&lt;&lt;conditional&gt;&gt;</span><span class="kw">;</span> <span class="cf">then</span></span>
 <span id="cb37-2"><a></a><span class="st">   # do something</span></span>
 <span id="cb37-3"><a></a><span class="st">else</span></span>
 <span id="cb37-4"><a></a><span class="st">   # do something else</span></span>
-<span id="cb37-5"><a></a><span class="st">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb37-5"><a></a><span class="st">fi</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>We can also use <code>elif</code></p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a></a><span class="cf">if</span> <span class="op">&lt;&lt;conditional&gt;&gt;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a></a><span class="cf">if</span> <span class="op">&lt;&lt;conditional&gt;&gt;</span><span class="kw">;</span> <span class="cf">then</span></span>
 <span id="cb38-2"><a></a><span class="st">   # do something</span></span>
 <span id="cb38-3"><a></a><span class="st">elif &lt;&lt;conditional&gt;&gt;; then</span></span>
 <span id="cb38-4"><a></a><span class="st">   # do something else</span></span>
 <span id="cb38-5"><a></a><span class="st">else</span></span>
 <span id="cb38-6"><a></a><span class="st">   # something else entirely</span></span>
-<span id="cb38-7"><a></a><span class="st">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb38-7"><a></a><span class="st">fi</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Writing condition expressions can be a little more cumbersome than in Python. These can be many pain points for new bash programmers, take for example:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a></a><span class="va">FILE_EXISTS</span><span class="op">=</span>false</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a></a><span class="va">FILE_EXISTS</span><span class="op">=</span>false</span>
 <span id="cb39-2"><a></a></span>
 <span id="cb39-3"><a></a><span class="cf">if</span> <span class="bu">[</span> <span class="va">$FILE_EXISTS</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
 <span id="cb39-4"><a></a><span class="bu">echo</span> <span class="st">"The file exists!"</span></span>
-<span id="cb39-5"><a></a><span class="cf">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb39-5"><a></a><span class="cf">fi</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This is because we have used the <code>[...]</code> single bracket syntax for the test. But there are others:</p>
 <ul>
 <li>No brackets: we could omit the brackets in which case it would run the false command not print the statement.</li>
@@ -486,80 +486,80 @@ Jay Paul Morgan
 <li>Double square bracket <code>[[...]]</code></li>
 </ul>
 <p>What if we write:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a></a><span class="va">VAR_1</span><span class="op">=</span><span class="st">"Mr Foo Bar"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a></a><span class="va">VAR_1</span><span class="op">=</span><span class="st">"Mr Foo Bar"</span></span>
 <span id="cb40-2"><a></a><span class="va">VAR_2</span><span class="op">=</span><span class="st">"Mr Foo Bar"</span></span>
 <span id="cb40-3"><a></a><span class="cf">if</span> <span class="bu">[</span> <span class="va">$VAR_1</span> <span class="ot">=</span> <span class="va">$VAR_2</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
 <span id="cb40-4"><a></a><span class="bu">echo</span> <span class="st">"They are the same"</span></span>
-<span id="cb40-5"><a></a><span class="cf">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb40-5"><a></a><span class="cf">fi</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>We would get an error because <code>test</code> expands the arguments into:</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a></a><span class="ex">Mr</span> Foo Bar = Mr Foo Bar</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a></a><span class="ex">Mr</span> Foo Bar = Mr Foo Bar</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>With the spaces included. To prevent this from happening, we have to wrap the variables in quotation marks.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a></a><span class="va">VAR_1</span><span class="op">=</span><span class="st">"Mr Foo Bar"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a></a><span class="va">VAR_1</span><span class="op">=</span><span class="st">"Mr Foo Bar"</span></span>
 <span id="cb42-2"><a></a><span class="va">VAR_2</span><span class="op">=</span><span class="st">"Mr Foo Bar"</span></span>
 <span id="cb42-3"><a></a><span class="cf">if</span> <span class="bu">[</span> <span class="st">"</span><span class="va">$VAR_1</span><span class="st">"</span> <span class="ot">=</span> <span class="st">"</span><span class="va">$VAR_2</span><span class="st">"</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
 <span id="cb42-4"><a></a><span class="bu">echo</span> <span class="st">"They are the same"</span></span>
-<span id="cb42-5"><a></a><span class="cf">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb42-5"><a></a><span class="cf">fi</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If we use <code>[[</code> in if statement, then we can do more sophisticated things like pattern matching:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a></a><span class="va">FILENAME</span><span class="op">=</span><span class="st">"testing.png"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a></a><span class="va">FILENAME</span><span class="op">=</span><span class="st">"testing.png"</span></span>
 <span id="cb43-2"><a></a><span class="cf">if</span> <span class="kw">[[</span> <span class="st">"</span><span class="va">$FILENAME</span><span class="st">"</span> <span class="ot">=</span> <span class="pp">*</span>.png <span class="kw">]];</span> <span class="cf">then</span></span>
 <span id="cb43-3"><a></a><span class="bu">echo</span> <span class="st">"Its a png file"</span></span>
-<span id="cb43-4"><a></a><span class="cf">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb43-4"><a></a><span class="cf">fi</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="loops" class="slide level2">
 <h2>Loops</h2>
 <p>Like in Python, we can iterate in bash</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="dt">{</span><span class="dv">1</span><span class="dt">..</span><span class="dv">10</span><span class="dt">}</span><span class="kw">;</span> <span class="cf">do</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="dt">{</span><span class="dv">1</span><span class="dt">..</span><span class="dv">10</span><span class="dt">}</span><span class="kw">;</span> <span class="cf">do</span></span>
 <span id="cb44-2"><a></a><span class="bu">echo</span> <span class="va">$i</span></span>
-<span id="cb44-3"><a></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb44-3"><a></a><span class="cf">done</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This iterates with i starting at 1 upto 10 (inclusive). Or we could do:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><a></a><span class="cf">for</span> <span class="kw">((</span> <span class="va">i</span><span class="op">=</span><span class="dv">1</span><span class="kw">;</span> <span class="va">i</span> <span class="op">&lt;=</span> <span class="dv">10</span><span class="kw">;</span> <span class="va">i</span><span class="op">++</span> <span class="kw">));</span> <span class="cf">do</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><a></a><span class="cf">for</span> <span class="kw">((</span> <span class="va">i</span><span class="op">=</span><span class="dv">1</span><span class="kw">;</span> <span class="va">i</span> <span class="op">&lt;=</span> <span class="dv">10</span><span class="kw">;</span> <span class="va">i</span><span class="op">++</span> <span class="kw">));</span> <span class="cf">do</span></span>
 <span id="cb45-2"><a></a><span class="bu">echo</span> <span class="va">$i</span></span>
-<span id="cb45-3"><a></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb45-3"><a></a><span class="cf">done</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>We can also iterate over a list of files/folders in a directory:</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><a></a><span class="cf">for</span> FILE <span class="kw">in</span> ./images/<span class="pp">*</span><span class="kw">;</span> <span class="cf">do</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><a></a><span class="cf">for</span> FILE <span class="kw">in</span> ./images/<span class="pp">*</span><span class="kw">;</span> <span class="cf">do</span></span>
 <span id="cb46-2"><a></a><span class="bu">echo</span> <span class="va">$FILE</span></span>
-<span id="cb46-3"><a></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb46-3"><a></a><span class="cf">done</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Using the <code>while</code> form, we can continue looping until our conditional is false. For example, we could loop testing our internet connection, until its been established:</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><a></a><span class="cf">while</span> <span class="ot">! </span><span class="fu">ping</span> <span class="at">-c</span> 1 google.com<span class="kw">;</span> <span class="cf">do</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><a></a><span class="cf">while</span> <span class="ot">! </span><span class="fu">ping</span> <span class="at">-c</span> 1 google.com<span class="kw">;</span> <span class="cf">do</span></span>
 <span id="cb47-2"><a></a><span class="bu">echo</span> <span class="st">"No internet yet"</span></span>
 <span id="cb47-3"><a></a><span class="fu">sleep</span> 1</span>
 <span id="cb47-4"><a></a><span class="cf">done</span></span>
 <span id="cb47-5"><a></a></span>
-<span id="cb47-6"><a></a><span class="bu">echo</span> <span class="st">"Internet is available!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb47-6"><a></a><span class="bu">echo</span> <span class="st">"Internet is available!"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="functions" class="slide level2">
 <h2>Functions</h2>
 <p>To create a function, we use the following syntax:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb48-1"><a></a><span class="fu">function_name()</span> <span class="kw">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb48-1"><a></a><span class="fu">function_name()</span> <span class="kw">{</span></span>
 <span id="cb48-2"><a></a><span class="co"># do something</span></span>
-<span id="cb48-3"><a></a><span class="kw">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb48-3"><a></a><span class="kw">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And to call the function, you just need to use the function name:</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><a></a><span class="ex">function_name</span> <span class="co"># this called function name</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><a></a><span class="ex">function_name</span> <span class="co"># this called function name</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here is another example:</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><a></a><span class="fu">say_hello()</span> <span class="kw">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><a></a><span class="fu">say_hello()</span> <span class="kw">{</span></span>
 <span id="cb50-2"><a></a><span class="bu">echo</span> <span class="st">"Hello, </span><span class="va">$1</span><span class="st">"</span></span>
 <span id="cb50-3"><a></a><span class="kw">}</span></span>
 <span id="cb50-4"><a></a></span>
-<span id="cb50-5"><a></a><span class="ex">say_hello</span> <span class="st">"Jane"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb50-5"><a></a><span class="ex">say_hello</span> <span class="st">"Jane"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Notice that we didn’t need to include any argument list. We just used <code>$1</code> for the first argument passed to the function.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb51-1"><a></a><span class="fu">say_hello()</span> <span class="kw">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb51-1"><a></a><span class="fu">say_hello()</span> <span class="kw">{</span></span>
 <span id="cb51-2"><a></a><span class="bu">echo</span> <span class="st">"</span><span class="va">$1</span><span class="st">, </span><span class="va">$2</span><span class="st">"</span></span>
 <span id="cb51-3"><a></a><span class="kw">}</span></span>
 <span id="cb51-4"><a></a></span>
-<span id="cb51-5"><a></a><span class="ex">say_hello</span> <span class="st">"Hi"</span> <span class="st">"Jane"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb51-5"><a></a><span class="ex">say_hello</span> <span class="st">"Hi"</span> <span class="st">"Jane"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Returning values is ‘interesting’ as, coming from other languages, you think could do something like this:</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><a></a><span class="fu">say_hello()</span> <span class="kw">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><a></a><span class="fu">say_hello()</span> <span class="kw">{</span></span>
 <span id="cb52-2"><a></a><span class="cf">return</span> <span class="st">"hello"</span></span>
 <span id="cb52-3"><a></a><span class="kw">}</span></span>
 <span id="cb52-4"><a></a><span class="va">RESULT</span><span class="op">=</span><span class="st">"</span><span class="va">$(</span><span class="ex">say_hello</span><span class="va">)</span><span class="st">"</span></span>
-<span id="cb52-5"><a></a><span class="bu">echo</span> <span class="va">$RESULT</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb52-5"><a></a><span class="bu">echo</span> <span class="va">$RESULT</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This didn’t work like we expected, the value wasn’t returned and assigned to <code>RESULT</code>. So how do we return a value?</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb53-1"><a></a><span class="fu">say_hello()</span> <span class="kw">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb53-1"><a></a><span class="fu">say_hello()</span> <span class="kw">{</span></span>
 <span id="cb53-2"><a></a><span class="bu">echo</span> <span class="st">"Hello"</span></span>
 <span id="cb53-3"><a></a><span class="kw">}</span></span>
 <span id="cb53-4"><a></a><span class="va">RESULT</span><span class="op">=</span><span class="st">"</span><span class="va">$(</span><span class="ex">say_hello</span><span class="va">)</span><span class="st">"</span></span>
 <span id="cb53-5"><a></a><span class="bu">echo</span> <span class="st">"This is before the printing of result"</span></span>
-<span id="cb53-6"><a></a><span class="bu">echo</span> <span class="va">$RESULT</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb53-6"><a></a><span class="bu">echo</span> <span class="va">$RESULT</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section></section>
 <section>
 <section id="high-performance-cluster" class="title-slide slide level1 center">
@@ -568,32 +568,32 @@ Jay Paul Morgan
 </section>
 <section id="how-to-login" class="slide level2">
 <h2>How to login</h2>
-<div class="sourceCode" id="cb54"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb54-1"><a></a><span class="fu">ssh</span> <span class="op">&lt;&lt;username&gt;&gt;</span>@sms-ext.lis-lab.fr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb54-1"><a></a><span class="fu">ssh</span> <span class="op">&lt;&lt;username&gt;&gt;</span>@sms-ext.lis-lab.fr</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Typing this command can become tiresome very quickly, especially after sending data back and forth. But we can make it a lot easier by updating our <code>~/.ssh/config</code> file to include something like:</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb55-1"><a></a><span class="ex">Host</span> cluster</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb55-1"><a></a><span class="ex">Host</span> cluster</span>
 <span id="cb55-2"><a></a> <span class="ex">HostName</span> sms-ext.lis-lab.fr</span>
-<span id="cb55-3"><a></a> <span class="ex">User</span> <span class="op">&lt;&lt;username&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb55-3"><a></a> <span class="ex">User</span> <span class="op">&lt;&lt;username&gt;&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Then to login to the cluster, we just need to type:</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb56-1"><a></a><span class="fu">ssh</span> cluster</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb56-1"><a></a><span class="fu">ssh</span> cluster</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And we should be prompted for our password.</p>
 </section>
 <section id="how-to-login-1" class="slide level2">
 <h2>How to login</h2>
 <p>If you trust the machine your on, you can remove password authentication and move to key-based authentication:</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb57-1"><a></a><span class="ex">ssh-copy-id</span> cluster</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb57"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb57-1"><a></a><span class="ex">ssh-copy-id</span> cluster</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>When we next login to the server, we shouldn’t be prompted for a password.</p>
 </section>
 <section id="how-to-copy-files-to-and-from-the-cluster" class="slide level2">
 <h2>How to copy files to and from the cluster</h2>
 <p>We have a number of options for transferring files to and from the cluster. Firstly, let’s look at the command <code>scp</code>. It takes two arguments, the first argument is the file you want to send, the second argument is the destination of the sent file.</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb58-1"><a></a><span class="fu">scp</span> <span class="op">&lt;&lt;origin&gt;&gt;</span> <span class="op">&lt;&lt;destination&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb58-1"><a></a><span class="fu">scp</span> <span class="op">&lt;&lt;origin&gt;&gt;</span> <span class="op">&lt;&lt;destination&gt;&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Similar to commands like <code>cp</code>, scp by default only works for files, not folders. To send folders/directories, we use the <code>-r</code> flag just like <code>cp</code>.</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb59-1"><a></a><span class="fu">scp</span> <span class="at">-r</span> <span class="op">&lt;&lt;origin_folder&gt;&gt;</span> <span class="op">&lt;&lt;destination_folder&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb59"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb59-1"><a></a><span class="fu">scp</span> <span class="at">-r</span> <span class="op">&lt;&lt;origin_folder&gt;&gt;</span> <span class="op">&lt;&lt;destination_folder&gt;&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="copying-files-rsync" class="slide level2">
 <h2>Copying files – rsync</h2>
 <p>One of the downsides about <code>scp</code> is that it will copy every file you give it. Even if the file at the destination is exactly the same. What if we only want to copy files that need to be copied, i.e.&nbsp;that are outdated, thus saving time? For that, we can use <code>rsync</code>. Rsync will copy files from one source to a destination only if the destination needs to be updated. This can save a lot of time by skipping files that already exist at the destination:</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb60-1"><a></a><span class="fu">rsync</span> <span class="op">&lt;&lt;source&gt;&gt;</span> <span class="op">&lt;&lt;destination&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb60-1"><a></a><span class="fu">rsync</span> <span class="op">&lt;&lt;source&gt;&gt;</span> <span class="op">&lt;&lt;destination&gt;&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section></section>
 <section>
 <section id="submitting-jobs" class="title-slide slide level1 center">
@@ -609,16 +609,16 @@ Jay Paul Morgan
 <section id="how-to-launch-a-job-srun" class="slide level2">
 <h2>How to launch a job – srun</h2>
 <p>The first command we will look at it is <code>srun</code>. This command will run request a job for execution in ‘real-time’. By real-time, we mean that the shell will wait until the job has been submitted.</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb61-1"><a></a><span class="ex">srun</span> <span class="op">&lt;&lt;compute</span> node options<span class="op">&gt;&gt;</span> <span class="op">&lt;&lt;command</span> to run<span class="op">&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb61"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb61-1"><a></a><span class="ex">srun</span> <span class="op">&lt;&lt;compute</span> node options<span class="op">&gt;&gt;</span> <span class="op">&lt;&lt;command</span> to run<span class="op">&gt;&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Let’s take a look at an example where we want to run an interactive bash shell on the compute shell (similar to ssh’ing into the compute node).</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb62-1"><a></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="at">--pty</span> bash <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb62"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb62-1"><a></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="at">--pty</span> bash <span class="at">-l</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This will request a job on any available compute node for 10 minutes. When a node becomes available, <code>bash</code> will execute, dropping you into the shell. You will notice that the shell prompt has changed from <code>sms</code> to the name of the node.</p>
 </section>
 <section id="salloc" class="slide level2">
 <h2>salloc</h2>
 <p>There is another method we can use to create an interactive job. We could use the <code>salloc</code> command to allocate resources for a task. After the resources have been allocated and our job is ready, we can <code>ssh</code> into the node with the allocated resources.</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb63-1"><a></a><span class="ex">salloc</span> <span class="at">--time</span><span class="op">=</span>10:00:00 <span class="kw">&amp;</span></span>
-<span id="cb63-2"><a></a><span class="fu">ssh</span> <span class="op">&lt;</span>name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb63"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb63-1"><a></a><span class="ex">salloc</span> <span class="at">--time</span><span class="op">=</span>10:00:00 <span class="kw">&amp;</span></span>
+<span id="cb63-2"><a></a><span class="fu">ssh</span> <span class="op">&lt;</span>name<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="options" class="slide level2">
 <h2>options</h2>
@@ -629,49 +629,49 @@ Jay Paul Morgan
 <section id="gpu-allocation" class="slide level2">
 <h2>GPU allocation</h2>
 <p>If we need to use a GPU, we need to use a few options. Firstly, we can specify that our job is on a compute node with GPU. There will usually be a group of nodes in a ‘GPU’ group or partition, and thus we can specify to use one of these partitions:</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb64-1"><a></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="at">--partiton</span><span class="op">=</span>gpu <span class="at">--pty</span> bash <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb64"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb64-1"><a></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="at">--partiton</span><span class="op">=</span>gpu <span class="at">--pty</span> bash <span class="at">-l</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>But you will notice that you still do not have access to a GPU. You’re running on the GPU node, but you haven’t actually requested a GPU be allocated to your job. For that you will use <code>--gres</code>:</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb65-1"><a></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="at">--partition</span><span class="op">=</span>gpu <span class="at">--gres</span><span class="op">=</span>gpu:1 <span class="at">--pty</span> bash <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb65"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb65-1"><a></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="at">--partition</span><span class="op">=</span>gpu <span class="at">--gres</span><span class="op">=</span>gpu:1 <span class="at">--pty</span> bash <span class="at">-l</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here we are requesting one GPU, but if we use <code>--gres:gpu:2</code> we are requesting 2 GPUs etc.</p>
 <p>There are many different types of GPUs available, some older than others. If you wanted to allocate a job with a specific type of GPU you can use the <code>--constraint</code> flag:</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb66-1"><a></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="dt">\</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb66"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb66-1"><a></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="dt">\</span></span>
 <span id="cb66-2"><a></a> <span class="at">--partition</span><span class="op">=</span>gpu <span class="dt">\</span></span>
 <span id="cb66-3"><a></a> <span class="at">--gres</span><span class="op">=</span>gpu:1 <span class="dt">\</span></span>
 <span id="cb66-4"><a></a> <span class="at">--constraint</span><span class="op">=</span><span class="st">'cuda61'</span> <span class="dt">\</span></span>
-<span id="cb66-5"><a></a> <span class="at">--pty</span> bash <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb66-5"><a></a> <span class="at">--pty</span> bash <span class="at">-l</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This command requests that our job run on the GPU partition, with 1 GPU allocated that has the capability of running CUDA compute 61.</p>
 <p>Or we can specify the type of GPU in the gres option:</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb67-1"><a></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="dt">\</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb67"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb67-1"><a></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>00:10:00 <span class="dt">\</span></span>
 <span id="cb67-2"><a></a> <span class="at">--partition</span><span class="op">=</span>gpu <span class="dt">\</span></span>
 <span id="cb67-3"><a></a> <span class="at">--gres</span><span class="op">=</span>gpu:2080:1 <span class="dt">\</span></span>
-<span id="cb67-4"><a></a> <span class="at">--pty</span> bash <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb67-4"><a></a> <span class="at">--pty</span> bash <span class="at">-l</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="learning-more-about-nodes" class="slide level2">
 <h2>Learning more about nodes</h2>
 <p>To understand what each compute node has we can use the <code>scontrol</code> command.</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb68-1"><a></a><span class="ex">scontrol</span> show nodes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb68-1"><a></a><span class="ex">scontrol</span> show nodes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Will list out all nodes and all capabilities of each node. Or just one node:</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb69-1"><a></a><span class="ex">scontrol</span> show node lisnode2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb69"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb69-1"><a></a><span class="ex">scontrol</span> show node lisnode2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="sbatch" class="slide level2">
 <h2>sbatch</h2>
 <p>It can be quite inconvenient to launch an interactive job to run some compute, and wait for the job to be allocated. If, instead, you have a long running experiment that you want to run without any intervention from you, you can use <code>sbatch</code>.</p>
 <p>Sbatch will require us to write a small bash script that specifies how to run a job and what to do once its allocated.</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb70-1"><a></a><span class="co">#!/bin/bash</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb70-1"><a></a><span class="co">#!/bin/bash</span></span>
 <span id="cb70-2"><a></a></span>
 <span id="cb70-3"><a></a><span class="co">#SBATCH --time=00:01:00</span></span>
 <span id="cb70-4"><a></a><span class="co">#SBATCH --job-name=my_new_job</span></span>
 <span id="cb70-5"><a></a><span class="co">#SBATCH --output=my_new_job.out</span></span>
 <span id="cb70-6"><a></a><span class="co">#SBATCH --error=my_new_job.err</span></span>
 <span id="cb70-7"><a></a></span>
-<span id="cb70-8"><a></a><span class="bu">echo</span> <span class="va">$HOSTNAME</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb70-8"><a></a><span class="bu">echo</span> <span class="va">$HOSTNAME</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And run it:</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb71-1"><a></a><span class="ex">sbatch</span> my_job.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb71"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb71-1"><a></a><span class="ex">sbatch</span> my_job.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Notice that instead of supplying options to sbatch, we can instead record them directly into the script using the <code>#SBATCH</code>. SLURM will examine this file, looking for lines starting with this comment, and infer that the rest of the line contains the options.</p>
 <p>There are a few other options we’ve included that are very useful when running non-interactive jobs. Firstly, we’ve given the job a name (<code>my_new_job</code>). This is so we can different between many jobs that we might run at the same time. To list out the jobs we currently have running we use <code>squeue</code>.</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb72-1"><a></a><span class="ex">squeue</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb72-1"><a></a><span class="ex">squeue</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>By default, squeue will list all of the active jobs, even other peoples. To specify only your jobs user the <code>--user</code> option:</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb73-1"><a></a><span class="ex">squeue</span> <span class="at">--user</span><span class="op">=</span>jay.morgan</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb73"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb73-1"><a></a><span class="ex">squeue</span> <span class="at">--user</span><span class="op">=</span>jay.morgan</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The other two options, <code>--output</code> and <code>--error</code> specify where the printed output and printed errors will be stored. Since the job is being run on a different node, by a non-interactive process, if you didn’t include these lines, you wouldn’t be able to see what was being printed by <code>echo</code> or by any other process such as <code>print</code> in Python.</p>
 </section>
 <section id="squeue" class="slide level2">
@@ -690,12 +690,12 @@ Jay Paul Morgan
 <section id="scontrol" class="slide level2">
 <h2>scontrol</h2>
 <p><code>scontrol</code> allows us to modify an existing job. For example, let us say that we have a job which we need to extend the time limit. Given that we know the job id (we could use <code>squeue</code> to find this), we can ask SLURM to update the time limit using:</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb74-1"><a></a><span class="ex">scontrol</span> update jobid=<span class="op">&lt;</span>job_id<span class="op">&gt;</span> TimeLimit=<span class="op">&lt;</span>new_timelimit<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb74"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb74-1"><a></a><span class="ex">scontrol</span> update jobid=<span class="op">&lt;</span>job_id<span class="op">&gt;</span> TimeLimit=<span class="op">&lt;</span>new_timelimit<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="scancel" class="slide level2">
 <h2>scancel</h2>
 <p>Let’s say that we’ve submitted a job, but we’ve noticed that there was an error in the code, and want to stop the job. For that, we use <code>scancel</code> and specify the id of the job we wish to cancel:</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb75-1"><a></a><span class="ex">scancel</span> 158590</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb75"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb75-1"><a></a><span class="ex">scancel</span> 158590</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>After running this command, we should see, using <code>squeue</code>, that either the job is finishing, or that its disappeared from our list (meaning that its completely stopped).</p>
 </section>
 <section id="sacct" class="slide level2">
@@ -722,58 +722,58 @@ Jay Paul Morgan
 <li><code>file_2.txt</code></li>
 </ul>
 <p>Or you have some computation script, such as deep learning training script, that takes uses a hyperparameter which can be tuned to achieve different performance results:</p>
-<div class="sourceCode" id="cb76"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb76-1"><a></a><span class="ex">python</span> train.py <span class="at">--learning-rate</span> 0.001</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb76"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb76-1"><a></a><span class="ex">python</span> train.py <span class="at">--learning-rate</span> 0.001</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Instead of a creating a sbatch script for each value of hyperparameter, or sequentially enumerating the values, you can use a job task array to spawn multiple jobs with slightly different values.</p>
 </section>
 <section id="job-task-arrays-how-to" class="slide level2">
 <h2>Job Task Arrays – how to</h2>
 <p>First, we will look at how to actually submit an array of tasks. To create an task array, you will need to add the <code>--array</code> options to your sbatch script:</p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb77-1"><a></a><span class="co">#!/bin/bash</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb77"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb77-1"><a></a><span class="co">#!/bin/bash</span></span>
 <span id="cb77-2"><a></a></span>
 <span id="cb77-3"><a></a><span class="co">#SBATCH --job-name=my_task_array</span></span>
 <span id="cb77-4"><a></a><span class="co">#SBATCH --array=1-5</span></span>
 <span id="cb77-5"><a></a></span>
-<span id="cb77-6"><a></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb77-6"><a></a><span class="ex">...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here we are creating an array of tasks numbered from 1-5. When you submit this script, you will see five tasks submitted to the queue.</p>
 <p>Now that we know how to create an array of tasks, we will want to do something useful with it. When you create an array, each individual task will have a unique variable called <code>SLURM_ARRAY_TASK_ID</code>. So for example, if we launch an array of 5 tasks, the first task will have the value <code>1</code>. Why is this useful? Well, we can use this variable to alter the program slightly. Take for example our list of files we need to process:</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb78-1"><a></a><span class="co">#!/bin/bash</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb78"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb78-1"><a></a><span class="co">#!/bin/bash</span></span>
 <span id="cb78-2"><a></a><span class="co">#SBATCH --job-name=my_task_array</span></span>
 <span id="cb78-3"><a></a><span class="co">#SBATCH --array=0-4</span></span>
 <span id="cb78-4"><a></a><span class="co">#SBATCH --time=00:10:00</span></span>
 <span id="cb78-5"><a></a></span>
 <span id="cb78-6"><a></a><span class="va">FILENAME</span><span class="op">=</span><span class="st">"file_</span><span class="va">${SLURM_ARRAY_TASK_ID}</span><span class="st">.txt"</span></span>
-<span id="cb78-7"><a></a><span class="ex">python</span> process.py <span class="va">$FILENAME</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb78-7"><a></a><span class="ex">python</span> process.py <span class="va">$FILENAME</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This will create a new bash variable called <code>FILENAME</code> by concatenating <code>file_</code> the current task’s (i.e.&nbsp;0, for the first task, 1 for the second task, etc) and <code>.txt</code>.</p>
 <p>If we run the previous example, we will see that we have five jobs named exactly the same thing <code>my_task_array</code>. This is okay, but we can be a little bit more clear as to which task is running, i.e.&nbsp;which task is processing which file?</p>
 <p>We can use some special variables in our bash script to make this more clear. These are <code>%A</code> that is the main job id, and <code>%a</code> that is the task array id.</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb79-1"><a></a><span class="co">#!/bin/bash</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb79"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb79-1"><a></a><span class="co">#!/bin/bash</span></span>
 <span id="cb79-2"><a></a></span>
 <span id="cb79-3"><a></a><span class="co">#SBATCH --error=my_task_array.%A_%a.out</span></span>
 <span id="cb79-4"><a></a><span class="co">#SBATCH --output=my_task_array.%A_%a.out</span></span>
-<span id="cb79-5"><a></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb79-5"><a></a><span class="ex">...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now, every task in our array will have a slightly different name because of the <code>%a</code> and therefore we will be able to determine which job is processing which file.</p>
 <p>Let’s move on to the second example, where we have a Deep Learning training program and we want to try different parameters. In this case, we can again use a task array.</p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb80-1"><a></a><span class="co">#!/bin/bash</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb80"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb80-1"><a></a><span class="co">#!/bin/bash</span></span>
 <span id="cb80-2"><a></a></span>
-<span id="cb80-3"><a></a><span class="co">#SBATCH --array=1-10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb80-3"><a></a><span class="co">#SBATCH --array=1-10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>We could either pass the <code>SLURM_ARRAY_TASK_ID</code> as a command line argument to the script:</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb81-1"><a></a><span class="ex">python</span> training.py <span class="at">--learning-rate</span> <span class="va">$SLURM_ARRAY_TASK_ID</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb81"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb81-1"><a></a><span class="ex">python</span> training.py <span class="at">--learning-rate</span> <span class="va">$SLURM_ARRAY_TASK_ID</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>But in this case, we could have to properly calculate the correct learning rate from the <code>SLURM_ARRAY_TASK_ID</code> value (remember that in my sbatch script I set <code>--array=1-5</code>). But bash only performs integer arithmetic, therefore we will need to calculate the correct learning rate in something else.</p>
 <p>Instead of passing the learning rate via a command line argument. We can get the value directly from our python script and calculate the value.</p>
-<div class="sourceCode" id="cb82"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a></a><span class="im">import</span> os</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb82"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a></a><span class="im">import</span> os</span>
 <span id="cb82-2"><a></a></span>
 <span id="cb82-3"><a></a>task_id <span class="op">=</span> <span class="bu">int</span>(os.environ[<span class="st">"SLURM_ARRAY_TASK_ID"</span>])</span>
-<span id="cb82-4"><a></a>learning_rate <span class="op">=</span> task_id <span class="op">/</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb82-4"><a></a>learning_rate <span class="op">=</span> task_id <span class="op">/</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here we are using the builtin <code>os</code> module in Python, getting the environment variable from the dictionary <code>environ</code> and parsing the value as an integer. Then we can calculate the appropriate learning rate using this value. So for example, if <code>SLURM_ARRAY_TASK_ID</code> is set to 1. Our learning rate would be 0.01 for this task.</p>
 <p>If you’re creating a job task array, you may want to create hundreds of jobs. And of course, you don’t want to use up the entire cluster leaving no resources for anybody else! Therefore, you will only want a maximum number of tasks to run at any one time.</p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb83-1"><a></a><span class="co">#!/bin/bash</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb83"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb83-1"><a></a><span class="co">#!/bin/bash</span></span>
 <span id="cb83-2"><a></a></span>
-<span id="cb83-3"><a></a><span class="co">#SBATCH --array=1-100%5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb83-3"><a></a><span class="co">#SBATCH --array=1-100%5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This will create a job task array of 100 jobs numbered from 1 to 100. But we have added an additional argument <code>%5</code> which means that only 5 jobs can run at any one time for this task array. If you have five tasks running, the other 95 tasks will wait.</p>
 <p>If, at any point, you want to change how many jobs can run simultaineously, you can update this ‘throttle’ value using <code>scontrol</code>:</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb84-1"><a></a><span class="ex">scontrol</span> update ArrayTaskThrottle=<span class="op">&lt;</span>count<span class="op">&gt;</span> JobId=<span class="op">&lt;</span>jobID<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb84"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb84-1"><a></a><span class="ex">scontrol</span> update ArrayTaskThrottle=<span class="op">&lt;</span>count<span class="op">&gt;</span> JobId=<span class="op">&lt;</span>jobID<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>So if we’ve already launched a job task array with the job id of <code>50602</code> that has a throttle value of 5 (only 5 tasks will run at once), we can change it to 10 using:</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb85-1"><a></a><span class="ex">scontrol</span> update ArrayTaskThrottle=10 JobId=50602</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb85"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb85-1"><a></a><span class="ex">scontrol</span> update ArrayTaskThrottle=10 JobId=50602</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section></section>
 <section>
 <section id="a-guided-walk-through" class="title-slide slide level1 center">
@@ -784,33 +784,33 @@ Jay Paul Morgan
 <h2>A guided walk through – environment</h2>
 <p>In this section we’re going to give an example walk through of working with the HPC cluster. In this example, we’re going to write our scripts locally, including the slurm submission script, and when they’re ready, we’ll send them to the cluster to perform the actual computation.</p>
 <p>Let’s imagine we’re starting a new project, and are programming our scripts in Python. Now is a good time to create a new conda environment to install our packages we’re going to use for our research. We’ll create this environment with (replacing <code>&lt;env-name&gt;</code> with whatever we want to call this environment):</p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb86-1"><a></a><span class="ex">conda</span> create <span class="at">--name</span> <span class="op">&lt;</span>env-name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb86"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb86-1"><a></a><span class="ex">conda</span> create <span class="at">--name</span> <span class="op">&lt;</span>env-name<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>and then activate it:</p>
-<div class="sourceCode" id="cb87"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb87-1"><a></a><span class="ex">conda</span> activate <span class="op">&lt;</span>env-name<span class="op">&gt;</span></span>
-<span id="cb87-2"><a></a><span class="ex">conda</span> install python=3.9</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb87"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb87-1"><a></a><span class="ex">conda</span> activate <span class="op">&lt;</span>env-name<span class="op">&gt;</span></span>
+<span id="cb87-2"><a></a><span class="ex">conda</span> install python=3.9</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="writing-our-scripts" class="slide level2">
 <h2>Writing our scripts</h2>
 <p>Let us also image we’ve just wrote the following script to create a lorenz attractor: <a href="https://pageperso.lis-lab.fr/jay.morgan/resources/2021-programming-level-up/lectures/week-5/lorenz.py">lorenz.py</a></p>
 <p>The specific implementation of this script is not particularly important for this walk through. Just know that we’re importing a few packages such as numpy and matplotlib. Then, we’re performing some computation, and saving the results to analyse later. As this script uses external libraries, we need to install them:</p>
-<div class="sourceCode" id="cb88"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb88-1"><a></a><span class="ex">conda</span> install numpy matplotlib</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb88"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb88-1"><a></a><span class="ex">conda</span> install numpy matplotlib</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="writing-our-job-submission-script" class="slide level2">
 <h2>Writing our job submission script</h2>
 <p>Since we want our calculations to be performed on the cluster, we will need to also write a job submission script (let’s call this <code>submit-job.sh</code>) in bash to pass to SLURM.</p>
-<div class="sourceCode" id="cb89"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb89-1"><a></a><span class="co">#!/bin/bash</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb89"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb89-1"><a></a><span class="co">#!/bin/bash</span></span>
 <span id="cb89-2"><a></a></span>
 <span id="cb89-3"><a></a><span class="co">#SBATCH --job-name=lorenz_attractor</span></span>
 <span id="cb89-4"><a></a><span class="co">#SBATCH --output=lorenz_attractor.log</span></span>
 <span id="cb89-5"><a></a><span class="co">#SBATCH --error=lorenz_attractor.log</span></span>
 <span id="cb89-6"><a></a><span class="co">#SBATCH --time=00:10:00</span></span>
 <span id="cb89-7"><a></a></span>
-<span id="cb89-8"><a></a><span class="ex">python</span> lorenz.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb89-8"><a></a><span class="ex">python</span> lorenz.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="replicating-our-environment-on-the-cluster" class="slide level2">
 <h2>Replicating our environment on the cluster</h2>
 <p>As we’ve installed external packages in our local development environment, we will want to ensure that when we run the calculations on the cluster, it will be using the same versions of packages. Conda makes this a lot easier. First, we export our environment to a recipe file:</p>
-<div class="sourceCode" id="cb90"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb90-1"><a></a><span class="ex">conda</span> env export <span class="at">--no-builds</span> <span class="op">&gt;</span> environment.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb90"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb90-1"><a></a><span class="ex">conda</span> env export <span class="at">--no-builds</span> <span class="op">&gt;</span> environment.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="sending-our-scripts-to-the-cluster" class="slide level2">
 <h2>Sending our scripts to the cluster</h2>
@@ -821,35 +821,35 @@ Jay Paul Morgan
 <li><code>submit-job.sh</code></li>
 </ul>
 <p>While we can send a folder (and the containing files), let’s send them one at a time:</p>
-<div class="sourceCode" id="cb91"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb91-1"><a></a><span class="fu">scp</span> lorenz.py <span class="op">&lt;</span>hostname<span class="op">&gt;</span>:<span class="op">&lt;</span>destination-path<span class="op">&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb91"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb91-1"><a></a><span class="fu">scp</span> lorenz.py <span class="op">&lt;</span>hostname<span class="op">&gt;</span>:<span class="op">&lt;</span>destination-path<span class="op">&gt;</span></span>
 <span id="cb91-2"><a></a><span class="fu">scp</span> environment.yml <span class="op">&lt;</span>hostname<span class="op">&gt;</span>:<span class="op">&lt;</span>destination-path<span class="op">&gt;</span></span>
-<span id="cb91-3"><a></a><span class="fu">scp</span> submit-job.sh <span class="op">&lt;</span>hostname<span class="op">&gt;</span>:<span class="op">&lt;</span>destination-path<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb91-3"><a></a><span class="fu">scp</span> submit-job.sh <span class="op">&lt;</span>hostname<span class="op">&gt;</span>:<span class="op">&lt;</span>destination-path<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>where <code>&lt;hostname&gt;</code> is the hostname/IP address that you’ve used to connect to the login node on the cluster before. <code>&lt;destination-path&gt;</code> is the path to where you want to save the files.</p>
 </section>
 <section id="logging-into-the-cluster" class="slide level2">
 <h2>Logging into the cluster</h2>
 <p>Now that our files are on the cluster, we can login:</p>
-<div class="sourceCode" id="cb92"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb92-1"><a></a><span class="fu">ssh</span> <span class="op">&lt;</span>username<span class="op">&gt;</span>@<span class="op">&lt;</span>hostname<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb92"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb92-1"><a></a><span class="fu">ssh</span> <span class="op">&lt;</span>username<span class="op">&gt;</span>@<span class="op">&lt;</span>hostname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>At which point, we’ve logged into the login node, and then we need to change directory to where we saved the files:</p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb93-1"><a></a><span class="bu">cd</span> <span class="op">&lt;</span>destination-path<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb93"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb93-1"><a></a><span class="bu">cd</span> <span class="op">&lt;</span>destination-path<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="re-creating-our-development-environment" class="slide level2">
 <h2>Re-creating our development environment</h2>
 <p>Now that we’re in the same folder as our scripts, we’re almost ready to submit our job. First, we need to recreate our development environment from our <code>environment.yml</code> file.</p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb94-1"><a></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb94"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb94-1"><a></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And activate our newly created environment:</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb95-1"><a></a><span class="ex">conda</span> activate <span class="op">&lt;</span>env-name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb95"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb95-1"><a></a><span class="ex">conda</span> activate <span class="op">&lt;</span>env-name<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="submitting-our-job" class="slide level2">
 <h2>Submitting our job</h2>
 <p>Now we can submit our job:</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb96-1"><a></a><span class="ex">sbatch</span> submit-job.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb96"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb96-1"><a></a><span class="ex">sbatch</span> submit-job.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>We can check the progress of our job with <code>squeue</code>, or its already completed, look at the job history with <code>sacct</code>.</p>
 </section>
 <section id="downloading-the-results" class="slide level2">
 <h2>Downloading the results</h2>
 <p>If our job runs successfully, a <code>data.pkl</code> file will be created. Back on our local computers, we will need to run the following to download it:</p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb97-1"><a></a><span class="fu">scp</span> <span class="op">&lt;</span>hostname<span class="op">&gt;</span>:<span class="op">&lt;</span>destination-path<span class="op">&gt;</span>/data.pkl ./</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb97"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb97-1"><a></a><span class="fu">scp</span> <span class="op">&lt;</span>hostname<span class="op">&gt;</span>:<span class="op">&lt;</span>destination-path<span class="op">&gt;</span>/data.pkl ./</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This will download the file into the current directory.</p>
 </section>
 <section id="analysing-the-results" class="slide level2">
@@ -860,14 +860,14 @@ Jay Paul Morgan
 <section id="useful-features-x11-forwarding" class="slide level2">
 <h2>Useful features – X11 Forwarding</h2>
 <p>If we’re performing analysis interactively using the cluster, we’ll often want to visualise the results, using matplotlib for example. To <em>see</em> our plots display like they would on our local machine when we call <code>plt.plot</code> or <code>plt.show()</code>, we will need to ensure that we’re using something called <code>X11 Forwarding</code>. To enable <code>X11 Forwarding</code>, we use the <code>-X</code> option when <code>ssh</code>‘ing into the cluster and compute nodes (i.e.&nbsp;it will need to be enabled on every ’hop’ so to speak).</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb98-1"><a></a><span class="fu">ssh</span> <span class="at">-X</span> <span class="op">&lt;&lt;remote-host&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb98"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb98-1"><a></a><span class="fu">ssh</span> <span class="at">-X</span> <span class="op">&lt;&lt;remote-host&gt;&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If want to enable it by default, we can enable it in our <code>ssh</code> config file:</p>
-<div class="sourceCode" id="cb99"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb99-1"><a></a><span class="ex">Host</span> cluster</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb99"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb99-1"><a></a><span class="ex">Host</span> cluster</span>
 <span id="cb99-2"><a></a> <span class="ex">HostName</span> sms-ext.lis-lab.fr</span>
 <span id="cb99-3"><a></a> <span class="ex">FowardX11</span> yes</span>
-<span id="cb99-4"><a></a> <span class="ex">User</span> <span class="op">&lt;&lt;username&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb99-4"><a></a> <span class="ex">User</span> <span class="op">&lt;&lt;username&gt;&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>After setting up <code>X11 Forwarding</code> correctly, and when logged into the remote host, we should be able to echo a variable called <code>$DISPLAY</code>.</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb100-1"><a></a><span class="bu">echo</span> <span class="va">$DISPLAY</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb100"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb100-1"><a></a><span class="bu">echo</span> <span class="va">$DISPLAY</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If <code>$DISPLAY</code> has a value, we know that X11 Forwarding has been setup correctly, and we’re ready to do some plotting!</p>
 </section>
 <section id="useful-features-jupyter-notebooks" class="slide level2">
@@ -876,11 +876,11 @@ Jay Paul Morgan
 <p>In a nut-shell, a reverse ssh tunnel allows you to redirect data on a remote port to a local port.</p>
 <p>Therefore, we can, using a reverse ssh tunnel, start a jupyter notebook on the supercomputer and access it using the web browser on our local computer!</p>
 <p>To begin, we can create an interactive job on the cluster:</p>
-<div class="sourceCode" id="cb101"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb101-1"><a></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>01:00:00 <span class="at">--pty</span> bash <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb101"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb101-1"><a></a><span class="ex">srun</span> <span class="at">--time</span><span class="op">=</span>01:00:00 <span class="at">--pty</span> bash <span class="at">-l</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And start our jupyter notebook, specifying a port that will not be in use:</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb102-1"><a></a><span class="ex">jupyter</span> notebook <span class="at">--port</span> 30333</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb102"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb102-1"><a></a><span class="ex">jupyter</span> notebook <span class="at">--port</span> 30333</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>With our notebook server now started on the 30333 port, we will want to create an ssh tunnel from our local computer, to the cluster’s login node, and then a tunnel from the login node to the specific compute node where the job is running:</p>
-<div class="sourceCode" id="cb103"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb103-1"><a></a><span class="fu">ssh</span> <span class="at">-L</span> 30333:localhost:30333 <span class="op">&lt;&lt;cluster-login-node&gt;&gt;</span> ssh <span class="at">-L</span> 30333:localhost:30333 <span class="op">&lt;&lt;cluster-compute-node&gt;&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb103"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb103-1"><a></a><span class="fu">ssh</span> <span class="at">-L</span> 30333:localhost:30333 <span class="op">&lt;&lt;cluster-login-node&gt;&gt;</span> ssh <span class="at">-L</span> 30333:localhost:30333 <span class="op">&lt;&lt;cluster-compute-node&gt;&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If everything goes well, we should now be able to open up our web browser, navigate to <code>localhost:30333</code> and see our jupyter notebooks.</p>
 
 
@@ -1074,7 +1074,7 @@ Jay Paul Morgan
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -1148,13 +1148,14 @@ Jay Paul Morgan
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

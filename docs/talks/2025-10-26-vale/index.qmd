@@ -1,0 +1,13 @@
+---
+title: "A Review of AI Agent Reasoning with Values"
+description: "Poster presentation of the research"
+categories: [conference,poster]
+author: Jay Paul Morgan
+date: 2025-10-26
+event: "Value Engineering in Artificial Intelligence (VALE) Workshop, 2025"
+event_url: "https://vale2025.iiia.csic.es/program"
+location: Bologna, Italy
+image: poster.png
+---
+
+![](poster.png){width="1000"}

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<link rel="alternate" hreflang="en" href="https://morganwastaken.com/teaching/2023-2024/Programming Level-up/lecture-8-reveal.html" />
-<link rel="alternate" hreflang="cy" href="https://morganwastaken.com/cy/teaching/2023-2024/Programming Level-up/lecture-8-reveal.cy.html" />
+<link rel="alternate" hreflang="en" href="/teaching/2023-2024/Programming Level-up/lecture-8-reveal.html" />
+<link rel="alternate" hreflang="cy" href="/cy/teaching/2023-2024/Programming Level-up/lecture-8-reveal.cy.html" />
 <script src="../../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Jay Paul Morgan">
   <title>Jay Paul Morgan – All about Git</title>
@@ -97,7 +97,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Q1SQLS91HT"></script>
 
   <script type="text/javascript">
@@ -238,11 +238,11 @@ Jay Paul Morgan
 <section id="installing-git" class="title-slide slide level1 center">
 <h1>Installing Git</h1>
 <p>Depending on the system you’re using, Git may or may not already be installed. If you’re using a debian based operating system, and you don’t have Git installed, you’ll want to use <code>apt</code> to install it.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="fu">sudo</span> apt install git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="fu">sudo</span> apt install git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Note</strong> You’ll need super-user privileges to install Git in this way.</p>
 <p>If you’re using a different operating system, you can refer to Git’s own documentation for each supported system: <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
 <p>We can check that Git is installed by running the following command into the terminal:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="bu">type</span> git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="bu">type</span> git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This, running on my computer, returns the path to the executable:</p>
 <pre><code>git is /usr/bin/git</code></pre>
 <p>You’ll probably see something similar on your machine.</p>
@@ -253,21 +253,21 @@ Jay Paul Morgan
 <h1>Setting up a Git Repository</h1>
 <p>Let’s imagine we’re starting a new project. All of our program scripts for this project are going to go into a single folder I’ve named ‘my-new-project’.</p>
 <p>So far, this directory is empty:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>my-new-project % ls -lha</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>my-new-project % ls -lha</span>
 <span id="cb4-2"><a></a>total 0</span>
 <span id="cb4-3"><a></a>drwxr-xr-x   2 jaypaulmorgan  wheel    64B 12 Nov 12:59 .</span>
-<span id="cb4-4"><a></a>drwxrwxrwt  16 root           wheel   512B 12 Nov 12:59 ..</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-4"><a></a>drwxrwxrwt  16 root           wheel   512B 12 Nov 12:59 ..</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Even though we have no files yet, we can initialise a Git repository for this directory (and this will work for directories that already have existing files as well) by using the <code>init</code> sub-command:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="fu">git</span> init</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Initialized empty Git repository in my-new-project/.git/</code></pre>
 <p>If successful, this command will tell us that it’s created a git <em>repository</em>. Formally, it has created a <code>.git</code> folder within our project folder that contains information about this git repository, i.e.&nbsp;history, name, etc.</p>
 <p>A <em>repository</em> in this context is the directory of things that are going to be tracked by Git. In this context of this lecture, we’ll often use repository and directory interchangeably.</p>
 <p>Now if we list the files and folders in this directory again, we should see there is only one new folder, the <code>.git</code> folder that Git told us it had created.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a></a><span class="ex">my-new-project</span> % ls <span class="at">-lha</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a></a><span class="ex">my-new-project</span> % ls <span class="at">-lha</span></span>
 <span id="cb7-2"><a></a><span class="ex">total</span> 0</span>
 <span id="cb7-3"><a></a><span class="ex">drwxr-xr-x</span>   3 jaypaulmorgan  wheel    96B 12 Nov 13:01 .</span>
 <span id="cb7-4"><a></a><span class="ex">drwxrwxrwt</span>  16 root           wheel   512B 12 Nov 12:59 ..</span>
-<span id="cb7-5"><a></a><span class="ex">drwxr-xr-x</span>   9 jaypaulmorgan  wheel   288B 12 Nov 13:01 .git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-5"><a></a><span class="ex">drwxr-xr-x</span>   9 jaypaulmorgan  wheel   288B 12 Nov 13:01 .git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>With Git now initialised in our project folder, we can start our programming!</p>
 </section>
 
@@ -275,18 +275,18 @@ Jay Paul Morgan
 <h1>Staging files</h1>
 <p>After some time of programming, we’ve managed to create a couple of files and folders.</p>
 <p>Let’s list these out (using the <code>tree</code> command so it looks nice):</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a></a><span class="ex">my-new-project</span> % tree</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a></a><span class="ex">my-new-project</span> % tree</span>
 <span id="cb8-2"><a></a><span class="bu">.</span></span>
 <span id="cb8-3"><a></a><span class="ex">├──</span> Makefile</span>
 <span id="cb8-4"><a></a><span class="ex">├──</span> README.md</span>
 <span id="cb8-5"><a></a><span class="ex">└──</span> src</span>
 <span id="cb8-6"><a></a>    <span class="ex">└──</span> main.cpp</span>
 <span id="cb8-7"><a></a></span>
-<span id="cb8-8"><a></a><span class="ex">2</span> directories, 3 files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-8"><a></a><span class="ex">2</span> directories, 3 files</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>In this <em>hypothetical</em> scenario, we’ve been programming and we’ve created a main.cpp C++ file, and a Makefile to specify how to compile the program. We’ve also written a README.md markdown file that tells other developers how to use the program.</p>
 <p><strong>BUT</strong> We haven’t <em>checkpointed</em> these files. What does <em>checkpoint</em> mean here? Well if we make any further changes to the program, we’ll no longer be able to get back to the project <em>as it currently is</em>. By <em>checkpointing</em> the program in it’s current state, even if we make some changes, we’ll still be able to come back to this checkpoint at a later point in time.</p>
 <p>To start <em>checkpointing</em> or as Git calls it <strong>commiting</strong> our files, we can first look at the current status of these files using the aptly-named sub-command <code>status</code>:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a></a><span class="ex">my-new-project</span> % git status</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a></a><span class="ex">my-new-project</span> % git status</span>
 <span id="cb9-2"><a></a><span class="ex">On</span> branch main</span>
 <span id="cb9-3"><a></a></span>
 <span id="cb9-4"><a></a><span class="ex">No</span> commits yet</span>
@@ -297,7 +297,7 @@ Jay Paul Morgan
 <span id="cb9-9"><a></a>    <span class="ex">README.md</span></span>
 <span id="cb9-10"><a></a>    <span class="ex">src/</span></span>
 <span id="cb9-11"><a></a></span>
-<span id="cb9-12"><a></a><span class="ex">nothing</span> added to commit but untracked files present <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> to track<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-12"><a></a><span class="ex">nothing</span> added to commit but untracked files present <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> to track<span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here we see that we’re on the <em>branch</em> <code>main</code> (we’ll come back to this at a later point in the lecture). We don’t have any commit yet, i.e. no checkpoints we can revert to. And, finally, we have some untracked files, i.e.&nbsp;all of the files we’ve created at this point.</p>
 <p>Helpfully, Git has told us if we want to start tracking the changes to the files, we should use the <code>add</code> sub-command to <strong>stage</strong> the files ready for <strong>committing</strong>.</p>
 <p>This is a perfect time to talk about the different statuses that each of the files could be in.</p>
@@ -322,11 +322,11 @@ Jay Paul Morgan
 </div>
 </div>
 <p>In this diagram we show there are various ‘states’ each of the files or folders could be in. To commit a file or a folder, we’ll first want to stage the changes with</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a></a><span class="fu">git</span> add <span class="op">&lt;</span>file/folder<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a></a><span class="fu">git</span> add <span class="op">&lt;</span>file/folder<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>and then when all the changes we want to commit are staged, we can finalise the commit using:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="fu">git</span> commit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="fu">git</span> commit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Let’s use these on our project now.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a></a><span class="ex">my-new-project</span> % git add .</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a></a><span class="ex">my-new-project</span> % git add .</span>
 <span id="cb12-2"><a></a><span class="ex">my-new-project</span> % git status</span>
 <span id="cb12-3"><a></a><span class="ex">On</span> branch main</span>
 <span id="cb12-4"><a></a></span>
@@ -336,22 +336,22 @@ Jay Paul Morgan
 <span id="cb12-8"><a></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git rm --cached &lt;file&gt;..."</span> to unstage<span class="kw">)</span></span>
 <span id="cb12-9"><a></a>    <span class="ex">new</span> file:   Makefile</span>
 <span id="cb12-10"><a></a>    <span class="ex">new</span> file:   README.md</span>
-<span id="cb12-11"><a></a>    <span class="ex">new</span> file:   src/main.cpp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-11"><a></a>    <span class="ex">new</span> file:   src/main.cpp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>We’ve first used <code>git add .</code> to add all files in the current directory (as denoted by ‘.’ which means the current directory in Linux), and then re-ran the <code>git status</code> command, which shows that all of our files are now ready to be committed, i.e.&nbsp;they are staged!</p>
 <p>If we wanted to remove a file from the staging area, we should use <code>git rm --cached &lt;name-of-file-or-folder&gt;</code> to un-stage it. <strong>Note</strong> this doesn’t delete the file/folder, just un-stages it.</p>
 <p>Now, with the files in the staging area, we’re ready to commit them. For this, we use the <code>git commit</code> command. This will bring up a text editor where we can write what in general has changed since the last commit. This is called the commit message. When you’re done describing the changes that’s been made, just save and exit the file.</p>
 <p>There is a shorthand way to do this using the <code>-m</code> flag:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">'This is my commit message'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">'This is my commit message'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>After committing we’ll get some output about what’s been checkpointed:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a></a><span class="ex">[main</span> <span class="er">(</span><span class="ex">root-commit</span><span class="kw">)</span> <span class="ex">b587617]</span> This is my commit message</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a></a><span class="ex">[main</span> <span class="er">(</span><span class="ex">root-commit</span><span class="kw">)</span> <span class="ex">b587617]</span> This is my commit message</span>
 <span id="cb14-2"><a></a> <span class="ex">3</span> files changed, 254 insertions<span class="er">(</span><span class="ex">+</span><span class="kw">)</span></span>
 <span id="cb14-3"><a></a> <span class="ex">create</span> mode 100644 Makefile</span>
 <span id="cb14-4"><a></a> <span class="ex">create</span> mode 100644 README.md</span>
-<span id="cb14-5"><a></a> <span class="ex">create</span> mode 100644 src/main.cpp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-5"><a></a> <span class="ex">create</span> mode 100644 src/main.cpp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Finally if we run <code>git status</code> again, we’ll see there are no changes since we’ve last committed (this makes sense since we just committed all of our changes).</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a></a><span class="ex">my-new-project</span> % git status</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a></a><span class="ex">my-new-project</span> % git status</span>
 <span id="cb15-2"><a></a><span class="ex">On</span> branch main</span>
-<span id="cb15-3"><a></a><span class="ex">nothing</span> to commit, working tree clean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-3"><a></a><span class="ex">nothing</span> to commit, working tree clean</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 
 <section id="log" class="title-slide slide level1 center">
@@ -359,21 +359,21 @@ Jay Paul Morgan
 <p>As we make more changes to the project, we’ll want to look at the history of changes to see what has changed and when.</p>
 <p>First, let’s make some more changes</p>
 <p>There is a simple sub-command named <code>log</code> that will allow us to see a sequential list of changes to the project.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a></a><span class="ex">my-new-project</span> % git status</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a></a><span class="ex">my-new-project</span> % git status</span>
 <span id="cb16-2"><a></a><span class="ex">On</span> branch main</span>
 <span id="cb16-3"><a></a><span class="ex">Changes</span> not staged for commit:</span>
 <span id="cb16-4"><a></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git add &lt;file&gt;..."</span> to update what will be committed<span class="kw">)</span></span>
 <span id="cb16-5"><a></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git restore &lt;file&gt;..."</span> to discard changes in working directory<span class="kw">)</span></span>
 <span id="cb16-6"><a></a>    <span class="ex">modified:</span>   src/main.cpp</span>
 <span id="cb16-7"><a></a></span>
-<span id="cb16-8"><a></a><span class="ex">no</span> changes added to commit <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> and/or <span class="st">"git commit -a"</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-8"><a></a><span class="ex">no</span> changes added to commit <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> and/or <span class="st">"git commit -a"</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>We’ve made a change to main.cpp, fixing a bug in the process. Now that we’re happy with the current state of the project (there are no more bugs that we’re currently aware of, but don’t worry there will always be more!), we want to create another commit.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a></a><span class="ex">my-new-project</span> % git add src/main.cpp </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a></a><span class="ex">my-new-project</span> % git add src/main.cpp </span>
 <span id="cb17-2"><a></a><span class="ex">my-new-project</span> % git commit <span class="at">-m</span> <span class="st">'Fix reading file bug caused by typo'</span></span>
 <span id="cb17-3"><a></a><span class="ex">[main</span> 1a5d58e] Fix reading file bug caused by typo</span>
-<span id="cb17-4"><a></a> <span class="ex">1</span> file changed, 1 deletion<span class="er">(</span><span class="ex">-</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-4"><a></a> <span class="ex">1</span> file changed, 1 deletion<span class="er">(</span><span class="ex">-</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now if we use the command <code>git log</code>, we’ll see a sequential view of how the project has changed (from the perspective of checkpoints).</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a></a><span class="ex">my-new-project</span> % git log</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a></a><span class="ex">my-new-project</span> % git log</span>
 <span id="cb18-2"><a></a><span class="ex">commit</span> 1a5d58e3e0c7796f7c5eb77083a6773f158d48b8 <span class="er">(</span><span class="ex">HEAD</span> <span class="at">-</span><span class="op">&gt;</span> main<span class="kw">)</span></span>
 <span id="cb18-3"><a></a><span class="ex">Author:</span> Jay Paul Morgan <span class="op">&lt;</span>email@email.com<span class="op">&gt;</span></span>
 <span id="cb18-4"><a></a><span class="ex">Date:</span>   Sun Nov 12 13:38:47 2023 +0100</span>
@@ -384,7 +384,7 @@ Jay Paul Morgan
 <span id="cb18-9"><a></a><span class="ex">Author:</span> Jay Paul Morgan <span class="op">&lt;</span>email@email.com<span class="op">&gt;</span></span>
 <span id="cb18-10"><a></a><span class="ex">Date:</span>   Sun Nov 12 13:28:23 2023 +0100</span>
 <span id="cb18-11"><a></a></span>
-<span id="cb18-12"><a></a>    <span class="ex">This</span> is my commit message</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-12"><a></a>    <span class="ex">This</span> is my commit message</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here we see that older commits are at the bottom, and the most recent at the top. If we have many commits, we can scroll through them using the <code>up</code> and <code>down</code> arrows on our keyboard, and <code>q</code> to quit.</p>
 </section>
 
@@ -435,18 +435,18 @@ Jay Paul Morgan
 <section id="creating-checking-out-branches" class="slide level2">
 <h2>Creating &amp; Checking out Branches</h2>
 <p>To create a new branch use the <code>branch</code> sub-command, specifying the name of the new branch:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a></a><span class="ex">my-new-project</span> % git branch develop</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a></a><span class="ex">my-new-project</span> % git branch develop</span>
 <span id="cb19-2"><a></a><span class="ex">my-new-project</span> % git branch</span>
 <span id="cb19-3"><a></a>  <span class="ex">develop</span></span>
-<span id="cb19-4"><a></a><span class="ex">*</span> main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-4"><a></a><span class="ex">*</span> main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here, we’ve created a new branch develop, and listed all of the existing branches using <code>git branch</code>.</p>
 <p>The asterisk (*) next to the branch name tells us what branch we’re currently on.</p>
 <p>To change branches we can <code>checkout</code> a new branch:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a></a><span class="ex">my-new-project</span> % git checkout develop</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a></a><span class="ex">my-new-project</span> % git checkout develop</span>
 <span id="cb20-2"><a></a><span class="ex">Switched</span> to branch <span class="st">'develop'</span></span>
 <span id="cb20-3"><a></a><span class="ex">my-new-project</span> % git branch</span>
 <span id="cb20-4"><a></a><span class="ex">*</span> develop</span>
-<span id="cb20-5"><a></a>  <span class="ex">main</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-5"><a></a>  <span class="ex">main</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Our project now looks like:</p>
 <div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
@@ -466,7 +466,7 @@ Jay Paul Morgan
 </div>
 <p>Git will tell us when it’s changing branches as you see in the above command.</p>
 <p>Now that we’re on the new branch, we can start to make some changes, stage, and commit them:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a></a><span class="ex">my-new-project</span> % git status</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a></a><span class="ex">my-new-project</span> % git status</span>
 <span id="cb21-2"><a></a><span class="ex">On</span> branch develop</span>
 <span id="cb21-3"><a></a><span class="ex">Changes</span> not staged for commit:</span>
 <span id="cb21-4"><a></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git add &lt;file&gt;..."</span> to update what will be committed<span class="kw">)</span></span>
@@ -477,7 +477,7 @@ Jay Paul Morgan
 <span id="cb21-9"><a></a><span class="ex">my-new-project</span> % git add src/main.cpp  </span>
 <span id="cb21-10"><a></a><span class="ex">my-new-project</span> % git commit <span class="at">-m</span> <span class="st">'Add new feature'</span></span>
 <span id="cb21-11"><a></a><span class="ex">[develop</span> a59f1a7] Add new feature</span>
-<span id="cb21-12"><a></a> <span class="ex">1</span> file changed, 1 insertion<span class="er">(</span><span class="ex">+</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb21-12"><a></a> <span class="ex">1</span> file changed, 1 insertion<span class="er">(</span><span class="ex">+</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now our project looks like:</p>
 <div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
@@ -501,14 +501,14 @@ Jay Paul Morgan
 <h2>Merging Branches</h2>
 <p>Our ‘feature’ is complete, and we have a working state of the program, so we’ll want to merge this new feature back into the <code>main</code> branch.</p>
 <p>First, we’ll checkout the <code>main</code> branch</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a></a><span class="ex">my-new-project</span> % git checkout main</span>
-<span id="cb22-2"><a></a><span class="ex">Switched</span> to branch <span class="st">'main'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a></a><span class="ex">my-new-project</span> % git checkout main</span>
+<span id="cb22-2"><a></a><span class="ex">Switched</span> to branch <span class="st">'main'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And now, we’ll merge the develop branch <em>into</em> the main branch using the <code>merge</code> sub-command:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a></a><span class="ex">my-new-project</span> % git merge develop</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a></a><span class="ex">my-new-project</span> % git merge develop</span>
 <span id="cb23-2"><a></a><span class="ex">Updating</span> 1a5d58e..a59f1a7</span>
 <span id="cb23-3"><a></a><span class="ex">Fast-forward</span></span>
 <span id="cb23-4"><a></a> <span class="ex">src/main.cpp</span> <span class="kw">|</span> <span class="ex">1</span> +</span>
-<span id="cb23-5"><a></a> <span class="ex">1</span> file changed, 1 insertion<span class="er">(</span><span class="ex">+</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-5"><a></a> <span class="ex">1</span> file changed, 1 insertion<span class="er">(</span><span class="ex">+</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Our project now looks like:</p>
 <div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
@@ -534,23 +534,23 @@ Jay Paul Morgan
 <h2>Merge Conflicts</h2>
 <p>Sometimes, though, the branches cannot automatically be merged together. This can happen when the branches being merged have edited the same piece of text. Which edits does Git keep when merging? It’s a piece of software, not a mind-reader! It can’t know the answer to this question so we have to tell Git what to keep and what to throw away to complete the merging process.</p>
 <p>So, let’s imagine we’re trying to merge two branches that have edited the same text. I’ve created this scenario by editing the title of the README file in two branches and tried to merge them. At this point this happened:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a></a><span class="ex">my-new-project</span> % git merge develop</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a></a><span class="ex">my-new-project</span> % git merge develop</span>
 <span id="cb24-2"><a></a><span class="ex">Auto-merging</span> README.md</span>
 <span id="cb24-3"><a></a><span class="ex">CONFLICT</span> <span class="er">(</span><span class="ex">content</span><span class="kw">)</span><span class="bu">:</span> Merge conflict in README.md</span>
-<span id="cb24-4"><a></a><span class="ex">Automatic</span> merge failed<span class="kw">;</span> <span class="ex">fix</span> conflicts and then commit the result.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb24-4"><a></a><span class="ex">Automatic</span> merge failed<span class="kw">;</span> <span class="ex">fix</span> conflicts and then commit the result.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Git is telling me: “I can’t automatically merge these two branches because they’ve edited the same thing. Tell me what to keep and then we can carry on.”</p>
 <p>So we’ll do just that, if we open up the README.md file mentioned in the merge conflict message, we’ll see:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD </span>
 <span id="cb25-2"><a></a><span class="fu"># Deep Learning </span></span>
 <span id="cb25-3"><a></a><span class="fu">======= </span></span>
 <span id="cb25-4"><a></a><span class="fu"># C++ Examples of Deep Learning </span></span>
-<span id="cb25-5"><a></a><span class="at">&gt;&gt;&gt;&gt;&gt;&gt;&gt; develop </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb25-5"><a></a><span class="at">&gt;&gt;&gt;&gt;&gt;&gt;&gt; develop </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Everything between <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> and <code>=======</code> is what’s currently in the commit. While between <code>=======</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; develop</code> is the content trying to be merged.</p>
 <p>Let’s say that we prefer what is in the develop branch, then we’ll remove (just by deleting in your text editor of choice) everything from <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> to <code>=======</code> and then remove <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; develop</code> so that our file now looks like this:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a></a><span class="fu"># C++ Examples of Deep Learning </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a></a><span class="fu"># C++ Examples of Deep Learning </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>In essence we’ve extracted the parts of the file we wanted to keep in the process of merging, and removed the parts we didn’t want, in addition to removing the <code>&lt;&lt;&lt;&lt;&lt;</code>, <code>=====</code> delimiters.</p>
 <p>Now we can save this file and commit the changes, thus completing the merge conflicts.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a></a><span class="ex">my-new-project</span> % git status</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a></a><span class="ex">my-new-project</span> % git status</span>
 <span id="cb27-2"><a></a><span class="ex">On</span> branch main</span>
 <span id="cb27-3"><a></a><span class="ex">You</span> have unmerged paths.</span>
 <span id="cb27-4"><a></a>  <span class="kw">(</span><span class="ex">fix</span> conflicts and run <span class="st">"git commit"</span><span class="kw">)</span></span>
@@ -562,7 +562,7 @@ Jay Paul Morgan
 <span id="cb27-10"><a></a></span>
 <span id="cb27-11"><a></a><span class="ex">no</span> changes added to commit <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> and/or <span class="st">"git commit -a"</span><span class="kw">)</span></span>
 <span id="cb27-12"><a></a><span class="ex">my-new-project</span> % git commit <span class="at">-a</span> <span class="at">-m</span> <span class="st">'Resolve conflicts'</span></span>
-<span id="cb27-13"><a></a><span class="ex">[main</span> c8efca4] Resolve conflicts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb27-13"><a></a><span class="ex">[main</span> c8efca4] Resolve conflicts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Our git history will now look something like:</p>
 <div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
@@ -593,7 +593,7 @@ Jay Paul Morgan
 <h1>Navigating through History</h1>
 <p>Finally, to conclude our whistle stop tour of using Git, we’ll take a look at how to navigate through the history of our program, i.e.&nbsp;change to different checkpoints.</p>
 <p>If we look at our <code>git log</code>, once more, we’ll see lots of commits now:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a></a><span class="ex">my-new-project</span> % git log <span class="at">--graph</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a></a><span class="ex">my-new-project</span> % git log <span class="at">--graph</span></span>
 <span id="cb28-2"><a></a><span class="ex">*</span>   commit c8efca46a2c4e794f2f66d2538891cbb5fce987a <span class="er">(</span><span class="ex">HEAD</span> <span class="at">-</span><span class="op">&gt;</span> main<span class="kw">)</span></span>
 <span id="cb28-3"><a></a><span class="kw">|</span><span class="ex">\ </span> Merge: 1245ad6 3bba75a</span>
 <span id="cb28-4"><a></a><span class="kw">|</span> <span class="kw">|</span> <span class="ex">Author:</span> Jay Paul Morgan <span class="op">&lt;</span>email@email.com<span class="op">&gt;</span></span>
@@ -621,10 +621,10 @@ Jay Paul Morgan
 <span id="cb28-26"><a></a><span class="kw">|</span> </span>
 <span id="cb28-27"><a></a><span class="ex">*</span> commit 1a5d58e3e0c7796f7c5eb77083a6773f158d48b8</span>
 <span id="cb28-28"><a></a><span class="kw">|</span> <span class="ex">Author:</span> Jay Paul Morgan <span class="op">&lt;</span>email@email.com<span class="op">&gt;</span></span>
-<span id="cb28-29"><a></a><span class="kw">|</span> <span class="ex">Date:</span>   Sun Nov 12 13:38:47 2023 +0100</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb28-29"><a></a><span class="kw">|</span> <span class="ex">Date:</span>   Sun Nov 12 13:38:47 2023 +0100</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You’ll notice that each commit has a funny looking string called a <em>hash</em>. This a unique representation of the current state of the program at the time of commiting. No two hashes should be the same.</p>
 <p>To go back to a previous point in time, we’ll take one of these hashes, let’s say <code>1a5d58e3e0c7796f7c5eb77083a6773f158d48b8</code>, and use this in our <code>git checkout</code> command:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a></a><span class="ex">my-new-project</span> % git checkout 1a5d58e3e0c7796f7c5eb77083a6773f158d48b8</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a></a><span class="ex">my-new-project</span> % git checkout 1a5d58e3e0c7796f7c5eb77083a6773f158d48b8</span>
 <span id="cb29-2"><a></a><span class="ex">Note:</span> switching to <span class="st">'1a5d58e3e0c7796f7c5eb77083a6773f158d48b8'</span>.</span>
 <span id="cb29-3"><a></a></span>
 <span id="cb29-4"><a></a><span class="ex">You</span> are in <span class="st">'detached HEAD'</span> state. You can look around, make experimental</span>
@@ -642,11 +642,11 @@ Jay Paul Morgan
 <span id="cb29-16"><a></a></span>
 <span id="cb29-17"><a></a><span class="ex">Turn</span> off this advice by setting config variable advice.detachedHead to false</span>
 <span id="cb29-18"><a></a></span>
-<span id="cb29-19"><a></a><span class="ex">HEAD</span> is now at 1a5d58e Fix reading file bug caused by typo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb29-19"><a></a><span class="ex">HEAD</span> is now at 1a5d58e Fix reading file bug caused by typo</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Wow that’s a lot of information! But all it’s telling us that any commits we make from here will not be permanent. That’s okay, we’re just looking. If we did want to make permanent commits starting at this commit, then we create a new branch from here by running <code>git switch -c &lt;new-branch-name&gt;</code>.</p>
 <p>Nevertheless, if you take a look at the files and folders at this point you’ll see they are exactly as they were when we made this specific commit. We’ve gone back in time!</p>
 <p>To get back to the original position, i.e.&nbsp;the most recent commit, we’ll checkout <code>HEAD</code>:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a></a><span class="fu">git</span> checkout HEAD</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a></a><span class="fu">git</span> checkout HEAD</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 
 <section id="remote-repositories" class="title-slide slide level1 center">
@@ -846,7 +846,7 @@ Jay Paul Morgan
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -920,13 +920,14 @@ Jay Paul Morgan
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
