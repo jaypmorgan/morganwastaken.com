@@ -1,20 +1,5 @@
 [
   {
-    "listing": "/talks.html",
-    "items": [
-      "/talks/2025-10-26-vale-presentation/index.html",
-      "/talks/2025-10-26-vale/index.html",
-      "/talks/2024-12-18-icmla/index.html",
-      "/talks/2024-08-28-bps/index.html",
-      "/talks/2024-07-04-goscai/index.html",
-      "/talks/2023-04-19-cloud-removal/index.html",
-      "/talks/2022-10-13-adaptive-neighbourhoods/index.html",
-      "/talks/2021-08-05-Learning-how-to-learn-with-deep-learning/index.html",
-      "/talks/2021-03-30-trustable-machine-learning-systems/index.html",
-      "/talks/2018-12-14-jurix/index.html"
-    ]
-  },
-  {
     "listing": "/teaching.html",
     "items": [
       "/teaching/2023-2024/Machine Learning/lecture-5.html",
@@ -36,6 +21,21 @@
       "/teaching/2023-2024/Programming Level-up/lecture-1.html",
       "/teaching/2023-2024/Programming Level-up/index.html",
       "/teaching/2023-2024/Programming Level-up/0.course-introduction.html"
+    ]
+  },
+  {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/2025-10-26-vale-presentation/index.html",
+      "/talks/2025-10-26-vale/index.html",
+      "/talks/2024-12-18-icmla/index.html",
+      "/talks/2024-08-28-bps/index.html",
+      "/talks/2024-07-04-goscai/index.html",
+      "/talks/2023-04-19-cloud-removal/index.html",
+      "/talks/2022-10-13-adaptive-neighbourhoods/index.html",
+      "/talks/2021-08-05-Learning-how-to-learn-with-deep-learning/index.html",
+      "/talks/2021-03-30-trustable-machine-learning-systems/index.html",
+      "/talks/2018-12-14-jurix/index.html"
     ]
   },
   {

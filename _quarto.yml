@@ -34,6 +34,8 @@ website:
         text: Blog
       - href: artwork.qmd
         text: Artwork
+      - href: resume.qmd
+        text: Résumé
   page-footer:
     border: true
     left:
@@ -53,23 +55,19 @@ website:
 format:
   html:
     theme:
-      light: flatly
-      dark: darkly
+      light: cosmo
     css:
       - styles.css
     toc: true
     canonical-url: true
 
 babelquarto:
+  languagelinks: sidebar
   languagecodes:
   - name: en
     text: "English"
-  - name: cy
-    text: "Cymraeg"
+  languages: ["en"]
   mainlanguage: 'en'
-  languages: ['cy']
-title-cy: Jay Paul Morgan
-author-cy: Jay Paul Morgan
 lang: en
 
 editor: visual
