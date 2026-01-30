@@ -9,8 +9,48 @@
 <link>https://morganwastaken.com/posts.html</link>
 <atom:link href="https://morganwastaken.com/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.8.26</generator>
-<lastBuildDate>Tue, 07 May 2024 23:00:00 GMT</lastBuildDate>
+<generator>quarto-1.8.27</generator>
+<lastBuildDate>Mon, 01 Dec 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Advent of Code – Day 1</title>
+  <dc:creator>Jay Paul Morgan</dc:creator>
+  <link>https://morganwastaken.com/posts/2025-12-01-aoc/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction-to-advent-of-code" class="level1">
+<h1>Introduction to Advent Of Code</h1>
+<p>This year, I thought I'd try to solve the <a href="https://adventofcode.com">Advent of Code (AOC)</a> puzzles using Scheme. I tried this before (2022), but only made it <a href="https://github.com/jaypmorgan/aoc/tree/master/2022/scheme">day 7</a>. It's also been a long time since I've used Scheme–perhaps lisps in general–so the solutions may not be the most elegant, but is an oppurtunity to use a language that I don't typically get to use or reach for in my work.</p>
+<p>I'll post each of these days as separate blog articles, with a description of my understanding of the puzzles, and an explanation of my solution to the current day.</p>
+<p>At least for the first couple of days, I will try not to reach for a library (or even write one myself), but try to program everything myself. There is definitely a possibility that this could become tedius, so I am not commiting myself to this for all of the puzzles, but it is just to push myself to get comfortable with Scheme rather than just reaching for on-liner solutions that doesn't teach me anything.</p>
+<p>With that out of the way, let's start with Day 1!</p>
+</section>
+<section id="day-1" class="level1">
+<h1>Day 1</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode scheme code-with-copy"><code class="sourceCode scheme"><span id="cb1-1">(<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">define</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"> </span>(f x)</span>
+<span id="cb1-2">  (<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> x x))</span></code></pre></div></div>
+<p>This is a test.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-exports="both" style="background: #f1f3f5;"><pre class="sourceCode scheme code-with-copy"><code class="sourceCode scheme"><span id="cb2-1">(f <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span></code></pre></div></div>
+<pre class="example"><code>2</code></pre>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://morganwastaken.com/posts/2025-12-01-aoc/</guid>
+  <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>How I utilise the word utilise</title>
   <dc:creator>Jay Paul Morgan</dc:creator>
@@ -1104,7 +1144,7 @@ June 27, 2019. <a href="https://morganwastaken.com/blog/2019-06-27-membership-fu
 </ol>
 </section></div> ]]></description>
   <guid>https://morganwastaken.com/posts/2025-09-01-paper/</guid>
-  <pubDate>Thu, 15 Jan 2026 10:28:59 GMT</pubDate>
+  <pubDate>Fri, 30 Jan 2026 19:28:55 GMT</pubDate>
   <media:content url="https://morganwastaken.com/posts/2025-09-01-paper/screen.png" medium="image" type="image/png" height="92" width="144"/>
 </item>
 </channel>

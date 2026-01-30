@@ -1,0 +1,9 @@
+[
+  {
+    "objectID": "posts/2025-12-01-aoc/index.html",
+    "href": "posts/2025-12-01-aoc/index.html",
+    "title": "Advent of Code – Day 1",
+    "section": "",
+    "text": "Introduction to Advent Of Code\nThis year, I thought I'd try to solve the Advent of Code (AOC) puzzles using Scheme. I tried this before (2022), but only made it day 7. It's also been a long time since I've used Scheme–perhaps lisps in general–so the solutions may not be the most elegant, but is an oppurtunity to use a language that I don't typically get to use or reach for in my work.\nI'll post each of these days as separate blog articles, with a description of my understanding of the puzzles, and an explanation of my solution to the current day.\nAt least for the first couple of days, I will try not to reach for a library (or even write one myself), but try to program everything myself. There is definitely a possibility that this could become tedius, so I am not commiting myself to this for all of the puzzles, but it is just to push myself to get comfortable with Scheme rather than just reaching for on-liner solutions that doesn't teach me anything.\nWith that out of the way, let's start with Day 1!\n\n\nDay 1\n(define (f x)\n  (+ x x))\nThis is a test.\n(f 1)\n2"
+  }
+]

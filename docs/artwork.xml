@@ -9,8 +9,27 @@
 <link>https://morganwastaken.com/artwork.html</link>
 <atom:link href="https://morganwastaken.com/artwork.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.8.26</generator>
-<lastBuildDate>Tue, 28 Jan 2025 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.8.27</generator>
+<lastBuildDate>Thu, 30 Jan 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Self Portrait</title>
+  <dc:creator>Oil Pastels</dc:creator>
+  <link>https://morganwastaken.com/artwork/2026-01-30-self-portrait/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://morganwastaken.com/artwork/2026-01-30-self-portrait/feature.jpeg" class="img-fluid"></p>
+
+
+
+ ]]></description>
+  <category>oilpastels</category>
+  <guid>https://morganwastaken.com/artwork/2026-01-30-self-portrait/</guid>
+  <pubDate>Thu, 30 Jan 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://morganwastaken.com/artwork/2026-01-30-self-portrait/feature.jpeg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Swansea Beach</title>
   <dc:creator>Pen and Watercolour on Paper</dc:creator>
@@ -30,6 +49,63 @@
   <guid>https://morganwastaken.com/artwork/2025-01-28-beach/</guid>
   <pubDate>Tue, 28 Jan 2025 00:00:00 GMT</pubDate>
   <media:content url="https://morganwastaken.com/artwork/2025-01-28-beach/feature.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Clouds</title>
+  <dc:creator>Oil Pastels</dc:creator>
+  <link>https://morganwastaken.com/artwork/2026-01-27-clouds/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://morganwastaken.com/artwork/2026-01-27-clouds/feature.png" class="img-fluid"></p>
+
+
+
+ ]]></description>
+  <category>oilpastels</category>
+  <guid>https://morganwastaken.com/artwork/2026-01-27-clouds/</guid>
+  <pubDate>Mon, 27 Jan 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://morganwastaken.com/artwork/2026-01-27-clouds/feature.png" medium="image" type="image/png" height="140" width="144"/>
+</item>
+<item>
+  <title>Flowers</title>
+  <dc:creator>Oil Pastels</dc:creator>
+  <link>https://morganwastaken.com/artwork/2026-01-27-flowers/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://morganwastaken.com/artwork/2026-01-27-flowers/feature.jpeg" class="img-fluid"></p>
+
+
+
+ ]]></description>
+  <category>oilpastels</category>
+  <guid>https://morganwastaken.com/artwork/2026-01-27-flowers/</guid>
+  <pubDate>Mon, 27 Jan 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://morganwastaken.com/artwork/2026-01-27-flowers/feature.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Water Lilies after Monet</title>
+  <dc:creator>Oil Pastels</dc:creator>
+  <link>https://morganwastaken.com/artwork/2026-01-24-lilies/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://morganwastaken.com/artwork/2026-01-24-lilies/feature.jpeg" class="img-fluid"></p>
+
+
+
+ ]]></description>
+  <category>oilpastels</category>
+  <guid>https://morganwastaken.com/artwork/2026-01-24-lilies/</guid>
+  <pubDate>Fri, 24 Jan 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://morganwastaken.com/artwork/2026-01-24-lilies/feature.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Simplification of Portrait</title>
