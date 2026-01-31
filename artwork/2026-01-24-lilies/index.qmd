@@ -2,7 +2,7 @@
 title: "Water Lilies after Monet"
 author: "Oil Pastels"
 categories: [oilpastels]
-date: 2025-01-24
+date: 2026-01-24
 image: feature.jpeg
 ---
 

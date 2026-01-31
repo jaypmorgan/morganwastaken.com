@@ -2,7 +2,7 @@
 title: "Self Portrait"
 author: "Oil Pastels"
 categories: [oilpastels]
-date: 2025-01-30
+date: 2026-01-30
 image: feature.jpeg
 ---
 

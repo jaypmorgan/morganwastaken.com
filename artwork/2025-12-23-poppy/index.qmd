@@ -1,8 +1,8 @@
 ---
-title: "Flowers"
+title: "Poppy"
 author: "Oil Pastels"
 categories: [oilpastels]
-date: 2026-01-27
+date: 2025-12-23
 image: feature.jpeg
 ---
 
