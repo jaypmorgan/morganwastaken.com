@@ -1,0 +1,9 @@
+---
+title: "Poppies"
+author: Oil pastels on paper
+date: 2025-08-03
+categories: [oilpastels]
+image: feature.jpeg
+---
+
+![](feature.jpeg)

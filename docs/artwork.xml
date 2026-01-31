@@ -126,6 +126,44 @@
   <media:content url="https://morganwastaken.com/artwork/2025-12-23-poppy/feature.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
+  <title>Poppies</title>
+  <dc:creator>Oil pastels on paper</dc:creator>
+  <link>https://morganwastaken.com/artwork/2025-08-03-poppies/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://morganwastaken.com/artwork/2025-08-03-poppies/feature.jpeg" class="img-fluid"></p>
+
+
+
+ ]]></description>
+  <category>oilpastels</category>
+  <guid>https://morganwastaken.com/artwork/2025-08-03-poppies/</guid>
+  <pubDate>Sat, 02 Aug 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://morganwastaken.com/artwork/2025-08-03-poppies/feature.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Tomatoes</title>
+  <dc:creator>Oil on paper</dc:creator>
+  <link>https://morganwastaken.com/artwork/2025-05-08-tomatoes/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://morganwastaken.com/artwork/2025-05-08-tomatoes/feature.jpeg" class="img-fluid"></p>
+
+
+
+ ]]></description>
+  <category>oil</category>
+  <guid>https://morganwastaken.com/artwork/2025-05-08-tomatoes/</guid>
+  <pubDate>Wed, 07 May 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://morganwastaken.com/artwork/2025-05-08-tomatoes/feature.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
   <title>Swansea Beach</title>
   <dc:creator>Pen and Watercolour on Paper</dc:creator>
   <link>https://morganwastaken.com/artwork/2025-01-28-beach/</link>
@@ -420,63 +458,6 @@
   <category>landscape</category>
   <guid>https://morganwastaken.com/artwork/2024-11-03-brynmill/</guid>
   <pubDate>Sun, 03 Nov 2024 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Mad Cats</title>
-  <dc:creator>Charcoal on Paper</dc:creator>
-  <link>https://morganwastaken.com/artwork/2024-10-24-mad-cats/</link>
-  <description><![CDATA[ 
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://morganwastaken.com/artwork/2024-10-24-mad-cats/mad-cat.png" class="img-fluid figure-img"></p>
-<figcaption>Mad Cat 1, Charcoal on Paper, 10/2024</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://morganwastaken.com/artwork/2024-10-24-mad-cats/mat-cat-2.png" class="img-fluid figure-img"></p>
-<figcaption>Mad Cat 2, Charcoal on Paper, 10/2024</figcaption>
-</figure>
-</div>
-
-
-
- ]]></description>
-  <category>charcoal</category>
-  <category>simple</category>
-  <category>sketch</category>
-  <category>animal</category>
-  <guid>https://morganwastaken.com/artwork/2024-10-24-mad-cats/</guid>
-  <pubDate>Wed, 23 Oct 2024 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Singleton Tree</title>
-  <dc:creator>Pencil on Paper</dc:creator>
-  <link>https://morganwastaken.com/artwork/2024-10-05-singleton-tree/</link>
-  <description><![CDATA[ 
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://morganwastaken.com/artwork/2024-10-05-singleton-tree/tree.png" class="img-fluid figure-img"></p>
-<figcaption>Singleton Tree, Pencil on Paper, 10/2024</figcaption>
-</figure>
-</div>
-
-
-
- ]]></description>
-  <category>pencil</category>
-  <category>sketch</category>
-  <category>landscape</category>
-  <guid>https://morganwastaken.com/artwork/2024-10-05-singleton-tree/</guid>
-  <pubDate>Fri, 04 Oct 2024 23:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
