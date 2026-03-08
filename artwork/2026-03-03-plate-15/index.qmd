@@ -1,0 +1,9 @@
+---
+title: "Bargue Plate 015"
+author: "Graphite on Paper"
+categories: [pencil,bargue]
+date: 2026-03-03
+image: feature.png
+---
+
+![](feature.png)
