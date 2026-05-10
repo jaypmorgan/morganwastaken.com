@@ -9,8 +9,28 @@
 <link>https://morganwastaken.com/artwork.html</link>
 <atom:link href="https://morganwastaken.com/artwork.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.8.27</generator>
-<lastBuildDate>Sun, 08 Mar 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Fri, 01 May 2026 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Sunflowers</title>
+  <dc:creator>Oil </dc:creator>
+  <link>https://morganwastaken.com/artwork/2026-05-02-sunflowers/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://morganwastaken.com/artwork/2026-05-02-sunflowers/feature.png" class="img-fluid"></p>
+
+
+
+ ]]></description>
+  <category>oil</category>
+  <category>bargue</category>
+  <guid>https://morganwastaken.com/artwork/2026-05-02-sunflowers/</guid>
+  <pubDate>Fri, 01 May 2026 23:00:00 GMT</pubDate>
+  <media:content url="https://morganwastaken.com/artwork/2026-05-02-sunflowers/feature.png" medium="image" type="image/png" height="196" width="144"/>
+</item>
 <item>
   <title>Bargue Plate 016</title>
   <dc:creator>Graphite on Paper</dc:creator>
@@ -402,33 +422,6 @@
   <category>animal</category>
   <guid>https://morganwastaken.com/artwork/2024-11-21-poppy/</guid>
   <pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Half of Bargue Plate 1</title>
-  <dc:creator>Pencil on Paper</dc:creator>
-  <link>https://morganwastaken.com/artwork/2024-11-17-bargue-plate-1/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>The Bargue plates are a set of reference lithographs used in the 19th century to teach art students. These plates were even used by Pablo Picasso and Vincent van Gogh as study.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://morganwastaken.com/artwork/2024-11-17-bargue-plate-1/IMG_0743.jpg" class="img-fluid figure-img"></p>
-<figcaption>Half of Bargue Plate 1, Pencil on Paper, 11/2024</figcaption>
-</figure>
-</div>
-
-
-
- ]]></description>
-  <category>pencil</category>
-  <category>sketch</category>
-  <category>bargue</category>
-  <category>study</category>
-  <guid>https://morganwastaken.com/artwork/2024-11-17-bargue-plate-1/</guid>
-  <pubDate>Sun, 17 Nov 2024 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
